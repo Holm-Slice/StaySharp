@@ -1,0 +1,97 @@
+@import url("https://use.typekit.net/uqd1zxm.css");
+
+.navbar-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and nav items */
+  background-color: rgb(69, 51, 147);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+  padding: 0 50px; /* Add some padding if needed */
+}
+
+.navbar-logo-img {
+  display: flex;
+  width: auto;
+  justify-content: left;
+  height: 200px;
+  margin-top: 35px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.nav-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row; /* Changed to row for horizontal layout */
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.nav-list li {
+  margin-left: 30px; /* Space between list items */
+  padding: 5px;
+  padding-top: 175px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-family: "custom1", "azo-sans-web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 25px;
+  padding: 45px 15px 25px 25px;
+  /* padding-top: 25px; */
+}
+
+.nav-list li {
+  margin-left: 30px; /* Space between list items */
+  padding: 5px;
+  padding-top: 175px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  position: relative;
+  color: inherit; /* Ensure the text color is inherited */
+}
+
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(69, 51, 147); /* Use the current text color */
+  top: 61%;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-list a:hover::after {
+  transform: scaleX(1);
+}
+/* .nav-list a:hover {
+  text-decoration: line-through;
+  transition: text-decoration 0.5s ease-in-out;
+} */
+
+/* .nav-list a:hover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-list a:hover: {
+  width: 100%;
+} */

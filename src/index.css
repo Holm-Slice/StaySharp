@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "custom1";
+  src: url("/assets/fonts/Typesauce-2OX9w.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

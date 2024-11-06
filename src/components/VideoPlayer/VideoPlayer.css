@@ -1,0 +1,12 @@
+.video-container {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  padding-top: 250px;
+}
+
+.responsive-video {
+  width: 100%;
+  height: auto;
+}
