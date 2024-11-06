@@ -2,10 +2,17 @@ import { Routes, Route, Link, Router, BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import ImageCarousel from "./components/Carousel/ImageCarousel";
 // import Home from "./pages/Home";
 // import ServicesOffered from "./pages/ServicesOffered";
 // import Contact from "./pages/Contact";
 import "./App.css";
+
+const images = [
+  "src/assets/Images/chef-knife1.jpg",
+  "src/assets/Images/chef-knife2.jpg",
+  "src/assets/Images/chef-knife3.jpg",
+];
 
 function App() {
   return (
@@ -18,6 +25,7 @@ function App() {
       <Section id="about" title="ABOUT">
         <h1>About page comp</h1>{" "}
       </Section>
+      <ImageCarousel images={images} />
       <Section id="services" title="SERVICES" />
       <Section id="contact" title="CONTACT" />
       {/* <Home id="Home" />
