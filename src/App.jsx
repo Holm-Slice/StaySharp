@@ -7,6 +7,7 @@ import ImageCarousel from "./components/Carousel/ImageCarousel";
 // import ServicesOffered from "./pages/ServicesOffered";
 // import Contact from "./pages/Contact";
 import "./App.css";
+import MenuDisplay from "./components/MenuDisplay/MenuDisplay";
 
 const images = [
   "src/assets/Images/chef-knife1.jpg",
@@ -26,7 +27,10 @@ function App() {
         <h1>About page comp</h1>{" "}
       </Section>
       <ImageCarousel images={images} />
-      <Section id="services" title="SERVICES" />
+      <Section id="services" title="SERVICES">
+        {/* <h1>Services:</h1> */}
+        <MenuDisplay />
+      </Section>
       <Section id="contact" title="CONTACT" />
       {/* <Home id="Home" />
         <ServicesOffered />
