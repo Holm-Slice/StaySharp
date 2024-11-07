@@ -1,9 +1,10 @@
 .carousel-container {
   position: relative;
-  width: 75vw;
+  width: 85vw;
+  height: auto;
   /* max-width: 800px; */
   margin: auto;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .carousel-image {
