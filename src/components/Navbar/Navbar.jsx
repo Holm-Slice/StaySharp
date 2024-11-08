@@ -10,7 +10,7 @@ function Navbar() {
       <div className="navbar-cont">
         <div className="navbar-logo-img">
           <img
-            src="src/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
+            src="public/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
             alt="stay-sharp-dont-be-dull-logo"
           />
         </div>
