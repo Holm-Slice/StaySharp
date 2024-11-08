@@ -5,17 +5,17 @@ function HorizontalScroller() {
     <div className="scroll-container">
       <div className="scroll-content">
         <img
-          src="src/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png"
+          src="/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png"
           alt="stay-sharp-icon"
           className="scroll-item"
         />
         <img
-          src="src/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png"
+          src="/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png"
           alt="stay-sharp-icon"
           className="scroll-item"
         />
         <img
-          src="src/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png"
+          src="/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png"
           alt="stay-sharp-icon"
           className="scroll-item"
         />
