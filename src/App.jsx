@@ -11,9 +11,9 @@ import MenuDisplay from "./components/MenuDisplay/MenuDisplay";
 import ContactForm from "./components/ContactForm/ContactForm";
 
 const images = [
-  "public/assets/Images/chef-knife1.jpg",
-  "public/assets/Images/chef-knife2.jpg",
-  "public/assets/Images/chef-knife3.jpg",
+  "/assets/Images/chef-knife1.jpg",
+  "/assets/Images/chef-knife2.jpg",
+  "/assets/Images/chef-knife3.jpg",
 ];
 
 function App() {
