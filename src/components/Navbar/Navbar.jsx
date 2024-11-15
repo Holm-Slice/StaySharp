@@ -1,11 +1,32 @@
-import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import HorizontalScroller from "../HorizontalScroller/HorizontalScroller";
 import "./Navbar.css";
 
 function Navbar() {
-  //   const location = useLocation();
+  useEffect(() => {
+    const scroller = document.getElementById("scroller");
+    if (!scroller) {
+      console.error("Scroller element not found");
+      return;
+    }
+
+    const handleScroll = () => {
+      const scrollerTop = scroller.getBoundingClientRect().top;
+      if (scrollerTop <= 0) {
+        scroller.classList.add("fixed");
+      } else {
+        scroller.classList.remove("fixed");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
+      <HorizontalScroller id="scroller" />
       {/* <nav className="navbar"> */}
       <div className="navbar-cont">
         <div className="navbar-logo-img">
@@ -25,7 +46,6 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <HorizontalScroller />
       </div>
       {/* </nav> */}
     </>

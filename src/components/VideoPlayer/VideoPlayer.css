@@ -3,7 +3,8 @@
   height: auto;
   overflow: hidden;
   position: relative;
-  padding-top: 250px;
+  /* padding-top: 0px; */
+  background-color: none;
 }
 
 .responsive-video {

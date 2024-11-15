@@ -1,4 +1,6 @@
 .scroll-container {
+  position: sticky;
+  /* top: 0; */
   width: 100vw;
   overflow-x: auto;
   white-space: nowrap;
@@ -7,7 +9,7 @@
   box-sizing: border-box;
   border: 2px solid rgb(69, 51, 147);
   background-color: white;
-  position: fixed;
+  /* position: fixed; */
   top: 250px; /* Adjust this value based on the height of your navbar */
   left: 0;
   z-index: 1000; /* Ensure it stays above other content */
@@ -17,6 +19,9 @@
   display: inline-flex;
   align-items: center;
   animation: scroll 15s linear infinite;
+  overflow-x: auto;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+  white-space: nowrap; /* Prevent line breaks */
 }
 
 .scroll-item {
@@ -26,8 +31,7 @@
   text-align: center;
   width: auto;
   max-height: 30px;
-  /* font-size: 18px; */
-  /* color: #333; */
+  /* animation: scroll 10s linear infinite; */
 }
 
 .scroll-item img {

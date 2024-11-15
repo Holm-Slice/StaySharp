@@ -12,6 +12,7 @@
   width: 100vw;
   z-index: 1000;
   padding: 0 50px; /* Add some padding if needed */
+  position: relative;
 }
 
 .navbar-logo-img {
@@ -22,6 +23,7 @@
   margin-top: 35px;
   margin-left: 50px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .nav-list ul {
@@ -76,6 +78,21 @@
 
 .nav-list a:hover::after {
   transform: scaleX(1);
+}
+
+.horizontal-scroller {
+  /* Initial styles for the scroller */
+  width: 100%;
+  /* Add other styles as needed */
+}
+
+.fixed {
+  position: fixed; /* Make the scroller fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Ensure it is below the navbar */
+  /* Add other styles as needed */
 }
 /* .nav-list a:hover {
   text-decoration: line-through;

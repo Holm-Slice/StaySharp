@@ -18,6 +18,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   animation: rotate 20s linear infinite; /* Rotate animation */
+  opacity: 0.1;
 }
 
 @keyframes rotate {
