@@ -7,7 +7,7 @@
   background-color: rgb(69, 51, 147);
   color: white;
   position: fixed;
-  top: 57px;
+  /* top: 57px; */
   left: 0;
   width: 100vw;
   z-index: 9999;
