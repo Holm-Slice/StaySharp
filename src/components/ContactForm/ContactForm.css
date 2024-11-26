@@ -86,14 +86,14 @@ button[type="submit"]:hover {
   }
 
   .background-image {
-    width: 650px; /* Adjust the size as needed */
-    height: 650px; /* Adjust the size as needed */
+    width: 600px; /* Adjust the size as needed */
+    height: 600px; /* Adjust the size as needed */
   }
 
   .contact-form {
-    padding: 15px;
-    width: 90%;
-    max-width: 400px;
+    padding: 5px;
+    width: 85%;
+    max-width: 300px;
   }
 
   .form-group input,
