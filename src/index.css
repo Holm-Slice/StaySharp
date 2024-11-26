@@ -21,15 +21,24 @@
     margin-bottom: 10px;
   }
 
+  .navbar-logo-img img {
+    height: 240px; /* Resize the image for mobile */
+  }
+
   .nav-list ul {
     flex-direction: column;
     width: 100%;
   }
 
+  .nav-list ul li {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
   .nav-list ul li a {
-    padding: 10px 0;
+    padding: 10px 10px;
     width: 100%;
-    text-align: left;
+    text-align: right;
   }
 
   .horizontal-scroller {
