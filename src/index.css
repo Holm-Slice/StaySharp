@@ -8,3 +8,36 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  .navbar-cont {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-logo-img {
+    margin-bottom: 10px;
+  }
+
+  .nav-list ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-list ul li a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .horizontal-scroller {
+    overflow-x: scroll;
+  }
+
+  .scroll-item img {
+    max-width: 100%;
+    height: auto;
+  }
+}

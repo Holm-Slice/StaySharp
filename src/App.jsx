@@ -44,10 +44,10 @@ function App() {
 
 // you can pass the children prop and call it (line 32 as of now {children}), this will now populate any component or code element that is a child of the section tag, but to execute this correctly we need to wrap the child element completely in a section tag ie <section> <child component or whatever/> </section>
 const Section = ({ id, title, children, className }) => (
-  <div id={id} className={className}>
+  <section id={id} className={className}>
     {/* <h1>{title}</h1> */}
     {children}
-  </div>
+  </section>
 );
 
 export default App;
