@@ -80,7 +80,7 @@ button[type="submit"]:hover {
 
 /* Styles for screens smaller than 768px */
 @media (max-width: 768px) {
-  .contact-form-container {
+  .contact-form-container .background-image {
     padding: 10px;
     background-size: contain; /* Adjust background size for mobile */
   }
