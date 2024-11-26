@@ -18,7 +18,7 @@
   }
 
   .navbar-logo-img {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex; /* Ensure the logo container is a flex container */
     justify-content: center; /* Center the logo horizontally */
     width: 100%; /* Ensure the logo container takes full width */
