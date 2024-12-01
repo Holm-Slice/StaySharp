@@ -25,10 +25,11 @@ function App() {
       {/* <HorizontalScroller /> */}
       <Section id="home" title="HOME" className="section-spacing">
         <div className="home-cont">
-          <h1>
+          <h1 className="header-copy">
             We sharpen knives, fix chipped knives, and even sell knives in
             Austin Texas
           </h1>{" "}
+          <h1 className="header-copy">...Yep we do it all!</h1>{" "}
         </div>
       </Section>
       <Section id="about" title="ABOUT" className="section-spacing">
