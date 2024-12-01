@@ -62,12 +62,12 @@ function App() {
             <p className="bio-copy">
               We are more than just a knife sharpening company—we are a partner
               to chefs, restaurateurs, and home cooks who value their craft.
-              Every blade we sharpen is treated with the same care and
-              dedication that guided our founder’s culinary journey. Our mission
-              is simple: to ensure that your tools are always as sharp as your
-              skills. Whether you’re preparing a family meal or crafting a
-              masterpiece for discerning diners, we’re here to help you cut
-              through the ordinary and achieve extraordinary results.
+              Every edge we sharpen is treated with the same care and dedication
+              that guided our founder’s culinary journey. Our mission is simple:
+              to ensure that your tools are always as sharp as your skills.
+              Whether you’re preparing a family meal or crafting a masterpiece
+              for discerning diners, we’re here to help you cut through the
+              ordinary and achieve extraordinary results.
             </p>
           </div>
         </div>
