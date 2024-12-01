@@ -17,3 +17,40 @@ html {
   padding-top: 200px; /* Adjust the value as needed */
   padding-bottom: 200px; /* Adjust the value as needed */
 }
+
+.home-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+.about-cont {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  max-height: 75%;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  padding-bottom: 150px;
+}
+
+.bio-copy {
+  line-height: 1.9; /* Adjust the line height as needed */
+  margin-bottom: 12px; /* Adjust the margin as needed */
+  padding-bottom: 5px;
+  padding-right: 120px;
+}
+
+.about-img {
+  width: 75%;
+  height: auto;
+  padding: 5px;
+  padding-left: 10px;
+}
