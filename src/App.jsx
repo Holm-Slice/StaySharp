@@ -25,7 +25,10 @@ function App() {
       {/* <HorizontalScroller /> */}
       <Section id="home" title="HOME" className="section-spacing">
         <div className="home-cont">
-          <h1>We sharpen knives in Austin Texas</h1>{" "}
+          <h1>
+            We sharpen knives, fix chipped knives, and even sell knives in
+            Austin Texas
+          </h1>{" "}
         </div>
       </Section>
       <Section id="about" title="ABOUT" className="section-spacing">
@@ -40,9 +43,9 @@ function App() {
           <div className="centered-container">
             <h2 className="bio-copy"> About us!</h2>
             <p className="bio-copy">
-              At Stay Sharp ATX, believes that a well-honed blade is the heart
-              of every great kitchen. Founded by a seasoned veteran of the food
-              and beverage industry, our company is built on a foundation of
+              Stay Sharp ATX, believes that a well-honed blade is the heart of
+              every great kitchen. Founded by a seasoned veteran of the food and
+              beverage industry, our company is built on a foundation of
               passion, precision, and a deep appreciation for the craft of
               cooking. With decades of experience working in renowned kitchens
               around the globe, our founder has witnessed firsthand the
@@ -67,7 +70,7 @@ function App() {
               to ensure that your tools are always as sharp as your skills.
               Whether you’re preparing a family meal or crafting a masterpiece
               for discerning diners, we’re here to help you cut through the
-              ordinary and achieve extraordinary results.
+              ordinary and stay sharp.
             </p>
           </div>
         </div>
