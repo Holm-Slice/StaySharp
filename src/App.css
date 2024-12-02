@@ -61,6 +61,8 @@ html {
   font-family: "custom1", "azo-sans-web", sans-serif;
   font-size: 40px;
   font-weight: 600;
-  color: rgb(69, 51, 147);
+  color: #73cab3; //
   margin-bottom: 20px;
+  text-shadow: -1px 0 rgb(69, 51, 147), 0 1px rgb(69, 51, 147),
+    1px 0 rgb(69, 51, 147), 0 -1px rgb(69, 51, 147);
 }
