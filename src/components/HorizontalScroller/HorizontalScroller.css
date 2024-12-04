@@ -47,3 +47,7 @@
     transform: translateX(-50%);
   }
 }
+
+.horizontal-scroller.fixed {
+  position: sticky;
+}

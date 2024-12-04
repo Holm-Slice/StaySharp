@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import HorizontalScroller from "../HorizontalScroller/HorizontalScroller";
 import "./Navbar.css";
 
@@ -26,7 +26,7 @@ function Navbar() {
   }, []);
   return (
     <>
-      <HorizontalScroller id="scroller" />
+      {/* <HorizontalScroller id="scroller" /> */}
       {/* <nav className="navbar"> */}
       <div className="navbar-cont">
         <div className="navbar-logo-img">
