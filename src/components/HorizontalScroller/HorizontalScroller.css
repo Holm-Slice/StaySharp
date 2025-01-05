@@ -19,7 +19,7 @@
 .scroll-content {
   display: inline-flex;
   align-items: center;
-  animation: scroll 15s linear infinite;
+  animation: scroll 20s linear infinite;
   overflow-x: auto;
   scroll-behavior: smooth; /* Enable smooth scrolling */
   white-space: nowrap; /* Prevent line breaks */
@@ -45,10 +45,49 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-30%);
   }
 }
 
 .horizontal-scroller.fixed {
   position: sticky;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .horizontal-scroller {
+    /* padding: 5px; */
+    top: 200px; /* Adjust this value based on the height of your navbar */
+  }
+
+  .scroll-content {
+    animation: scroll 15s linear infinite;
+  }
+}
+
+/* Medium screen styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .horizontal-scroller {
+    /* padding: 8px; */
+    top: 220px; /* Adjust this value based on the height of your navbar */
+    width: 100vw;
+  }
+
+  .scroll-content {
+    animation: scroll 18s linear infinite;
+  }
+}
+
+/* Large screen styles */
+@media (min-width: 1025px) {
+  .horizontal-scroller {
+    /* padding: 10px; */
+    top: 250px; /* Adjust this value based on the height of 
+    your navbar */
+    width: auto;
+  }
+
+  .scroll-content {
+    animation: scroll 20s linear infinite;
+  }
 }

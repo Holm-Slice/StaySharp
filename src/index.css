@@ -10,7 +10,7 @@
 }
 
 /* Styles for screens smaller than 768px */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .navbar-cont {
     flex-direction: column;
     align-items: flex-start;
@@ -62,7 +62,28 @@
   }
 
   .scroll-item img {
-    max-width: 100%;
+    max-width: 500%;
     height: auto;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
+
+/* Large screen styles */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 30px;
   }
 }

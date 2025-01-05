@@ -42,6 +42,7 @@ function App() {
             />
           </div>
           <div className="centered-container">
+            <div className="top-bio-banner"></div>
             <h2 className="bio-copy"> About us!</h2>
             <p className="bio-copy">
               Stay Sharp ATX, believes that a well-honed blade is the heart of
