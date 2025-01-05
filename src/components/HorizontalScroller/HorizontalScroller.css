@@ -84,7 +84,7 @@
     /* padding: 10px; */
     top: 250px; /* Adjust this value based on the height of 
     your navbar */
-    width: auto;
+    width: 100vw;
   }
 
   .scroll-content {

@@ -132,7 +132,27 @@
 }
 
 /* Large screen styles */
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+  .horizontal-scroller {
+    overflow-x: scroll;
+  }
+
+  .scroll-item img {
+    max-width: 500%;
+    height: auto;
+  }
+}
+
+/* XL screen styles */
+@media (min-width: 1301px) and (max-width: 1600px) {
   body {
     font-size: 18px;
   }
