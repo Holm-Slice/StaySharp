@@ -66,3 +66,18 @@ html {
   /* text-shadow: -1px 0 rgb(69, 51, 147), 0 1px rgb(69, 51, 147),
     1px 0 rgb(69, 51, 147), 0 -1px rgb(69, 51, 147); */
 }
+
+.bio-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+  gap: 20px; /* Adjust the gap between columns as needed */
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-copy {
+  margin: 16;
+  padding: 16;
+  font-size: 25px;
+  font-family: "custom1", "azo-sans-web", sans-serif;
+}

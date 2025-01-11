@@ -3,11 +3,12 @@ import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import ImageCarousel from "./components/Carousel/ImageCarousel";
+import Menu from "./components/Menu/Services/Menu";
 // import Home from "./pages/Home";
 // import ServicesOffered from "./pages/ServicesOffered";
 // import Contact from "./pages/Contact";
 import "./App.css";
-import MenuDisplay from "./components/MenuDisplay/MenuDisplay";
+import Divider from "./components/Divider/Divider";
 import ContactForm from "./components/ContactForm/ContactForm";
 
 const images = [
@@ -22,16 +23,19 @@ function App() {
       <Navbar />
       <HorizontalScroller />
       <VideoPlayer />
+      <Divider />
       {/* <HorizontalScroller /> */}
       <Section id="home" title="HOME" className="section-spacing">
         <div className="home-cont">
           <h1 className="header-copy">
-            We sharpen knives, fix chipped knives, and even sell knives in
-            Austin Texas
+            Knives Sharp! Chipped Blades No More! Got Something Your Looking to
+            Buy or Sell, We'll Help Ya!{" "}
           </h1>{" "}
-          <h2 className="header-copy">...Yep we do it all!</h2>{" "}
+          <h2 className="header-copy">...We Do It All!</h2>{" "}
         </div>
       </Section>
+      <Divider />
+
       <Section id="about" title="ABOUT" className="section-spacing">
         <div className="about-cont">
           <div>
@@ -41,47 +45,60 @@ function App() {
               alt=""
             />
           </div>
+
           <div className="centered-container">
             <div className="top-bio-banner"></div>
             <h2 className="bio-copy"> About us!</h2>
-            <p className="bio-copy">
-              Stay Sharp ATX, believes that a well-honed blade is the heart of
-              every great kitchen. Founded by a seasoned veteran of the food and
-              beverage industry, our company is built on a foundation of
-              passion, precision, and a deep appreciation for the craft of
-              cooking. With decades of experience working in renowned kitchens
-              around the globe, our founder has witnessed firsthand the
-              transformative power of a perfectly sharpened knife.
-            </p>
-            <p className="bio-copy">
-              Our journey began in some of the world’s most celebrated
-              restaurants, where the pursuit of excellence was not just a goal
-              but a way of life. From bustling markets in Southeast Asia to
-              Michelin-starred establishments in Europe and North America, our
-              founder developed an intimate understanding of the tools chefs
-              rely on to bring their culinary visions to life. This global
-              perspective, paired with years of hands-on expertise, inspired the
-              creation of a service that delivers unmatched quality and
-              attention to detail.
-            </p>
-            <p className="bio-copy">
-              We are more than just a knife sharpening company—we are a partner
-              to chefs, restaurateurs, and home cooks who value their craft.
-              Every edge we sharpen is treated with the same care and dedication
-              that guided our founder’s culinary journey. Our mission is simple:
-              to ensure that your tools are always as sharp as your skills.
-              Whether you’re preparing a family meal or crafting a masterpiece
-              for discerning diners, we’re here to help you cut through the
-              ordinary and stay sharp.
-            </p>
+            <div className="bio-columns">
+              <section>
+                <p className="bio-copy">
+                  This story begins like many chef's, in restaurants where the
+                  pursuit of excellence was not just a goal, but a way of life.
+                  From bustling restaurants in Mexico City, to fine dining
+                  establishments in Phoenix, Austin, and Denver. We have
+                  developed an intimate understanding and respect of the tools
+                  chefs rely on to bring their culinary visions to life. Years
+                  of hands-on expertise, inspired the creation of a service that
+                  delivers unmatched quality and attention to detail.
+                </p>
+              </section>
+              <section>
+                <p className="bio-copy">
+                  {" "}
+                  Stay Sharp ATX, believes that a well-honed blade is the heart
+                  of every great kitchen. Founded by a seasoned veteran of the
+                  food and beverage industry, our company is built on a
+                  foundation of passion, precision, and a deep appreciation for
+                  the craft of cooking. With decades of experience working in
+                  renowned kitchens around the globe, our founder has witnessed
+                  firsthand the transformative power of a perfectly sharpened
+                  knife.
+                </p>
+              </section>
+              <section>
+                <p className="bio-copy">
+                  We are more than just a knife sharpening company—we are a
+                  partner to chefs, line cooks restaurateurs, and home cooks.
+                  Anyone who values their craft and the tools that make it
+                  happen. Our mission is simple:
+                  <br />
+                  to ensure that your tools are always as sharp as your skills.
+                  Whether you’re preparing a family meal or crafting a
+                  masterpiece for paying customers, we’re here to help you cut
+                  through the bs and stay sharp.
+                </p>
+              </section>
+            </div>
           </div>
         </div>
       </Section>
+      <Divider />
       <ImageCarousel images={images} />
+      <Divider />
       <Section id="services" title="SERVICES" className="section-spacing">
-        {/* <h1>Services:</h1> */}
-        <MenuDisplay />
+        <Menu />
       </Section>
+      <Divider />
       <Section id="contact" title="CONTACT" className="section-spacing">
         <ContactForm />
       </Section>
