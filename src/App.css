@@ -27,7 +27,7 @@ html {
 }
 .about-cont {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 35% 65%;
   grid-template-rows: auto;
   max-height: 75%;
 }
@@ -38,13 +38,12 @@ html {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh; /* Full viewport height */
-  padding-bottom: 150px;
 }
 
 .bio-copy {
   line-height: 1.9; /* Adjust the line height as needed */
   margin-bottom: 12px; /* Adjust the margin as needed */
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   padding-right: 120px;
   font-family: "custom1", "azo-sans-web", sans-serif;
   color: rgb(69, 51, 147);
@@ -68,16 +67,29 @@ html {
 }
 
 .bio-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Three columns */
-  gap: 20px; /* Adjust the gap between columns as needed */
+  /* Three columns */
+  gap: 40px; /* Adjust the gap between columns as needed */
   align-items: center;
   justify-content: center;
+  line-height: 0.5rem;
+  /* padding-top: 50px; */
+  /* margin-top: 20px; */
+}
+
+.bio-copy-h2 {
+  display: flex;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(69, 51, 147);
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-right: 200px;
+  padding-bottom: 10px;
 }
 
 .bio-copy {
-  margin: 16;
-  padding: 16;
-  font-size: 25px;
+  line-height: 1.9; /* Adjust the line height as needed */
+  font-size: 22px;
   font-family: "custom1", "azo-sans-web", sans-serif;
 }

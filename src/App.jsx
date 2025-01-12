@@ -28,8 +28,8 @@ function App() {
       <Section id="home" title="HOME" className="section-spacing">
         <div className="home-cont">
           <h1 className="header-copy">
-            Knives Sharp! Chipped Blades No More! Got Something Your Looking to
-            Buy or Sell, We'll Help Ya!{" "}
+            Knives Sharp! Chips Gone! Got Something You're Looking to Buy or
+            Sell, We'll Help Ya!{" "}
           </h1>{" "}
           <h2 className="header-copy">...We Do It All!</h2>{" "}
         </div>
@@ -48,8 +48,10 @@ function App() {
 
           <div className="centered-container">
             <div className="top-bio-banner"></div>
-            <h2 className="bio-copy"> About us!</h2>
+
             <div className="bio-columns">
+              <h2 className="bio-copy-h2"> About us!</h2>
+              <br />
               <section>
                 <p className="bio-copy">
                   This story begins like many chef's, in restaurants where the
@@ -61,6 +63,7 @@ function App() {
                   of hands-on expertise, inspired the creation of a service that
                   delivers unmatched quality and attention to detail.
                 </p>
+                <br />
               </section>
               <section>
                 <p className="bio-copy">
@@ -74,6 +77,7 @@ function App() {
                   firsthand the transformative power of a perfectly sharpened
                   knife.
                 </p>
+                <br />
               </section>
               <section>
                 <p className="bio-copy">
