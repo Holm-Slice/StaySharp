@@ -50,7 +50,10 @@ function App() {
             <div className="top-bio-banner"></div>
 
             <div className="bio-columns">
-              <h2 className="bio-copy-h2"> About us!</h2>
+              <div className="bio-copy-h2">
+                <h2> About us!</h2>
+              </div>
+
               <br />
               <section>
                 <p className="bio-copy">

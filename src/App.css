@@ -72,24 +72,31 @@ html {
   align-items: center;
   justify-content: center;
   line-height: 0.5rem;
-  /* padding-top: 50px; */
   /* margin-top: 20px; */
 }
 
 .bio-copy-h2 {
   display: flex;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 600;
   color: rgb(69, 51, 147);
-  margin-bottom: 20px;
   align-items: center;
   justify-content: center;
   padding-right: 200px;
-  padding-bottom: 10px;
+  margin-bottom: 40px;
+  /* padding-bottom: 40px; */
+
+  transition: text-shadow 0.5s;
+}
+
+.bio-copy-h2 h2:hover {
+  text-shadow: 5px 5px 10px#73CAB3;
+  cursor: pointer;
 }
 
 .bio-copy {
   line-height: 1.9; /* Adjust the line height as needed */
   font-size: 22px;
   font-family: "custom1", "azo-sans-web", sans-serif;
+  margin-bottom: 40px;
 }

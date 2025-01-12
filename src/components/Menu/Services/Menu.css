@@ -21,6 +21,12 @@
   padding-bottom: 100px;
 }
 
+.services-svg {
+  width: 10%;
+  height: auto;
+  fill: white;
+}
+
 .menu-container h1 {
   text-align: center;
   font-size: 50px;
@@ -28,15 +34,49 @@
   /* text-shadow: 0 5px 10px rgb(209, 154, 197); */
 }
 
-.services-svg {
-  width: 10%;
-  height: auto;
-  fill: white;
+.menu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(69, 51, 147);
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.menu-header h1 {
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 15px;
+  /* text-shadow: 0 5px 10px rgb(209, 154, 197); */
+  transition: text-shadow 0.5s;
+}
+
+.menu-header h1:hover {
+  text-shadow: 5px 5px 10px rgb(209, 154, 197);
+  cursor: pointer;
+}
+
+/* .menu-card h2 {
+  font-size: 30px;
+  padding: 10px;
+} */
+
+.menu-card h2,
+.menu-card h3,
+.menu-card p {
+  margin: 10px 0;
+  padding: 0 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
 .menu-container .menu-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   width: 100%;
 }
@@ -45,19 +85,23 @@
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 10px rgb(209, 154, 197);
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: rgb(69, 51, 147);
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  font-size: 22px;
+  padding: 10px;
+  font-size: 18px;
   color: white;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
 }
 
 .menu-card-container > div:hover {
   transform: scale(1.05);
   transition: 0.5s;
 }
+
 /* .menu-container h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
