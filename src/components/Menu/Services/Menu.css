@@ -76,12 +76,14 @@
 
 .menu-container .menu-card-container {
   display: grid;
+  place-content: space-evenly;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   width: 100%;
 }
 
 .menu-card {
+  place-content: space-evenly;
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 10px rgb(209, 154, 197);
@@ -93,8 +95,16 @@
   font-size: 18px;
   color: white;
   text-align: center;
-  width: 100%;
+  width: 80%;
   cursor: pointer;
+  margin-left: 45px;
+  /* margin-left: 20px; */
+  /* margin: 20px; */
+}
+
+.menu-card h2 {
+  font-size: 25px;
+  padding-top: 10px;
 }
 
 .menu-card-container > div:hover {

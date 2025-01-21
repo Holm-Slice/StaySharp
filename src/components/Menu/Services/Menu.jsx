@@ -24,15 +24,15 @@ function Menu() {
             </h3>
             <br />
             <p className="services-offered">
-              Western: $1.50 per inch{" "}
+              Western / Japanese: $1 / $2 per inch{" "}
               <p>
                 <small>This is some smaller text.</small>
               </p>{" "}
-              <br />
+              {/* <br />
               Japanese: $2.00 per inch{" "}
               <p>
                 <small>This is some smaller text.</small>
-              </p>{" "}
+              </p>{" "} */}
               <br />
               Single Bevel: $3.50 per inch
               <p>

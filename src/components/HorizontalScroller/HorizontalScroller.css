@@ -1,19 +1,22 @@
 .scroll-container {
   position: sticky;
-  /* top: 0; */
   width: 100vw;
   overflow-x: auto;
   white-space: nowrap;
   scroll-behavior: smooth;
   padding: 10px;
   box-sizing: border-box;
-  border: 2px solid rgb(69, 51, 147);
+  border: 3px solid rgb(69, 51, 147);
   background-color: white;
-  /* position: fixed; */
   top: 250px; /* Adjust this value based on the height of your navbar */
   left: 0;
   z-index: 1000; /* Ensure it stays above other content */
   cursor: pointer;
+  padding-bottom: 3px;
+}
+
+.horizontal-scroller.fixed {
+  top: -1px; /* Raise by 2 pixels when fixed */
 }
 
 .scroll-content {

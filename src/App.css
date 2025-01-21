@@ -38,6 +38,7 @@ html {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh; /* Full viewport height */
+  padding-bottom: 200px;
 }
 
 .bio-copy {
