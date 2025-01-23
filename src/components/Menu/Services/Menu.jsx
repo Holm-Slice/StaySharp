@@ -6,7 +6,7 @@ function Menu() {
     <div>
       <div className="menu-container">
         <div className="menu-header">
-          <h1> Services Menu</h1>
+          <h1>Menu of Services </h1>
         </div>
 
         <div className="menu-card-container">
@@ -16,34 +16,40 @@ function Menu() {
               src="public/assets/imgs/SVGs/chef-knife-sharpening-service.svg"
               alt="chef-knife-image"
             />
-            <h2>Knife Sharpening</h2>
-            <br />
+            <h1>Knife Sharpening</h1>
+            {/* <br />
             <h3>
               Our knife sharpening service is the best around. Local and mail-in
               are live
-            </h3>
+            </h3> */}
             <br />
             <p className="services-offered">
-              Western / Japanese: $1 / $2 per inch{" "}
+              <h2>
+                Western Knives: <br /> $1 Per Inch{" "}
+              </h2>
               <p>
-                <small>This is some smaller text.</small>
+                <small>Wusthof, Henkel, Etc.</small>
+              </p>{" "}
+              <br />
+              <h2>
+                Japanese Knives: <br /> $2 Per Inch{" "}
+              </h2>
+              <p>
+                <small>High Carbon, Custom knives, Double Bevel, Etc.</small>
+              </p>{" "}
+              <br />
+              <h2>
+                Single Bevel Knives: <br /> $3.5 Per Inch
+              </h2>
+              <p>
+                <small>Yanagiba, Deba, Usuba, Etc</small>
               </p>{" "}
               {/* <br />
-              Japanese: $2.00 per inch{" "}
-              <p>
-                <small>This is some smaller text.</small>
-              </p>{" "} */}
-              <br />
-              Single Bevel: $3.50 per inch
+              <h2>Serrated: $3 per inch</h2>
               <p>
                 <small>This is some smaller text.</small>
               </p>{" "}
-              <br />
-              Serrated: $3.00 per inch
-              <p>
-                <small>This is some smaller text.</small>
-              </p>{" "}
-              <br />
+              <br /> */}
             </p>
             <a href="#" className="services-btn">
               BOOK NOW
@@ -55,32 +61,36 @@ function Menu() {
               src="public/assets/imgs/SVGs/chef-knife-sharpening-service.svg"
               alt="chef-knife-image"
             />
-            <h2>Knife Sharpening</h2>
+            <h1>Knife Repairs</h1>
             <br />
-            <h3>
-              Our knife sharpening service is the best around. Local and mail-in
-              services are also available!
-            </h3>
-            <br />
+
             <p className="services-offered">
-              Western: $1.50 per inch{" "}
+              <h2>
+                Chip Repair: <br /> $5 & Up
+              </h2>
               <p>
-                <small>This is some smaller text.</small>
+                <small>Repair of any chips in the edge</small>
               </p>{" "}
               <br />
-              Japanese: $2.00 per inch{" "}
+              <h2>
+                Tip Repair: <br /> $7 % Up{" "}
+              </h2>
               <p>
-                <small>This is some smaller text.</small>
+                <small>Repair that tip you accidentally broke</small>
               </p>{" "}
               <br />
-              Single Bevel: $3.50 per inch
+              <h2>
+                Bevel Repair: <br /> $10
+              </h2>
               <p>
-                <small>This is some smaller text.</small>
+                <small>Bread Knives, Etc.</small>
               </p>{" "}
               <br />
-              Serrated: $3.00 per inch
+              <h2>
+                Thinning: <br /> $15 & Up
+              </h2>
               <p>
-                <small>This is some smaller text.</small>
+                <small>Maintenance to keep that edge workin'.</small>
               </p>{" "}
               <br />
             </p>

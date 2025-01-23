@@ -57,43 +57,43 @@ function App() {
               <br />
               <section>
                 <p className="bio-copy">
-                  This story begins like many chef's, in restaurants where the
-                  pursuit of excellence was not just a goal, but a way of life.
-                  From bustling restaurants in Mexico City, to fine dining
-                  establishments in Phoenix, Austin, and Denver. We have
-                  developed an intimate understanding and respect of the tools
-                  chefs rely on to bring their culinary visions to life. Years
-                  of hands-on expertise, inspired the creation of a service that
-                  delivers unmatched quality and attention to detail.
+                  Yep, That's me. You're probably wondering how I got here...
+                  Well It all started about 12 years ago in the back of a pizza
+                  shop in Nowhere, Colorado. Well...That's where I started
+                  cooking at least, but it was never my plan to end up in this
+                  industry. I always thought I would be a designer of some sort,
+                  most likely an architect.
                 </p>
                 <br />
+              </section>
+              {/* <section>
+                <p className="bio-copy"> </p>
+                <br />
+              </section> */}
+              <section>
+                <p className="bio-copy">
+                  So that is what took me to attend School at Arizona State
+                  University. It was while studying architorture there that I
+                  realized I would rather be poor in a kitchen than be poor in a
+                  studio. So I started cooking at real restaurants, not just
+                  slinging pizzas out of my mothers Honda Civic. This took me
+                  from Phoenix to California and Mexico back to Colorado and
+                  finally to my place of residence today, Austin, TX.
+                  <br />
+                </p>
               </section>
               <section>
                 <p className="bio-copy">
                   {" "}
-                  Stay Sharp ATX, believes that a well-honed blade is the heart
-                  of every great kitchen. Founded by a seasoned veteran of the
-                  food and beverage industry, our company is built on a
-                  foundation of passion, precision, and a deep appreciation for
-                  the craft of cooking. With decades of experience working in
-                  renowned kitchens around the globe, our founder has witnessed
-                  firsthand the transformative power of a perfectly sharpened
-                  knife.
+                  Along the way I fell in love with a subgenre of chef culture,
+                  that being the cult of really high end and beautiful kitchen
+                  knives, Hours of research and hours spent talking to other
+                  knife shop owners has led me to this place today. The still
+                  poor owner of a tiny, online sharpening and kitchen knife (and
+                  other cooking and dining things) shop. Welcome!
                 </p>
+
                 <br />
-              </section>
-              <section>
-                <p className="bio-copy">
-                  We are more than just a knife sharpening company—we are a
-                  partner to chefs, line cooks restaurateurs, and home cooks.
-                  Anyone who values their craft and the tools that make it
-                  happen. Our mission is simple:
-                  <br />
-                  to ensure that your tools are always as sharp as your skills.
-                  Whether you’re preparing a family meal or crafting a
-                  masterpiece for paying customers, we’re here to help you cut
-                  through the bs and stay sharp.
-                </p>
               </section>
             </div>
           </div>

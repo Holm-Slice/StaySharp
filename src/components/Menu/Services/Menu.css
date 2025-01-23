@@ -29,8 +29,8 @@
 
 .menu-container h1 {
   text-align: center;
-  font-size: 50px;
-  padding-bottom: 15px;
+  font-size: 40px;
+  padding-top: 20px;
   /* text-shadow: 0 5px 10px rgb(209, 154, 197); */
 }
 
@@ -72,6 +72,27 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
+}
+
+.menu-card h2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* top: 10px; */
+  bottom: 40%;
+  width: 0;
+  height: 2™`px; /* Adjust the height as needed */
+  background-color: white;
+  transition: width 0.7s ease-in-out;
+}
+
+.menu-card h2:hover::after {
+  width: 100%;
 }
 
 .menu-container .menu-card-container {
