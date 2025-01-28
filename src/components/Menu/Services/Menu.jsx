@@ -11,11 +11,6 @@ function Menu() {
 
         <div className="menu-card-container">
           <div className="menu-card">
-            <img
-              className="services-svg"
-              src="public/assets/imgs/SVGs/chef-knife-sharpening-service.svg"
-              alt="chef-knife-image"
-            />
             <h1>Knife Sharpening</h1>
             {/* <br />
             <h3>
@@ -23,7 +18,7 @@ function Menu() {
               are live
             </h3> */}
             <br />
-            <p className="services-offered">
+            <p className="services-offered-extras">
               <h2>
                 Western Knives: <br /> $1 Per Inch{" "}
               </h2>
@@ -44,23 +39,24 @@ function Menu() {
               <p>
                 <small>Yanagiba, Deba, Usuba, Etc</small>
               </p>{" "}
-              {/* <br />
-              <h2>Serrated: $3 per inch</h2>
+              <br />
+              <h2>
+                Rehandling <br />
+                15 & Up
+              </h2>
               <p>
-                <small>This is some smaller text.</small>
+                <small>Treat Yo Hand To Something Niiiice.</small>
               </p>{" "}
-              <br /> */}
+              <br />
             </p>
-            <a href="#" className="services-btn">
+            <button
+              onClick={() => "https://your-shopify-page-url.com"}
+              className="services-btn"
+            >
               BOOK NOW
-            </a>
+            </button>
           </div>
           <div className="menu-card">
-            <img
-              className="services-svg"
-              src="public/assets/imgs/SVGs/chef-knife-sharpening-service.svg"
-              alt="chef-knife-image"
-            />
             <h1>Knife Repairs</h1>
             <br />
 
@@ -76,7 +72,7 @@ function Menu() {
                 Tip Repair: <br /> $7 % Up{" "}
               </h2>
               <p>
-                <small>Repair that tip you accidentally broke</small>
+                <small>Repair that tip you broke</small>
               </p>{" "}
               <br />
               <h2>
@@ -90,54 +86,55 @@ function Menu() {
                 Thinning: <br /> $15 & Up
               </h2>
               <p>
-                <small>Maintenance to keep that edge workin'.</small>
+                <small>
+                  Give your knife a little extra love to keep that edge workin'.
+                </small>
               </p>{" "}
               <br />
             </p>
-            <button href="#" className="services-btn">
+            <button
+              onClick={() => "https://your-shopify-page-url.com"}
+              className="services-btn"
+            >
               BOOK NOW
             </button>
           </div>
           <div className="menu-card">
-            <img
-              className="services-svg"
-              src="public/assets/imgs/SVGs/chef-knife-sharpening-service.svg"
-              alt="chef-knife-image"
-            />
-            <h2>Knife Sharpening</h2>
-            <br />
-            <h3>
-              Our knife sharpening service is the best around. Local and mail-in
-              are live
-            </h3>
+            <h1>Rando Blades</h1>
             <br />
             <p className="services-offered">
-              Western: $1.50 per inch{" "}
+              <h2>
+                Shears: <br /> $20
+              </h2>
               <p>
-                <small>This is some smaller text.</small>
+                <small>Sharpen Your Kitchen, Hair, or Pruning Device.</small>
               </p>{" "}
               <br />
-              Japanese: $2.00 per inch{" "}
+              <h2>
+                Mandolins <br />
+                $7
+              </h2>
               <p>
-                <small>This is some smaller text.</small>
+                <small>Cut Your Finger Off Again.</small>
               </p>{" "}
               <br />
-              Single Bevel: $3.50 per inch
-              <p>
-                <small>This is some smaller text.</small>
-              </p>{" "}
-              <br />
-              Serrated: $3.00 per inch
+              <h2>
+                Total Restoration <br />
+                $50 & Up
+              </h2>
               <p>
                 <small>This is some smaller text.</small>
               </p>{" "}
               <br />
             </p>
-            <a href="#" className="services-btn">
+            <button
+              onClick={() => "https://your-shopify-page-url.com"}
+              className="services-btn"
+            >
               BOOK NOW
-            </a>
+            </button>
           </div>
-          <div className="menu-card">
+          {/* <div className="menu-card">
             <img
               className="services-svg"
               src="public/assets/imgs/SVGs/chef-knife-sharpening-service.svg"
@@ -174,7 +171,7 @@ function Menu() {
             <a href="#" className="services-btn">
               BOOK NOW
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

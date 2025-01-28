@@ -21,9 +21,9 @@ function App() {
   return (
     <div className="main-app-div">
       <Navbar />
-      <HorizontalScroller />
-      <VideoPlayer />
       <Divider />
+      <HorizontalScroller />
+
       {/* <HorizontalScroller /> */}
       <Section id="home" title="HOME" className="section-spacing">
         <div className="home-cont">
@@ -33,6 +33,13 @@ function App() {
           </h1>{" "}
           <h2 className="header-copy">...We Do It All!</h2>{" "}
         </div>
+      </Section>
+      <Divider />
+      <VideoPlayer />
+      <Divider />
+
+      <Section id="services" title="SERVICES" className="section-spacing">
+        <Menu />
       </Section>
       <Divider />
 
@@ -51,7 +58,7 @@ function App() {
 
             <div className="bio-columns">
               <div className="bio-copy-h2">
-                <h2> About us!</h2>
+                <h2>Lore...</h2>
               </div>
 
               <br />
