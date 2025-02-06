@@ -1,19 +1,15 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
+module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Bebas Neue", "sans-serif"],
+        slab: ["Roboto Slab", "serif"],
+      },
+      colors: {
+        my_teal: "#73cab3",
+      },
+    },
   },
+  variants: {},
   plugins: [],
 };
-
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [
-//     "./src/**/*.{js,jsx,ts,tsx}",
-//   ],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
