@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="main-app-div">
       <Navbar />
-      <Divider />
+      {/* <Divider /> */}
       <HorizontalScroller />
 
       {/* <HorizontalScroller /> */}

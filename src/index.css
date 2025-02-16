@@ -1,9 +1,12 @@
+/* @import "tailwind.css"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "custom1";
   src: url("/assets/fonts/Typesauce-2OX9w.ttf");
 }
-
-@import "tailwind.css";
 
 * {
   padding: 0;

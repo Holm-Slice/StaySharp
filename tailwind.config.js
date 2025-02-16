@@ -1,15 +1,15 @@
-module.exports = {
+// module.exports = {
+//   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+//   theme: {
+//     extend: {},
+//   },
+//   plugins: [],
+// };
+
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ["Bebas Neue", "sans-serif"],
-        slab: ["Roboto Slab", "serif"],
-      },
-      colors: {
-        my_teal: "#73cab3",
-      },
-    },
+    extend: {},
   },
-  variants: {},
   plugins: [],
 };
