@@ -63,8 +63,6 @@ html {
   font-weight: 600;
   color: rgb(69, 51, 147);
   margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
   /* text-shadow: -1px 0 rgb(69, 51, 147), 0 1px rgb(69, 51, 147),
     1px 0 rgb(69, 51, 147), 0 -1px rgb(69, 51, 147); */
 }

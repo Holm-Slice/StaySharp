@@ -10,6 +10,7 @@ import Menu from "./components/Menu/Services/Menu";
 import "./App.css";
 import Divider from "./components/Divider/Divider";
 import ContactForm from "./components/ContactForm/ContactForm";
+import ServiceCardTailwind from "./components/ServiceCardTailwind/ServiceCardTailwind";
 
 const images = [
   "/assets/Images/chef-knife1.jpg",
@@ -23,24 +24,28 @@ function App() {
       <Navbar />
       {/* <Divider /> */}
       <HorizontalScroller />
-
+      <VideoPlayer />
+      <Divider />
       {/* <HorizontalScroller /> */}
       <Section id="home" title="HOME" className="section-spacing">
         <div className="home-cont">
-          <h1 className="header-copy">
+          <h1 className="flex flex-col text-wrap text-align-center text-ss_purple text-4xl pb-2">
             Knives Sharp! Chips Gone! Got Something You're Looking to Buy or
             Sell, We'll Help Ya!{" "}
           </h1>{" "}
-          <h2 className="header-copy">...We Do It All!</h2>{" "}
+          <h2 className="flex flex-col text-wrap text-align-center text-ss_purple text-4xl pt-2">
+            ...We Do It All!
+          </h2>{" "}
         </div>
       </Section>
       <Divider />
-      <VideoPlayer />
-      <Divider />
+      <ServiceCardTailwind />
+
+      {/* <Divider />
 
       <Section id="services" title="SERVICES" className="section-spacing">
         <Menu />
-      </Section>
+      </Section> */}
       <Divider />
 
       <Section id="about" title="ABOUT" className="section-spacing">
@@ -108,10 +113,12 @@ function App() {
       </Section>
       <Divider />
       <ImageCarousel images={images} />
-      <Divider />
+      {/* <Divider />
       <Section id="services" title="SERVICES" className="section-spacing">
         <Menu />
-      </Section>
+      </Section> */}
+      <Divider />
+      <ServiceCardTailwind />
       <Divider />
       <Section id="contact" title="CONTACT" className="section-spacing">
         <ContactForm />
