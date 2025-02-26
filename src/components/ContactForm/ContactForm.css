@@ -6,6 +6,12 @@
   height: 100vh; /* Full viewport height */
   overflow: visible;
   padding-top: 20px;
+  margin-top: 40px;
+  z-index: 0;
+}
+
+.section-spacing {
+  padding-top: 200px; /* Adjust the value as needed */
 }
 
 .background-image {
@@ -82,25 +88,32 @@ button[type="submit"]:hover {
 /* Styles for screens smaller than 768px */
 @media (max-width: 768px) {
   .contact-form-container {
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
     background-size: contain; /* Adjust background size for mobile */
     width: 90%;
+    padding-top: 0px;
+    margin-top: 0px;
   }
 
   .background-image {
-    width: 550px; /* Adjust the size as needed */
-    height: 550px; /* Adjust the size as needed */
+    display: none;
   }
 
   .contact-form {
-    padding: 5px;
-    width: 90%;
-    max-width: 250px;
+    padding: 12px;
+    width: 70%; /* 20% smaller */
+    max-width: 400px; /* 20% smaller than 500px */
   }
 
   .form-group input,
   .form-group textarea {
     padding: 8px;
+  }
+
+  .section-spacing {
+    padding-top: 0px; /* Adjust the value as needed */
   }
 
   button {

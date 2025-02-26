@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ImageCarousel.css";
+import Divider from "../Divider/Divider";
 
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +25,8 @@ const ImageCarousel = ({ images }) => {
   }, []);
 
   return (
-    <div className="carousel-container">
+    <div className="max-w-full h-auto z-10">
+      <Divider />
       {/* <button className="carousel-button prev" onClick={prevSlide}>
         &#10094;
       </button> */}
@@ -36,6 +38,7 @@ const ImageCarousel = ({ images }) => {
       {/* <button className="carousel-button next" onClick={nextSlide}>
         &#10095;
       </button> */}
+      <Divider />
     </div>
   );
 };

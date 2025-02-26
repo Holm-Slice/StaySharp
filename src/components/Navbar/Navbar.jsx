@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import HorizontalScroller from "../HorizontalScroller/HorizontalScroller";
+import { smoothScroll } from "../../smoothScroll";
 import "./Navbar.css";
 
 function Navbar() {
@@ -24,6 +25,11 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleNavClick = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute("href");
+    smoothScroll(target, 2000); // 4000ms = 4 seconds
+  };
   return (
     <>
       {/* <HorizontalScroller id="scroller" /> */}
@@ -39,10 +45,18 @@ function Navbar() {
         <div className="nav-list">
           <ul>
             <li>
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#services">Services</a>
-              <a href="#contact">Contact</a>
+              <a href="#home" onClick={handleNavClick}>
+                Home
+              </a>
+              <a href="#about" onClick={handleNavClick}>
+                About
+              </a>
+              <a href="#services" onClick={handleNavClick}>
+                Services
+              </a>
+              <a href="#contact" onClick={handleNavClick}>
+                Contact
+              </a>
             </li>
           </ul>
         </div>

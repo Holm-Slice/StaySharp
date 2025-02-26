@@ -94,6 +94,38 @@
   z-index: 999; /* Ensure it is below the navbar */
   /* Add other styles as needed */
 }
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .nav-list ul {
+    flex-direction: column; /* Stack the items vertically on small screens */
+  }
+
+  .navbar-logo-img {
+    margin: 0; /* Remove margins */
+    padding: 10px 0; /* Add padding for spacing */
+    justify-content: center; /* Center the logo */
+  }
+
+  .navbar-logo-img img {
+    height: 40px; /* Smaller height for the logo image */
+    padding-bottom: 10px; /* Remove bottom padding */
+  }
+
+  .nav-list li {
+    margin-left: 0; /* Remove left margin */
+    padding-top: 60px; /* Adjust padding */
+    padding-left: 60px; /* Remove left padding */
+  }
+
+  .nav-list a {
+    padding-top: 10px; /* Adjust padding */
+  }
+
+  .nav-list a::after {
+    display: none; /* Remove hover decoration on small screens */
+  }
+}
 /* .nav-list a:hover {
   text-decoration: line-through;
   transition: text-decoration 0.5s ease-in-out;

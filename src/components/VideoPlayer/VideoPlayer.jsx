@@ -3,9 +3,9 @@ import "./VideoPlayer.css";
 
 const VideoPlayer = () => {
   return (
-    <div className="video-player">
+    <div className="max-w-full h-auto">
       <div className="responsive-video">
-        <video className="actual-video" autoPlay muted loop>
+        <video className="" autoPlay muted loop>
           <source
             src="/assets/Video/CHRIS-ASMR-VID-SQUARE.mp4"
             type="video/mp4"

@@ -1,7 +1,7 @@
 function ServiceCardTailwind() {
   return (
     <div className="bg-white flex flex-col justify-center items-center uppercase">
-      <h1 className="text-4xl text-ss_purple pt-4 ">Fixin's </h1>
+      <h1 className="text-4xl text-ss_purple pt-4 uppercase ">Fixin's </h1>
       <main className="bg-white border-2 border-ss_purple w-full max-w-xs m-10 p-3 md:grid md:grid-cols-2 md:max-w-3xl md:gap-4 md:p-5 bg-mobile bg-no-repeat bg-bottom md:bg-desktop shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4">
         <img
           src="orange.jpg"
