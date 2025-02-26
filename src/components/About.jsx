@@ -17,7 +17,7 @@ function About() {
         <div className="centered-container overflow-hidden md:w-1/2">
           <div className="top-bio-banner"></div>
 
-          <div className="flex flex-col justify-center align-center text-ss_purple text-xl pt-6 sm:p-12 text-center overflow-hidden">
+          <div className="flex flex-col justify-center align-center text-ss_purple text-xl pt-6 sm:p-12 text-center overflow-hidden px-8">
             <div className="flex flex-col justify-center align-center text-ss_purple text-4xl pt-6 text-center sm:p-12">
               <h2 className="">Lore...</h2>
             </div>
