@@ -95,6 +95,7 @@ button[type="submit"]:hover {
     width: 90%;
     padding-top: 0px;
     margin-top: 0px;
+    padding-left: 40px;
   }
 
   .background-image {
@@ -102,7 +103,7 @@ button[type="submit"]:hover {
   }
 
   .contact-form {
-    padding: 12px;
+    padding: 14px;
     width: 70%; /* 20% smaller */
     max-width: 400px; /* 20% smaller than 500px */
   }
