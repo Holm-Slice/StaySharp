@@ -115,7 +115,7 @@
   .nav-list li {
     margin-left: 0; /* Remove left margin */
     padding-top: 60px; /* Adjust padding */
-    padding-left: 60px; /* Remove left padding */
+    padding-left: 40px; /* Remove left padding */
   }
 
   .nav-list a {
