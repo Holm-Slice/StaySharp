@@ -90,12 +90,12 @@ button[type="submit"]:hover {
   .contact-form-container {
     align-items: center;
     justify-content: center;
-    padding: 0px;
+    padding: 30px;
     background-size: contain; /* Adjust background size for mobile */
     width: 100%;
     padding-top: 0px;
     margin-top: 0px;
-    padding-left: 40px;
+    /* padding-left: 0px; */
   }
 
   .background-image {
