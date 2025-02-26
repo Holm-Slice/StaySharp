@@ -1,6 +1,7 @@
 .contact-form-container {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full viewport height */

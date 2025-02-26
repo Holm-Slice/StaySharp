@@ -24,7 +24,7 @@ function About() {
 
             <br />
 
-            <section className="sm:line-clamp-2 flex flex-col text-wrap justify-center align-center text-ss_purple text-lg pt-6 text-center overflow-hidden">
+            <section className=" overflow-hidden sm:pb-8 flex flex-col text-wrap justify-center align-center text-ss_purple text-lg pt-6 text-center mt-6">
               <p className="flex flex-col text-wrap justify-center align-center text-ss_purple text-lg pt-6 text-center">
                 Yep, That's me. You're probably wondering how I got here... Well
                 It all started about 12 years ago in the back of a pizza shop in
