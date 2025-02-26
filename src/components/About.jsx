@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <Divider />
-      <div className="flex flex-col my-8 overflow-hidden md:flex-row">
+      <div className="flex flex-col mt-8 overflow-hidden md:flex-row">
         <div className="overflow-hidden md:w-1/2">
           <img
             className="about-img object-cover w-full h-full"

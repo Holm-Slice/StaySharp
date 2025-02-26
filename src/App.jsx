@@ -34,9 +34,9 @@ function App() {
       <VideoPlayer />
       <Divider />
       {/* <HorizontalScroller /> */}
-      <Section id="home" title="HOME" className="section-spacing">
+      <Section id="home" title="HOME" className="pb-20">
         <div className="flex flex-col">
-          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-2 pb-6 text-center">
+          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-10 pb-6 text-center">
             Knives Sharp! Chips Gone! Got Something You're Looking to Buy or
             Sell, We'll Help Ya!{" "}
           </h1>{" "}
