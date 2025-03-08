@@ -3,7 +3,7 @@ import "./VideoPlayer.css";
 
 const VideoPlayer = () => {
   return (
-    <div className="max-w-full h-auto">
+    <div className="max-w-full max-h-auto flex justify-center items-center">
       <div className="responsive-video">
         <video className="" autoPlay muted loop>
           <source

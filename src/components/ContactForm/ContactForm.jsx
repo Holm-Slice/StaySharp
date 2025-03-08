@@ -112,7 +112,7 @@ function ContactForm() {
   return (
     <div className="flex flex-col ">
       <div className="contact-form-container">
-        <div className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-10 pb-6 text-center">
+        <div className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-10 mt-16 text-center">
           <h1>Let's Connect</h1>
         </div>
         <div className="background-image"></div>

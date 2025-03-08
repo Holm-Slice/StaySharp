@@ -14,6 +14,15 @@ export default {
         ss_teal: "#73CAB3",
         ss_pink: "#d19ac5",
       },
+      keyframes: {
+        underline: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+      },
+      animation: {
+        underline: "underline 1s ease-in-out forwards",
+      },
     },
   },
   plugins: [lineClamp],
