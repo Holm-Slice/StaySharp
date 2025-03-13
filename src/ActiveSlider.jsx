@@ -127,11 +127,11 @@ function ActiveSlider() {
         <img
           src={KnifeLeftIcon}
           alt="Previous"
-          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-auto transform rotate-45 transition-transform duration-[2000ms] ease-in-out hover:-rotate-45 "
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-auto transform rotate-45 transition-transform duration-[2000ms] ease-in-out hover:-rotate-45 cursor-pointer"
         />
         <p className="hidden md:block">Dice</p>
       </button>
-      <div className="w-full max-w-xs sm:max-w-sm md:max-w-4xl flex md:overflow-hidden sm:overflow-visible relative justify-center">
+      <div className="w-full max-w-xs sm:max-w-sm md:max-w-4xl flex md:overflow-hidden sm:overflow-auto relative justify-center">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
