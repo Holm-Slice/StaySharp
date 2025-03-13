@@ -3,9 +3,14 @@ import "./VideoPlayer.css";
 
 const VideoPlayer = () => {
   return (
-    <div className="max-w-full max-h-auto flex justify-center items-center">
+    <div className="max-w-100% max-h-auto flex justify-center items-center">
       <div className="responsive-video">
-        <video className="" autoPlay muted loop>
+        <video
+          className="max-w-100% flex justify-center items-center"
+          autoPlay
+          muted
+          loop
+        >
           <source
             src="/assets/Video/CHRIS-ASMR-VID-SQUARE.mp4"
             type="video/mp4"

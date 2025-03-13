@@ -78,19 +78,19 @@
 
 import React, { useState } from "react";
 import ServiceCardTailwind from "./components/ServiceCardTailwind/ServiceCardTailwind";
-import PrevIcon from "/assets/imgs/SVGs/knife-left.svg";
-import NextIcon from "/assets/imgs/SVGs/knife-right.svg";
+import KnifeLeftIcon from "../public/assets/imgs/SVGs/knife-left.svg";
+import KnifeRightIcon from "../public/assets/imgs/SVGs/knife-right.svg";
 
 const serviceCards = [
   {
     title: "Western Style Knife Sharpening",
-    description: "Wustof, Zwilling, MadeIn, yooooou name it!",
+    description: "Wustof, Zwilling, Shun, yooooou name it!",
     price: "Starting at $1 per inch",
     image: "orange.jpg",
   },
   {
     title: "Japanese Style Knife Sharpening",
-    description: "Takayuki, Global, Miyabi, and more!",
+    description: "Shun, Global, Miyabi, and more!",
     price: "Starting at $2 per inch",
     image: "japanese-knife.jpg",
   },
@@ -119,21 +119,19 @@ function ActiveSlider() {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
-      <section className="flex flex-col items-center justify-center">
-        <button
-          onClick={handlePrev}
-          className="absolute left-40 rounded-full p-2 text-ss_purple fill-ss_purple font-bold"
-        >
-          <img
-            src={PrevIcon}
-            alt="Previous"
-            className="w-16 h-auto rotate-45 hover:transition-transform hover:-rotate-45 hover:duration-300 hover:ease-in-out fill-ss_purple ml-4"
-          />
-          <p>Dice</p>
-        </button>
-      </section>
-      <div className="w-full max-w-4xl flex overflow-hidden relative">
+    <div className="relative w-full h-full flex items-center justify-center p-4 sm:p-6 md:p-8">
+      <button
+        onClick={handlePrev}
+        className="absolute left-4 sm:left-6 md:left-10 rounded-full p-2 text-ss_purple font-bold"
+      >
+        <img
+          src={KnifeLeftIcon}
+          alt="Previous"
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-auto transform rotate-45 transition-transform duration-[2000ms] ease-in-out hover:-rotate-45 "
+        />
+        <p className="hidden md:block">Dice</p>
+      </button>
+      <div className="w-full max-w-xs sm:max-w-sm md:max-w-4xl flex md:overflow-hidden sm:overflow-visible relative justify-center">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -150,19 +148,17 @@ function ActiveSlider() {
           ))}
         </div>
       </div>
-      <section className="flex flex-col items-center justify-center">
-        <button
-          onClick={handleNext}
-          className="absolute right-40 rounded-full p-2 text-ss_purple fill-ss_purple font-bold"
-        >
-          <img
-            src={NextIcon}
-            alt="Next"
-            className="w-16 h-auto -rotate-45 hover:transition-transform hover:rotate-45 hover:duration-300 hover:ease-in-out fill-ss_purple mr-6"
-          />
-          <p>Slice</p>
-        </button>
-      </section>
+      <button
+        onClick={handleNext}
+        className="absolute right-4 sm:right-6 md:right-10 rounded-full p-2 text-ss_purple font-bold"
+      >
+        <img
+          src={KnifeRightIcon}
+          alt="Next"
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-auto transform -rotate-45 transition-transform duration-[2000ms] ease-in-out hover:rotate-45"
+        />
+        <p className="hidden md:block">Slice</p>
+      </button>
     </div>
   );
 }
