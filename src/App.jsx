@@ -32,9 +32,12 @@ function App() {
       <Divider />
       <Section id="home" title="HOME" className="pb-20">
         <div className="flex flex-col mx-10 ">
-          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-10 pb-2 text-center">
-            Knives Sharp! Chips Gone! Got Something You're Looking to Buy or
-            Sell, We'll Help Ya!
+          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-10 pb-2 text-center uppercase">
+            Knives Sharp! Chips Gone!
+          </h1>
+          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-10 pb-2 text-center uppercase">
+            Got Something You're Looking to Buy or Sell, We'll Help Ya
+            Straighten It Out!
           </h1>
         </div>
       </Section>

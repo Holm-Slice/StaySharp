@@ -37,6 +37,7 @@ function Navbar() {
       <div className="navbar-cont">
         <div className="navbar-logo-img">
           <img
+            className="navbar-logo-img"
             src="/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
             alt="stay-sharp-dont-be-dull-logo"
           />

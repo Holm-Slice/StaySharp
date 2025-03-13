@@ -6,21 +6,21 @@
   align-items: center;
   height: 100vh; /* Full viewport height */
   overflow: visible;
-  padding-top: 20px;
-  margin-top: 40px;
+  padding-top: 10px;
+  margin-top: 20px;
   z-index: 0;
 }
 
 .section-spacing {
-  padding-top: 200px; /* Adjust the value as needed */
+  padding-top: 150px; /* Adjust the value as needed */
 }
 
 .background-image {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1200px; /* Adjust the size as needed */
-  height: 1200px; /* Adjust the size as needed */
+  width: 1000px; /* Adjust the size as needed */
+  height: 1000px; /* Adjust the size as needed */
   transform: translate(-50%, -50%);
   background-image: url("/assets/Images/logo-circle-10x.png");
   background-size: cover;
@@ -46,7 +46,7 @@
   width: 100%;
   max-width: 500px;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;

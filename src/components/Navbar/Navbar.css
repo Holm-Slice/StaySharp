@@ -11,7 +11,7 @@
   left: 0;
   width: 100vw;
   z-index: 9999;
-  padding: 0 50px; /* Add some padding if needed */
+  padding: 0px; /* Add some padding if needed */
   position: relative;
 }
 
@@ -20,10 +20,10 @@
   width: auto;
   justify-content: left;
   height: 200px;
-  margin-top: 35px;
+  margin-top: 36px;
   margin-left: 50px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 60px;
+  padding-bottom: 21px;
 }
 
 .nav-list ul {
@@ -96,53 +96,89 @@
 }
 
 /* Media query for small screens */
+/* Media query for small screens */
 @media (max-width: 768px) {
-  .nav-list ul {
+  .navbar-cont {
     flex-direction: column; /* Stack the items vertically on small screens */
-    padding-bottom: 0; /* Remove padding */
+    align-items: center; /* Center the items */
+    padding: 0px 0; /* Add padding */
   }
 
   .navbar-logo-img {
-    margin: 0; /* Remove margins */
-    padding: 10px 0; /* Add padding for spacing */
-    justify-content: center; /* Center the logo */
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-right: 75px;
   }
 
   .navbar-logo-img img {
     height: 40px; /* Smaller height for the logo image */
-    padding-bottom: 10px; /* Remove bottom padding */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  .nav-list ul {
+    flex-direction: column; /* Stack the items vertically on small screens */
+    align-items: center; /* Center the list items */
+    padding-top: 40px; /* Add top padding */
+    /* Add left padding */
+    margin: 0; /* Add even space around */
   }
 
   .nav-list li {
-    margin-left: 0px; /* Remove left margin */
-    padding-top: 80px; /* Adjust padding */
-    padding-left: 40px; /* Remove left padding */
+    margin: 20px 0; /* Add margin to space items evenly */
+    padding: 0; /* Add padding */
+    width: 100%; /* Ensure full width for centering */
+    text-align: center; /* Center the text */
+    padding-left: 150px;
   }
 
   .nav-list a {
-    padding-top: 10px; /* Adjust padding */
-    margin-left: 20px;
+    padding: 10px 0; /* Adjust padding */
   }
 
   .nav-list a::after {
-    display: none; /* Remove hover decoration on small screens */
+    top: 90%; /* Adjust this value to move the line lower */
   }
 }
-/* .nav-list a:hover {
-  text-decoration: line-through;
-  transition: text-decoration 0.5s ease-in-out;
-} */
 
-/* .nav-list a:hover {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.5s ease-in-out;
+@media (max-width: 325px) {
+  .navbar-cont {
+    flex-direction: column; /* Stack the items vertically on small screens */
+    align-items: center; /* Center the items */
+    padding: 0px 0; /* Add padding */
+  }
+
+  .navbar-logo-img {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-right: 75px;
+  }
+
+  .navbar-logo-img img {
+    height: 40px; /* Smaller height for the logo image */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  .nav-list ul {
+    flex-direction: column; /* Stack the items vertically on small screens */
+    align-items: center; /* Center the list items */
+    padding-top: 40px; /* Add top padding */
+    /* Add left padding */
+    margin: 0; /* Add even space around */
+  }
+
+  .nav-list li {
+    margin: 20px 0; /* Add margin to space items evenly */
+    padding: 0; /* Add padding */
+    width: 100%; /* Ensure full width for centering */
+    text-align: center; /* Center the text */
+    padding-left: 150px;
+  }
+
+  .nav-list a {
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  .nav-list a::after {
+    top: 90%; /* Adjust this value to move the line lower */
+  }
 }
-
-.nav-list a:hover: {
-  width: 100%;
-} */
