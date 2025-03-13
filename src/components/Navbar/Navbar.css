@@ -99,6 +99,7 @@
 @media (max-width: 768px) {
   .nav-list ul {
     flex-direction: column; /* Stack the items vertically on small screens */
+    padding-bottom: 0; /* Remove padding */
   }
 
   .navbar-logo-img {
@@ -113,13 +114,14 @@
   }
 
   .nav-list li {
-    margin-left: 0; /* Remove left margin */
-    padding-top: 60px; /* Adjust padding */
+    margin-left: 0px; /* Remove left margin */
+    padding-top: 80px; /* Adjust padding */
     padding-left: 40px; /* Remove left padding */
   }
 
   .nav-list a {
     padding-top: 10px; /* Adjust padding */
+    margin-left: 20px;
   }
 
   .nav-list a::after {
