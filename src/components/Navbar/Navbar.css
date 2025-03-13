@@ -171,7 +171,7 @@
     padding: 0; /* Add padding */
     width: 100%; /* Ensure full width for centering */
     text-align: center; /* Center the text */
-    padding-left: 150px;
+    padding-left: 100px;
   }
 
   .nav-list a {
