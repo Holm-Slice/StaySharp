@@ -1,67 +1,10 @@
 @import url("https://use.typekit.net/uqd1zxm.css");
 
-.navbar-cont {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space between logo and nav items */
-  background-color: rgb(69, 51, 147);
-  color: white;
-  position: fixed;
-  /* top: 57px; */
-  left: 0;
-  width: 100vw;
-  z-index: 9999;
-  padding: 0px; /* Add some padding if needed */
-  position: relative;
-}
-
-.navbar-logo-img {
-  display: flex;
-  width: auto;
-  justify-content: left;
-  height: 200px;
-  margin-top: 36px;
-  margin-left: 50px;
-  margin-bottom: 60px;
-  padding-bottom: 21px;
-}
-
-.nav-list ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row; /* Changed to row for horizontal layout */
-  align-items: center;
-  margin: 0;
-  padding: 10px;
-}
-
-.nav-list li {
-  margin-left: 30px; /* Space between list items */
-  padding: 5px;
-  padding-top: 175px;
-}
-
 .nav-list a {
-  color: white;
-  text-decoration: none;
   font-family: "custom1", "azo-sans-web", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 25px;
-  padding: 45px 15px 25px 25px;
+
+  padding: 0;
   /* padding-top: 25px; */
-}
-
-.nav-list li {
-  margin-left: 30px; /* Space between list items */
-  padding: 5px;
-  padding-top: 175px;
-}
-
-.nav-list a {
-  text-decoration: none;
-  position: relative;
-  color: inherit; /* Ensure the text color is inherited */
 }
 
 .nav-list a::after {
@@ -70,7 +13,7 @@
   width: 100%;
   height: 5px;
   background-color: rgb(69, 51, 147); /* Use the current text color */
-  top: 61%;
+  top: 52%;
   left: 0;
   transform: scaleX(0);
   transition: transform 0.7s ease;
@@ -80,105 +23,5 @@
   transform: scaleX(1);
 }
 
-.horizontal-scroller {
-  /* Initial styles for the scroller */
-  width: 100%;
-  /* Add other styles as needed */
-}
-
-.fixed {
-  position: fixed; /* Make the scroller fixed */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999; /* Ensure it is below the navbar */
-  /* Add other styles as needed */
-}
-
 /* Media query for small screens */
 /* Media query for small screens */
-@media (max-width: 768px) {
-  .navbar-cont {
-    flex-direction: column; /* Stack the items vertically on small screens */
-    align-items: center; /* Center the items */
-    padding: 0px 0; /* Add padding */
-  }
-
-  .navbar-logo-img {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    padding-right: 75px;
-  }
-
-  .navbar-logo-img img {
-    height: 40px; /* Smaller height for the logo image */
-    width: auto; /* Maintain aspect ratio */
-  }
-
-  .nav-list ul {
-    flex-direction: column; /* Stack the items vertically on small screens */
-    align-items: center; /* Center the list items */
-    padding-top: 40px; /* Add top padding */
-    /* Add left padding */
-    margin: 0; /* Add even space around */
-  }
-
-  .nav-list li {
-    margin: 20px 0; /* Add margin to space items evenly */
-    padding: 0; /* Add padding */
-    width: 100%; /* Ensure full width for centering */
-    text-align: center; /* Center the text */
-    padding-left: 150px;
-  }
-
-  .nav-list a {
-    padding: 10px 0; /* Adjust padding */
-  }
-
-  .nav-list a::after {
-    top: 90%; /* Adjust this value to move the line lower */
-  }
-}
-
-@media (max-width: 325px) {
-  .navbar-cont {
-    flex-direction: column; /* Stack the items vertically on small screens */
-    align-items: center; /* Center the items */
-    padding: 0px 0; /* Add padding */
-  }
-
-  .navbar-logo-img {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    padding-right: 75px;
-  }
-
-  .navbar-logo-img img {
-    height: 40px; /* Smaller height for the logo image */
-    width: auto; /* Maintain aspect ratio */
-  }
-
-  .nav-list ul {
-    flex-direction: column; /* Stack the items vertically on small screens */
-    align-items: center; /* Center the list items */
-    padding-top: 40px; /* Add top padding */
-    /* Add left padding */
-    margin: 0; /* Add even space around */
-  }
-
-  .nav-list li {
-    margin: 20px 0; /* Add margin to space items evenly */
-    padding: 0; /* Add padding */
-    width: 100%; /* Ensure full width for centering */
-    text-align: center; /* Center the text */
-    padding-left: 50px;
-  }
-
-  .nav-list a {
-    padding: 10px 0; /* Adjust padding */
-  }
-
-  .nav-list a::after {
-    top: 90%; /* Adjust this value to move the line lower */
-  }
-}

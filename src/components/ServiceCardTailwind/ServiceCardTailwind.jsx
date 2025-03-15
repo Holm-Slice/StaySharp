@@ -37,11 +37,8 @@ import React from "react";
 
 function ServiceCardTailwind({ title, description, price, image }) {
   return (
-    <div className="flex flex-col justify-center items-center z-50 p-4 m-4 md:p-8 md:m-8">
-      <h1 className="relative text-2xl md:text-4xl text-ss_purple pb-4 md:pb-10 cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
-        Fixin's
-      </h1>
-      <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 md:grid md:grid-cols-2 md:max-w-4xl md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 md:gap-8">
+    <div className="flex flex-col justify-center items-center p-4 m-4 md:p-8 md:m-8 overflow-hidden">
+      <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 md:grid md:grid-cols-2  md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4">
         <img
           src={image}
           alt={title}

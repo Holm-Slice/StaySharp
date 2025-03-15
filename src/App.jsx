@@ -32,15 +32,21 @@ function App() {
       <Divider />
       <Section id="home" title="HOME" className="pb-20">
         <div className="flex flex-col mx-10 ">
-          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-10 pb-2 text-center uppercase">
+          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple  pt-10 pb-2 text-center uppercase text-4xl max-sm:text-xl">
             Knives Sharp! Chips Gone!
           </h1>
-          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-4xl pt-10 pb-2 text-center uppercase">
+          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-xl sm:text-4xl pt-10 pb-2 text-center uppercase">
             Got Something You're Looking to Buy or Sell, We'll Help Ya
             Straighten It Out!
           </h1>
         </div>
       </Section>
+      <div>
+        {" "}
+        <h1 className="relative text-4xl md:text-4xl text-center text-ss_purple pb-4 md:pb-10 cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
+          Fixin's
+        </h1>
+      </div>
       <ActiveSlider />
       <About />
       <ImageCarousel images={images} />

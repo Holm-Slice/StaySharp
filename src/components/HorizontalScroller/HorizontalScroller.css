@@ -17,6 +17,7 @@
 
 .horizontal-scroller.fixed {
   top: -1px; /* Raise by 2 pixels when fixed */
+  z-index: 1000;
 }
 
 .scroll-content {

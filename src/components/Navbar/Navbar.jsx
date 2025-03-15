@@ -34,35 +34,64 @@ function Navbar() {
     <>
       {/* <HorizontalScroller id="scroller" /> */}
       {/* <nav className="navbar"> */}
-      <div className="navbar-cont">
-        <div className="navbar-logo-img">
+      {/* <HorizontalScroller id="scroller" /> */}
+
+      <div className="w-full bg-ss_purple text-white flex flex-col sm:flex-row items-center justify-between p-0 ">
+        {/* Logo Container */}
+        <div className="mb-0">
           <img
-            className="navbar-logo-img"
+            className="h-40 m-12"
             src="/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
-            alt="stay-sharp-dont-be-dull-logo"
+            alt="stay-sharp-don't-be-dull-logo"
           />
         </div>
-        {/* <h1>Stay Sharp</h1> */}
-        <div className="nav-list">
-          <ul>
-            <li>
-              <a href="#home" onClick={handleNavClick}>
+
+        {/* Navigation List */}
+        <div className="nav-list w-full md:w-auto ">
+          <ul className="flex flex-row max-sm:flex-row items-center justify-evenly m-0 p-5 mt-40  ">
+            <li className="p-0 text-center">
+              <a
+                href="#home"
+                onClick={handleNavClick}
+                className="text-white no-underline font-light text-2xl px-0 relative mr-12 "
+              >
                 Home
+                <span className="absolute w-full h-1.25 bg-ss_purple top-1/2 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-in-out"></span>
               </a>
-              <a href="#about" onClick={handleNavClick}>
+            </li>
+            <li className="p-0 text-center">
+              <a
+                href="#about"
+                onClick={handleNavClick}
+                className="text-white no-underline font-light text-2xl px-0 relative mr-12"
+              >
                 About
+                <span className="absolute w-full h-1.25 bg-ss_purple top-1/2 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-in-out"></span>
               </a>
-              <a href="#services" onClick={handleNavClick}>
+            </li>
+            <li className="p-0 text-center">
+              <a
+                href="#services"
+                onClick={handleNavClick}
+                className="text-white no-underline font-light text-2xl px-0 relative mr-12"
+              >
                 Services
+                <span className="absolute w-full h-1.25 bg-ss_purple top-1/2 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-in-out"></span>
               </a>
-              <a href="#contact" onClick={handleNavClick}>
+            </li>
+            <li className="p-0 text-center">
+              <a
+                href="#contact"
+                onClick={handleNavClick}
+                className="text-white no-underline font-light text-2xl px-0 relative mr-12"
+              >
                 Contact
+                <span className="absolute w-full h-1.25 bg-ss_purple top-1/2 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-in-out"></span>
               </a>
             </li>
           </ul>
         </div>
       </div>
-      {/* </nav> */}
     </>
   );
 }
