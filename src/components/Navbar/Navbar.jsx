@@ -47,8 +47,8 @@ function Navbar() {
         </div>
 
         {/* Navigation List */}
-        <div className="nav-list w-full md:w-auto ">
-          <ul className="flex flex-row max-sm:flex-row items-center justify-evenly m-0 p-5 mt-40  ">
+        <div className="nav-list w-full md:w-auto h-24 ">
+          <ul className="flex flex-row max-sm:flex-row items-center justify-evenly p-5 mt-10  ">
             <li className="p-0 text-center">
               <a
                 href="#home"

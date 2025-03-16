@@ -83,7 +83,7 @@
     padding: 20px;
   }
   .navbar-cont {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
     padding: 10px;
   }
@@ -100,7 +100,7 @@
   }
 
   .nav-list ul {
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 100%;
   }
 
