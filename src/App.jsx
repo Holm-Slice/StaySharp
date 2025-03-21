@@ -8,7 +8,7 @@ import "./App.css";
 import Divider from "./components/Divider/Divider";
 import ContactForm from "./components/ContactForm/ContactForm";
 import { smoothScroll } from "./smoothScroll";
-import About from "./components/About";
+import About from "./components/About/About";
 import ActiveSlider from "./ActiveSlider";
 
 const images = [

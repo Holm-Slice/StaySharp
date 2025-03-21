@@ -1,3 +1,4 @@
+/* Container for the form and background */
 .contact-form-container {
   position: relative;
   display: flex;
@@ -5,15 +6,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full viewport height */
-  overflow: visible;
+  /* overflow: hidden; */
   padding-top: 10px;
   margin-top: 20px;
 }
 
-.section-spacing {
-  padding-top: 150px; /* Adjust the value as needed */
-}
-
+/* Background image */
 .background-image {
   position: absolute;
   top: 50%;
@@ -21,13 +19,13 @@
   width: 1000px; /* Adjust the size as needed */
   height: 1000px; /* Adjust the size as needed */
   transform: translate(-50%, -50%);
-  background-image: url("/assets/Images/logo-circle-10x.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: rotate 20s linear infinite; /* Rotate animation */
   opacity: 0.1;
+  animation: rotate 20s linear infinite; /* Rotate animation */
+  z-index: 0; /* Ensure it stays behind the form */
+  pointer-events: none; /* Prevent the image from interfering with user interactions */
 }
 
+/* Rotate animation */
 @keyframes rotate {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -37,15 +35,25 @@
   }
 }
 
+/* Title container */
+.title-container {
+  z-index: 1; /* Ensure it stays above the background */
+  text-align: center;
+  color: #453393; /* Adjust color as needed */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
 .contact-form {
   position: relative;
-  z-index: ;
+  z-index: 1; /* Ensure it stays above the background */
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 500px;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -83,41 +91,4 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: rgb(115, 202, 179);
-}
-
-/* Styles for screens smaller than 768px */
-@media (max-width: 768px) {
-  .contact-form-container {
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background-size: contain; /* Adjust background size for mobile */
-    width: 100%;
-    padding-top: 0px;
-    margin-top: 0px;
-    /* padding-left: 0px; */
-  }
-
-  .background-image {
-    display: none;
-  }
-
-  .contact-form {
-    padding: 14px;
-    /* width: 100%; 20% smaller */
-    max-width: 500px; /* 20% smaller than 500px */
-  }
-
-  .form-group input,
-  .form-group textarea {
-    padding: 8px;
-  }
-
-  .section-spacing {
-    padding-top: 0px; /* Adjust the value as needed */
-  }
-
-  button {
-    padding: 8px;
-  }
 }

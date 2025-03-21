@@ -22,6 +22,7 @@ export default {
       },
       animation: {
         underline: "underline 1s ease-in-out forwards",
+        "spin-slow": "spin 20s linear infinite", // Correct,
       },
     },
   },

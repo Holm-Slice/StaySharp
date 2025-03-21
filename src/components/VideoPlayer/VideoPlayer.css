@@ -4,7 +4,7 @@
   width: 100vw;
   height: auto; /* Adjust this value to make the video height smaller */
   overflow: hidden;
-  position: relative;
+  position: absolute;
   background-color: none;
 }
 
@@ -15,7 +15,7 @@
 
 .actual-video {
   width: 100%;
-  height: auto; /* Adjust this value to make the video height smaller */
+  height: 50%; /* Adjust the percentage as needed */
   object-fit: cover;
   position: absolute;
   top: 0;

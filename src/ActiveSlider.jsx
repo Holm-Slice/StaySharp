@@ -119,25 +119,28 @@ function ActiveSlider() {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center p-4 sm:p-6 md:p-8">
+    <div className="relative w-full h-full flex items-center justify-center p-4 sm:p-8 md:p-8">
+      {/* Previous Button */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 sm:left-6 md:left-10 rounded-full p-2 text-ss_purple font-bold"
+        className="absolute lg:ml-40 left-2 sm:left-6 md:left-10 top-1/2 transform -translate-y-1/2 rounded-full p-2 text-ss_purple font-bold focus:outline-none z-50"
       >
         <img
           src={KnifeLeftIcon}
           alt="Previous"
-          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-auto transform rotate-45 transition-transform duration-[2000ms] ease-in-out hover:-rotate-45 cursor-pointer"
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transform rotate-45 transition-transform duration-500 ease-in-out hover:-rotate-45"
         />
-        <p className="hidden md:block">Dice</p>
+        <p className="hidden md:block text-center mt-2">Dice</p>
       </button>
+
+      {/* Slider Content */}
       <div className="w-full max-w-xs sm:max-w-sm md:max-w-4xl flex md:overflow-hidden sm:overflow-auto relative justify-center">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {serviceCards.map((card, index) => (
-            <div key={index} className="w-full flex-shrink-0">
+            <div key={index} className="w-full flex-shrink-0 ">
               <ServiceCardTailwind
                 title={card.title}
                 description={card.description}
@@ -148,16 +151,18 @@ function ActiveSlider() {
           ))}
         </div>
       </div>
+
+      {/* Next Button */}
       <button
         onClick={handleNext}
-        className="absolute right-4 sm:right-6 md:right-10 rounded-full p-2 text-ss_purple font-bold"
+        className="absolute lg:mr-40 right-2 sm:right-6 md:right-10 top-1/2 transform -translate-y-1/2 rounded-full p-2 text-ss_purple font-bold"
       >
         <img
           src={KnifeRightIcon}
           alt="Next"
-          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-auto transform -rotate-45 transition-transform duration-[2000ms] ease-in-out hover:rotate-45"
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transform -rotate-45 transition-transform duration-500 ease-in-out hover:rotate-45"
         />
-        <p className="hidden md:block">Slice</p>
+        <p className="hidden md:block text-center mt-2">Slice</p>
       </button>
     </div>
   );

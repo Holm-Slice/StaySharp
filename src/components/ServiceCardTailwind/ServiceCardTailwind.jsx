@@ -37,7 +37,7 @@ import React from "react";
 
 function ServiceCardTailwind({ title, description, price, image }) {
   return (
-    <div className="flex flex-col justify-center items-center p-4 m-4 md:p-8 md:m-8 ">
+    <div className="flex flex-col justify-center items-center p-4 m-4 md:p-8 md:m-8 overflow-hidden sm:overflow-hidden">
       <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 md:grid md:grid-cols-2  md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4">
         <img
           src={image}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HorizontalScroller from "../HorizontalScroller/HorizontalScroller";
+
 import { smoothScroll } from "../../smoothScroll";
 import "./Navbar.css";
 
@@ -36,11 +36,11 @@ function Navbar() {
       {/* <nav className="navbar"> */}
       {/* <HorizontalScroller id="scroller" /> */}
 
-      <div className="w-full bg-ss_purple text-white flex flex-col sm:flex-row items-center justify-between p-0 ">
+      <div className="w-full bg-ss_purple text-white flex flex-col sm:flex-row items-end justify-between p-0 ">
         {/* Logo Container */}
-        <div className="mb-0">
+        <div className=" mb-0 flex justify-center sm:justify-start w-full sm:w-auto ">
           <img
-            className="h-40 m-12"
+            className="h-40 m-12 ml-12 "
             src="/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
             alt="stay-sharp-don't-be-dull-logo"
           />
@@ -48,8 +48,8 @@ function Navbar() {
 
         {/* Navigation List */}
         <div className="nav-list w-full md:w-auto h-24 ">
-          <ul className="flex flex-row max-sm:flex-row items-center justify-evenly p-5 mt-10  ">
-            <li className="p-0 text-center">
+          <ul className="flex flex-row max-sm:flex-row items-end justify-evenly p-5 mt-10 uppercase mb-2">
+            <li className="p-0 text-center ">
               <a
                 href="#home"
                 onClick={handleNavClick}
