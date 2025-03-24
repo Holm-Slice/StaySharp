@@ -5,7 +5,10 @@ function About() {
   return (
     <>
       <Divider />
-      <div className="flex flex-col mt-12 md:flex-row mb-8 ml-8 md:ml-0">
+      <div
+        id="about"
+        className="flex flex-col mt-12 md:flex-row mb-8 ml-8 md:ml-0"
+      >
         {/* Image Section */}
         <div className="w-full md:w-1/2 h-auto flex items-center justify-center mb-8 md:mb-0">
           <img

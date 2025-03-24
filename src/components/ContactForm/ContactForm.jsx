@@ -40,7 +40,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="contact-form-container">
+    <div id="contact" className="contact-form-container">
       {/* Background Image */}
       <img
         src="/assets/Images/logo-circle-10x.png"

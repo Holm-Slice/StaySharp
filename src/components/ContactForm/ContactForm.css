@@ -16,13 +16,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1000px; /* Adjust the size as needed */
-  height: 1000px; /* Adjust the size as needed */
   transform: translate(-50%, -50%);
   opacity: 0.1;
   animation: rotate 20s linear infinite; /* Rotate animation */
   z-index: 0; /* Ensure it stays behind the form */
   pointer-events: none; /* Prevent the image from interfering with user interactions */
+  width: 1000px; /* Default size */
+  height: 1000px; /* Default size */
 }
 
 /* Rotate animation */
@@ -32,6 +32,22 @@
   }
   to {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* For small screens (sm) */
+  .background-image {
+    display: none; /* Hide the background image */
+  }
+}
+
+@media (max-width: 1024px) {
+  /* For medium screens (md) */
+  .background-image {
+    width: 800px;
+    height: 800px;
   }
 }
 

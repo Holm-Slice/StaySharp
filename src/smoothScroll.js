@@ -1,30 +1,30 @@
-export function smoothScroll(target, duration) {
-  const targetElement = document.querySelector(target);
-  if (!targetElement) return;
+export const smoothScroll = (target, duration = 800, offset = 80) => {
+  console.log(`Scrolling to target: ${target}`); // Debugging log
+  const element = document.querySelector(target);
+  if (!element) {
+    console.error(`Element with target ${target} not found.`);
+    return;
+  }
 
-  const start = window.pageYOffset;
-  const distance = targetElement.getBoundingClientRect().top;
+  const targetPosition = element.offsetTop - offset; // Subtract offset to prevent scrolling too far
+  const startPosition = window.scrollY; // Current scroll position
+  const distance = targetPosition - startPosition;
   let startTime = null;
 
-  function animation(currentTime) {
+  const animation = (currentTime) => {
     if (startTime === null) startTime = currentTime;
     const timeElapsed = currentTime - startTime;
-    const progress = Math.min(timeElapsed / duration, 1); // Ensure progress does not exceed 1
-    const easeProgress = easeInOutCubic(progress);
-    const scrollPosition = start + distance * easeProgress;
+    const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  };
 
-    window.scrollTo(0, scrollPosition);
-
-    if (timeElapsed < duration) {
-      requestAnimationFrame(animation);
-    } else {
-      window.scrollTo(0, start + distance); // Ensure it ends exactly at the target
-    }
-  }
-
-  function easeInOutCubic(t) {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-  }
+  const easeInOutCubic = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t * t + b;
+    t -= 2;
+    return (c / 2) * (t * t * t + 2) + b;
+  };
 
   requestAnimationFrame(animation);
-}
+};

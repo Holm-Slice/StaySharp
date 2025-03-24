@@ -43,14 +43,14 @@ function App() {
       </Section>
       <div>
         {" "}
-        <h1 className="relative text-4xl md:text-4xl text-center text-ss_purple pb-4 md:pb-10 cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
+        <h1 className="relative text-4xl md:text-4xl text-center text-ss_purple  cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
           Fixin's
         </h1>
       </div>
       <ActiveSlider />
       <About />
       <ImageCarousel images={images} />
-      <Section id="contact" title="CONTACT" className="section-spacing">
+      <Section title="CONTACT" className="section-spacing">
         <ContactForm />
       </Section>
     </div>
