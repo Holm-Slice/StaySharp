@@ -62,7 +62,7 @@ function ActiveSlider() {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {serviceCards.map((card, index) => (
-            <div key={index} className="w-full flex-shrink-0">
+            <div key={index} className="w-full flex-shrink-0 z-500">
               <ServiceCardTailwind
                 title={card.title}
                 description={card.description}
