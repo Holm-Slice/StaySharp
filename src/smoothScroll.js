@@ -1,5 +1,4 @@
 export const smoothScroll = (target, duration = 800, offset = 80) => {
-  console.log(`Scrolling to target: ${target}`); // Debugging log
   const element = document.querySelector(target);
   if (!element) {
     console.error(`Element with target ${target} not found.`);
@@ -19,6 +18,7 @@ export const smoothScroll = (target, duration = 800, offset = 80) => {
     if (timeElapsed < duration) requestAnimationFrame(animation);
   };
 
+  // Cubic easing function for smoother scrolling
   const easeInOutCubic = (t, b, c, d) => {
     t /= d / 2;
     if (t < 1) return (c / 2) * t * t * t + b;

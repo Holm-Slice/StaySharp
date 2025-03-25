@@ -29,7 +29,7 @@ function Navbar() {
     e.preventDefault();
     const target = e.target.getAttribute("href");
     if (target) {
-      window.location.hash = target;
+      smoothScroll(target, 800, 80); // 800ms duration, 80px offset
     }
   };
 
