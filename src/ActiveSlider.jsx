@@ -16,10 +16,61 @@ const serviceCards = [
     price: "Starting at $2 per inch",
     image: "japanese-knife.jpg",
   },
+
   {
-    title: "Serrated Knife Sharpening",
-    description: "Bread knives, steak knives, and more!",
-    price: "Starting at $1.50 per inch",
+    title: "Single Bevel Knives",
+    description: "Yanagiba, Deba, Usuba, Etc",
+    price: "Starting at $3",
+    image: "serrated-knife.jpg",
+  },
+
+  {
+    title: "Chip Repair",
+    description: "Repair of any chips in the edge",
+    price: "Starting at $5",
+    image: "serrated-knife.jpg",
+  },
+  {
+    title: "Tip Repair",
+    description: "Repair that tip you accidentally broke",
+    price: "Starting at $7",
+    image: "serrated-knife.jpg",
+  },
+
+  {
+    title: "Bevel Repair",
+    description: "Bread Knives, Serrated Knives, and more!",
+    price: "Starting at $10",
+    image: "serrated-knife.jpg",
+  },
+  {
+    title: "Thinning",
+    description: "Maintenance to keep that edge workin'",
+    price: "Starting at $15",
+    image: "serrated-knife.jpg",
+  },
+  {
+    title: "Shears",
+    description: "Kitchen, Hair or Pruning",
+    price: "Starting at $20",
+    image: "serrated-knife.jpg",
+  },
+  {
+    title: "Mandolins",
+    description: "Cut your finger off easily again",
+    price: "Starting at $7",
+    image: "serrated-knife.jpg",
+  },
+  {
+    title: "Rehandling",
+    description: "Replace that handle you broke",
+    price: "Starting at $15",
+    image: "serrated-knife.jpg",
+  },
+  {
+    title: "Total Restoration",
+    description: "Get that beaster piece RTG",
+    price: "Starting at $50",
     image: "serrated-knife.jpg",
   },
   // Add more service cards as needed

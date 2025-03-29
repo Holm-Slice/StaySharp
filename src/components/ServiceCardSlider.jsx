@@ -2,35 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import ServiceCardTailwind from "./ServiceCardTailwind/ServiceCardTailwind";
 
-// const ServiceCardSlider = () => {
-//   const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: true,
-//   };
-
-//   return (
-//     <div className="service-card-slider">
-//       <Slider {...settings}>
-//         <div>
-//           <ServiceCardTailwind />
-//         </div>
-//         <div>
-//           <ServiceCardTailwind />
-//         </div>
-//         <div>
-//           <ServiceCardTailwind />
-//         </div>
-//       </Slider>
-//     </div>
-//   );
-// };
-
-// export default ServiceCardSlider;
-
 import { useState, useRef, useEffect } from "react";
 
 const ServiceCardSlider = ({ children }) => {
