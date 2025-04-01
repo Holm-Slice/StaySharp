@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ServiceCardTailwind from "./components/ServiceCardTailwind/ServiceCardTailwind";
-import KnifeLeftIcon from "../public/assets/imgs/SVGs/knife-left.svg";
-import KnifeRightIcon from "../public/assets/imgs/SVGs/knife-right.svg";
+import KnifeLeftIcon from "/assets/imgs/SVGs/knife-left.svg";
+import KnifeRightIcon from "/assets/imgs/SVGs/knife-right.svg";
 
 const serviceCards = [
   {
