@@ -1,35 +1,23 @@
 import { useEffect } from "react";
-import { smoothScroll } from "../../smoothScroll";
 import "./Navbar.css";
 
 function Navbar() {
-  useEffect(() => {
-    const scroller = document.getElementById("scroller");
-    if (!scroller) {
-      console.error("Scroller element not found");
-      return;
-    }
-
-    const handleScroll = () => {
-      const scrollerTop = scroller.getBoundingClientRect().top;
-      if (scrollerTop <= 0) {
-        scroller.classList.add("fixed");
-      } else {
-        scroller.classList.remove("fixed");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const handleNavClick = (e) => {
     e.preventDefault();
-    const target = e.target.getAttribute("href");
-    if (target) {
-      smoothScroll(target, 800, 80); // 800ms duration, 80px offset
+    const targetId = e.target.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const elementHeight = targetElement.offsetHeight;
+      const centerOffset = (windowHeight - elementHeight) / 2;
+      const offsetPosition = elementPosition + window.pageYOffset - centerOffset - 26; // Minus 26px to center position to account for sticky horizontal scroller
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
