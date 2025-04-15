@@ -50,7 +50,7 @@ function App() {
       <ActiveSlider />
       <About />
       <ImageCarousel images={images} />
-      <Section title="CONTACT" className="section-spacing">
+      <Section title="CONTACT">
         <ContactForm />
       </Section>
     </div>
