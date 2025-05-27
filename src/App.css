@@ -127,4 +127,29 @@ img {
   font-family: "custom1", "azo-sans-web", sans-serif;
   margin-bottom: 40px;
 }
-```
+
+/* Custom styles for the app */
+.main-app-div {
+  min-height: 100vh;
+}
+
+.content {
+  font-family: "custom1", "azo-sans-web", sans-serif;
+  margin-bottom: 40px;
+}
+
+/* Custom animation for underline effect */
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-underline {
+  animation: underline 1s ease-in-out forwards;
+}
+
+/* Add any other custom CSS here */
