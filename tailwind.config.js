@@ -1,5 +1,3 @@
-import lineClamp from "@tailwindcss/line-clamp";
-
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -22,9 +20,9 @@ export default {
       },
       animation: {
         underline: "underline 1s ease-in-out forwards",
-        "spin-slow": "spin 20s linear infinite", // Correct,
+        "spin-slow": "spin 20s linear infinite",
       },
     },
   },
-  plugins: [lineClamp],
+  plugins: [],
 };
