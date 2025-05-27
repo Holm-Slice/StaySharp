@@ -1,3 +1,5 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -125,3 +127,4 @@ img {
   font-family: "custom1", "azo-sans-web", sans-serif;
   margin-bottom: 40px;
 }
+```
