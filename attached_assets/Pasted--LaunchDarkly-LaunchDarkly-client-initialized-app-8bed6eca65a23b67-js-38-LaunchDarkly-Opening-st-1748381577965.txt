@@ -1,0 +1,205 @@
+[LaunchDarkly] LaunchDarkly client initialized
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwiYW5vbnltb3VzIjpmYWxzZX0
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+bash.svg:1 
+            
+            
+           Failed to load resource: net::ERR_NAME_NOT_RESOLVEDUnderstand this error
+/~:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 694 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+bash.svg:1 
+            
+            
+           Failed to load resource: net::ERR_NAME_NOT_RESOLVEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+bash.svg:1 
+            
+            
+           Failed to load resource: net::ERR_NAME_NOT_RESOLVEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 862 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 966 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 524 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 870 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+7Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'battery'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+framework-3c0c5f8044ab3419.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-3c0c5f8044ab3419.js:1Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 749 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 727 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 803 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+workspace_iframe.html:32 Unrecognized feature: 'ambient-light-sensor'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'battery'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-not-rendered'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'layout-animations'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'legacy-image-formats'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'navigation-override'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'oversized-images'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'publickey-credentials'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'speaker-selection'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'unoptimized-images'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'unsized-media'.Understand this warning
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowfullscreen'.Understand this warning
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowpaymentrequest'.Understand this warning
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 403 (Forbidden)Understand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 993 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 403 (Forbidden)Understand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 572 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+index.css:1 
+            
+            
+           Failed to load resource: the server responded with a status of 500 (Internal Server Error)Understand this error
+App.css:1 
+            
+            
+           Failed to load resource: the server responded with a status of 500 (Internal Server Error)Understand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 908 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
+14StaySharp:1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this error
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 502 (Bad Gateway)Understand this error
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 502 (Bad Gateway)Understand this error
+
+                
+          
+          
+          
+         Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.Understand this warning
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/:1 Failed to decode downloaded font: https://d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/assets/fonts/Typesauce-2OX9w.ttfUnderstand this warning
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/:1 OTS parsing error: invalid sfntVersion: 171712836Understand this warning
+
+                
+          
+          
+          
+         Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Error on stream connection: {"isTrusted":true}, will continue retrying after 675 milliseconds.
+(anonymous) @ _app-8bed6eca65a23b67.js:38
+(anonymous) @ _app-8bed6eca65a23b67.js:1
+(anonymous) @ _app-8bed6eca65a23b67.js:1
+l.<computed> @ _app-8bed6eca65a23b67.js:1
+E @ _app-8bed6eca65a23b67.js:1Understand this warning
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Closing stream connection
+clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_CLOSEDUnderstand this error
+_app-8bed6eca65a23b67.js:38 [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/62b35a865152ab14c5942820/eyJrZXkiOiI0Mjg2MDA2MCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6ImhvbG0tc2xpY2UiLCJyb2xlcyI6WyJpbnRlbnRfcGVyc29uYWwiXSwiZW1haWwiOiJ0YXlsb3Job2xtOTJAZ21haWwuY29tIiwidGltZV9jcmVhdGVkIjoxNzQ3NjAzMzk2NTgzLCJfbWV0YSI6eyJwcml2YXRlQXR0cmlidXRlcyI6WyJlbWFpbCJdfX0
