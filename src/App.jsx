@@ -1,3 +1,4 @@
+
 import { Routes, Route, Link, Router, BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
@@ -17,50 +18,59 @@ const images = [
   "/assets/Images/chef-knife3.jpg",
 ];
 
+const Section = ({ id, title, children, className }) => (
+  <section id={id} className={className} aria-labelledby={id ? `${id}-heading` : undefined}>
+    {children}
+  </section>
+);
+
 function App() {
   const handleScroll = (e) => {
     e.preventDefault();
     const target = e.target.getAttribute("href");
-    smoothScroll(target, 5000); // 4000ms = 4 seconds
+    smoothScroll(target, 5000);
   };
 
   return (
     <div className="main-app-div">
       <Navbar onClick={handleScroll} />
       <HorizontalScroller />
-      <VideoPlayer className="max-h-40" />
-      <Divider />
-      <Section id="home" title="HOME" className="pb-20">
-        <div className="flex flex-col mx-10 ">
-          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple  pt-10 pb-2 text-center uppercase text-4xl max-sm:text-xl">
-            Knives Sharp! Chips Gone!
-          </h1>
-          <h1 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-xl sm:text-4xl pt-10 pb-2 text-center uppercase">
-            Got Something You're Looking to Buy or Sell, We'll Help Ya
-            Straighten It Out!
-          </h1>
+      
+      <main>
+        <VideoPlayer className="max-h-40" />
+        <Divider />
+        
+        <Section id="home" title="HOME" className="pb-20">
+          <header className="flex flex-col mx-10">
+            <h1 
+              id="home-heading"
+              className="flex flex-col text-wrap justify-center align-center text-ss_purple pt-10 pb-2 text-center uppercase text-4xl max-sm:text-xl"
+            >
+              Knives Sharp! Chips Gone!
+            </h1>
+            <h2 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-xl sm:text-4xl pt-10 pb-2 text-center uppercase">
+              Got Something You're Looking to Buy or Sell, We'll Help Ya Straighten It Out!
+            </h2>
+          </header>
+        </Section>
+        
+        <div>
+          <h2 className="relative text-4xl md:text-4xl text-center text-ss_purple cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
+            Fixin's
+          </h2>
         </div>
-      </Section>
-      <div>
-        {" "}
-        <h1 className="relative text-4xl md:text-4xl text-center text-ss_purple  cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
-          Fixin's
-        </h1>
-      </div>
-      <ActiveSlider />
-      <About />
-      <ImageCarousel images={images} />
-      <Section title="CONTACT">
-        <ContactForm />
-      </Section>
+        
+        <ActiveSlider />
+        <About />
+        <ImageCarousel images={images} />
+        
+        <Section id="contact" title="CONTACT">
+          <h2 id="contact-heading" className="sr-only">Contact Us</h2>
+          <ContactForm />
+        </Section>
+      </main>
     </div>
   );
 }
-
-const Section = ({ id, title, children, className }) => (
-  <section id={id} className={className}>
-    {children}
-  </section>
-);
 
 export default App;
