@@ -421,7 +421,7 @@ function HorizontalScroller(props) {
               alt="stay-sharp-icon"
               className="scroll-item"
             />
-            <imgx
+            <img
               src="/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png"
               alt="stay-sharp-icon"
               className="scroll-item"
