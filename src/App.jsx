@@ -1,5 +1,6 @@
 
 import { Routes, Route, Link, Router, BrowserRouter } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
@@ -28,6 +29,33 @@ const Section = ({ id, title, children, className }) => (
 );
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  const updateQuantity = (knifeId, quantity) => {
+    if (quantity === 0) {
+      setCart(prevCart => prevCart.filter(item => item.id !== knifeId));
+      return;
+    }
+    setCart(prevCart =>
+      prevCart.map(item =>
+        item.id === knifeId ? { ...item, quantity } : item
+      )
+    );
+  };
+
+  const removeFromCart = (knifeId) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== knifeId));
+  };
+
+  const handleCheckout = async () => {
+    if (!import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
+      alert('Stripe is not configured yet. Please contact the store owner.');
+      return;
+    }
+    // Checkout logic would go here
+    console.log('Checkout with items:', cart);
+  };
+
   const handleScroll = (e) => {
     e.preventDefault();
     const target = e.target.getAttribute("href");
@@ -36,12 +64,25 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Navbar 
+        cart={cart}
+        onUpdateQuantity={updateQuantity}
+        onRemoveItem={removeFromCart}
+        onCheckout={handleCheckout}
+      />
       <Routes>
         <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/shop" element={<ShopDashboard />} />
+        <Route path="/shop" element={
+          <ShopDashboard 
+            cart={cart}
+            setCart={setCart}
+            onUpdateQuantity={updateQuantity}
+            onRemoveItem={removeFromCart}
+            onCheckout={handleCheckout}
+          />
+        } />
         <Route path="/" element={
           <div className="main-app-div">
-            <Navbar onClick={handleScroll} />
             <HorizontalScroller />
             
             <main>
