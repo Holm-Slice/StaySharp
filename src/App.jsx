@@ -54,13 +54,12 @@ function App() {
           </header>
         </Section>
         
-        <div>
+        <Section id="services" title="SERVICES">
           <h2 className="relative text-4xl md:text-4xl text-center text-ss_purple cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
             Fixin's
           </h2>
-        </div>
-        
-        <ActiveSlider />
+          <ActiveSlider />
+        </Section>
         <About />
         <ImageCarousel images={images} />
         
