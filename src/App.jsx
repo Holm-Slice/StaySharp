@@ -48,12 +48,25 @@ function App() {
   };
 
   const handleCheckout = async () => {
-    if (!import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
-      alert('Stripe is not configured yet. Please contact the store owner.');
-      return;
+    try {
+      if (!import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
+        alert('Stripe is not configured yet. Please contact the store owner.');
+        return;
+      }
+      
+      if (cart.length === 0) {
+        alert('Your cart is empty.');
+        return;
+      }
+      
+      // For now, just log the checkout attempt
+      console.log('Checkout with items:', cart);
+      alert('Checkout functionality will be available once Stripe is configured with your API keys.');
+      
+    } catch (error) {
+      console.error('Checkout error:', error);
+      alert('There was an error processing your checkout. Please try again.');
     }
-    // Checkout logic would go here
-    console.log('Checkout with items:', cart);
   };
 
   const handleScroll = (e) => {

@@ -2,8 +2,15 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// For now, we'll handle the missing Stripe key gracefully
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || null);
+// Dynamically import Stripe only if the key is available
+let stripePromise = null;
+if (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
+  import('@stripe/stripe-js').then(({ loadStripe }) => {
+    stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+  }).catch(error => {
+    console.warn('Stripe failed to load:', error);
+  });
+}
 
 const mockKnives = [
   {
