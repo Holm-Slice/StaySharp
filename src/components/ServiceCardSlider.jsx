@@ -18,7 +18,7 @@ const ServiceCardSlider = ({ children }) => {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      Math.min(prevIndex + 1, children.length - 1)
+      Math.min(prevIndex + 1, (children?.length || 0) - 1)
     );
   };
 
@@ -27,6 +27,15 @@ const ServiceCardSlider = ({ children }) => {
       containerRef.current.scrollLeft = currentIndex * totalCardWidth;
     }
   }, [currentIndex, totalCardWidth]);
+
+  // If no children are provided, return null or a placeholder
+  if (!children || children.length === 0) {
+    return (
+      <div className="relative w-full overflow-hidden p-8 text-center">
+        <p className="text-gray-500">No services available</p>
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full overflow-hidden">
