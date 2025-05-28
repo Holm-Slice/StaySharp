@@ -17,7 +17,7 @@ function ProductCard({ product, onAddToCart }) {
             {product.name}
           </h1>
           
-          <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center line-clamp-3">
+          <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
             {product.description}
           </h2>
           
@@ -25,10 +25,10 @@ function ProductCard({ product, onAddToCart }) {
             <button
               onClick={() => onAddToCart(product)}
               disabled={product.stock === 0}
-              className={`uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow md:flex-none border-4 transition-colors duration-[1300ms] ${
+              className={`uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] md:flex-none border-4 border-ss_purple ${
                 product.stock === 0
                   ? 'bg-gray-300 text-gray-500 cursor-not-allowed border-gray-300'
-                  : 'bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple'
+                  : 'bg-ss_purple text-white'
               }`}
             >
               {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
