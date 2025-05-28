@@ -153,21 +153,23 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
             </div>
             
             {/* Search Bar and Cart Container */}
-            <div className="flex justify-center items-start gap-6">
-              {/* Search Bar */}
-              <div className="max-w-md w-full">
-                <input
-                  type="text"
-                  placeholder="Search by name, brand, style, or description..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-ss_purple focus:ring-2 focus:ring-ss_purple focus:ring-opacity-20"
-                />
+            <div className="relative w-full">
+              {/* Centered Search Bar */}
+              <div className="flex justify-center">
+                <div className="max-w-md w-full">
+                  <input
+                    type="text"
+                    placeholder="Search by name, brand, style, or description..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-ss_purple focus:ring-2 focus:ring-ss_purple focus:ring-opacity-20"
+                  />
+                </div>
               </div>
               
-              {/* Cart */}
+              {/* Cart - Positioned to the right */}
               {cart && (
-                <div className="flex-shrink-0">
+                <div className="absolute top-0 right-0 flex-shrink-0">
                   <div className="bg-white rounded-lg shadow-md p-4 min-w-80 max-w-96 border">
                     <h2 className="text-lg font-semibold text-gray-900 mb-3">
                       Cart ({cart.length})
