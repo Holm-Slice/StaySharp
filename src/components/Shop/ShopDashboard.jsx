@@ -1,7 +1,11 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ProductCard from './ProductCard';
+import { loadStripe } from '@stripe/stripe-js';
+import Cart from './Cart';
+
+// For now, we'll handle the missing Stripe key gracefully
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || null);
 
 const mockKnives = [
   {
@@ -78,6 +82,7 @@ function ShopDashboard() {
   const [hoveredKnife, setHoveredKnife] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     // Simulate API call
@@ -97,6 +102,77 @@ function ShopDashboard() {
     );
     setFilteredKnives(filtered);
   }, [searchQuery, knives]);
+
+  const addToCart = (knife) => {
+    setCart(prevCart => {
+      const existingItem = prevCart.find(item => item.id === knife.id);
+      if (existingItem) {
+        return prevCart.map(item =>
+          item.id === knife.id 
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      }
+      return [...prevCart, { ...knife, quantity: 1 }];
+    });
+  };
+
+  const removeFromCart = (knifeId) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== knifeId));
+  };
+
+  const updateQuantity = (knifeId, quantity) => {
+    if (quantity === 0) {
+      removeFromCart(knifeId);
+      return;
+    }
+    setCart(prevCart =>
+      prevCart.map(item =>
+        item.id === knifeId ? { ...item, quantity } : item
+      )
+    );
+  };
+
+  const handleCheckout = async () => {
+    if (!import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
+      alert('Stripe is not configured yet. Please contact the store owner.');
+      return;
+    }
+
+    const stripe = await stripePromise;
+    if (!stripe) {
+      alert('Stripe failed to load. Please try again.');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ items: cart }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to create checkout session');
+      }
+
+      const session = await response.json();
+
+      const result = await stripe.redirectToCheckout({
+        sessionId: session.id,
+      });
+
+      if (result.error) {
+        console.error('Stripe error:', result.error);
+        alert('Checkout failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Checkout error:', error);
+      alert('Checkout failed. Please try again or contact support.');
+    }
+  };
 
   if (loading) {
     return (
@@ -143,9 +219,12 @@ function ShopDashboard() {
         </div>
       </header>
 
-      {/* Knife Grid */}
+      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Knife Grid */}
+          <div className="lg:col-span-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredKnives.map(knife => (
             <div
               key={knife.id}
@@ -199,6 +278,7 @@ function ShopDashboard() {
                     </span>
                     
                     <button
+                      onClick={() => addToCart(knife)}
                       disabled={knife.stock === 0}
                       className={`px-4 py-2 rounded-md font-medium transition-colors ${
                         knife.stock === 0
@@ -221,13 +301,25 @@ function ShopDashboard() {
           ))}
         </div>
 
-        {filteredKnives.length === 0 && !loading && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              {searchQuery ? `No knives found matching "${searchQuery}"` : 'No knives available at the moment'}
-            </p>
+            {filteredKnives.length === 0 && !loading && (
+              <div className="text-center py-12">
+                <p className="text-gray-500 text-lg">
+                  {searchQuery ? `No knives found matching "${searchQuery}"` : 'No knives available at the moment'}
+                </p>
+              </div>
+            )}
           </div>
-        )}
+
+          {/* Cart */}
+          <div className="lg:col-span-1">
+            <Cart 
+              items={cart}
+              onUpdateQuantity={updateQuantity}
+              onRemoveItem={removeFromCart}
+              onCheckout={handleCheckout}
+            />
+          </div>
+        </div>
       </main>
     </div>
   );
