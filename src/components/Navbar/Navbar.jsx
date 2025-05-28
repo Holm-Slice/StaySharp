@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
   const location = useLocation();
-  const isShopDashboard = location.pathname === '/shop';
+  const isShopDashboard = location.pathname === "/shop";
   useEffect(() => {
     const scroller = document.getElementById("scroller");
     if (!scroller) {
@@ -61,15 +61,7 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                 Home
               </a>
             </li>
-            <li className="p-0 text-center">
-              <a
-                href="#about"
-                onClick={handleNavClick}
-                className="text-white no-underline font-light text-2xl px-0 relative mr-12"
-              >
-                About
-              </a>
-            </li>
+
             <li className="p-0 text-center">
               <a
                 href="#services"
@@ -89,6 +81,15 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
             </li>
             <li className="p-0 text-center">
               <a
+                href="#about"
+                onClick={handleNavClick}
+                className="text-white no-underline font-light text-2xl px-0 relative mr-12"
+              >
+                About
+              </a>
+            </li>
+            <li className="p-0 text-center">
+              <a
                 href="#contact"
                 onClick={handleNavClick}
                 className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
@@ -98,8 +99,6 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
             </li>
           </ul>
         </div>
-
-        
       </div>
     </div>
   );
