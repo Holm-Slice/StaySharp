@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Routes, Route, Link, Router, BrowserRouter } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
@@ -28,28 +28,7 @@ const Section = ({ id, title, children, className }) => (
 );
 
 function App() {
-  const [cart, setCart] = useState([]);
-
-  const updateQuantity = (knifeId, quantity) => {
-    if (quantity === 0) {
-      removeFromCart(knifeId);
-      return;
-    }
-    setCart(prevCart =>
-      prevCart.map(item =>
-        item.id === knifeId ? { ...item, quantity } : item
-      )
-    );
-  };
-
-  const removeFromCart = (knifeId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== knifeId));
-  };
-
-  const handleCheckout = async () => {
-    // This will be handled by the ShopDashboard component
-    console.log('Checkout initiated from navbar');
-  };
+  const [globalCart, setGlobalCart] = useState([]);
 
   const handleScroll = (e) => {
     e.preventDefault();
@@ -57,20 +36,19 @@ function App() {
     smoothScroll(target, 5000);
   };
 
+  // Function to sync cart across components
+  const updateGlobalCart = (cartData) => {
+    setGlobalCart(cartData);
+  };
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/shop" element={<ShopDashboard globalCart={cart} setGlobalCart={setCart} />} />
+        <Route path="/shop" element={<ShopDashboard onCartUpdate={updateGlobalCart} />} />
         <Route path="/" element={
           <div className="main-app-div">
-            <Navbar 
-              onClick={handleScroll}
-              cart={cart}
-              onUpdateQuantity={updateQuantity}
-              onRemoveItem={removeFromCart}
-              onCheckout={handleCheckout}
-            />
+            <Navbar cartItems={globalCart} onClick={handleScroll} />
             <HorizontalScroller />
 
             <main>
@@ -98,7 +76,7 @@ function App() {
                 <ActiveSlider />
               </Section>
 
-              <Shop style={{ textAlign: 'center' }} />
+              <Shop />
               <About />
               <ImageCarousel images={images} />
 

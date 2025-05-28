@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { smoothScroll } from "../../smoothScroll";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-function Navbar({ cart = [], onUpdateQuantity, onRemoveItem, onCheckout }) {
+function Navbar({ cartItems = [] }) {
   useEffect(() => {
     const scroller = document.getElementById("scroller");
     if (!scroller) {
@@ -34,8 +34,10 @@ function Navbar({ cart = [], onUpdateQuantity, onRemoveItem, onCheckout }) {
     }
   };
 
+  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
-    <div className="w-full bg-ss_purple text-white flex flex-col sm:flex-row items-end justify-between p-0">
+    <div className="w-full bg-ss_purple text-white flex flex-col sm:flex-row items-center justify-between p-0">
       {/* Logo Container */}
       <div className="mb-0 flex justify-center sm:justify-start w-full sm:w-auto">
         <img
@@ -45,14 +47,14 @@ function Navbar({ cart = [], onUpdateQuantity, onRemoveItem, onCheckout }) {
         />
       </div>
 
-      {/* Navigation List */}
-      <div className="nav-list w-full md:w-auto h-24">
-        <ul className="flex flex-row max-sm:flex-row items-end justify-evenly p-5 mt-10 uppercase mb-2 overflow-hidden">
+      {/* Navigation List - Centered */}
+      <div className="nav-list flex-1 flex justify-center h-24">
+        <ul className="flex flex-row items-center justify-center p-5 mt-10 uppercase mb-2 space-x-8">
           <li className="p-0 text-center">
             <a
               href="#home"
               onClick={handleNavClick}
-              className="text-white no-underline font-light text-2xl px-0 relative mr-12"
+              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
             >
               Home
             </a>
@@ -61,7 +63,7 @@ function Navbar({ cart = [], onUpdateQuantity, onRemoveItem, onCheckout }) {
             <a
               href="#about"
               onClick={handleNavClick}
-              className="text-white no-underline font-light text-2xl px-0 relative mr-12"
+              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
             >
               About
             </a>
@@ -70,7 +72,7 @@ function Navbar({ cart = [], onUpdateQuantity, onRemoveItem, onCheckout }) {
             <a
               href="#services"
               onClick={handleNavClick}
-              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
+              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
             >
               Services
             </a>
@@ -78,7 +80,7 @@ function Navbar({ cart = [], onUpdateQuantity, onRemoveItem, onCheckout }) {
           <li className="p-0 text-center">
             <Link
               to="/shop"
-              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
+              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
             >
               Shop
             </Link>
@@ -87,94 +89,36 @@ function Navbar({ cart = [], onUpdateQuantity, onRemoveItem, onCheckout }) {
             <a
               href="#contact"
               onClick={handleNavClick}
-              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
+              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
             >
               Contact
             </a>
           </li>
-          <li className="p-0 text-center relative group">
-            <button className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12 flex items-center">
-              Cart ({cart.length})
-            </button>
-            
-            {/* Cart Dropdown */}
-            <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Shopping Cart ({cart.length})
-                </h3>
-                
-                {cart.length === 0 ? (
-                  <p className="text-gray-500">Your cart is empty</p>
-                ) : (
-                  <>
-                    <div className="space-y-3 mb-4 max-h-64 overflow-y-auto">
-                      {cart.map(item => (
-                        <div key={item.id} className="flex items-center space-x-3">
-                          <img 
-                            src={item.image || '/assets/Images/chef-knife1.jpg'} 
-                            alt={item.name}
-                            className="w-12 h-12 object-cover rounded"
-                          />
-                          
-                          <div className="flex-1">
-                            <h4 className="text-sm font-medium text-gray-900">
-                              {item.name}
-                            </h4>
-                            <p className="text-sm text-gray-500">${item.price}</p>
-                          </div>
-                          
-                          <div className="flex items-center space-x-2">
-                            <button
-                              onClick={() => onUpdateQuantity && onUpdateQuantity(item.id, item.quantity - 1)}
-                              className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
-                            >
-                              -
-                            </button>
-                            
-                            <span className="text-sm font-medium w-8 text-center">
-                              {item.quantity}
-                            </span>
-                            
-                            <button
-                              onClick={() => onUpdateQuantity && onUpdateQuantity(item.id, item.quantity + 1)}
-                              className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
-                            >
-                              +
-                            </button>
-                            
-                            <button
-                              onClick={() => onRemoveItem && onRemoveItem(item.id)}
-                              className="text-red-500 hover:text-red-700 ml-2"
-                            >
-                              ✕
-                            </button>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="border-t pt-4">
-                      <div className="flex justify-between items-center mb-4">
-                        <span className="text-lg font-semibold">Total:</span>
-                        <span className="text-xl font-bold text-ss_purple">
-                          ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
-                        </span>
-                      </div>
-                      
-                      <button
-                        onClick={onCheckout}
-                        className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors"
-                      >
-                        Checkout
-                      </button>
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-          </li>
         </ul>
+      </div>
+
+      {/* Cart Icon */}
+      <div className="mr-12 mb-0 flex items-center">
+        <Link to="/shop" className="relative p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors">
+          <svg 
+            className="w-8 h-8 text-white" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2 8m2-8v8a2 2 0 002 2h6a2 2 0 002-2v-8m-8 0V9a2 2 0 012-2h4a2 2 0 012 2v4.01" 
+            />
+          </svg>
+          {cartItemCount > 0 && (
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center font-bold">
+              {cartItemCount}
+            </span>
+          )}
+        </Link>
       </div>
     </div>
   );
