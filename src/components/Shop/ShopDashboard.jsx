@@ -182,6 +182,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                               <img 
                                 src={item.image || '/assets/Images/chef-knife1.jpg'} 
                                 alt={item.name}
+                                title={item.name}
                                 className="w-12 h-12 object-cover rounded"
                               />
                               
@@ -283,6 +284,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                   <img 
                     src={knife.image} 
                     alt={knife.name}
+                    title={knife.name}
                     className="w-full h-64 object-cover"
                   />
                   

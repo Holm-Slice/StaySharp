@@ -61,6 +61,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                       <img 
                         src={item.image || '/assets/Images/chef-knife1.jpg'} 
                         alt={item.name}
+                        title={item.name}
                         className="w-20 h-20 object-cover rounded-lg"
                       />
                       

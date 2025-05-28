@@ -45,6 +45,7 @@ const ImageCarousel = ({ images }) => {
                 <img
                   src={image}
                   alt={`Professional kitchen knife ${index + 1} - high-quality cutlery for chefs`}
+                  title={`Professional kitchen knife ${index + 1} - high-quality cutlery for chefs`}
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                   loading="lazy"
                   decoding="async"
