@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { smoothScroll } from "../../smoothScroll";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   useEffect(() => {
@@ -75,13 +76,12 @@ function Navbar() {
             </a>
           </li>
           <li className="p-0 text-center">
-            <a
-              href="#shop"
-              onClick={handleNavClick}
+            <Link
+              to="/shop"
               className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
             >
               Shop
-            </a>
+            </Link>
           </li>
           <li className="p-0 text-center">
             <a

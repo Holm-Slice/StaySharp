@@ -12,6 +12,7 @@ import { smoothScroll } from "./smoothScroll";
 import About from "./components/About/About";
 import ActiveSlider from "./ActiveSlider";
 import Shop from "./components/Shop/Shop";
+import ShopDashboard from "./components/Shop/ShopDashboard";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 
 const images = [
@@ -37,6 +38,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/shop" element={<ShopDashboard />} />
         <Route path="/" element={
           <div className="main-app-div">
             <Navbar onClick={handleScroll} />
