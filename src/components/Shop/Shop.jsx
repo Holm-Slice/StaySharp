@@ -3,7 +3,8 @@ import ProductGrid from './ProductGrid';
 import Cart from './Cart';
 import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+// For now, we'll handle the missing Stripe key gracefully
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || null);
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -57,7 +58,17 @@ function Shop() {
   };
 
   const handleCheckout = async () => {
+    if (!import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
+      alert('Stripe is not configured yet. Please contact the store owner.');
+      return;
+    }
+
     const stripe = await stripePromise;
+
+    if (!stripe) {
+      alert('Stripe failed to load. Please try again.');
+      return;
+    }
 
     try {
       const response = await fetch('/api/create-checkout-session', {
@@ -68,6 +79,10 @@ function Shop() {
         body: JSON.stringify({ items: cart }),
       });
 
+      if (!response.ok) {
+        throw new Error('Failed to create checkout session');
+      }
+
       const session = await response.json();
 
       const result = await stripe.redirectToCheckout({
@@ -76,9 +91,11 @@ function Shop() {
 
       if (result.error) {
         console.error('Stripe error:', result.error);
+        alert('Checkout failed. Please try again.');
       }
     } catch (error) {
       console.error('Checkout error:', error);
+      alert('Checkout failed. Please try again or contact support.');
     }
   };
 
