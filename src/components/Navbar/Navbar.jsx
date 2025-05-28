@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { smoothScroll } from "../../smoothScroll";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-function Navbar({ cartItems = [] }) {
+function Navbar() {
   useEffect(() => {
     const scroller = document.getElementById("scroller");
     if (!scroller) {
@@ -34,10 +34,8 @@ function Navbar({ cartItems = [] }) {
     }
   };
 
-  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
-
   return (
-    <div className="w-full bg-ss_purple text-white flex flex-col sm:flex-row items-center justify-between p-0">
+    <div className="w-full bg-ss_purple text-white flex flex-col sm:flex-row items-end justify-between p-0">
       {/* Logo Container */}
       <div className="mb-0 flex justify-center sm:justify-start w-full sm:w-auto">
         <img
@@ -47,14 +45,14 @@ function Navbar({ cartItems = [] }) {
         />
       </div>
 
-      {/* Navigation List - Centered */}
-      <div className="nav-list flex-1 flex justify-center h-24">
-        <ul className="flex flex-row items-center justify-center p-5 mt-10 uppercase mb-2 space-x-8">
+      {/* Navigation List */}
+      <div className="nav-list w-full md:w-auto h-24">
+        <ul className="flex flex-row max-sm:flex-row items-end justify-evenly p-5 mt-10 uppercase mb-2 overflow-hidden">
           <li className="p-0 text-center">
             <a
               href="#home"
               onClick={handleNavClick}
-              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
+              className="text-white no-underline font-light text-2xl px-0 relative mr-12"
             >
               Home
             </a>
@@ -63,7 +61,7 @@ function Navbar({ cartItems = [] }) {
             <a
               href="#about"
               onClick={handleNavClick}
-              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
+              className="text-white no-underline font-light text-2xl px-0 relative mr-12"
             >
               About
             </a>
@@ -72,7 +70,7 @@ function Navbar({ cartItems = [] }) {
             <a
               href="#services"
               onClick={handleNavClick}
-              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
+              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
             >
               Services
             </a>
@@ -80,7 +78,7 @@ function Navbar({ cartItems = [] }) {
           <li className="p-0 text-center">
             <Link
               to="/shop"
-              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
+              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
             >
               Shop
             </Link>
@@ -89,36 +87,12 @@ function Navbar({ cartItems = [] }) {
             <a
               href="#contact"
               onClick={handleNavClick}
-              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative hover:text-gray-200 transition-colors"
+              className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
             >
               Contact
             </a>
           </li>
         </ul>
-      </div>
-
-      {/* Cart Icon */}
-      <div className="mr-12 mb-0 flex items-center">
-        <Link to="/shop" className="relative p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors">
-          <svg 
-            className="w-8 h-8 text-white" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2 8m2-8v8a2 2 0 002 2h6a2 2 0 002-2v-8m-8 0V9a2 2 0 012-2h4a2 2 0 012 2v4.01" 
-            />
-          </svg>
-          {cartItemCount > 0 && (
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center font-bold">
-              {cartItemCount}
-            </span>
-          )}
-        </Link>
       </div>
     </div>
   );

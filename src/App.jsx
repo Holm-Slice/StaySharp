@@ -1,5 +1,5 @@
+
 import { Routes, Route, Link, Router, BrowserRouter } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
@@ -28,33 +28,26 @@ const Section = ({ id, title, children, className }) => (
 );
 
 function App() {
-  const [globalCart, setGlobalCart] = useState([]);
-
   const handleScroll = (e) => {
     e.preventDefault();
     const target = e.target.getAttribute("href");
     smoothScroll(target, 5000);
   };
 
-  // Function to sync cart across components
-  const updateGlobalCart = (cartData) => {
-    setGlobalCart(cartData);
-  };
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/shop" element={<ShopDashboard onCartUpdate={updateGlobalCart} />} />
+        <Route path="/shop" element={<ShopDashboard />} />
         <Route path="/" element={
           <div className="main-app-div">
-            <Navbar cartItems={globalCart} onClick={handleScroll} />
+            <Navbar onClick={handleScroll} />
             <HorizontalScroller />
-
+            
             <main>
               <VideoPlayer className="max-h-40" />
               <Divider />
-
+              
               <Section id="home" title="HOME" className="pb-20">
                 <header className="flex flex-col mx-4 sm:mx-10">
                   <h1 
@@ -68,18 +61,18 @@ function App() {
                   </h2>
                 </header>
               </Section>
-
+              
               <Section id="services" title="SERVICES">
                 <h2 className="relative text-2xl sm:text-4xl text-center text-ss_purple cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
                   Fixin's
                 </h2>
                 <ActiveSlider />
               </Section>
-
+              
               <Shop />
               <About />
               <ImageCarousel images={images} />
-
+              
               <Section id="contact" title="CONTACT">
                 <h2 id="contact-heading" className="sr-only">Contact Us</h2>
                 <ContactForm />

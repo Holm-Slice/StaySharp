@@ -76,7 +76,7 @@ const mockKnives = [
   }
 ];
 
-function ShopDashboard({ onCartUpdate }) {
+function ShopDashboard() {
   const [knives, setKnives] = useState([]);
   const [filteredKnives, setFilteredKnives] = useState([]);
   const [hoveredKnife, setHoveredKnife] = useState(null);
@@ -102,13 +102,6 @@ function ShopDashboard({ onCartUpdate }) {
     );
     setFilteredKnives(filtered);
   }, [searchQuery, knives]);
-
-  // Sync cart with parent component
-  useEffect(() => {
-    if (onCartUpdate) {
-      onCartUpdate(cart);
-    }
-  }, [cart, onCartUpdate]);
 
   const addToCart = (knife) => {
     setCart(prevCart => {
