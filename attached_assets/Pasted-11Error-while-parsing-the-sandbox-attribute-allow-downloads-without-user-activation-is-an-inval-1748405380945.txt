@@ -1,0 +1,771 @@
+11Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+framework-5ac0d5cf12c7cbb3.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this error
+framework-5ac0d5cf12c7cbb3.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this error
+framework-5ac0d5cf12c7cbb3.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this error
+framework-5ac0d5cf12c7cbb3.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this error
+framework-5ac0d5cf12c7cbb3.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this error
+workspace_iframe.html:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+workspace_iframe.html:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev:3000/__replco/workspace_iframe.html?initialPath=%2F&id=%3Arfm%3A:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+workspace_iframe.html:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+workspace_iframe.html:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev:3000/__replco/workspace_iframe.html?initialPath=%2F&id=%3Arfm%3A:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'battery'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+framework-5ac0d5cf12c7cbb3.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-5ac0d5cf12c7cbb3.js:1Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 commitComplete listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:45423)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 fileDirty listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:45543)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 fileClean listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:45658)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 commitStart listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:45775)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 promptUserReconnect listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:47068)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 cursor listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:45878)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 removeCursor listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:45982)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 fileSavedChanged listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:46096)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:47365)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 fsError listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:47551)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 transparentReconnect listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:48413)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+_app-4b2a1d3821d04258.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 changes listeners added. Use emitter.setMaxListeners() to increase limit
+    at d (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:58325)
+    at c.addListener (https://cdn.replit.com/_next/static/chunks/4899-651713a6d5cf3023.js:1:60859)
+    at h (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:50345)
+    at Object.watchTextFile (https://cdn.replit.com/_next/static/chunks/7482-261f5ea4ce5a0cab.js:1:51293)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222387
+    at Array.map (<anonymous>)
+    at https://cdn.replit.com/_next/static/chunks/pages/replEnvironmentDesktop-fa21f157cc5c336a.js:1:222362
+    at oO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:125395)
+    at uB (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:154390)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152776
+    at uO (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:152842)
+    at u_ (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:137506)
+    at r6 (https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:86196)
+    at https://cdn.replit.com/_next/static/chunks/framework-5ac0d5cf12c7cbb3.js:1:134884
+(anonymous) @ _app-4b2a1d3821d04258.js:38Understand this warning
+stallwart.build.js:1 stallwart: failed ping 1
+workspace_iframe.html:32 Unrecognized feature: 'ambient-light-sensor'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'ambient-light-sensor'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'battery'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'battery'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-not-rendered'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-not-rendered'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'layout-animations'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'layout-animations'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'legacy-image-formats'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'legacy-image-formats'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'navigation-override'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'navigation-override'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'oversized-images'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'oversized-images'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'publickey-credentials'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'publickey-credentials'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'speaker-selection'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'speaker-selection'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'unoptimized-images'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'unoptimized-images'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'unsized-media'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'unsized-media'.Understand this warning
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowfullscreen'.Understand this warning
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowfullscreen'.Understand this warning
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowpaymentrequest'.Understand this warning
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowpaymentrequest'.Understand this warning
+ WebSocket connection to 'wss://localhost:5173/?token=GWyFMan8IenF' failed: 
+t @ eruda.js:2Understand this error
+Network.js:227 WebSocket connection to 'wss://localhost:5173/?token=GWyFMan8IenF' failed: 
+t @ Network.js:227Understand this error
+ [vite] server connection lost. Polling for restart...
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:749:13)
+    at WebSocket.<anonymous> (client:561:13)Understand this error
+ WebSocket connection to 'wss://localhost:5173/?token=GWyFMan8IenF' failed: 
+t @ eruda.js:2Understand this error
+Network.js:227 WebSocket connection to 'wss://localhost:5173/?token=GWyFMan8IenF' failed: 
+t @ Network.js:227Understand this error
+Console.js:61 [vite] server connection lost. Polling for restart...
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:749:13)
+    at WebSocket.<anonymous> (client:561:13)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+2 No routes matched location "/" 
+Mt.forEach.n.<computed> @ eruda.js:2Understand this warning
+2 Scroller element not found
+Mt.forEach.n.<computed> @ eruda.js:2Understand this error
+@stripe_stripe-js.js:115 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'match')
+    at initStripe2 (@stripe_stripe-js.js:115:22)
+    at @stripe_stripe-js.js:151:12Understand this error
+8Failed to decode downloaded font: <URL>Understand this warning
+8OTS parsing error: invalid sfntVersion: 171712836Understand this warning
+2Console.js:61 No routes matched location "/" 
+Mt.forEach.n.<computed> @ Console.js:61Understand this warning
+2Console.js:61 Scroller element not found
+Mt.forEach.n.<computed> @ Console.js:61Understand this error
+@stripe_stripe-js.js?v=87be555c:115 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'match')
+    at initStripe2 (@stripe_stripe-js.js?v=87be555c:115:22)
+    at @stripe_stripe-js.js?v=87be555c:151:12Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+Console.js:61 Element with target #services not found.
+Mt.forEach.n.<computed> @ Console.js:61Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+
+                
+          
+          
+          
+         Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.Understand this warning
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+
+                
+          
+          
+          
+         Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.Understand this warning
+ 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+ 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+ 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+ 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+ 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+ 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error

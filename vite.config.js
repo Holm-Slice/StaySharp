@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     hmr: {
       port: 5173,
-      host: "localhost"
+      clientPort: 5173
     },
     allowedHosts: [
       // add your exact Replit preview URL here:
@@ -17,5 +17,7 @@ export default defineConfig({
       // you can also allow the entire subdomain pattern:
       ".spock.replit.dev",
     ],
+    strictPort: false,
+    cors: true
   },
 });
