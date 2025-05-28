@@ -76,13 +76,14 @@ const mockKnives = [
   }
 ];
 
-function ShopDashboard() {
+function ShopDashboard({ globalCart, setGlobalCart }) {
   const [knives, setKnives] = useState([]);
   const [filteredKnives, setFilteredKnives] = useState([]);
   const [hoveredKnife, setHoveredKnife] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const [cart, setCart] = useState([]);
+  const cart = globalCart || [];
+  const setCart = setGlobalCart || (() => {});
 
   useEffect(() => {
     // Simulate API call
@@ -187,26 +188,24 @@ function ShopDashboard() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col space-y-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <Link 
-                  to="/" 
-                  className="text-ss_purple hover:text-ss_pale_purple transition-colors flex items-center gap-2"
-                >
-                  ← Back to Home
-                </Link>
-                <h1 className="text-3xl font-bold text-ss_purple mt-2">
-                  Stay Sharp Knife Collection
-                </h1>
-                <p className="text-gray-600 mt-1">
-                  Premium knives for professional and home chefs
-                </p>
-              </div>
+          <div className="flex flex-col space-y-4 items-center text-center">
+            <div className="w-full">
+              <Link 
+                to="/" 
+                className="text-ss_purple hover:text-ss_pale_purple transition-colors flex items-center gap-2 justify-center"
+              >
+                ← Back to Home
+              </Link>
+              <h1 className="text-3xl font-bold text-ss_purple mt-2">
+                Stay Sharp Knife Collection
+              </h1>
+              <p className="text-gray-600 mt-1">
+                Premium knives for professional and home chefs
+              </p>
             </div>
             
             {/* Search Bar */}
-            <div className="max-w-md">
+            <div className="max-w-md w-full">
               <input
                 type="text"
                 placeholder="Search by name, brand, style, or description..."
@@ -221,10 +220,7 @@ function ShopDashboard() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Knife Grid */}
-          <div className="lg:col-span-3">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredKnives.map(knife => (
             <div
               key={knife.id}
@@ -301,25 +297,13 @@ function ShopDashboard() {
           ))}
         </div>
 
-            {filteredKnives.length === 0 && !loading && (
-              <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">
-                  {searchQuery ? `No knives found matching "${searchQuery}"` : 'No knives available at the moment'}
-                </p>
-              </div>
-            )}
+        {filteredKnives.length === 0 && !loading && (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">
+              {searchQuery ? `No knives found matching "${searchQuery}"` : 'No knives available at the moment'}
+            </p>
           </div>
-
-          {/* Cart */}
-          <div className="lg:col-span-1">
-            <Cart 
-              items={cart}
-              onUpdateQuantity={updateQuantity}
-              onRemoveItem={removeFromCart}
-              onCheckout={handleCheckout}
-            />
-          </div>
-        </div>
+        )}
       </main>
     </div>
   );
