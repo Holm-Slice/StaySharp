@@ -76,27 +76,103 @@ function App() {
     smoothScroll(target, 5000);
   };
 
+  const HomePage = () => (
+    <div className="App">
+      <Section id="hero" className="hero-section">
+        <ImageCarousel images={images} />
+      </Section>
+
+      <Divider />
+
+      <Section id="about" className="about-section">
+        <About />
+      </Section>
+
+      <Divider />
+
+      <Section id="services" className="services-section">
+        <ServiceCardSlider />
+      </Section>
+
+      <Divider />
+
+      <Section id="portfolio" className="portfolio-section">
+        <HorizontalScroller />
+      </Section>
+
+      <Divider />
+
+      <Section id="video" className="video-section">
+        <VideoPlayer />
+      </Section>
+
+      <Divider />
+
+      <Section id="contact" className="contact-section">
+        <ContactForm />
+      </Section>
+    </div>
+  );
+
   return (
     <BrowserRouter>
-      <Navbar 
-        cart={cart}
-        onUpdateQuantity={updateQuantity}
-        onRemoveItem={removeFromCart}
-        onCheckout={handleCheckout}
-      />
       <Routes>
+        <Route path="/" element={
+          <>
+            <Navbar 
+              cart={cart}
+              onUpdateQuantity={updateQuantity}
+              onRemoveItem={removeFromCart}
+              onCheckout={handleCheckout}
+            />
+            <HomePage />
+          </>
+        } />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/shop" element={
-          <ShopDashboard 
-            cart={cart}
-            setCart={setCart}
-            onUpdateQuantity={updateQuantity}
-            onRemoveItem={removeFromCart}
-            onCheckout={handleCheckout}
-          />
+          <>
+            <Navbar 
+              cart={cart}
+              onUpdateQuantity={updateQuantity}
+              onRemoveItem={removeFromCart}
+              onCheckout={handleCheckout}
+            />
+            <ShopDashboard 
+              cart={cart}
+              setCart={setCart}
+              onUpdateQuantity={updateQuantity}
+              onRemoveItem={removeFromCart}
+              onCheckout={handleCheckout}
+            />
+          </>
         } />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/booking" element={<BookingPage />} />
+        <Route path="/cart" element={
+          <>
+            <Navbar 
+              cart={cart}
+              onUpdateQuantity={updateQuantity}
+              onRemoveItem={removeFromCart}
+              onCheckout={handleCheckout}
+            />
+            <CartPage 
+              cart={cart}
+              onUpdateQuantity={updateQuantity}
+              onRemoveItem={removeFromCart}
+              onCheckout={handleCheckout}
+            />
+          </>
+        } />
+        <Route path="/booking" element={
+          <>
+            <Navbar 
+              cart={cart}
+              onUpdateQuantity={updateQuantity}
+              onRemoveItem={removeFromCart}
+              onCheckout={handleCheckout}
+            />
+            <BookingPage />
+          </>
+        } />
       </Routes>
     </BrowserRouter>
   );
