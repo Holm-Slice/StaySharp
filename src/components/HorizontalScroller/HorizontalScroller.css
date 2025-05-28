@@ -1,7 +1,7 @@
 .scroll-container {
   position: sticky;
   width: 100vw;
-  overflow-x: auto;
+  overflow-x: hidden; /* Hide the scrollbar */
   white-space: nowrap;
   scroll-behavior: smooth;
   padding: 10px;
@@ -65,7 +65,7 @@
   }
 
   .scroll-content {
-    animation: scroll 10s linear infinite;
+    animation: scroll 20s linear infinite;
   }
 }
 
@@ -78,7 +78,7 @@
   }
 
   .scroll-content {
-    animation: scroll 10s linear infinite;
+    animation: scroll 25s linear infinite;
   }
 }
 
@@ -92,6 +92,6 @@
   }
 
   .scroll-content {
-    animation: scroll 10s linear infinite;
+    animation: scroll 40s linear infinite;
   }
 }
