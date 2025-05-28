@@ -1,49 +1,51 @@
 
 function ProductCard({ product, onAddToCart }) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-      <div className="aspect-w-1 aspect-h-1">
-        <img 
-          src={product.image || '/assets/Images/chef-knife1.jpg'} 
-          alt={product.name}
-          title={product.name}
-          className="w-full h-64 object-cover"
-        />
-      </div>
-      
-      <div className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">
-          {product.name}
-        </h3>
-        
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-          {product.description}
-        </p>
-        
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-ss_purple">
-            ${product.price}
-          </span>
-          
-          <button
-            onClick={() => onAddToCart(product)}
-            disabled={product.stock === 0}
-            className={`px-4 py-2 rounded-md font-medium transition-colors ${
-              product.stock === 0
-                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                : 'bg-ss_purple text-white hover:bg-ss_pale_purple'
-            }`}
-          >
-            {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
-          </button>
+    <div className="flex flex-col justify-center items-center p-4 m-4 md:p-8 md:m-8 overflow-hidden">
+      <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
+        <div className="relative w-full h-48 md:h-auto overflow-hidden">
+          <img 
+            src={product.image || '/assets/Images/chef-knife1.jpg'} 
+            alt={product.name}
+            title={product.name}
+            className="object-cover w-full h-full"
+          />
         </div>
         
-        {product.stock > 0 && product.stock <= 5 && (
-          <p className="text-orange-500 text-sm mt-2">
-            Only {product.stock} left in stock!
+        <section>
+          <h1 className="font-title font-bold text-xl md:text-2xl text-center">
+            {product.name}
+          </h1>
+          
+          <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center line-clamp-3">
+            {product.description}
+          </h2>
+          
+          <section className="flex items-center justify-center my-2 md:my-4">
+            <button
+              onClick={() => onAddToCart(product)}
+              disabled={product.stock === 0}
+              className={`uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow md:flex-none border-4 transition-colors duration-[1300ms] ${
+                product.stock === 0
+                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed border-gray-300'
+                  : 'bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple'
+              }`}
+            >
+              {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
+            </button>
+          </section>
+          
+          <p className="font-light text-black text-center text-sm md:text-base">
+            ${product.price}
           </p>
-        )}
-      </div>
+          
+          {product.stock > 0 && product.stock <= 5 && (
+            <p className="text-orange-500 text-sm mt-2 text-center">
+              Only {product.stock} left in stock!
+            </p>
+          )}
+        </section>
+      </main>
     </div>
   );
 }
