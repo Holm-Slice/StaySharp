@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@stripe/stripe-js": "^7.3.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
     "emailjs-com": "^3.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
@@ -21,7 +25,8 @@
     "react-router-dom": "^6.26.1",
     "react-slick": "^0.30.3",
     "save": "^2.9.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "stripe": "^18.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
