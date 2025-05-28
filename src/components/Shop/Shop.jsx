@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import ProductGrid from './ProductGrid';
 import Cart from './Cart';
@@ -59,7 +58,7 @@ function Shop() {
 
   const handleCheckout = async () => {
     const stripe = await stripePromise;
-    
+
     try {
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
@@ -97,7 +96,7 @@ function Shop() {
         <h1 className="text-4xl font-bold text-center text-ss_purple mb-12">
           Stay Sharp Store
         </h1>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-3">
             <ProductGrid 
@@ -105,7 +104,7 @@ function Shop() {
               onAddToCart={addToCart} 
             />
           </div>
-          
+
           <div className="lg:col-span-1">
             <Cart 
               items={cart}
