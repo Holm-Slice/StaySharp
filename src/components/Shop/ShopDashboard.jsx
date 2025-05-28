@@ -153,39 +153,40 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
             </div>
             
             {/* Search Bar and Cart Container */}
-            <div className="relative w-full">
+            <div className="flex items-start justify-between gap-6 w-full">
+              {/* Left spacer for balance */}
+              <div className="flex-1 max-w-xs"></div>
+              
               {/* Centered Search Bar */}
-              <div className="flex justify-center">
-                <div className="max-w-md w-full">
-                  <input
-                    type="text"
-                    placeholder="Search by name, brand, style, or description..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-ss_purple focus:ring-2 focus:ring-ss_purple focus:ring-opacity-20"
-                  />
-                </div>
+              <div className="flex-1 max-w-md">
+                <input
+                  type="text"
+                  placeholder="Search by name, brand, style, or description..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-ss_purple focus:ring-2 focus:ring-ss_purple focus:ring-opacity-20"
+                />
               </div>
               
-              {/* Cart - Positioned to the right */}
+              {/* Cart - Right aligned */}
               {cart && (
-                <div className="absolute top-0 right-0 flex-shrink-0">
-                  <div className="bg-white rounded-lg shadow-md p-4 min-w-80 max-w-96 border">
-                    <h2 className="text-lg font-semibold text-gray-900 mb-3">
+                <div className="flex-1 max-w-xs">
+                  <div className="bg-white rounded-lg shadow-md p-3 border w-full">
+                    <h2 className="text-base font-semibold text-gray-900 mb-2">
                       Cart ({cart.length})
                     </h2>
                     
                     {cart.length === 0 ? (
-                      <p className="text-gray-500 text-sm">Your cart is empty</p>
+                      <p className="text-gray-500 text-xs">Your cart is empty</p>
                     ) : (
                       <>
-                        <div className="space-y-3 mb-4 max-h-40 overflow-y-auto">
+                        <div className="space-y-2 mb-3 max-h-32 overflow-y-auto">
                           {cart.map(item => (
                             <div key={item.id} className="flex items-center space-x-2">
                               <img 
                                 src={item.image || '/assets/Images/chef-knife1.jpg'} 
                                 alt={item.name}
-                                className="w-8 h-8 object-cover rounded"
+                                className="w-6 h-6 object-cover rounded"
                               />
                               
                               <div className="flex-1 min-w-0">
@@ -198,25 +199,25 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                               <div className="flex items-center space-x-1">
                                 <button
                                   onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                                  className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300 text-xs"
+                                  className="w-4 h-4 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300 text-xs"
                                 >
                                   -
                                 </button>
                                 
-                                <span className="text-xs font-medium w-6 text-center">
+                                <span className="text-xs font-medium w-4 text-center">
                                   {item.quantity}
                                 </span>
                                 
                                 <button
                                   onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                                  className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300 text-xs"
+                                  className="w-4 h-4 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300 text-xs"
                                 >
                                   +
                                 </button>
                                 
                                 <button
                                   onClick={() => onRemoveItem(item.id)}
-                                  className="text-red-500 hover:text-red-700 text-xs ml-1"
+                                  className="text-red-500 hover:text-red-700 text-xs"
                                 >
                                   ✕
                                 </button>
@@ -225,17 +226,17 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                           ))}
                         </div>
                         
-                        <div className="border-t pt-3">
-                          <div className="flex justify-between items-center mb-3">
-                            <span className="text-sm font-semibold">Total:</span>
-                            <span className="text-sm font-bold text-ss_purple">
+                        <div className="border-t pt-2">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-xs font-semibold">Total:</span>
+                            <span className="text-xs font-bold text-ss_purple">
                               ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
                             </span>
                           </div>
                           
                           <button
                             onClick={onCheckout}
-                            className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors text-sm"
+                            className="w-full bg-ss_purple text-white py-1.5 rounded-md font-medium hover:bg-ss_pale_purple transition-colors text-xs"
                           >
                             Checkout
                           </button>
