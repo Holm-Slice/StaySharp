@@ -73,7 +73,7 @@
   }
 
   .scroll-content {
-    animation: scroll 10s linear infinite;
+    animation: scroll 6.7s linear infinite;
   }
 }
 
@@ -87,7 +87,7 @@
   }
 
   .scroll-content {
-    animation: scroll 25s linear infinite;
+    animation: scroll 16.7s linear infinite;
   }
 }
 
@@ -102,6 +102,6 @@
   }
 
   .scroll-content {
-    animation: scroll 40s linear infinite;
+    animation: scroll 26.7s linear infinite;
   }
 }
