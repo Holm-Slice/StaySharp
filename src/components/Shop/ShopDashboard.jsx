@@ -167,8 +167,8 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
               
               {/* Cart - Centered */}
               {cart && cart.length > 0 && (
-                <div className="max-w-md w-full flex justify-center">
-                  <div className="bg-white rounded-lg shadow-md p-4 border w-full flex flex-col items-center justify-center">
+                <div className="max-w-md w-full">
+                  <div className="bg-white rounded-lg shadow-md p-4 border w-full">
                     <h2 className="text-lg font-semibold text-gray-900 mb-3 text-center">
                       Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)} items)
                     </h2>
