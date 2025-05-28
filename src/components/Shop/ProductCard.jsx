@@ -6,7 +6,6 @@ function ProductCard({ product, onAddToCart }) {
         <img 
           src={product.image || '/assets/Images/chef-knife1.jpg'} 
           alt={product.name}
-          title={product.name}
           className="w-full h-64 object-cover"
         />
       </div>

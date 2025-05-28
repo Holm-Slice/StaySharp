@@ -153,8 +153,8 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
             </div>
             
             {/* Search Bar and Cart Container */}
-            <div className="flex flex-col items-center space-y-4 w-full">
-              {/* Centered Search Bar */}
+            <div className="flex justify-center items-start gap-6">
+              {/* Search Bar */}
               <div className="max-w-md w-full">
                 <input
                   type="text"
@@ -165,56 +165,56 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                 />
               </div>
               
-              {/* Cart - Centered */}
-              {cart && cart.length > 0 && (
-                <div className="max-w-md w-full">
-                  <div className="bg-white rounded-lg shadow-md p-4 border w-full">
-                    <h2 className="text-lg font-semibold text-gray-900 mb-3 text-center">
-                      Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)} items)
+              {/* Cart */}
+              {cart && (
+                <div className="flex-shrink-0">
+                  <div className="bg-white rounded-lg shadow-md p-4 min-w-80 max-w-96 border">
+                    <h2 className="text-lg font-semibold text-gray-900 mb-3">
+                      Cart ({cart.length})
                     </h2>
                     
-                    {/* Show full cart details if only one unique item type */}
-                    {cart.length === 1 ? (
+                    {cart.length === 0 ? (
+                      <p className="text-gray-500 text-sm">Your cart is empty</p>
+                    ) : (
                       <>
-                        <div className="space-y-3 mb-4">
+                        <div className="space-y-3 mb-4 max-h-40 overflow-y-auto">
                           {cart.map(item => (
-                            <div key={item.id} className="flex items-center space-x-3">
+                            <div key={item.id} className="flex items-center space-x-2">
                               <img 
                                 src={item.image || '/assets/Images/chef-knife1.jpg'} 
                                 alt={item.name}
-                                title={item.name}
-                                className="w-12 h-12 object-cover rounded"
+                                className="w-8 h-8 object-cover rounded"
                               />
                               
-                              <div className="flex-1">
-                                <h4 className="text-sm font-medium text-gray-900">
+                              <div className="flex-1 min-w-0">
+                                <h4 className="text-xs font-medium text-gray-900 truncate">
                                   {item.name}
                                 </h4>
-                                <p className="text-sm text-gray-500">${item.price}</p>
+                                <p className="text-xs text-gray-500">${item.price}</p>
                               </div>
                               
-                              <div className="flex items-center space-x-2">
+                              <div className="flex items-center space-x-1">
                                 <button
                                   onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                                  className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
+                                  className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300 text-xs"
                                 >
                                   -
                                 </button>
                                 
-                                <span className="text-sm font-medium w-8 text-center">
+                                <span className="text-xs font-medium w-6 text-center">
                                   {item.quantity}
                                 </span>
                                 
                                 <button
                                   onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                                  className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
+                                  className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300 text-xs"
                                 >
                                   +
                                 </button>
                                 
                                 <button
                                   onClick={() => onRemoveItem(item.id)}
-                                  className="text-red-500 hover:text-red-700 ml-2"
+                                  className="text-red-500 hover:text-red-700 text-xs ml-1"
                                 >
                                   ✕
                                 </button>
@@ -225,38 +225,19 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                         
                         <div className="border-t pt-3">
                           <div className="flex justify-between items-center mb-3">
-                            <span className="text-base font-semibold">Total:</span>
-                            <span className="text-lg font-bold text-ss_purple">
+                            <span className="text-sm font-semibold">Total:</span>
+                            <span className="text-sm font-bold text-ss_purple">
                               ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
                             </span>
                           </div>
                           
                           <button
                             onClick={onCheckout}
-                            className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors"
+                            className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors text-sm"
                           >
                             Checkout
                           </button>
                         </div>
-                      </>
-                    ) : (
-                      /* Show compact view with "View Cart" button for multiple items */
-                      <>
-                        <div className="text-center mb-4">
-                          <p className="text-sm text-gray-600 mb-2">
-                            {cart.length} different items in your cart
-                          </p>
-                          <p className="text-lg font-bold text-ss_purple">
-                            Total: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
-                          </p>
-                        </div>
-                        
-                        <Link
-                          to="/cart"
-                          className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors text-center block"
-                        >
-                          View Cart
-                        </Link>
                       </>
                     )}
                   </div>
@@ -284,7 +265,6 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                   <img 
                     src={knife.image} 
                     alt={knife.name}
-                    title={knife.name}
                     className="w-full h-64 object-cover"
                   />
                   

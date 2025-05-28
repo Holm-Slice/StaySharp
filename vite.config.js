@@ -17,7 +17,5 @@ export default defineConfig({
       // you can also allow the entire subdomain pattern:
       ".spock.replit.dev",
     ],
-    strictPort: false,
-    cors: true
   },
 });
