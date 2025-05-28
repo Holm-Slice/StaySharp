@@ -1,32 +1,38 @@
 .scroll-container {
   position: sticky;
   width: 100vw;
-  overflow-x: hidden; /* Hide the scrollbar */
+  overflow-x: hidden;
+  /* Hide the scrollbar */
   white-space: nowrap;
   scroll-behavior: smooth;
   padding: 10px;
   box-sizing: border-box;
   border: 3px solid rgb(69, 51, 147);
   background-color: white;
-  top: 250px; /* Adjust this value based on the height of your navbar */
+  top: 250px;
+  /* Adjust this value based on the height of your navbar */
   left: 0;
-  z-index: 1000; /* Ensure it stays above other content */
+  z-index: 1000;
+  /* Ensure it stays above other content */
   cursor: pointer;
   padding-bottom: 3px;
 }
 
 .horizontal-scroller.fixed {
-  top: -1px; /* Raise by 2 pixels when fixed */
+  top: -1px;
+  /* Raise by 2 pixels when fixed */
   z-index: 1000;
 }
 
 .scroll-content {
   display: inline-flex;
   align-items: center;
-  animation: scroll 20s linear infinite;
+  animation: scroll 10s linear infinite;
   overflow-x: auto;
-  scroll-behavior: smooth; /* Enable smooth scrolling */
-  white-space: nowrap; /* Prevent line breaks */
+  scroll-behavior: smooth;
+  /* Enable smooth scrolling */
+  white-space: nowrap;
+  /* Prevent line breaks */
 }
 
 .scroll-item {
@@ -48,6 +54,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-37%);
   }
@@ -61,11 +68,12 @@
 @media (max-width: 600px) {
   .horizontal-scroller {
     /* padding: 5px; */
-    top: 200px; /* Adjust this value based on the height of your navbar */
+    top: 200px;
+    /* Adjust this value based on the height of your navbar */
   }
 
   .scroll-content {
-    animation: scroll 20s linear infinite;
+    animation: scroll 10s linear infinite;
   }
 }
 
@@ -73,7 +81,8 @@
 @media (min-width: 601px) and (max-width: 1024px) {
   .horizontal-scroller {
     /* padding: 8px; */
-    top: 220px; /* Adjust this value based on the height of your navbar */
+    top: 220px;
+    /* Adjust this value based on the height of your navbar */
     width: 100vw;
   }
 
@@ -86,7 +95,8 @@
 @media (min-width: 1025px) {
   .horizontal-scroller {
     /* padding: 10px; */
-    top: 250px; /* Adjust this value based on the height of 
+    top: 250px;
+    /* Adjust this value based on the height of 
     your navbar */
     width: 100vw;
   }
