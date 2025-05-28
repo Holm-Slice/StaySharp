@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     hmr: {
       port: 5173,
-      clientPort: 5173
+      host: "localhost"
     },
     allowedHosts: [
       // add your exact Replit preview URL here:
