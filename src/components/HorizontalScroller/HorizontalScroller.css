@@ -27,12 +27,9 @@
 .scroll-content {
   display: inline-flex;
   align-items: center;
-  animation: scroll 10s linear infinite;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  /* Enable smooth scrolling */
+  animation: scroll 15s linear infinite;
   white-space: nowrap;
-  /* Prevent line breaks */
+  will-change: transform;
 }
 
 .scroll-item {
@@ -56,7 +53,7 @@
   }
 
   100% {
-    transform: translateX(-37%);
+    transform: translateX(-33.33%);
   }
 }
 
@@ -67,41 +64,34 @@
 /* Mobile styles */
 @media (max-width: 600px) {
   .horizontal-scroller {
-    /* padding: 5px; */
     top: 200px;
-    /* Adjust this value based on the height of your navbar */
   }
 
   .scroll-content {
-    animation: scroll 6.7s linear infinite;
+    animation: scroll 10s linear infinite;
   }
 }
 
 /* Medium screen styles */
 @media (min-width: 601px) and (max-width: 1024px) {
   .horizontal-scroller {
-    /* padding: 8px; */
     top: 220px;
-    /* Adjust this value based on the height of your navbar */
     width: 100vw;
   }
 
   .scroll-content {
-    animation: scroll 16.7s linear infinite;
+    animation: scroll 12s linear infinite;
   }
 }
 
 /* Large screen styles */
 @media (min-width: 1025px) {
   .horizontal-scroller {
-    /* padding: 10px; */
     top: 250px;
-    /* Adjust this value based on the height of 
-    your navbar */
     width: 100vw;
   }
 
   .scroll-content {
-    animation: scroll 26.7s linear infinite;
+    animation: scroll 15s linear infinite;
   }
 }

@@ -47,7 +47,14 @@ function HorizontalScroller(props) {
   ];
 
   // Repeat the pattern multiple times to ensure seamless infinite scroll
-  const repeatedImages = [...imagePattern, ...imagePattern, ...imagePattern, ...imagePattern];
+  const repeatedImages = [
+    ...imagePattern, 
+    ...imagePattern, 
+    ...imagePattern, 
+    ...imagePattern, 
+    ...imagePattern, 
+    ...imagePattern
+  ];
 
   return (
     <div
