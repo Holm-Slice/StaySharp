@@ -26,7 +26,9 @@ function CheckoutPage() {
     return bookingData.services.length * 25; // $25 base per service for demo
   };
 
-  const total = calculateTotal();
+  const reservationFee = 10;
+  const estimatedTotal = calculateTotal();
+  const remainingBalance = Math.max(0, estimatedTotal - reservationFee);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -51,8 +53,8 @@ function CheckoutPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Here you would normally integrate with your Stripe backend
-      console.log('Payment processed:', { bookingData, cardData, total });
-      alert('Payment successful! Your booking has been confirmed.');
+      console.log('Payment processed:', { bookingData, cardData, reservationFee, remainingBalance });
+      alert(`Payment successful! Your booking has been confirmed. Remaining balance of $${remainingBalance} will be collected at service completion.`);
       navigate('/');
       
     } catch (error) {
@@ -143,17 +145,34 @@ function CheckoutPage() {
               </div>
             </div>
 
-            <div className="border-t-2 border-ss_purple pt-4">
+            <div className="border-t-2 border-ss_purple pt-4 space-y-2">
               <div className="flex justify-between items-center">
-                <span className="text-xl font-bold">Total:</span>
-                <span className="text-xl font-bold text-ss_purple">${total}</span>
+                <span className="font-medium">Estimated Total:</span>
+                <span className="font-medium">${estimatedTotal}</span>
+              </div>
+              <div className="flex justify-between items-center text-green-600">
+                <span className="font-medium">Reservation Fee (Today):</span>
+                <span className="font-medium">$10</span>
+              </div>
+              <div className="flex justify-between items-center text-gray-600">
+                <span className="font-medium">Remaining Balance:</span>
+                <span className="font-medium">${remainingBalance}</span>
+              </div>
+              <div className="border-t-2 border-ss_purple pt-2">
+                <div className="flex justify-between items-center">
+                  <span className="text-xl font-bold">Charging Today:</span>
+                  <span className="text-xl font-bold text-ss_purple">$10</span>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Payment Form */}
           <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393]">
-            <h2 className="font-title font-bold text-xl mb-6">Payment Details</h2>
+            <h2 className="font-title font-bold text-xl mb-2">Payment Details</h2>
+            <p className="text-sm text-gray-600 mb-6">
+              Pay a $10 reservation fee now. Remaining balance of ${remainingBalance} will be collected at service completion.
+            </p>
             
             <form onSubmit={handlePayment} className="space-y-6">
               {/* Payment Method Selection */}
@@ -265,13 +284,14 @@ function CheckoutPage() {
                     : 'bg-ss_purple text-white hover:bg-white hover:text-ss_purple'
                 }`}
               >
-                {loading ? 'Processing Payment...' : `Pay $${total}`}
+                {loading ? 'Processing Payment...' : `Pay $10 Reservation Fee`}
               </button>
             </form>
 
             {/* Terms */}
             <p className="text-xs text-gray-500 mt-4 text-center">
-              By completing this payment, you agree to our terms of service and privacy policy.
+              By completing this payment, you agree to our terms of service and privacy policy. 
+              The $10 reservation fee will be deducted from your final service total.
             </p>
           </div>
         </div>
