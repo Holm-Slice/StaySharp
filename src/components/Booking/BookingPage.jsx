@@ -138,7 +138,7 @@ function BookingPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col items-center"></div>
+      <div className="max-w-6xl mx-auto flex flex-col items-center">
         {/* Back to Services Link */}
         <div className="mb-8">
           <Link 
@@ -161,7 +161,7 @@ function BookingPage() {
 
         <div className="grid lg:grid-cols-2 gap-8 w-full max-w-6xl">
           {/* Calendar Section */}
-          <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393]">
+          <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393] justify-self-center">
             <div className="flex justify-between items-center mb-6">
               <button
                 onClick={() => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1))}
