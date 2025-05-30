@@ -16,6 +16,7 @@ import ShopDashboard from "./components/Shop/ShopDashboard";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import CartPage from "./components/Shop/CartPage";
 import BookingPage from "./components/Booking/BookingPage";
+import CheckoutPage from "./components/Checkout/CheckoutPage";
 
 const images = [
   "/assets/Images/chef-knife1.jpg",
@@ -92,6 +93,7 @@ function App() {
       <Routes>
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/booking" element={<BookingPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route
           path="/shop"
           element={

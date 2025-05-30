@@ -1,9 +1,10 @@
 
 import React, { useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 function BookingPage() {
   const location = useLocation();
+  const navigate = useNavigate();
   const selectedService = location.state?.service || {
     title: "Western Style Knife Sharpening",
     description: "Professional knife sharpening service",
@@ -118,7 +119,7 @@ function BookingPage() {
       services: selectedServices
     };
     console.log('Booking submitted:', bookingData);
-    alert('Booking request submitted! We will contact you soon.');
+    navigate('/checkout', { state: { bookingData } });
   };
 
   const monthNames = [
