@@ -70,9 +70,9 @@ function ContactForm() {
   return (
     <div
       id="contact"
-      className="flex flex-col justify-center items-center p-4 m-4 md:p-8 md:m-8 overflow-hidden"
+      className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8"
     >
-      <main className="bg-white border-2 border-ss_purple w-2/3 max-w-2/3 p-4 md:p-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
+      <main className="bg-white border-2 border-ss_purple w-2/3 max-w-2/3 p-4 md:p-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
         <h1 className="font-title font-bold text-2xl md:text-3xl text-center mb-6 text-ss_purple">
           Let's Connect
         </h1>
