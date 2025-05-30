@@ -24,7 +24,7 @@ function ProductCard({ product, onAddToCart }) {
             <button
               onClick={() => onAddToCart(product)}
               disabled={product.stock === 0}
-              className="bg-ss_purple text-white uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] md:flex-none border-4 border-ss_purple"
+              className="bg-ss_purple text-white uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] md:flex-none border-4 border-ss_purple shadow-[4px_4px_0px_#453393] hover:shadow-[2px_2px_0px_#453393] transition-shadow"
             >
               {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
             </button>
