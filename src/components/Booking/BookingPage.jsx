@@ -4,30 +4,37 @@ import { useLocation, Link } from 'react-router-dom';
 
 function BookingPage() {
   const location = useLocation();
-  const service = location.state?.service || {
-    title: "Service Booking",
-    description: "Book your service",
-    price: "Contact for pricing"
+  const selectedService = location.state?.service || {
+    title: "Western Style Knife Sharpening",
+    description: "Professional knife sharpening service",
+    price: "Starting at $1 per inch"
   };
 
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
-  const [showServiceSelection, setShowServiceSelection] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [selectedServices, setSelectedServices] = useState([selectedService]);
+  const [showServiceModal, setShowServiceModal] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    serviceType: service.title,
     message: ''
   });
 
   // Available services
-  const services = [
-    { title: "Knife Sharpening", description: "Professional blade sharpening service", price: "$5-15 per knife" },
-    { title: "Tool Restoration", description: "Restore and sharpen your tools", price: "$10-25 per tool" },
-    { title: "Scissor Sharpening", description: "Precision scissor sharpening", price: "$8-12 per pair" },
-    { title: "Chainsaw Sharpening", description: "Professional chainsaw chain sharpening", price: "$15-20 per chain" }
+  const availableServices = [
+    { title: "Western Style Knife Sharpening", description: "Wustof, Zwilling, Shun, and more!", price: "Starting at $1 per inch" },
+    { title: "Japanese Style Knife Sharpening", description: "Shun, Global, Miyabi, and more!", price: "Starting at $2 per inch" },
+    { title: "Single Bevel Knives", description: "Yanagiba, Deba, Usuba, Etc", price: "Starting at $3 per knife" },
+    { title: "Chip Repair", description: "Repair of any chips in the edge", price: "Starting at $5" },
+    { title: "Tip Repair", description: "Repair that tip you accidentally broke", price: "Starting at $7" },
+    { title: "Bevel Repair", description: "Bread Knives, Serrated Knives, and more!", price: "Starting at $10" },
+    { title: "Thinning", description: "Maintenance to keep that edge workin'", price: "Starting at $15" },
+    { title: "Shears", description: "Kitchen, Hair or Pruning", price: "Starting at $20" },
+    { title: "Mandolins", description: "Cut your finger off easily again", price: "Starting at $7" },
+    { title: "Rehandling", description: "Replace that handle you broke", price: "Starting at $15" },
+    { title: "Total Restoration", description: "Get that beast piece RTG", price: "Starting at $50" }
   ];
 
   // Available time slots
@@ -36,7 +43,7 @@ function BookingPage() {
     "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"
   ];
 
-  // Mock availability data (in real app, this would come from backend)
+  // Mock availability data
   const getAvailability = (date) => {
     const dayOfWeek = date.getDay();
     if (dayOfWeek === 0 || dayOfWeek === 6) return []; // No availability on weekends
@@ -74,21 +81,24 @@ function BookingPage() {
     if (availability.length > 0) {
       setSelectedDate(date);
       setSelectedTime(null);
-      setShowServiceSelection(false);
     }
   };
 
   const handleTimeSelect = (time) => {
     setSelectedTime(time);
-    setShowServiceSelection(true);
   };
 
-  const handleServiceSelect = (selectedService) => {
-    setFormData(prev => ({
-      ...prev,
-      serviceType: selectedService.title
-    }));
-    setShowServiceSelection(false);
+  const handleAddService = (service) => {
+    if (!selectedServices.find(s => s.title === service.title)) {
+      setSelectedServices([...selectedServices, service]);
+    }
+    setShowServiceModal(false);
+  };
+
+  const handleRemoveService = (serviceTitle) => {
+    if (selectedServices.length > 1) {
+      setSelectedServices(selectedServices.filter(s => s.title !== serviceTitle));
+    }
   };
 
   const handleInputChange = (e) => {
@@ -104,7 +114,8 @@ function BookingPage() {
     const bookingData = {
       ...formData,
       date: selectedDate?.toLocaleDateString(),
-      time: selectedTime
+      time: selectedTime,
+      services: selectedServices
     };
     console.log('Booking submitted:', bookingData);
     alert('Booking request submitted! We will contact you soon.');
@@ -116,7 +127,6 @@ function BookingPage() {
   ];
 
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
   const days = getDaysInMonth(currentMonth);
 
   return (
@@ -189,7 +199,7 @@ function BookingPage() {
                     key={index}
                     onClick={() => handleDateClick(date)}
                     disabled={!isAvailable || isPast}
-                    className={`h-12 border-2 transition-all duration-300 ${
+                    className={`h-12 border-2 transition-all duration-300 flex items-center justify-center ${
                       isSelected
                         ? 'bg-ss_purple text-white border-ss_purple'
                         : isAvailable && !isPast
@@ -198,9 +208,6 @@ function BookingPage() {
                     }`}
                   >
                     <div className="text-sm">{date.getDate()}</div>
-                    {isAvailable && !isPast && (
-                      <div className="text-xs">{availability.length}</div>
-                    )}
                   </button>
                 );
               })}
@@ -231,42 +238,84 @@ function BookingPage() {
             )}
           </div>
 
-          {/* Service Selection & Booking Form */}
+          {/* Services & Booking Form */}
           <div className="space-y-6">
-            {/* Service Selection */}
-            {showServiceSelection && (
+            {/* Selected Services */}
+            {selectedDate && selectedTime && (
               <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393]">
-                <h3 className="font-title font-bold text-xl mb-4">Select Your Service</h3>
-                <div className="grid gap-4">
-                  {services.map(serviceOption => (
-                    <div
-                      key={serviceOption.title}
-                      onClick={() => handleServiceSelect(serviceOption)}
-                      className={`p-4 border-2 cursor-pointer transition-all duration-300 hover:shadow-[4px_4px_0px_#453393] ${
-                        formData.serviceType === serviceOption.title
-                          ? 'border-ss_purple bg-ss_purple text-white'
-                          : 'border-ss_purple bg-white hover:bg-ss_purple hover:text-white'
-                      }`}
-                    >
-                      <h4 className="font-bold">{serviceOption.title}</h4>
-                      <p className="text-sm opacity-90">{serviceOption.description}</p>
-                      <p className="text-sm font-medium mt-1">{serviceOption.price}</p>
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="font-title font-bold text-xl">Your Services</h3>
+                  <button
+                    onClick={() => setShowServiceModal(true)}
+                    className="bg-ss_purple text-white px-4 py-2 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-2 border-ss_purple text-sm"
+                  >
+                    + Add Service
+                  </button>
+                </div>
+                
+                <div className="space-y-3">
+                  {selectedServices.map((service, index) => (
+                    <div key={index} className="flex justify-between items-center p-3 border-2 border-gray-200 bg-gray-50">
+                      <div>
+                        <h4 className="font-medium">{service.title}</h4>
+                        <p className="text-sm text-gray-600">{service.price}</p>
+                      </div>
+                      {selectedServices.length > 1 && (
+                        <button
+                          onClick={() => handleRemoveService(service.title)}
+                          className="text-red-500 hover:text-red-700 px-2 py-1"
+                        >
+                          ✕
+                        </button>
+                      )}
                     </div>
                   ))}
                 </div>
               </div>
             )}
 
+            {/* Service Selection Modal */}
+            {showServiceModal && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393] max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="font-title font-bold text-xl">Add a Service</h3>
+                    <button
+                      onClick={() => setShowServiceModal(false)}
+                      className="text-gray-500 hover:text-gray-700 text-2xl"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <div className="grid gap-3">
+                    {availableServices.filter(service => 
+                      !selectedServices.find(s => s.title === service.title)
+                    ).map(service => (
+                      <div
+                        key={service.title}
+                        onClick={() => handleAddService(service)}
+                        className="p-4 border-2 border-ss_purple bg-white hover:bg-ss_purple hover:text-white cursor-pointer transition-all duration-300 hover:shadow-[4px_4px_0px_#453393]"
+                      >
+                        <h4 className="font-bold">{service.title}</h4>
+                        <p className="text-sm opacity-90">{service.description}</p>
+                        <p className="text-sm font-medium mt-1">{service.price}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Booking Summary & Form */}
-            {selectedDate && selectedTime && formData.serviceType && (
+            {selectedDate && selectedTime && (
               <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393]">
                 <h3 className="font-title font-bold text-xl mb-4">Booking Details</h3>
                 
                 {/* Summary */}
                 <div className="bg-gray-50 p-4 mb-6 border-2 border-gray-200">
-                  <p><strong>Service:</strong> {formData.serviceType}</p>
                   <p><strong>Date:</strong> {selectedDate.toLocaleDateString()}</p>
                   <p><strong>Time:</strong> {selectedTime}</p>
+                  <p><strong>Services:</strong> {selectedServices.length} service(s) selected</p>
                 </div>
 
                 {/* Contact Form */}
