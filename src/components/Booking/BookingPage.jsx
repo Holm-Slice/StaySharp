@@ -80,8 +80,14 @@ function BookingPage() {
   const handleDateClick = (date) => {
     const availability = getAvailability(date);
     if (availability.length > 0) {
-      setSelectedDate(date);
-      setSelectedTime(null);
+      // If the same date is clicked again, unselect it
+      if (selectedDate && date.toDateString() === selectedDate.toDateString()) {
+        setSelectedDate(null);
+        setSelectedTime(null);
+      } else {
+        setSelectedDate(date);
+        setSelectedTime(null);
+      }
     }
   };
 

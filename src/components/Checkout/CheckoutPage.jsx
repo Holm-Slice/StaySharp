@@ -27,9 +27,17 @@ function CheckoutPage() {
     return bookingData.services.length * 25; // $25 base per service for demo
   };
 
+  const [currentServices, setCurrentServices] = useState(bookingData.services || []);
+  
   const reservationFee = 10;
-  const estimatedTotal = calculateTotal();
+  const estimatedTotal = currentServices.length * 25; // Recalculate based on current services
   const remainingBalance = Math.max(0, estimatedTotal - reservationFee);
+
+  const handleRemoveService = (serviceTitle) => {
+    if (currentServices.length > 1) {
+      setCurrentServices(currentServices.filter(s => s.title !== serviceTitle));
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -54,7 +62,7 @@ function CheckoutPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Here you would normally integrate with your Stripe backend
-      console.log('Payment processed:', { bookingData, cardData, reservationFee, remainingBalance });
+      console.log('Payment processed:', { ...bookingData, services: currentServices, cardData, reservationFee, remainingBalance });
       
       // Send payment confirmation email to customer
       try {
@@ -66,7 +74,7 @@ function CheckoutPage() {
             to_email: bookingData.email,
             booking_date: bookingData.date,
             booking_time: bookingData.time,
-            services: bookingData.services?.map(s => s.title).join(', '),
+            services: currentServices.map(s => s.title).join(', '),
             reservation_fee: reservationFee,
             remaining_balance: remainingBalance,
             estimated_total: estimatedTotal,
@@ -85,7 +93,7 @@ function CheckoutPage() {
             customer_phone: bookingData.phone || 'Not provided',
             booking_date: bookingData.date,
             booking_time: bookingData.time,
-            services: bookingData.services?.map(s => s.title).join(', '),
+            services: currentServices.map(s => s.title).join(', '),
             customer_message: bookingData.message || 'No additional details',
             reservation_fee: reservationFee,
             remaining_balance: remainingBalance,
@@ -176,17 +184,35 @@ function CheckoutPage() {
 
             <div className="border-t-2 border-gray-200 pt-4 mb-4">
               <h3 className="font-bold text-lg mb-3">Services:</h3>
-              <div className="space-y-2">
-                {bookingData.services?.map((service, index) => (
+              {currentServices.length === 0 ? (
+                <div className="p-4 border-2 border-red-200 bg-red-50 text-red-700 text-center">
+                  <p className="font-medium">No services selected</p>
+                  <p className="text-sm">Please return to booking to add services</p>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  {currentServices.map((service, index) => (
                   <div key={index} className="flex justify-between items-center p-3 border-2 border-gray-200 bg-gray-50">
-                    <div>
+                    <div className="flex-1">
                       <h4 className="font-medium">{service.title}</h4>
                       <p className="text-sm text-gray-600">{service.description}</p>
                     </div>
-                    <span className="font-medium">$25</span>
+                    <div className="flex items-center space-x-3">
+                      <span className="font-medium">$25</span>
+                      {currentServices.length > 1 && (
+                        <button
+                          onClick={() => handleRemoveService(service.title)}
+                          className="text-red-500 hover:text-red-700 px-2 py-1 border border-red-300 hover:border-red-500 transition-colors"
+                          title="Remove service"
+                        >
+                          ✕
+                        </button>
+                      )}
+                    </div>
                   </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="border-t-2 border-ss_purple pt-4 space-y-2">
@@ -321,14 +347,14 @@ function CheckoutPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || currentServices.length === 0}
                 className={`w-full uppercase py-3 px-6 text-lg font-medium transition-colors duration-[1300ms] border-4 border-ss_purple ${
-                  loading
+                  loading || currentServices.length === 0
                     ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                     : 'bg-ss_purple text-white hover:bg-white hover:text-ss_purple'
                 }`}
               >
-                {loading ? 'Processing Payment...' : `Pay $10 Reservation Fee`}
+                {loading ? 'Processing Payment...' : currentServices.length === 0 ? 'No Services Selected' : `Pay $10 Reservation Fee`}
               </button>
             </form>
 
