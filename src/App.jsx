@@ -17,6 +17,8 @@ import AdminDashboard from "./components/Admin/AdminDashboard";
 import CartPage from "./components/Shop/CartPage";
 import BookingPage from "./components/Booking/BookingPage";
 import CheckoutPage from "./components/Checkout/CheckoutPage";
+import ServiceConfirmationPage from "./components/Confirmation/ServiceConfirmationPage";
+import ShopConfirmationPage from "./components/Confirmation/ShopConfirmationPage";
 
 const images = [
   "/assets/Images/chef-knife1.jpg",
@@ -65,11 +67,23 @@ function App() {
         return;
       }
 
-      // For now, just log the checkout attempt
-      console.log("Checkout with items:", cart);
-      alert(
-        "Checkout functionality will be available once Stripe is configured with your API keys.",
-      );
+      // Simulate payment processing
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Create order data
+      const orderData = {
+        items: cart,
+        orderNumber: `SS-${Date.now().toString().slice(-6)}`,
+        customerName: 'Customer', // You can collect this from a form
+        customerEmail: 'customer@email.com', // You can collect this from a form
+        lastFourDigits: '1234' // From payment form
+      };
+
+      // Clear cart
+      setCart([]);
+      
+      // Navigate to confirmation page
+      window.location.href = `/confirmation/shop?orderData=${encodeURIComponent(JSON.stringify(orderData))}`;
     } catch (error) {
       console.error("Checkout error:", error);
       alert("There was an error processing your checkout. Please try again.");
@@ -95,6 +109,8 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/confirmation/service" element={<ServiceConfirmationPage />} />
+        <Route path="/confirmation/shop" element={<ShopConfirmationPage />} />
         <Route
           path="/shop"
           element={

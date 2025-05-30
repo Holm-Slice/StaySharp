@@ -107,7 +107,7 @@ function CheckoutPage() {
       }
       
       alert(`Payment successful! Your booking has been confirmed. Remaining balance of $${remainingBalance} will be collected at service completion.`);
-      navigate('/');
+      navigate('/confirmation/service', { state: { bookingData: { ...bookingData, services: currentServices } } });
       
     } catch (error) {
       console.error('Payment error:', error);
