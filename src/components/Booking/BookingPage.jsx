@@ -161,7 +161,7 @@ function BookingPage() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Calendar Section */}
-          <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393]">
+          <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393] mx-auto">
             <div className="flex justify-between items-center mb-6">
               <button
                 onClick={() => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1))}
@@ -190,7 +190,7 @@ function BookingPage() {
             </div>
 
             {/* Calendar grid */}
-            <div className="grid grid-cols-7 gap-1">
+            <div className="grid grid-cols-7 gap-1 justify-center">
               {days.map((date, index) => {
                 if (!date) {
                   return <div key={index} className="h-12"></div>;
