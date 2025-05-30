@@ -46,12 +46,8 @@ function HorizontalScroller(props) {
     { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" }
   ];
 
-  // Repeat the pattern multiple times to ensure seamless infinite scroll
+  // Repeat the pattern to ensure seamless infinite scroll
   const repeatedImages = [
-    ...imagePattern, 
-    ...imagePattern, 
-    ...imagePattern, 
-    ...imagePattern, 
     ...imagePattern, 
     ...imagePattern
   ];
