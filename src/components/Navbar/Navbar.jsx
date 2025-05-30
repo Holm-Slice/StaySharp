@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
   const location = useLocation();
   const isShopDashboard = location.pathname === "/shop";
+  const isHomePage = location.pathname === "/";
   useEffect(() => {
     const scroller = document.getElementById("scroller");
     if (!scroller) {
@@ -52,15 +53,16 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
         {/* Navigation List */}
         <div className="nav-list h-24">
           <ul className="flex flex-row max-sm:flex-row items-end justify-evenly p-5 mt-10 uppercase mb-2 overflow-hidden">
-            <li className="p-0 text-center">
-              <a
-                href="#home"
-                onClick={handleNavClick}
-                className="text-white no-underline font-light text-2xl px-0 relative mr-12"
-              >
-                Home
-              </a>
-            </li>
+            {!isHomePage && (
+              <li className="p-0 text-center">
+                <Link
+                  to="/"
+                  className="text-white no-underline font-light text-2xl px-0 relative mr-12"
+                >
+                  Home
+                </Link>
+              </li>
+            )}
 
             <li className="p-0 text-center">
               <a
