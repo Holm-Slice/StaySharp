@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -76,13 +75,13 @@ function ContactForm() {
         <h1 className="font-title font-bold text-2xl md:text-3xl text-center mb-6 text-ss_purple">
           Let's Connect
         </h1>
-        
+
         {submitStatus === 'success' && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
             Thank you! Your message has been sent successfully. We'll get back to you soon!
           </div>
         )}
-        
+
         {submitStatus === 'error' && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
             Sorry, there was an error sending your message. Please try again or contact us directly.
@@ -108,7 +107,7 @@ function ContactForm() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:shadow-[0_0_10px_#453393] focus:border-ss_purple focus:ring-ss_purple focus:outline-none sm:text-sm h-11 pl-2"
+                className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2"
               />
             </div>
 
@@ -128,7 +127,7 @@ function ContactForm() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:shadow-[0_0_10px_#453393] focus:border-ss_purple focus:ring-ss_purple focus:outline-none sm:text-sm h-11 pl-2"
+                className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2"
               />
             </div>
           </div>
@@ -149,7 +148,7 @@ function ContactForm() {
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:shadow-[0_0_10px_#453393] focus:border-ss_purple focus:ring-ss_purple focus:outline-none sm:text-sm h-11 pl-2"
+              className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2"
             />
           </div>
 
@@ -168,7 +167,7 @@ function ContactForm() {
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:shadow-[0_0_10px_#453393] focus:border-ss_purple focus:ring-ss_purple focus:outline-none sm:text-sm h-24 pl-2 pt-2"
+              className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-24 pl-2 pt-2"
             ></textarea>
           </div>
 
