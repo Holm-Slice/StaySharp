@@ -1,4 +1,5 @@
 
+
 import React from "react";
 
 function ProductCard({ product, onAddToCart }) {
@@ -26,7 +27,7 @@ function ProductCard({ product, onAddToCart }) {
             {product.description}
           </h2>
           <section className="flex items-center justify-center my-2 md:my-4">
-            <button
+            <button 
               onClick={handleAddToCart}
               disabled={product.stock === 0}
               className="bg-ss_purple text-white uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] md:flex-none border-4 border-ss_purple"
