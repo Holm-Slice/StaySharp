@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
+import emailjs from '@emailjs/browser';
 
 // Initialize Stripe
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder');
@@ -54,6 +55,49 @@ function CheckoutPage() {
       
       // Here you would normally integrate with your Stripe backend
       console.log('Payment processed:', { bookingData, cardData, reservationFee, remainingBalance });
+      
+      // Send payment confirmation email to customer
+      try {
+        await emailjs.send(
+          'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+          'YOUR_PAYMENT_CONFIRMATION_TEMPLATE_ID', // Replace with your payment confirmation template ID
+          {
+            to_name: bookingData.name,
+            to_email: bookingData.email,
+            booking_date: bookingData.date,
+            booking_time: bookingData.time,
+            services: bookingData.services?.map(s => s.title).join(', '),
+            reservation_fee: reservationFee,
+            remaining_balance: remainingBalance,
+            estimated_total: estimatedTotal,
+            reply_to: 'your-business@email.com' // Replace with your business email
+          },
+          'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        );
+
+        // Send notification to business owner
+        await emailjs.send(
+          'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+          'YOUR_BOOKING_NOTIFICATION_TEMPLATE_ID', // Replace with your booking notification template ID
+          {
+            customer_name: bookingData.name,
+            customer_email: bookingData.email,
+            customer_phone: bookingData.phone || 'Not provided',
+            booking_date: bookingData.date,
+            booking_time: bookingData.time,
+            services: bookingData.services?.map(s => s.title).join(', '),
+            customer_message: bookingData.message || 'No additional details',
+            reservation_fee: reservationFee,
+            remaining_balance: remainingBalance,
+            to_email: 'your-business@email.com' // Replace with your business email
+          },
+          'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        );
+      } catch (emailError) {
+        console.error('Email sending failed:', emailError);
+        // Don't block the user flow if email fails
+      }
+      
       alert(`Payment successful! Your booking has been confirmed. Remaining balance of $${remainingBalance} will be collected at service completion.`);
       navigate('/');
       

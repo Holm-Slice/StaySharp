@@ -1,5 +1,6 @@
+
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ function ContactForm() {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,27 +20,51 @@ function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
-      .then(
-        (result) => {
-          console.log(result.text);
+    try {
+      // Send email to business owner
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_CONTACT_TEMPLATE_ID', // Replace with your contact form template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: 'your-business@email.com' // Replace with your business email
         },
-        (error) => {
-          console.log(error.text);
-        }
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
       );
 
-    // Clear form after submission
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+      // Send automated response to customer
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_AUTORESPONSE_TEMPLATE_ID', // Replace with your auto-response template ID
+        {
+          to_name: formData.name,
+          to_email: formData.email,
+          reply_to: 'your-business@email.com' // Replace with your business email
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+
+      setSubmitStatus('success');
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -49,6 +76,19 @@ function ContactForm() {
         <h1 className="font-title font-bold text-2xl md:text-3xl text-center mb-6 text-ss_purple">
           Let's Connect
         </h1>
+        
+        {submitStatus === 'success' && (
+          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+            Thank you! Your message has been sent successfully. We'll get back to you soon!
+          </div>
+        )}
+        
+        {submitStatus === 'error' && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+            Sorry, there was an error sending your message. Please try again or contact us directly.
+          </div>
+        )}
+
         <form className="space-y-6" onSubmit={handleSubmit}>
           {/* Name, Email, and Phone Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -67,6 +107,7 @@ function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:shadow-[0_0_10px_#453393] focus:border-ss_purple focus:ring-ss_purple focus:outline-none sm:text-sm h-11 pl-2"
               />
             </div>
@@ -86,6 +127,7 @@ function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:shadow-[0_0_10px_#453393] focus:border-ss_purple focus:ring-ss_purple focus:outline-none sm:text-sm h-11 pl-2"
               />
             </div>
@@ -106,6 +148,7 @@ function ContactForm() {
               value={formData.phone}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:shadow-[0_0_10px_#453393] focus:border-ss_purple focus:ring-ss_purple focus:outline-none sm:text-sm h-11 pl-2"
             />
           </div>
@@ -124,6 +167,7 @@ function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:shadow-[0_0_10px_#453393] focus:border-ss_purple focus:ring-ss_purple focus:outline-none sm:text-sm h-24 pl-2 pt-2"
             ></textarea>
           </div>
@@ -132,9 +176,14 @@ function ContactForm() {
           <div className="flex items-center justify-center">
             <button
               type="submit"
-              className="bg-ss_purple text-white uppercase py-2 px-4 md:py-3 md:px-6 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple"
+              disabled={isSubmitting}
+              className={`bg-ss_purple text-white uppercase py-2 px-4 md:py-3 md:px-6 transition-colors duration-[1300ms] border-4 border-ss_purple ${
+                isSubmitting 
+                  ? 'opacity-50 cursor-not-allowed' 
+                  : 'hover:bg-white hover:text-ss_purple'
+              }`}
             >
-              Send
+              {isSubmitting ? 'Sending...' : 'Send'}
             </button>
           </div>
         </form>
