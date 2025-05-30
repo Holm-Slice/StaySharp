@@ -241,7 +241,7 @@ function CheckoutPage() {
           <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393]">
             <h2 className="font-title font-bold text-xl mb-2">Payment Details</h2>
             <p className="text-sm text-gray-600 mb-6">
-              Pay a $10 reservation fee now. Remaining balance of ${remainingBalance} will be collected at service completion.
+              Today you will be paying a $10 deposit, that will be taken off of your final bill. The remaining balance of ${remainingBalance} will be collected at the time of service completion.
             </p>
             
             <form onSubmit={handlePayment} className="space-y-6">
