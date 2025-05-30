@@ -1,5 +1,3 @@
-
-
 import React from "react";
 
 function ProductCard({ product, onAddToCart }) {
@@ -8,15 +6,13 @@ function ProductCard({ product, onAddToCart }) {
   };
 
   return (
-    <div
-      className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8"
-    >
+    <div className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8">
       <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
         <div className="relative w-full h-48 md:h-auto overflow-hidden">
-          <img 
-            src={product.image || "/assets/Images/chef-knife1.jpg"} 
-            alt={product.name} 
-            className="object-cover w-full h-full" 
+          <img
+            src={product.image || "/assets/Images/chef-knife1.jpg"}
+            alt={product.name}
+            className="object-cover w-full h-full"
           />
         </div>
         <section>
@@ -27,7 +23,7 @@ function ProductCard({ product, onAddToCart }) {
             {product.description}
           </h2>
           <section className="flex items-center justify-center my-2 md:my-4">
-            <button 
+            <button
               onClick={handleAddToCart}
               disabled={product.stock === 0}
               className="bg-ss_purple text-white uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] md:flex-none border-4 border-ss_purple"
