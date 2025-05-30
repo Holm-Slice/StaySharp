@@ -90,6 +90,7 @@ function App() {
         onRemoveItem={removeFromCart}
         onCheckout={handleCheckout}
       />
+      <HorizontalScroller />
       <Routes>
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/booking" element={<BookingPage />} />
@@ -121,8 +122,6 @@ function App() {
           path="/"
           element={
             <div className="main-app-div">
-              <HorizontalScroller />
-
               <main>
                 <VideoPlayer className="max-h-40" />
                 <Divider />
