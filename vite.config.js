@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     hmr: {
       port: 5173,
-      host: "d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev"
+      host: "localhost"
     },
     allowedHosts: [
       // add your exact Replit preview URL here:
