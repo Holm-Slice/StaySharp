@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -104,7 +102,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
         setLoading(false);
       }
     };
-    
+
     loadKnives();
   }, []);
 
@@ -164,7 +162,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                 Premium knives for professional and home chefs
               </p>
             </div>
-            
+
             {/* Search Bar and Cart Container */}
             <div className="flex flex-col items-center space-y-4 w-full">
               {/* Centered Search Bar */}
@@ -177,7 +175,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-ss_purple focus:ring-2 focus:ring-ss_purple focus:ring-opacity-20"
                 />
               </div>
-              
+
               {/* Cart - Centered */}
               {cart && cart.length > 0 && (
                 <div className="max-w-md w-full">
@@ -185,7 +183,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                     <h2 className="text-lg font-semibold text-gray-900 mb-3 text-center">
                       Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)} items)
                     </h2>
-                    
+
                     {/* Show full cart details if only one unique item type */}
                     {cart.length === 1 ? (
                       <>
@@ -198,14 +196,14 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                                 title={item.name}
                                 className="w-12 h-12 object-cover rounded"
                               />
-                              
+
                               <div className="flex-1">
                                 <h4 className="text-sm font-medium text-gray-900">
                                   {item.name}
                                 </h4>
                                 <p className="text-sm text-gray-500">${item.price}</p>
                               </div>
-                              
+
                               <div className="flex items-center space-x-2">
                                 <button
                                   onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
@@ -213,18 +211,18 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                                 >
                                   -
                                 </button>
-                                
+
                                 <span className="text-sm font-medium w-8 text-center">
                                   {item.quantity}
                                 </span>
-                                
+
                                 <button
                                   onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
                                   className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
                                 >
                                   +
                                 </button>
-                                
+
                                 <button
                                   onClick={() => onRemoveItem(item.id)}
                                   className="text-red-500 hover:text-red-700 ml-2"
@@ -235,7 +233,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                             </div>
                           ))}
                         </div>
-                        
+
                         <div className="border-t pt-3">
                           <div className="flex justify-between items-center mb-3">
                             <span className="text-base font-semibold">Total:</span>
@@ -243,7 +241,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                               ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
                             </span>
                           </div>
-                          
+
                           <button
                             onClick={onCheckout}
                             className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors"
@@ -263,7 +261,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                             Total: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
                           </p>
                         </div>
-                        
+
                         <Link
                           to="/cart"
                           className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors text-center block"
@@ -300,7 +298,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                     title={knife.name}
                     className="object-cover w-full h-full"
                   />
-                  
+
                   {/* Hover Popup - Only over image */}
                   {hoveredKnife?.id === knife.id && (
                     <div className="absolute bottom-2 right-2 bg-white border-2 border-ss_purple rounded-lg shadow-lg p-3 z-10 min-w-48">
@@ -321,18 +319,18 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                     </div>
                   )}
                 </div>
-                
+
                 <section className="flex flex-col h-full justify-between">
                   <div>
                     <h1 className="font-title font-bold text-xl md:text-2xl text-center">
                       {knife.name}
                     </h1>
-                    
+
                     <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
                       {knife.description}
                     </h2>
                   </div>
-                  
+
                   <div className="flex justify-between items-end">
                     <div className="flex flex-col">
                       <p className="font-light text-black text-sm md:text-base">
@@ -344,7 +342,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                         </p>
                       )}
                     </div>
-                    
+
                     <button
                       onClick={() => addToCart(knife)}
                       disabled={knife.stock === 0}

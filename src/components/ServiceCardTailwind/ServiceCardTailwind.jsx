@@ -35,14 +35,14 @@ function ServiceCardTailwind({ title, description, price, image }) {
               {description}
             </h2>
           </div>
-          
+
           <div className="flex justify-between items-end">
             <div className="flex flex-col">
               <p className="font-light text-black text-sm md:text-base">
                 {price}
               </p>
             </div>
-            
+
             <button
               onClick={handleBookNow}
               className="bg-ss_purple text-white uppercase py-2 px-4 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple text-sm md:text-base"
