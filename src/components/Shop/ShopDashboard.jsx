@@ -268,11 +268,11 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredKnives.map(knife => (
             <div
               key={knife.id}
-              className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8"
+              className="flex flex-col justify-center items-center"
             >
               <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
                 <div 
