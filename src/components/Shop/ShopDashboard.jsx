@@ -1,15 +1,17 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Dynamically import Stripe only if the key is available
 let stripePromise = null;
 if (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
-  import('@stripe/stripe-js').then(({ loadStripe }) => {
-    stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
-  }).catch(error => {
-    console.warn('Stripe failed to load:', error);
-    stripePromise = null;
-  });
+  import("@stripe/stripe-js")
+    .then(({ loadStripe }) => {
+      stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+    })
+    .catch((error) => {
+      console.warn("Stripe failed to load:", error);
+      stripePromise = null;
+    });
 }
 
 const mockKnives = [
@@ -22,7 +24,7 @@ const mockKnives = [
     price: 149.99,
     image: "/assets/Images/chef-knife1.jpg",
     description: "Professional German chef's knife with full tang construction",
-    stock: 3
+    stock: 3,
   },
   {
     id: 2,
@@ -33,7 +35,7 @@ const mockKnives = [
     price: 189.99,
     image: "/assets/Images/chef-knife2.jpg",
     description: "Hand-forged Japanese santoku with Damascus steel",
-    stock: 2
+    stock: 2,
   },
   {
     id: 3,
@@ -44,7 +46,7 @@ const mockKnives = [
     price: 299.99,
     image: "/assets/Images/chef-knife3.jpg",
     description: "Premium Japanese gyuto with VG10 steel core",
-    stock: 1
+    stock: 1,
   },
   {
     id: 4,
@@ -55,7 +57,7 @@ const mockKnives = [
     price: 39.99,
     image: "/assets/Images/chef-knife1.jpg",
     description: "Precision paring knife for detailed work",
-    stock: 8
+    stock: 8,
   },
   {
     id: 5,
@@ -66,7 +68,7 @@ const mockKnives = [
     price: 119.99,
     image: "/assets/Images/chef-knife2.jpg",
     description: "Lightweight stainless steel Japanese chef's knife",
-    stock: 5
+    stock: 5,
   },
   {
     id: 6,
@@ -77,27 +79,33 @@ const mockKnives = [
     price: 89.99,
     image: "/assets/Images/chef-knife3.jpg",
     description: "Serrated bread knife with ice-hardened blade",
-    stock: 4
-  }
+    stock: 4,
+  },
 ];
 
-function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onCheckout }) {
+function ShopDashboard({
+  cart,
+  setCart,
+  onUpdateQuantity,
+  onRemoveItem,
+  onCheckout,
+}) {
   const [knives, setKnives] = useState([]);
   const [filteredKnives, setFilteredKnives] = useState([]);
   const [hoveredKnife, setHoveredKnife] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     // Simulate API call with error handling
     const loadKnives = async () => {
       try {
         // Simulate async operation
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         setKnives(mockKnives);
         setFilteredKnives(mockKnives);
       } catch (error) {
-        console.error('Error loading knives:', error);
+        console.error("Error loading knives:", error);
       } finally {
         setLoading(false);
       }
@@ -107,30 +115,31 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
   }, []);
 
   useEffect(() => {
-    const filtered = knives.filter(knife =>
-      knife.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      knife.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      knife.style.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      knife.description.toLowerCase().includes(searchQuery.toLowerCase())
+    const filtered = knives.filter(
+      (knife) =>
+        knife.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        knife.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        knife.style.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        knife.description.toLowerCase().includes(searchQuery.toLowerCase()),
     );
     setFilteredKnives(filtered);
   }, [searchQuery, knives]);
 
   const addToCart = (knife) => {
     try {
-      setCart(prevCart => {
-        const existingItem = prevCart.find(item => item.id === knife.id);
+      setCart((prevCart) => {
+        const existingItem = prevCart.find((item) => item.id === knife.id);
         if (existingItem) {
-          return prevCart.map(item =>
-            item.id === knife.id 
+          return prevCart.map((item) =>
+            item.id === knife.id
               ? { ...item, quantity: item.quantity + 1 }
-              : item
+              : item,
           );
         }
         return [...prevCart, { ...knife, quantity: 1 }];
       });
     } catch (error) {
-      console.error('Error adding to cart:', error);
+      console.error("Error adding to cart:", error);
     }
   };
 
@@ -149,8 +158,8 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col items-center text-center">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="text-ss_purple hover:text-ss_pale_purple transition-colors flex items-center gap-2 mb-4"
               >
                 ← Back to Home
@@ -181,17 +190,23 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                 <div className="max-w-md w-full">
                   <div className="bg-white rounded-lg shadow-md p-4 border w-full">
                     <h2 className="text-lg font-semibold text-gray-900 mb-3 text-center">
-                      Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)} items)
+                      Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)}{" "}
+                      items)
                     </h2>
 
                     {/* Show full cart details if only one unique item type */}
                     {cart.length === 1 ? (
                       <>
                         <div className="space-y-3 mb-4">
-                          {cart.map(item => (
-                            <div key={item.id} className="flex items-center space-x-3">
-                              <img 
-                                src={item.image || '/assets/Images/chef-knife1.jpg'} 
+                          {cart.map((item) => (
+                            <div
+                              key={item.id}
+                              className="flex items-center space-x-3"
+                            >
+                              <img
+                                src={
+                                  item.image || "/assets/Images/chef-knife1.jpg"
+                                }
                                 alt={item.name}
                                 title={item.name}
                                 className="w-12 h-12 object-cover rounded"
@@ -201,12 +216,16 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                                 <h4 className="text-sm font-medium text-gray-900">
                                   {item.name}
                                 </h4>
-                                <p className="text-sm text-gray-500">${item.price}</p>
+                                <p className="text-sm text-gray-500">
+                                  ${item.price}
+                                </p>
                               </div>
 
                               <div className="flex items-center space-x-2">
                                 <button
-                                  onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
+                                  onClick={() =>
+                                    onUpdateQuantity(item.id, item.quantity - 1)
+                                  }
                                   className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
                                 >
                                   -
@@ -217,7 +236,9 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                                 </span>
 
                                 <button
-                                  onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+                                  onClick={() =>
+                                    onUpdateQuantity(item.id, item.quantity + 1)
+                                  }
                                   className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
                                 >
                                   +
@@ -236,9 +257,18 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
 
                         <div className="border-t pt-3">
                           <div className="flex justify-between items-center mb-3">
-                            <span className="text-base font-semibold">Total:</span>
+                            <span className="text-base font-semibold">
+                              Total:
+                            </span>
                             <span className="text-lg font-bold text-ss_purple">
-                              ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
+                              $
+                              {cart
+                                .reduce(
+                                  (sum, item) =>
+                                    sum + item.price * item.quantity,
+                                  0,
+                                )
+                                .toFixed(2)}
                             </span>
                           </div>
 
@@ -258,7 +288,13 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                             {cart.length} different items in your cart
                           </p>
                           <p className="text-lg font-bold text-ss_purple">
-                            Total: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
+                            Total: $
+                            {cart
+                              .reduce(
+                                (sum, item) => sum + item.price * item.quantity,
+                                0,
+                              )
+                              .toFixed(2)}
                           </p>
                         </div>
 
@@ -281,19 +317,19 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {filteredKnives.map(knife => (
+          {filteredKnives.map((knife) => (
             <div
               key={knife.id}
               className="flex flex-col justify-center items-center"
             >
-              <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl h-[500px] md:h-[400px] p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.08] hover:duration-[300ms] duration-[300ms] cursor-pointer gap-6 overflow-hidden">
-                <div 
+              <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl h-[500px] md:h-[400px] p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-6 overflow-hidden">
+                <div
                   className="relative w-full h-48 md:h-full overflow-hidden"
                   onMouseEnter={() => setHoveredKnife(knife)}
                   onMouseLeave={() => setHoveredKnife(null)}
                 >
-                  <img 
-                    src={knife.image} 
+                  <img
+                    src={knife.image}
                     alt={knife.name}
                     title={knife.name}
                     className="object-cover w-full h-full"
@@ -304,16 +340,28 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                     <div className="absolute bottom-2 right-2 bg-white border-2 border-ss_purple rounded-lg shadow-lg p-3 z-10 min-w-48">
                       <div className="space-y-1 text-sm">
                         <div className="flex justify-between">
-                          <span className="font-medium text-gray-700">Style:</span>
-                          <span className="text-ss_purple font-semibold">{knife.style}</span>
+                          <span className="font-medium text-gray-700">
+                            Style:
+                          </span>
+                          <span className="text-ss_purple font-semibold">
+                            {knife.style}
+                          </span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium text-gray-700">Length:</span>
-                          <span className="text-ss_purple font-semibold">{knife.length}</span>
+                          <span className="font-medium text-gray-700">
+                            Length:
+                          </span>
+                          <span className="text-ss_purple font-semibold">
+                            {knife.length}
+                          </span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium text-gray-700">Brand:</span>
-                          <span className="text-ss_purple font-semibold">{knife.brand}</span>
+                          <span className="font-medium text-gray-700">
+                            Brand:
+                          </span>
+                          <span className="text-ss_purple font-semibold">
+                            {knife.brand}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -348,11 +396,11 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                       disabled={knife.stock === 0}
                       className={`uppercase py-2 px-4 transition-colors duration-[1300ms] border-4 text-sm md:text-base ${
                         knife.stock === 0
-                          ? 'bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed'
-                          : 'bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple'
+                          ? "bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed"
+                          : "bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
                       }`}
                     >
-                      {knife.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
+                      {knife.stock === 0 ? "Out of Stock" : "Add to Cart"}
                     </button>
                   </div>
                 </section>
@@ -364,7 +412,9 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
         {filteredKnives.length === 0 && !loading && (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">
-              {searchQuery ? `No knives found matching "${searchQuery}"` : 'No knives available at the moment'}
+              {searchQuery
+                ? `No knives found matching "${searchQuery}"`
+                : "No knives available at the moment"}
             </p>
           </div>
         )}
