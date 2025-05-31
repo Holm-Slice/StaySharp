@@ -15,25 +15,33 @@ function ProductCard({ product, onAddToCart }) {
             className="object-cover w-full h-full"
           />
         </div>
-        <section>
-          <h1 className="font-title font-bold text-xl md:text-2xl text-center">
-            {product.name}
-          </h1>
-          <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
-            {product.description}
-          </h2>
-          <section className="flex items-center justify-center my-2 md:my-4">
+        <section className="flex flex-col h-full justify-between">
+          <div>
+            <h1 className="font-title font-bold text-xl md:text-2xl text-center">
+              {product.name}
+            </h1>
+            <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
+              {product.description}
+            </h2>
+          </div>
+
+          <div className="flex flex-col items-center space-y-2">
+            <p className="font-light text-black text-center text-sm md:text-base">
+              ${product.price}
+            </p>
+            {product.stock > 0 && product.stock <= 3 && (
+              <p className="text-orange-500 text-sm">
+                Only {product.stock} left in stock!
+              </p>
+            )}
             <button
               onClick={handleAddToCart}
               disabled={product.stock === 0}
-              className="bg-ss_purple text-white uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] md:flex-none border-4 border-ss_purple"
+              className="bg-ss_purple text-white uppercase py-1 px-6 w-full max-w-48 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple text-sm md:text-base"
             >
               {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
             </button>
-          </section>
-          <p className="font-light text-black text-center text-sm md:text-base">
-            ${product.price}
-          </p>
+          </div>
         </section>
       </main>
     </div>
