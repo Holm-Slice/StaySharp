@@ -12,7 +12,7 @@ function ProductGrid({ products, onAddToCart }) {
   }
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
       {products.map(product => (
         <ProductCard 
           key={product.id}
