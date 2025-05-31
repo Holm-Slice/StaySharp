@@ -268,13 +268,13 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredKnives.map(knife => (
             <div
               key={knife.id}
               className="flex flex-col justify-center items-center"
             >
-              <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
+              <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-102 hover:duration-[300ms] duration-[300ms] cursor-pointer gap-6 overflow-hidden">
                 <div 
                   className="relative w-full h-48 md:h-auto overflow-hidden"
                   onMouseEnter={() => setHoveredKnife(knife)}
@@ -308,20 +308,31 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                   )}
                 </div>
                 
-                <section>
+                <section className="flex flex-col h-full">
                   <h1 className="font-title font-bold text-xl md:text-2xl text-center">
                     {knife.name}
                   </h1>
                   
-                  <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
+                  <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center flex-grow">
                     {knife.description}
                   </h2>
                   
-                  <section className="flex items-center justify-center my-2 md:my-4">
+                  <div className="flex justify-between items-end mt-auto">
+                    <div className="flex flex-col">
+                      <p className="font-light text-black text-sm md:text-base">
+                        ${knife.price}
+                      </p>
+                      {knife.stock > 0 && knife.stock <= 3 && (
+                        <p className="text-orange-500 text-sm mt-1">
+                          Only {knife.stock} left in stock!
+                        </p>
+                      )}
+                    </div>
+                    
                     <button
                       onClick={() => addToCart(knife)}
                       disabled={knife.stock === 0}
-                      className={`uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow transition-colors duration-[1300ms] md:flex-none border-4 ${
+                      className={`uppercase py-2 px-4 transition-colors duration-[1300ms] border-4 text-sm md:text-base ${
                         knife.stock === 0
                           ? 'bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed'
                           : 'bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple'
@@ -329,17 +340,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                     >
                       {knife.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
                     </button>
-                  </section>
-                  
-                  <p className="font-light text-black text-center text-sm md:text-base">
-                    ${knife.price}
-                  </p>
-                  
-                  {knife.stock > 0 && knife.stock <= 3 && (
-                    <p className="text-orange-500 text-sm text-center mt-2">
-                      Only {knife.stock} left in stock!
-                    </p>
-                  )}
+                  </div>
                 </section>
               </main>
             </div>
