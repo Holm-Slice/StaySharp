@@ -107,19 +107,21 @@ function ActiveSlider() {
       </button>
 
       {/* Slider Content */}
-      <div className="w-full max-w-xs sm:max-w-sm md:max-w-4xl overflow-hidden relative">
+      <div className="w-full max-w-xs sm:max-w-sm md:max-w-6xl overflow-hidden relative">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {serviceCards.map((card, index) => (
-            <div key={index} className="w-full flex-shrink-0 z-500">
-              <ServiceCardTailwind
-                title={card.title}
-                description={card.description}
-                price={card.price}
-                image={card.image}
-              />
+            <div key={index} className="w-full flex-shrink-0 flex justify-center">
+              <div className="w-full max-w-2xl">
+                <ServiceCardTailwind
+                  title={card.title}
+                  description={card.description}
+                  price={card.price}
+                  image={card.image}
+                />
+              </div>
             </div>
           ))}
         </div>
