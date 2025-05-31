@@ -268,15 +268,15 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {filteredKnives.map(knife => (
             <div
               key={knife.id}
               className="flex flex-col justify-center items-center"
             >
-              <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-102 hover:duration-[300ms] duration-[300ms] cursor-pointer gap-6 overflow-hidden">
+              <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl h-[500px] md:h-[400px] p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.08] hover:duration-[300ms] duration-[300ms] cursor-pointer gap-6 overflow-hidden">
                 <div 
-                  className="relative w-full h-48 md:h-auto overflow-hidden"
+                  className="relative w-full h-48 md:h-full overflow-hidden"
                   onMouseEnter={() => setHoveredKnife(knife)}
                   onMouseLeave={() => setHoveredKnife(null)}
                 >
@@ -308,16 +308,18 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                   )}
                 </div>
                 
-                <section className="flex flex-col h-full">
-                  <h1 className="font-title font-bold text-xl md:text-2xl text-center">
-                    {knife.name}
-                  </h1>
+                <section className="flex flex-col h-full justify-between">
+                  <div>
+                    <h1 className="font-title font-bold text-xl md:text-2xl text-center">
+                      {knife.name}
+                    </h1>
+                    
+                    <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
+                      {knife.description}
+                    </h2>
+                  </div>
                   
-                  <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center flex-grow">
-                    {knife.description}
-                  </h2>
-                  
-                  <div className="flex justify-between items-end mt-auto">
+                  <div className="flex justify-between items-end">
                     <div className="flex flex-col">
                       <p className="font-light text-black text-sm md:text-base">
                         ${knife.price}
