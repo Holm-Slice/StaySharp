@@ -10,6 +10,7 @@ if (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
     stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
   }).catch(error => {
     console.warn('Stripe failed to load:', error);
+    stripePromise = null;
   });
 }
 
@@ -90,12 +91,21 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    // Simulate API call
-    setTimeout(() => {
-      setKnives(mockKnives);
-      setFilteredKnives(mockKnives);
-      setLoading(false);
-    }, 1000);
+    // Simulate API call with error handling
+    const loadKnives = async () => {
+      try {
+        // Simulate async operation
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setKnives(mockKnives);
+        setFilteredKnives(mockKnives);
+      } catch (error) {
+        console.error('Error loading knives:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    loadKnives();
   }, []);
 
   useEffect(() => {
@@ -109,17 +119,21 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
   }, [searchQuery, knives]);
 
   const addToCart = (knife) => {
-    setCart(prevCart => {
-      const existingItem = prevCart.find(item => item.id === knife.id);
-      if (existingItem) {
-        return prevCart.map(item =>
-          item.id === knife.id 
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
-      return [...prevCart, { ...knife, quantity: 1 }];
-    });
+    try {
+      setCart(prevCart => {
+        const existingItem = prevCart.find(item => item.id === knife.id);
+        if (existingItem) {
+          return prevCart.map(item =>
+            item.id === knife.id 
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          );
+        }
+        return [...prevCart, { ...knife, quantity: 1 }];
+      });
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+    }
   };
 
   if (loading) {
