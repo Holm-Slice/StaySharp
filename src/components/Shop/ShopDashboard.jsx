@@ -379,22 +379,19 @@ function ShopDashboard({
                     </h2>
                   </div>
 
-                  <div className="flex justify-between items-end">
-                    <div className="flex flex-col">
-                      <p className="font-light text-black text-sm md:text-base">
-                        ${knife.price}
+                  <div className="flex flex-col items-center space-y-2">
+                    <p className="font-light text-black text-center text-sm md:text-base">
+                      ${knife.price}
+                    </p>
+                    {knife.stock > 0 && knife.stock <= 3 && (
+                      <p className="text-orange-500 text-sm">
+                        Only {knife.stock} left in stock!
                       </p>
-                      {knife.stock > 0 && knife.stock <= 3 && (
-                        <p className="text-orange-500 text-sm mt-1">
-                          Only {knife.stock} left in stock!
-                        </p>
-                      )}
-                    </div>
-
+                    )}
                     <button
                       onClick={() => addToCart(knife)}
                       disabled={knife.stock === 0}
-                      className={`uppercase py-2 px-4 transition-colors duration-[1300ms] border-4 text-sm md:text-base ${
+                      className={`uppercase py-1 px-6 w-full max-w-48 transition-colors duration-[1300ms] border-4 text-sm md:text-base ${
                         knife.stock === 0
                           ? "bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed"
                           : "bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
