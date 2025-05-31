@@ -12,7 +12,7 @@ function ProductGrid({ products, onAddToCart }) {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
+    <div className="grid grid-cols-3 gap-2 md:gap-4 lg:gap-6">
       {products.map(product => (
         <ProductCard 
           key={product.id}
