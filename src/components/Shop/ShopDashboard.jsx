@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -120,8 +121,6 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
       return [...prevCart, { ...knife, quantity: 1 }];
     });
   };
-
-  
 
   if (loading) {
     return (
@@ -269,15 +268,15 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center">
           {filteredKnives.map(knife => (
             <div
               key={knife.id}
-              className="relative"
+              className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8"
             >
-              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
                 <div 
-                  className="aspect-w-1 aspect-h-1 relative"
+                  className="relative w-full h-48 md:h-auto overflow-hidden"
                   onMouseEnter={() => setHoveredKnife(knife)}
                   onMouseLeave={() => setHoveredKnife(null)}
                 >
@@ -285,7 +284,7 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                     src={knife.image} 
                     alt={knife.name}
                     title={knife.name}
-                    className="w-full h-64 object-cover"
+                    className="object-cover w-full h-full"
                   />
                   
                   {/* Hover Popup - Only over image */}
@@ -309,40 +308,40 @@ function ShopDashboard({ cart, setCart, onUpdateQuantity, onRemoveItem, onChecko
                   )}
                 </div>
                 
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <section>
+                  <h1 className="font-title font-bold text-xl md:text-2xl text-center">
                     {knife.name}
-                  </h3>
+                  </h1>
                   
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
                     {knife.description}
-                  </p>
+                  </h2>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-ss_purple">
-                      ${knife.price}
-                    </span>
-                    
+                  <section className="flex items-center justify-center my-2 md:my-4">
                     <button
                       onClick={() => addToCart(knife)}
                       disabled={knife.stock === 0}
-                      className={`px-4 py-2 rounded-md font-medium transition-colors ${
+                      className={`uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow transition-colors duration-[1300ms] md:flex-none border-4 ${
                         knife.stock === 0
-                          ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                          : 'bg-ss_purple text-white hover:bg-ss_pale_purple'
+                          ? 'bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed'
+                          : 'bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple'
                       }`}
                     >
                       {knife.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
                     </button>
-                  </div>
+                  </section>
+                  
+                  <p className="font-light text-black text-center text-sm md:text-base">
+                    ${knife.price}
+                  </p>
                   
                   {knife.stock > 0 && knife.stock <= 3 && (
-                    <p className="text-orange-500 text-sm">
+                    <p className="text-orange-500 text-sm text-center mt-2">
                       Only {knife.stock} left in stock!
                     </p>
                   )}
-                </div>
-              </div>
+                </section>
+              </main>
             </div>
           ))}
         </div>

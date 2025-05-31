@@ -1,4 +1,5 @@
 
+
 import { Link } from 'react-router-dom';
 
 function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
@@ -6,7 +7,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-6">
@@ -30,9 +31,9 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-8">
         {cart.length === 0 ? (
-          <div className="text-center py-12">
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <div className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8">
+            <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden text-center">
+              <h2 className="font-title font-bold text-xl md:text-2xl mb-4">
                 Your cart is empty
               </h2>
               <p className="text-gray-600 mb-6">
@@ -40,18 +41,18 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
               </p>
               <Link
                 to="/shop"
-                className="bg-ss_purple text-white px-6 py-3 rounded-md font-medium hover:bg-ss_pale_purple transition-colors"
+                className="bg-ss_purple text-white px-6 py-3 font-medium hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple uppercase inline-block"
               >
                 Continue Shopping
               </Link>
-            </div>
+            </main>
           </div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center">
             {/* Cart Items */}
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h2 className="text-xl font-semibold text-gray-900 mb-6">
+            <div className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8 w-full lg:w-2/3">
+              <main className="bg-white border-2 border-ss_purple w-full p-4 md:p-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
+                <h2 className="font-title font-bold text-xl md:text-2xl text-center mb-6">
                   Cart Items
                 </h2>
                 
@@ -62,7 +63,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                         src={item.image || '/assets/Images/chef-knife1.jpg'} 
                         alt={item.name}
                         title={item.name}
-                        className="w-20 h-20 object-cover rounded-lg"
+                        className="w-20 h-20 object-cover"
                       />
                       
                       <div className="flex-1">
@@ -81,7 +82,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                            className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
+                            className="w-8 h-8 bg-ss_purple text-white flex items-center justify-center hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
                           >
                             -
                           </button>
@@ -92,7 +93,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                           
                           <button
                             onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                            className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
+                            className="w-8 h-8 bg-ss_purple text-white flex items-center justify-center hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
                           >
                             +
                           </button>
@@ -116,13 +117,13 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                     </div>
                   ))}
                 </div>
-              </div>
+              </main>
             </div>
 
             {/* Order Summary */}
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-lg shadow-md p-6 sticky top-4">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <div className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8 w-full lg:w-1/3">
+              <main className="bg-white border-2 border-ss_purple w-full max-w-xs md:max-w-lg p-4 md:p-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden sticky top-4">
+                <h2 className="font-title font-bold text-xl md:text-2xl text-center mb-4">
                   Order Summary
                 </h2>
                 
@@ -152,18 +153,18 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                 
                 <button
                   onClick={onCheckout}
-                  className="w-full bg-ss_purple text-white py-3 rounded-md font-medium hover:bg-ss_pale_purple transition-colors mb-4"
+                  className="w-full bg-ss_purple text-white py-3 font-medium hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple uppercase mb-4"
                 >
                   Proceed to Checkout
                 </button>
                 
                 <Link
                   to="/shop"
-                  className="w-full border border-ss_purple text-ss_purple py-3 rounded-md font-medium hover:bg-ss_purple hover:text-white transition-colors text-center block"
+                  className="w-full border-4 border-ss_purple text-ss_purple py-3 font-medium hover:bg-ss_purple hover:text-white transition-colors duration-[1300ms] text-center block uppercase"
                 >
                   Continue Shopping
                 </Link>
-              </div>
+              </main>
             </div>
           </div>
         )}
