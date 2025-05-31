@@ -17,7 +17,7 @@ export default defineConfig({
       // you can also allow the entire subdomain pattern:
       ".spock.replit.dev",
       // deployment URL:
-      "stay-sharp-holm-slice.replit.app",
+      "stay-sharp-holm-slice.replit.app"
     ],
   },
 });

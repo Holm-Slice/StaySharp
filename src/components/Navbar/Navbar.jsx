@@ -64,15 +64,17 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
               </li>
             )}
 
-            <li className="p-0 text-center">
-              <a
-                href="#services"
-                onClick={handleNavClick}
-                className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
-              >
-                Services
-              </a>
-            </li>
+            {!isShopDashboard && (
+              <li className="p-0 text-center">
+                <a
+                  href="#services"
+                  onClick={handleNavClick}
+                  className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
+                >
+                  Services
+                </a>
+              </li>
+            )}
             <li className="p-0 text-center">
               <Link
                 to="/shop"
@@ -81,24 +83,28 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                 Shop
               </Link>
             </li>
-            <li className="p-0 text-center">
-              <a
-                href="#about"
-                onClick={handleNavClick}
-                className="text-white no-underline font-light text-2xl px-0 relative mr-12"
-              >
-                About
-              </a>
-            </li>
-            <li className="p-0 text-center">
-              <a
-                href="#contact"
-                onClick={handleNavClick}
-                className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
-              >
-                Contact
-              </a>
-            </li>
+            {!isShopDashboard && (
+              <li className="p-0 text-center">
+                <a
+                  href="#about"
+                  onClick={handleNavClick}
+                  className="text-white no-underline font-light text-2xl px-0 relative mr-12"
+                >
+                  About
+                </a>
+              </li>
+            )}
+            {!isShopDashboard && (
+              <li className="p-0 text-center">
+                <a
+                  href="#contact"
+                  onClick={handleNavClick}
+                  className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
+                >
+                  Contact
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>
