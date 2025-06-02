@@ -50,8 +50,9 @@ function Menu() {
               <br />
             </p>
             <button
-              onClick={() => "https://your-shopify-page-url.com"}
+              onClick={() => window.open("https://your-shopify-page-url.com", "_blank")}
               className="services-btn"
+              style={{ display: 'block !important', visibility: 'visible !important', opacity: '1 !important' }}
             >
               BOOK NOW
             </button>
@@ -93,8 +94,9 @@ function Menu() {
               <br />
             </p>
             <button
-              onClick={() => "https://your-shopify-page-url.com"}
+              onClick={() => window.open("https://your-shopify-page-url.com", "_blank")}
               className="services-btn"
+              style={{ display: 'block !important', visibility: 'visible !important', opacity: '1 !important' }}
             >
               BOOK NOW
             </button>
@@ -128,8 +130,9 @@ function Menu() {
               <br />
             </p>
             <button
-              onClick={() => "https://your-shopify-page-url.com"}
+              onClick={() => window.open("https://your-shopify-page-url.com", "_blank")}
               className="services-btn"
+              style={{ display: 'block !important', visibility: 'visible !important', opacity: '1 !important' }}
             >
               BOOK NOW
             </button>

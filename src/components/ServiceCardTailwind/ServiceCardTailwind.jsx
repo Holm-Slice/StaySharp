@@ -36,16 +36,17 @@ function ServiceCardTailwind({ title, description, price, image }) {
             </h2>
           </div>
 
-          <div className="flex justify-between items-end">
+          <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end gap-2 mt-4">
             <div className="flex flex-col">
-              <p className="font-light text-black text-sm md:text-base">
+              <p className="font-light text-black text-sm md:text-base text-center sm:text-left">
                 {price}
               </p>
             </div>
 
             <button
               onClick={handleBookNow}
-              className="bg-ss_purple text-white uppercase py-2 px-4 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple text-sm md:text-base"
+              className="bg-ss_purple text-white uppercase py-2 px-4 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple text-sm md:text-base w-full sm:w-auto min-h-[44px] flex items-center justify-center"
+              style={{ display: 'block !important', visibility: 'visible !important' }}
             >
               Book Now!
             </button>

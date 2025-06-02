@@ -25,7 +25,7 @@ function ProductCard({ product, onAddToCart }) {
             </h2>
           </div>
 
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center space-y-2 mt-4">
             <p className="font-light text-black text-center text-sm md:text-base">
               ${product.price}
             </p>
@@ -37,7 +37,8 @@ function ProductCard({ product, onAddToCart }) {
             <button
               onClick={handleAddToCart}
               disabled={product.stock === 0}
-              className="bg-ss_purple text-white uppercase py-1 px-6 w-full max-w-48 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple text-sm md:text-base"
+              className="bg-ss_purple text-white uppercase py-2 px-6 w-full max-w-48 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple text-sm md:text-base min-h-[44px] flex items-center justify-center"
+              style={{ display: 'block !important', visibility: 'visible !important', opacity: '1 !important' }}
             >
               {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
             </button>

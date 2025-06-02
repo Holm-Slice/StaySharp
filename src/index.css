@@ -99,6 +99,26 @@ body {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  /* Fix service card buttons specifically */
+  .bg-ss_purple {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Fix services-btn class */
+  .services-btn {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 10px auto !important;
+    width: auto !important;
+    min-height: 44px !important;
   }
 
   /* Fix cart and checkout buttons */
