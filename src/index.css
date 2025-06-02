@@ -48,17 +48,21 @@ body {
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
+    display: flex !important;
   }
 
   .nav-list ul li {
     margin-right: 0;
     margin-bottom: 5px;
+    display: block !important;
   }
 
   .nav-list ul li a {
-    font-size: 16px;
-    padding: 8px 12px;
+    font-size: 14px;
+    padding: 8px 6px;
     text-align: center;
+    display: block !important;
+    white-space: nowrap;
   }
 
   /* Mobile-specific utility classes */
@@ -70,10 +74,8 @@ body {
     font-size: 0.875rem;
   }
 
-  .mobile-hidden {
-    display: none;
-  }
-
+  /* Remove mobile-hidden class that was hiding elements */
+  
   .horizontal-scroller {
     overflow-x: scroll;
   }
@@ -89,7 +91,19 @@ body {
   }
 
   .navbar li {
-    margin: 0 10px;
+    margin: 0 5px;
+  }
+
+  /* Ensure buttons are visible on mobile */
+  button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Fix cart and checkout buttons */
+  .nav-list {
+    display: block !important;
   }
 }
 

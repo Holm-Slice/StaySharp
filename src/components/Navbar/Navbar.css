@@ -24,4 +24,22 @@
 }
 
 /* Media query for small screens */
-/* Media query for small screens */
+@media (max-width: 768px) {
+  .nav-list ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .nav-list ul li {
+    flex: 0 0 auto;
+    min-width: fit-content;
+  }
+
+  .nav-list ul li a {
+    font-size: 14px !important;
+    margin-right: 5px !important;
+    padding: 5px 8px;
+    white-space: nowrap;
+  }
+}
