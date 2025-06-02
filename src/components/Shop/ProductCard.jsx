@@ -38,14 +38,6 @@ function ProductCard({ product, onAddToCart }) {
               onClick={handleAddToCart}
               disabled={product.stock === 0}
               className="bg-ss_purple text-white uppercase py-2 px-6 w-full max-w-48 hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple text-sm md:text-base min-h-[44px] flex items-center justify-center"
-              style={{ 
-                display: 'flex !important', 
-                visibility: 'visible !important', 
-                opacity: '1 !important',
-                backgroundColor: 'rgb(69, 51, 147) !important',
-                color: 'white !important',
-                border: '4px solid rgb(69, 51, 147) !important'
-              }}
             >
               {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
             </button>

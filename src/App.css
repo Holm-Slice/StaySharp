@@ -9,11 +9,7 @@
   box-sizing: border-box;
 }
 
-body, 
-html, 
-#root {
-  background-color: white !important;
-}
+
 
 html {
   scroll-behavior: smooth;
