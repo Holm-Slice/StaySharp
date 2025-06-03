@@ -110,7 +110,7 @@ const ImageCarousel = () => {
                         <h2 className="text-base sm:text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center line-clamp-2 md:line-clamp-none">
                           {knife.description}
                         </h2>
-                        
+
                         {/* Mobile-only details */}
                         <div className="md:hidden mt-3 text-center">
                           <div className="flex justify-center space-x-4 text-xs text-gray-600">
@@ -140,6 +140,12 @@ const ImageCarousel = () => {
                         </button>
                       </div>
                     </section>
+                    {/* SEO optimized text - hidden */}
+                    <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
+                      Austin Texas premium kitchen knives chef knife collection professional cutlery 
+                      Japanese knives German knives knife sales Austin kitchen knife store professional 
+                      knife sharpening Austin Texas culinary knife experts premium blade collection
+                    </div>
                   </main>
                 </div>
               </div>

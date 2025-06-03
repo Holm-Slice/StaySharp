@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -21,7 +20,12 @@ function ServiceCardTailwind({ title, description, price, image }) {
 
   return (
     <div className="flex flex-col justify-center items-center p-4 m-2 md:p-8 md:m-8">
-      <main className="bg-white border-2 border-ss_purple w-full max-w-sm sm:max-w-lg md:max-w-2xl min-h-[450px] sm:min-h-[500px] md:h-[400px] p-4 sm:p-6 md:p-10 flex flex-col md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 sm:gap-6 overflow-hidden">
+      <main className="bg-white border-2 border-ss_purple w-full max-w-sm sm:max-w-lg md:max-w-2xl min-h-[450px] sm:min-h-[500px] md:h-[400px] p-4 sm:p-6 md:p-10 flex flex-col md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 sm:gap-6 overflow-hidden relative">
+        <div className="seo-text" style={{ display: 'none' }}>
+          Austin Texas knife sharpening service professional blade maintenance kitchen cutlery repair
+          knife restoration Austin expert knife care professional knife sharpening Austin Texas
+          culinary knife services knife repair Austin kitchen blade sharpening professional
+        </div>
         <div
           className="relative w-full h-40 sm:h-48 md:h-full overflow-hidden flex-shrink-0"
           onMouseEnter={() => setHoveredService({ title, description, price })}

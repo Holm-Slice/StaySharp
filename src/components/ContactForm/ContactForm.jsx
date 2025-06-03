@@ -187,6 +187,11 @@ function ContactForm() {
           </div>
         </form>
       </main>
+       <div className="seo-text" style={{ display: 'none' }}>
+        Contact Austin Texas knife sharpening service professional kitchen cutlery expert 
+        knife restoration consultation Austin blade sharpening appointment kitchen knife repair 
+        Austin Texas professional knife care expert knife sharpening service contact
+      </div>
     </div>
   );
 }

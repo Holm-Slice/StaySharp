@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 
@@ -48,7 +47,7 @@ function BookingPage() {
   const getAvailability = (date) => {
     const dayOfWeek = date.getDay();
     if (dayOfWeek === 0 || dayOfWeek === 6) return []; // No availability on weekends
-    
+
     // Random availability for demo
     const availableSlots = timeSlots.filter(() => Math.random() > 0.3);
     return availableSlots;
@@ -63,17 +62,17 @@ function BookingPage() {
     const startingDayOfWeek = firstDay.getDay();
 
     const days = [];
-    
+
     // Add empty cells for days before the first day of the month
     for (let i = 0; i < startingDayOfWeek; i++) {
       days.push(null);
     }
-    
+
     // Add all days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       days.push(new Date(year, month, day));
     }
-    
+
     return days;
   };
 
@@ -142,7 +141,12 @@ function BookingPage() {
   const days = getDaysInMonth(currentMonth);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
+    <div className="min-h-screen bg-gray-50 py-8 px-4 relative">
+      <div className="seo-text absolute -translate-y-full opacity-0">
+        Book Austin Texas knife sharpening appointment professional kitchen cutlery service 
+        schedule knife restoration Austin blade sharpening booking knife repair appointment 
+        Austin Texas professional knife care expert knife sharpening booking service
+      </div>
       <div className="max-w-6xl mx-auto">
         {/* Back to Services Link */}
         <div className="mb-8 text-center">
@@ -264,7 +268,7 @@ function BookingPage() {
                     + Add Service
                   </button>
                 </div>
-                
+
                 <div className="space-y-3">
                   {selectedServices.map((service, index) => (
                     <div key={index} className="flex justify-between items-center p-3 border-2 border-gray-200 bg-gray-50">
@@ -322,7 +326,7 @@ function BookingPage() {
             {selectedDate && selectedTime && (
               <div className="bg-white border-2 border-ss_purple p-6 shadow-[8px_8px_0px_#453393]">
                 <h3 className="font-title font-bold text-xl mb-4">Booking Details</h3>
-                
+
                 {/* Summary */}
                 <div className="bg-gray-50 p-4 mb-6 border-2 border-gray-200">
                   <p><strong>Date:</strong> {selectedDate.toLocaleDateString()}</p>

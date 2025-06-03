@@ -9,7 +9,12 @@ const VideoPlayer = () => {
   };
 
   return (
-    <div>
+    <div className="relative">
+      <div className="seo-text">
+        Austin Texas knife sharpening demonstration professional blade restoration 
+        kitchen cutlery maintenance expert knife care Austin knife sharpening video 
+        professional knife services Austin Texas culinary blade sharpening expert
+      </div>
       <video style={videoStyle} autoPlay loop muted>
         <source
           src="/assets/Video/CHRIS-ASMR-VID-SQUARE.mp4"

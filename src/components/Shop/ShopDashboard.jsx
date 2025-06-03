@@ -14,7 +14,7 @@ if (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
       stripePromise = null;
     });
 }
-  
+
 
 function ShopDashboard({
   cart,
@@ -37,11 +37,11 @@ function ShopDashboard({
       try {
         // Simulate async operation
         await new Promise((resolve) => setTimeout(resolve, 1000));
-        
+
         // Check if we need to reorder products based on selected product
         let orderedKnives = [...mockKnives];
         const selectedProductId = location.state?.selectedProductId;
-        
+
         if (selectedProductId) {
           const selectedIndex = orderedKnives.findIndex(knife => knife.id === selectedProductId);
           if (selectedIndex > -1) {
@@ -50,10 +50,10 @@ function ShopDashboard({
             orderedKnives.unshift(selectedProduct);
           }
         }
-        
+
         setKnives(orderedKnives);
         setFilteredKnives(orderedKnives);
-        
+
         // Scroll to top of page when component loads with selected product
         if (selectedProductId) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -110,7 +110,12 @@ function ShopDashboard({
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      <div className="seo-text absolute -translate-y-full opacity-0">
+        Austin Texas knife shop premium kitchen cutlery sales Japanese knives German knives 
+        professional knife collection Austin knife store kitchen cutlery Austin Texas 
+        chef knife sales premium blade collection Austin knife experts culinary knives
+      </div>
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 py-6">
@@ -336,7 +341,7 @@ function ShopDashboard({
                     <h2 className="text-sm sm:text-base lg:text-xl text-gray-500 font-light text-center line-clamp-2 lg:line-clamp-none">
                       {knife.description}
                     </h2>
-                    
+
                     {/* Mobile-only details */}
                     <div className="lg:hidden mt-3 text-center">
                       <div className="flex justify-center space-x-4 text-xs text-gray-600">

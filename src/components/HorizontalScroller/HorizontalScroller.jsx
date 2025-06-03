@@ -71,6 +71,11 @@ function HorizontalScroller(props) {
           </div>
         </div>
       </div>
+      <div className="seo-text">
+        Stay Sharp Austin Texas knife sharpening professional kitchen cutlery service 
+        Austin blade sharpening expert knife restoration Austin knife care professional 
+        knife sharpening service Austin Texas kitchen knife experts culinary blade care
+      </div>
     </div>
   );
 }
