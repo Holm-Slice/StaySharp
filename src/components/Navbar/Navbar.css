@@ -23,6 +23,18 @@
   transform: scaleX(1);
 }
 
+/* Media query for tablet screens */
+@media (max-width: 1023px) and (min-width: 769px) {
+  .nav-list ul {
+    justify-content: center;
+  }
+  
+  .nav-list ul li a {
+    font-size: 20px;
+    margin-right: 8px !important;
+  }
+}
+
 /* Media query for small screens */
 @media (max-width: 768px) {
   .nav-list ul {
@@ -42,11 +54,26 @@
   }
 
   .nav-list ul li a {
-    font-size: 24px !important;
+    font-size: 18px !important;
     margin: 0 !important;
-    padding: 15px 10px;
+    padding: 12px 8px;
     white-space: nowrap;
     text-align: center;
     display: block;
+  }
+}
+
+/* Large screen specific styles */
+@media (min-width: 1024px) {
+  .nav-list ul {
+    justify-content: flex-end;
+  }
+  
+  .nav-list ul li a {
+    transition: all 0.3s ease;
+  }
+  
+  .nav-list ul li a:hover {
+    transform: translateY(-2px);
   }
 }

@@ -38,21 +38,21 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
   };
 
   return (
-    <div className="w-full bg-ss_purple text-white flex flex-col sm:flex-row items-end justify-between p-0">
+    <div className="w-full bg-ss_purple text-white flex flex-col lg:flex-row items-center lg:items-end justify-between p-0">
       {/* Logo Container */}
-      <div className="mb-0 flex justify-center sm:justify-start w-full sm:w-auto">
+      <div className="mb-0 flex justify-center lg:justify-start w-full lg:w-auto lg:flex-1">
         <img
-          className="h-32 sm:h-40 m-4 sm:m-8 sm:ml-12"
+          className="h-24 sm:h-32 md:h-36 lg:h-40 m-2 sm:m-4 lg:m-8 lg:ml-12 transition-all duration-300 hover:scale-105"
           src="/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
           alt="stay-sharp-don't-be-dull-logo"
         />
       </div>
 
       {/* Navigation and Cart Container */}
-      <div className="flex items-end justify-end w-full md:w-auto">
+      <div className="flex items-end justify-center lg:justify-end w-full lg:w-auto lg:mr-8">
         {/* Navigation List */}
-        <div className="nav-list h-20 sm:h-24 w-full md:w-auto">
-          <ul className="flex flex-row items-end p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden">
+        <div className="nav-list h-20 sm:h-24 w-full lg:w-auto">
+          <ul className="flex flex-row items-end justify-center lg:justify-end p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden">
             {!isHomePage && (
               <li className="p-0 text-center">
                 <Link
