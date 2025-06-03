@@ -49,10 +49,10 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
       </div>
 
       {/* Navigation and Cart Container */}
-      <div className="flex items-end justify-between w-full md:w-auto">
+      <div className="flex items-end justify-end w-full md:w-auto">
         {/* Navigation List */}
-        <div className="nav-list h-20 sm:h-24">
-          <ul className="flex flex-row max-sm:flex-row items-end justify-evenly p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden">
+        <div className="nav-list h-20 sm:h-24 w-full md:w-auto">
+          <ul className="flex flex-row items-end p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden">
             {!isHomePage && (
               <li className="p-0 text-center">
                 <Link
