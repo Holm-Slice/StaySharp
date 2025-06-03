@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ServiceCardTailwind from "./components/ServiceCardTailwind/ServiceCardTailwind";
+import Divider from "./components/Divider/Divider";
 const KnifeLeftIcon = "/assets/imgs/SVGs/knife-left.svg";
 const KnifeRightIcon = "/assets/imgs/SVGs/knife-right.svg";
 
@@ -81,13 +82,13 @@ function ActiveSlider() {
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? serviceCards.length - 1 : prevIndex - 1
+      prevIndex === 0 ? serviceCards.length - 1 : prevIndex - 1,
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === serviceCards.length - 1 ? 0 : prevIndex + 1
+      prevIndex === serviceCards.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
@@ -113,7 +114,10 @@ function ActiveSlider() {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {serviceCards.map((card, index) => (
-            <div key={index} className="w-full flex-shrink-0 flex justify-center">
+            <div
+              key={index}
+              className="w-full flex-shrink-0 flex justify-center"
+            >
               <div className="w-full max-w-2xl">
                 <ServiceCardTailwind
                   title={card.title}
@@ -139,8 +143,10 @@ function ActiveSlider() {
         />
         <p className="hidden md:block text-center mt-2">Slice</p>
       </button>
-    </div>
+    </div>   
   );
 }
+
+
 
 export default ActiveSlider;

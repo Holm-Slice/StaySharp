@@ -16,8 +16,8 @@ import ShopDashboard from "./components/Shop/ShopDashboard";
 import CartPage from "./components/Shop/CartPage";
 import ProductDetailPage from "./components/Shop/ProductDetailPage";
 import BookingPage from "./components/Booking/BookingPage";
-import CheckoutPage from './components/Checkout/CheckoutPage';
-import UnifiedCheckoutPage from './components/Checkout/UnifiedCheckoutPage';
+import CheckoutPage from "./components/Checkout/CheckoutPage";
+import UnifiedCheckoutPage from "./components/Checkout/UnifiedCheckoutPage";
 import ServiceConfirmationPage from "./components/Confirmation/ServiceConfirmationPage";
 import ShopConfirmationPage from "./components/Confirmation/ShopConfirmationPage";
 import AdminDashboard from "./components/Admin/AdminDashboard";
@@ -70,15 +70,15 @@ function App() {
       }
 
       // Simulate payment processing
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Create order data
       const orderData = {
         items: cart,
         orderNumber: `SS-${Date.now().toString().slice(-6)}`,
-        customerName: 'Customer', // You can collect this from a form
-        customerEmail: 'customer@email.com', // You can collect this from a form
-        lastFourDigits: '1234' // From payment form
+        customerName: "Customer", // You can collect this from a form
+        customerEmail: "customer@email.com", // You can collect this from a form
+        lastFourDigits: "1234", // From payment form
       };
 
       // Clear cart
@@ -112,7 +112,10 @@ function App() {
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/unified-checkout" element={<UnifiedCheckoutPage />} />
-        <Route path="/confirmation/service" element={<ServiceConfirmationPage />} />
+        <Route
+          path="/confirmation/service"
+          element={<ServiceConfirmationPage />}
+        />
         <Route path="/confirmation/shop" element={<ShopConfirmationPage />} />
         <Route
           path="/shop"
@@ -137,7 +140,18 @@ function App() {
             />
           }
         />
-        <Route path="/shop/product/:id" element={<ProductDetailPage cart={cart} setCart={setCart} onUpdateQuantity={updateQuantity} onRemoveItem={removeFromCart} onCheckout={handleCheckout} />} />
+        <Route
+          path="/shop/product/:id"
+          element={
+            <ProductDetailPage
+              cart={cart}
+              setCart={setCart}
+              onUpdateQuantity={updateQuantity}
+              onRemoveItem={removeFromCart}
+              onCheckout={handleCheckout}
+            />
+          }
+        />
         <Route
           path="/"
           element={
