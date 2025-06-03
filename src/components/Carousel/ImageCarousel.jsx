@@ -61,11 +61,13 @@ const ImageCarousel = () => {
                     >
                       <img
                         src={knife.image}
-                        alt={knife.name}
+                        alt={`Professional knife sharpening service Austin Texas - Premium kitchen knife ${knife.id}`}
                         title={knife.name}
                         className="object-cover w-full h-full"
                         loading="lazy"
                         decoding="async"
+                        width="800"
+                        height="600"
                       />
 
                       {/* Hover Popup - Only over image, hidden on mobile */}

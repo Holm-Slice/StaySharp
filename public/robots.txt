@@ -1,5 +1,13 @@
 
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /confirmation
+Disallow: /unified-checkout
 
-Sitemap: https://your-domain.com/sitemap.xml
+# Sitemap location
+Sitemap: https://stay-sharp-holm-slice.replit.app/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

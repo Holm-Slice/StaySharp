@@ -294,9 +294,12 @@ function ShopDashboard({
                 >
                   <img
                     src={knife.image}
-                    alt={knife.name}
-                    title={knife.name}
-                    className="object-cover w-full h-full"
+                    alt={`${knife.name} - Professional kitchen knife available at Stay Sharp Austin`}
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width="300"
+                    height="192"
                   />
 
                   {/* Hover Popup - Only over image, hidden on mobile */}

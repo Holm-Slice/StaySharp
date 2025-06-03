@@ -1,5 +1,5 @@
 import { Routes, Route, Link, Router, BrowserRouter } from "react-router-dom";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
@@ -20,7 +20,16 @@ import CheckoutPage from "./components/Checkout/CheckoutPage";
 import UnifiedCheckoutPage from "./components/Checkout/UnifiedCheckoutPage";
 import ServiceConfirmationPage from "./components/Confirmation/ServiceConfirmationPage";
 import ShopConfirmationPage from "./components/Confirmation/ShopConfirmationPage";
-import AdminDashboard from "./components/Admin/AdminDashboard";
+// Lazy load route components for better performance
+// const AdminDashboard = lazy(() => import("./components/Admin/AdminDashboard"));
+// const ShopDashboard = lazy(() => import("./components/Shop/ShopDashboard"));
+// const CartPage = lazy(() => import("./components/Shop/CartPage"));
+// const ProductDetailPage = lazy(() => import("./components/Shop/ProductDetailPage"));
+// const BookingPage = lazy(() => import("./components/Booking/BookingPage"));
+// const CheckoutPage = lazy(() => import("./components/Checkout/CheckoutPage"));
+// const UnifiedCheckoutPage = lazy(() => import("./components/Checkout/UnifiedCheckoutPage"));
+// const ServiceConfirmationPage = lazy(() => import("./components/Confirmation/ServiceConfirmationPage"));
+// const ShopConfirmationPage = lazy(() => import("./components/Confirmation/ShopConfirmationPage"));
 
 const images = [
   "/assets/Images/chef-knife1.jpg",
@@ -108,18 +117,19 @@ function App() {
       />
       <HorizontalScroller />
       <Routes>
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/booking" element={<BookingPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/unified-checkout" element={<UnifiedCheckoutPage />} />
+        <Route path="/admin" element={<Suspense fallback={<div>Loading...</div>}><AdminDashboard /></Suspense>} />
+        <Route path="/booking" element={<Suspense fallback={<div>Loading...</div>}><BookingPage /></Suspense>} />
+        <Route path="/checkout" element={<Suspense fallback={<div>Loading...</div>}><CheckoutPage /></Suspense>} />
+        <Route path="/unified-checkout" element={<Suspense fallback={<div>Loading...</div>}><UnifiedCheckoutPage /></Suspense>} />
         <Route
           path="/confirmation/service"
-          element={<ServiceConfirmationPage />}
+          element={<Suspense fallback={<div>Loading...</div>}><ServiceConfirmationPage /></Suspense>}
         />
-        <Route path="/confirmation/shop" element={<ShopConfirmationPage />} />
+        <Route path="/confirmation/shop" element={<Suspense fallback={<div>Loading...</div>}><ShopConfirmationPage /></Suspense>} />
         <Route
           path="/shop"
           element={
+            <Suspense fallback={<div>Loading...</div>}>
             <ShopDashboard
               cart={cart}
               setCart={setCart}
@@ -127,22 +137,26 @@ function App() {
               onRemoveItem={removeFromCart}
               onCheckout={handleCheckout}
             />
+            </Suspense>
           }
         />
         <Route
           path="/cart"
           element={
+            <Suspense fallback={<div>Loading...</div>}>
             <CartPage
               cart={cart}
               onUpdateQuantity={updateQuantity}
               onRemoveItem={removeFromCart}
               onCheckout={handleCheckout}
             />
+            </Suspense>
           }
         />
         <Route
           path="/shop/product/:id"
           element={
+            <Suspense fallback={<div>Loading...</div>}>
             <ProductDetailPage
               cart={cart}
               setCart={setCart}
@@ -150,6 +164,7 @@ function App() {
               onRemoveItem={removeFromCart}
               onCheckout={handleCheckout}
             />
+            </Suspense>
           }
         />
         <Route
