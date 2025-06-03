@@ -44,7 +44,7 @@ function ShopDashboard({
         
         if (selectedProductId) {
           const selectedIndex = orderedKnives.findIndex(knife => knife.id === selectedProductId);
-          if (selectedIndex > 0) {
+          if (selectedIndex > -1) {
             // Move selected product to the front
             const selectedProduct = orderedKnives.splice(selectedIndex, 1)[0];
             orderedKnives.unshift(selectedProduct);
@@ -53,6 +53,11 @@ function ShopDashboard({
         
         setKnives(orderedKnives);
         setFilteredKnives(orderedKnives);
+        
+        // Scroll to top of page when component loads with selected product
+        if (selectedProductId) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       } catch (error) {
         console.error("Error loading knives:", error);
       } finally {

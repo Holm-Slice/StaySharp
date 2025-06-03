@@ -47,7 +47,11 @@ const ImageCarousel = () => {
 
   const handleViewShop = (productId = null) => {
     if (productId) {
-      navigate("/shop", { state: { selectedProductId: productId } });
+      // Navigate to shop with selected product ID and scroll to top
+      navigate("/shop", { 
+        state: { selectedProductId: productId },
+        replace: false 
+      });
     } else {
       navigate("/shop");
     }
