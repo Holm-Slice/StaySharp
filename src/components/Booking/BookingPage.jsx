@@ -145,7 +145,7 @@ function BookingPage() {
     <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Back to Services Link */}
-        <div className="mb-8">
+        <div className="mb-8 text-center">
           <Link 
             to="/" 
             className="text-ss_purple hover:underline font-medium"
