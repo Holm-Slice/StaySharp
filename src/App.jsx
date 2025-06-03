@@ -109,26 +109,65 @@ function App() {
       />
       <HorizontalScroller />
       <Routes>
-        <Route path="/admin" element={<Suspense fallback={<div>Loading...</div>}><AdminDashboard /></Suspense>} />
-        <Route path="/booking" element={<Suspense fallback={<div>Loading...</div>}><BookingPage /></Suspense>} />
-        <Route path="/checkout" element={<Suspense fallback={<div>Loading...</div>}><CheckoutPage /></Suspense>} />
-        <Route path="/unified-checkout" element={<Suspense fallback={<div>Loading...</div>}><UnifiedCheckoutPage /></Suspense>} />
+        <Route
+          path="/admin"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <AdminDashboard />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/booking"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <BookingPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <CheckoutPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/unified-checkout"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <UnifiedCheckoutPage />
+            </Suspense>
+          }
+        />
         <Route
           path="/confirmation/service"
-          element={<Suspense fallback={<div>Loading...</div>}><ServiceConfirmationPage /></Suspense>}
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ServiceConfirmationPage />
+            </Suspense>
+          }
         />
-        <Route path="/confirmation/shop" element={<Suspense fallback={<div>Loading...</div>}><ShopConfirmationPage /></Suspense>} />
+        <Route
+          path="/confirmation/shop"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ShopConfirmationPage />
+            </Suspense>
+          }
+        />
         <Route
           path="/shop"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-            <ShopDashboard
-              cart={cart}
-              setCart={setCart}
-              onUpdateQuantity={updateQuantity}
-              onRemoveItem={removeFromCart}
-              onCheckout={handleCheckout}
-            />
+              <ShopDashboard
+                cart={cart}
+                setCart={setCart}
+                onUpdateQuantity={updateQuantity}
+                onRemoveItem={removeFromCart}
+                onCheckout={handleCheckout}
+              />
             </Suspense>
           }
         />
@@ -136,12 +175,12 @@ function App() {
           path="/cart"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-            <CartPage
-              cart={cart}
-              onUpdateQuantity={updateQuantity}
-              onRemoveItem={removeFromCart}
-              onCheckout={handleCheckout}
-            />
+              <CartPage
+                cart={cart}
+                onUpdateQuantity={updateQuantity}
+                onRemoveItem={removeFromCart}
+                onCheckout={handleCheckout}
+              />
             </Suspense>
           }
         />
@@ -149,13 +188,13 @@ function App() {
           path="/shop/product/:id"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-            <ProductDetailPage
-              cart={cart}
-              setCart={setCart}
-              onUpdateQuantity={updateQuantity}
-              onRemoveItem={removeFromCart}
-              onCheckout={handleCheckout}
-            />
+              <ProductDetailPage
+                cart={cart}
+                setCart={setCart}
+                onUpdateQuantity={updateQuantity}
+                onRemoveItem={removeFromCart}
+                onCheckout={handleCheckout}
+              />
             </Suspense>
           }
         />
@@ -191,14 +230,13 @@ function App() {
                 <Divider />
                 <ImageCarousel images={images} />
 
-                <About />
-
                 <Section id="contact" title="CONTACT">
                   <h2 id="contact-heading" className="sr-only">
                     Contact Us
                   </h2>
                   <ContactForm />
                 </Section>
+                <About />
               </main>
             </div>
           }

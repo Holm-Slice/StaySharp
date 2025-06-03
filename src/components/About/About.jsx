@@ -11,7 +11,6 @@ function About() {
 
   return (
     <>
-      <Divider />
       <div
         id="about"
         className="flex flex-col mt-12 md:flex-row mb-8 ml-8 md:ml-0"
