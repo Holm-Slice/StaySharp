@@ -71,7 +71,7 @@ body {
 
   .nav-list ul li a {
     font-size: 24px;
-    padding: 10px 8px;
+    padding: 15px 12px;
     text-align: center;
     display: block !important;
     white-space: nowrap;
@@ -154,7 +154,7 @@ body {
 
   .nav-list ul li a {
     font-size: 24px;
-    padding: 5px 5px;
+    padding: 12px 10px;
     width: 100%;
     text-align: center;
   }
