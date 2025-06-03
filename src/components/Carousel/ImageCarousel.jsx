@@ -52,10 +52,10 @@ const ImageCarousel = () => {
           {shuffledKnives.map((knife) => (
             <div key={knife.id} className="carousel-slide">
               <div className="flex justify-center px-2 lg:px-4">
-                <div className="flex flex-col justify-center items-center px-2 lg:px-4">
-                  <main className="bg-white border-2 border-ss_purple w-full max-w-xs sm:max-w-sm lg:max-w-md h-[400px] lg:h-[320px] p-4 lg:p-6 lg:grid lg:grid-cols-2 lg:gap-4 shadow-[4px_4px_0px_#453393] lg:shadow-[6px_6px_0px_#453393] hover:transition-transform lg:hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
+                <div className="flex flex-col justify-center items-center p-4 m-2 md:p-8 md:m-8">
+                  <main className="bg-white border-2 border-ss_purple w-full max-w-sm sm:max-w-lg md:max-w-2xl min-h-[450px] sm:min-h-[500px] md:h-[400px] p-4 sm:p-6 md:p-10 flex flex-col md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 sm:gap-6 overflow-hidden">
                     <div
-                      className="relative w-full h-48 lg:h-full overflow-hidden flex-shrink-0"
+                      className="relative w-full h-40 sm:h-48 md:h-full overflow-hidden flex-shrink-0"
                       onMouseEnter={() => setHoveredKnife(knife)}
                       onMouseLeave={() => setHoveredKnife(null)}
                     >
@@ -68,9 +68,9 @@ const ImageCarousel = () => {
                         decoding="async"
                       />
 
-                      {/* Hover Popup - Only over image */}
+                      {/* Hover Popup - Only over image, hidden on mobile */}
                       {hoveredKnife?.id === knife.id && (
-                        <div className="absolute bottom-2 right-2 bg-white border-2 border-ss_purple rounded-lg shadow-lg p-3 z-10 min-w-48">
+                        <div className="hidden md:block absolute bottom-2 right-2 bg-white border-2 border-ss_purple rounded-lg shadow-lg p-3 z-10 min-w-48">
                           <div className="space-y-1 text-sm">
                             <div className="flex justify-between">
                               <span className="font-medium text-gray-700">
@@ -102,28 +102,39 @@ const ImageCarousel = () => {
                     </div>
 
                     <section className="flex flex-col flex-1 justify-between min-h-0">
-                      <div>
-                        <h1 className="font-title font-bold text-lg md:text-xl text-center">
+                      <div className="flex-1">
+                        <h1 className="font-title font-bold text-lg sm:text-xl md:text-2xl text-center mb-2 sm:mb-0">
                           {knife.name}
                         </h1>
 
-                        <h2 className="text-xs md:text-sm lg:text-base text-gray-500 font-light my-1 text-center">
+                        <h2 className="text-base sm:text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center line-clamp-2 md:line-clamp-none">
                           {knife.description}
                         </h2>
+                        
+                        {/* Mobile-only details */}
+                        <div className="md:hidden mt-3 text-center">
+                          <div className="flex justify-center space-x-4 text-xs text-gray-600">
+                            <span>{knife.style}</span>
+                            <span>•</span>
+                            <span>{knife.length}</span>
+                            <span>•</span>
+                            <span>{knife.brand}</span>
+                          </div>
+                        </div>
                       </div>
 
-                      <div className="flex flex-col items-center space-y-1">
-                        <p className="font-light text-black text-center text-sm">
+                      <div className="flex flex-col items-center space-y-3 mt-4">
+                        <p className="font-light text-black text-center text-base sm:text-lg font-semibold">
                           ${knife.price}
                         </p>
                         {knife.stock > 0 && knife.stock <= 3 && (
-                          <p className="text-orange-500 text-xs">
+                          <p className="text-orange-500 text-sm font-medium">
                             Only {knife.stock} left!
                           </p>
                         )}
                         <button
                           onClick={() => handleViewShop(knife.id)}
-                          className="uppercase py-1 px-4 w-full max-w-40 transition-colors duration-[1300ms] border-2 text-xs md:text-sm bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
+                          className="uppercase py-2 sm:py-3 px-4 sm:px-6 w-full max-w-xs sm:max-w-48 transition-colors duration-[1300ms] border-4 text-xs sm:text-sm font-medium bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
                         >
                           View in Shop
                         </button>
