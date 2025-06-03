@@ -12,24 +12,28 @@ const ImageCarousel = () => {
   const [hoveredKnife, setHoveredKnife] = useState(null);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: true,
-    centerMode: true,
-    centerPadding: "0px",
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
-          centerMode: false,
         }
       }
     ]
@@ -60,9 +64,9 @@ const ImageCarousel = () => {
             <div key={knife.id} className="carousel-slide">
               <div className="flex justify-center px-2 lg:px-4">
                 <div className="flex flex-col justify-center items-center px-2 lg:px-4">
-                  <main className="bg-white border-2 border-ss_purple w-full max-w-xs sm:max-w-sm lg:max-w-md h-[350px] sm:h-[400px] lg:h-[320px] p-3 sm:p-4 lg:p-6 sm:grid sm:grid-cols-2 lg:gap-4 shadow-[4px_4px_0px_#453393] lg:shadow-[6px_6px_0px_#453393] transition-colors duration-300 cursor-pointer gap-3 sm:gap-4 overflow-hidden">
+                  <main className="bg-white border-2 border-ss_purple w-full max-w-xs sm:max-w-sm lg:max-w-md h-[400px] lg:h-[320px] p-4 lg:p-6 lg:grid lg:grid-cols-2 lg:gap-4 shadow-[4px_4px_0px_#453393] lg:shadow-[6px_6px_0px_#453393] hover:transition-transform lg:hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
                     <div
-                      className="relative w-full h-28 sm:h-32 lg:h-full overflow-hidden"
+                      className="relative w-full h-48 lg:h-full overflow-hidden flex-shrink-0"
                       onMouseEnter={() => setHoveredKnife(knife)}
                       onMouseLeave={() => setHoveredKnife(null)}
                     >
@@ -108,7 +112,7 @@ const ImageCarousel = () => {
                       )}
                     </div>
 
-                    <section className="flex flex-col h-full justify-between">
+                    <section className="flex flex-col flex-1 justify-between min-h-0">
                       <div>
                         <h1 className="font-title font-bold text-lg md:text-xl text-center">
                           {knife.name}

@@ -21,7 +21,7 @@ function ServiceCardTailwind({ title, description, price, image }) {
 
   return (
     <div className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8">
-      <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl h-[500px] md:h-[400px] p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-6 overflow-hidden">
+      <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl h-[500px] md:h-[400px] p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-6 overflow-hidden">
         <div
           className="relative w-full h-48 md:h-full overflow-hidden"
           onMouseEnter={() => setHoveredService({ title, description, price })}
@@ -70,13 +70,13 @@ function ServiceCardTailwind({ title, description, price, image }) {
             </h2>
           </div>
 
-          <div className="flex flex-col items-center space-y-2">
-            <p className="font-light text-black text-center text-sm md:text-base">
+          <div className="flex flex-col items-center space-y-3 mt-4">
+            <p className="font-light text-black text-center text-lg font-semibold">
               {price}
             </p>
             <button
               onClick={handleBookNow}
-              className="uppercase py-1 px-6 w-full max-w-48 transition-colors duration-[1300ms] border-4 text-sm md:text-base bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
+              className="uppercase py-3 px-6 w-full max-w-48 transition-colors duration-[1300ms] border-4 text-sm font-medium bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
             >
               Book Now!
             </button>
