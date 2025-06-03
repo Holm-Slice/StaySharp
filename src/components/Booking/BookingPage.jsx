@@ -125,7 +125,12 @@ function BookingPage() {
       services: selectedServices
     };
     console.log('Booking submitted:', bookingData);
-    navigate('/checkout', { state: { bookingData } });
+    navigate('/unified-checkout', { 
+      state: { 
+        type: 'service', 
+        bookingData 
+      } 
+    });
   };
 
   const monthNames = [

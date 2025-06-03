@@ -16,7 +16,8 @@ import ShopDashboard from "./components/Shop/ShopDashboard";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import CartPage from "./components/Shop/CartPage";
 import BookingPage from "./components/Booking/BookingPage";
-import CheckoutPage from "./components/Checkout/CheckoutPage";
+import CheckoutPage from './components/Checkout/CheckoutPage';
+import UnifiedCheckoutPage from './components/Checkout/UnifiedCheckoutPage';
 import ServiceConfirmationPage from "./components/Confirmation/ServiceConfirmationPage";
 import ShopConfirmationPage from "./components/Confirmation/ShopConfirmationPage";
 
@@ -69,7 +70,7 @@ function App() {
 
       // Simulate payment processing
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // Create order data
       const orderData = {
         items: cart,
@@ -81,7 +82,7 @@ function App() {
 
       // Clear cart
       setCart([]);
-      
+
       // Navigate to confirmation page
       window.location.href = `/confirmation/shop?orderData=${encodeURIComponent(JSON.stringify(orderData))}`;
     } catch (error) {
@@ -109,6 +110,7 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/unified-checkout" element={<UnifiedCheckoutPage />} />
         <Route path="/confirmation/service" element={<ServiceConfirmationPage />} />
         <Route path="/confirmation/shop" element={<ShopConfirmationPage />} />
         <Route
