@@ -1,0 +1,1695 @@
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+5Unrecognized feature: 'ambient-light-sensor'.Understand this warning
+5Unrecognized feature: 'battery'.Understand this warning
+5Unrecognized feature: 'execution-while-not-rendered'.Understand this warning
+5Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+framework-b22b66ad04906b96.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-b22b66ad04906b96.js:1Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Aro6%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Aro6%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+5Unrecognized feature: 'layout-animations'.Understand this warning
+5Unrecognized feature: 'legacy-image-formats'.Understand this warning
+5Unrecognized feature: 'navigation-override'.Understand this warning
+5Unrecognized feature: 'oversized-images'.Understand this warning
+5Unrecognized feature: 'publickey-credentials'.Understand this warning
+5Unrecognized feature: 'speaker-selection'.Understand this warning
+5Unrecognized feature: 'unoptimized-images'.Understand this warning
+5Unrecognized feature: 'unsized-media'.Understand this warning
+framework-b22b66ad04906b96.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-b22b66ad04906b96.js:1Understand this warning
+5Allow attribute will take precedence over 'allowfullscreen'.Understand this warning
+5Allow attribute will take precedence over 'allowpaymentrequest'.Understand this warning
+2_app-bcf30c87ed123998.js:38 Measure loop restarted more than 5 times
+(anonymous) @ _app-bcf30c87ed123998.js:38Understand this warning
+_app-bcf30c87ed123998.js:38 Viewport failed to stabilize
+(anonymous) @ _app-bcf30c87ed123998.js:38Understand this warning
+eruda.js:2 WebSocket connection to 'wss://localhost:5173/?token=y_INNwUqY9PG' failed: 
+t @ VM12 eruda.js:2Understand this error
+eruda.js:2 [vite] server connection lost. Polling for restart...
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:749:13)
+    at WebSocket.<anonymous> (client:561:13)Understand this error
+2App.jsx:137 Uncaught ReferenceError: AdminDashboard is not defined
+    at App (App.jsx:137:87)
+    at renderWithHooks (chunk-6VWAHX6D.js:11548:26)
+    at mountIndeterminateComponent (chunk-6VWAHX6D.js:14926:21)
+    at beginWork (chunk-6VWAHX6D.js:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-6VWAHX6D.js:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-6VWAHX6D.js:3699:24)
+    at invokeGuardedCallback (chunk-6VWAHX6D.js:3733:39)
+    at beginWork$1 (chunk-6VWAHX6D.js:19765:15)
+    at performUnitOfWork (chunk-6VWAHX6D.js:19198:20)
+    at workLoopSync (chunk-6VWAHX6D.js:19137:13)Understand this error
+eruda.js:2 The above error occurred in the <App> component:
+
+    at App (https://d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/src/App.jsx:65:27)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+Mt.forEach.n.<computed> @ VM12 eruda.js:2Understand this error
+chunk-6VWAHX6D.js:19413 Uncaught ReferenceError: AdminDashboard is not defined
+    at App (App.jsx:137:87)
+    at renderWithHooks (chunk-6VWAHX6D.js:11548:26)
+    at mountIndeterminateComponent (chunk-6VWAHX6D.js:14926:21)
+    at beginWork (chunk-6VWAHX6D.js:15914:22)
+    at beginWork$1 (chunk-6VWAHX6D.js:19753:22)
+    at performUnitOfWork (chunk-6VWAHX6D.js:19198:20)
+    at workLoopSync (chunk-6VWAHX6D.js:19137:13)
+    at renderRootSync (chunk-6VWAHX6D.js:19116:15)
+    at recoverFromConcurrentError (chunk-6VWAHX6D.js:18736:28)
+    at performConcurrentWorkOnRoot (chunk-6VWAHX6D.js:18684:30)Understand this error
+@stripe_stripe-js.js:115 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'match')
+    at initStripe2 (@stripe_stripe-js.js:115:22)
+    at @stripe_stripe-js.js:151:12Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_CONNECTION_REFUSEDUnderstand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+
+                
+          
+          
+          
+         Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.Understand this warning
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+
+                
+          
+          
+          
+         Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.Understand this warning
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ VM12 eruda.js:2
+ping @ VM14 client:736
+waitForSuccessfulPing @ VM14 client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+eruda.js:2 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (eruda.js:2:218642)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ eruda.js:2
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/:14 
+            
+            
+           GET https://d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/@vite/client net::ERR_ABORTED 502 (Bad Gateway)Understand this error
+client:536 WebSocket connection to 'wss://localhost:5173/?token=B1nPRejIO1_n' failed: 
+t @ Network.js:227
+setupWebSocket @ client:536
+(anonymous) @ client:531Understand this error
+Console.js:61 [vite] server connection lost. Polling for restart...
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:749
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:749:13)
+    at WebSocket.<anonymous> (client:561:13)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:749
+(anonymous) @ client:561Understand this error
+client:536 WebSocket connection to 'wss://localhost:5173/?token=B1nPRejIO1_n' failed: 
+t @ Network.js:227
+setupWebSocket @ client:536
+(anonymous) @ client:531Understand this error
+Console.js:61 [vite] server connection lost. Polling for restart...
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:749
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:749:13)
+    at WebSocket.<anonymous> (client:561:13)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:749
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+App.jsx:110 Uncaught ReferenceError: AdminDashboard is not defined
+    at App (App.jsx:110:40)
+    at renderWithHooks (chunk-6VWAHX6D.js?v=d83636e5:11548:26)
+    at mountIndeterminateComponent (chunk-6VWAHX6D.js?v=d83636e5:14926:21)
+    at beginWork (chunk-6VWAHX6D.js?v=d83636e5:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-6VWAHX6D.js?v=d83636e5:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-6VWAHX6D.js?v=d83636e5:3699:24)
+    at invokeGuardedCallback (chunk-6VWAHX6D.js?v=d83636e5:3733:39)
+    at beginWork$1 (chunk-6VWAHX6D.js?v=d83636e5:19765:15)
+    at performUnitOfWork (chunk-6VWAHX6D.js?v=d83636e5:19198:20)
+    at workLoopSync (chunk-6VWAHX6D.js?v=d83636e5:19137:13)
+App @ App.jsx:110
+renderWithHooks @ chunk-6VWAHX6D.js?v=d83636e5:11548
+mountIndeterminateComponent @ chunk-6VWAHX6D.js?v=d83636e5:14926
+beginWork @ chunk-6VWAHX6D.js?v=d83636e5:15914
+callCallback2 @ chunk-6VWAHX6D.js?v=d83636e5:3674
+invokeGuardedCallbackDev @ chunk-6VWAHX6D.js?v=d83636e5:3699
+invokeGuardedCallback @ chunk-6VWAHX6D.js?v=d83636e5:3733
+beginWork$1 @ chunk-6VWAHX6D.js?v=d83636e5:19765
+performUnitOfWork @ chunk-6VWAHX6D.js?v=d83636e5:19198
+workLoopSync @ chunk-6VWAHX6D.js?v=d83636e5:19137
+renderRootSync @ chunk-6VWAHX6D.js?v=d83636e5:19116
+performConcurrentWorkOnRoot @ chunk-6VWAHX6D.js?v=d83636e5:18678
+workLoop @ chunk-6VWAHX6D.js?v=d83636e5:197
+flushWork @ chunk-6VWAHX6D.js?v=d83636e5:176
+performWorkUntilDeadline @ chunk-6VWAHX6D.js?v=d83636e5:384Understand this error
+App.jsx:110 Uncaught ReferenceError: AdminDashboard is not defined
+    at App (App.jsx:110:40)
+    at renderWithHooks (chunk-6VWAHX6D.js?v=d83636e5:11548:26)
+    at mountIndeterminateComponent (chunk-6VWAHX6D.js?v=d83636e5:14926:21)
+    at beginWork (chunk-6VWAHX6D.js?v=d83636e5:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-6VWAHX6D.js?v=d83636e5:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-6VWAHX6D.js?v=d83636e5:3699:24)
+    at invokeGuardedCallback (chunk-6VWAHX6D.js?v=d83636e5:3733:39)
+    at beginWork$1 (chunk-6VWAHX6D.js?v=d83636e5:19765:15)
+    at performUnitOfWork (chunk-6VWAHX6D.js?v=d83636e5:19198:20)
+    at workLoopSync (chunk-6VWAHX6D.js?v=d83636e5:19137:13)
+App @ App.jsx:110
+renderWithHooks @ chunk-6VWAHX6D.js?v=d83636e5:11548
+mountIndeterminateComponent @ chunk-6VWAHX6D.js?v=d83636e5:14926
+beginWork @ chunk-6VWAHX6D.js?v=d83636e5:15914
+callCallback2 @ chunk-6VWAHX6D.js?v=d83636e5:3674
+invokeGuardedCallbackDev @ chunk-6VWAHX6D.js?v=d83636e5:3699
+invokeGuardedCallback @ chunk-6VWAHX6D.js?v=d83636e5:3733
+beginWork$1 @ chunk-6VWAHX6D.js?v=d83636e5:19765
+performUnitOfWork @ chunk-6VWAHX6D.js?v=d83636e5:19198
+workLoopSync @ chunk-6VWAHX6D.js?v=d83636e5:19137
+renderRootSync @ chunk-6VWAHX6D.js?v=d83636e5:19116
+recoverFromConcurrentError @ chunk-6VWAHX6D.js?v=d83636e5:18736
+performConcurrentWorkOnRoot @ chunk-6VWAHX6D.js?v=d83636e5:18684
+workLoop @ chunk-6VWAHX6D.js?v=d83636e5:197
+flushWork @ chunk-6VWAHX6D.js?v=d83636e5:176
+performWorkUntilDeadline @ chunk-6VWAHX6D.js?v=d83636e5:384Understand this error
+Console.js:61 The above error occurred in the <App> component:
+
+    at App (https://d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/src/App.jsx:65:27)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+Mt.forEach.n.<computed> @ Console.js:61
+logCapturedError @ chunk-6VWAHX6D.js?v=d83636e5:14032
+update.callback @ chunk-6VWAHX6D.js?v=d83636e5:14052
+callCallback @ chunk-6VWAHX6D.js?v=d83636e5:11248
+commitUpdateQueue @ chunk-6VWAHX6D.js?v=d83636e5:11265
+commitLayoutEffectOnFiber @ chunk-6VWAHX6D.js?v=d83636e5:17093
+commitLayoutMountEffects_complete @ chunk-6VWAHX6D.js?v=d83636e5:17980
+commitLayoutEffects_begin @ chunk-6VWAHX6D.js?v=d83636e5:17969
+commitLayoutEffects @ chunk-6VWAHX6D.js?v=d83636e5:17920
+commitRootImpl @ chunk-6VWAHX6D.js?v=d83636e5:19353
+commitRoot @ chunk-6VWAHX6D.js?v=d83636e5:19277
+finishConcurrentRender @ chunk-6VWAHX6D.js?v=d83636e5:18760
+performConcurrentWorkOnRoot @ chunk-6VWAHX6D.js?v=d83636e5:18718
+workLoop @ chunk-6VWAHX6D.js?v=d83636e5:197
+flushWork @ chunk-6VWAHX6D.js?v=d83636e5:176
+performWorkUntilDeadline @ chunk-6VWAHX6D.js?v=d83636e5:384Understand this error
+chunk-6VWAHX6D.js?v=d83636e5:19413 Uncaught ReferenceError: AdminDashboard is not defined
+    at App (App.jsx:110:40)
+    at renderWithHooks (chunk-6VWAHX6D.js?v=d83636e5:11548:26)
+    at mountIndeterminateComponent (chunk-6VWAHX6D.js?v=d83636e5:14926:21)
+    at beginWork (chunk-6VWAHX6D.js?v=d83636e5:15914:22)
+    at beginWork$1 (chunk-6VWAHX6D.js?v=d83636e5:19753:22)
+    at performUnitOfWork (chunk-6VWAHX6D.js?v=d83636e5:19198:20)
+    at workLoopSync (chunk-6VWAHX6D.js?v=d83636e5:19137:13)
+    at renderRootSync (chunk-6VWAHX6D.js?v=d83636e5:19116:15)
+    at recoverFromConcurrentError (chunk-6VWAHX6D.js?v=d83636e5:18736:28)
+    at performConcurrentWorkOnRoot (chunk-6VWAHX6D.js?v=d83636e5:18684:30)
+App @ App.jsx:110
+renderWithHooks @ chunk-6VWAHX6D.js?v=d83636e5:11548
+mountIndeterminateComponent @ chunk-6VWAHX6D.js?v=d83636e5:14926
+beginWork @ chunk-6VWAHX6D.js?v=d83636e5:15914
+beginWork$1 @ chunk-6VWAHX6D.js?v=d83636e5:19753
+performUnitOfWork @ chunk-6VWAHX6D.js?v=d83636e5:19198
+workLoopSync @ chunk-6VWAHX6D.js?v=d83636e5:19137
+renderRootSync @ chunk-6VWAHX6D.js?v=d83636e5:19116
+recoverFromConcurrentError @ chunk-6VWAHX6D.js?v=d83636e5:18736
+performConcurrentWorkOnRoot @ chunk-6VWAHX6D.js?v=d83636e5:18684
+workLoop @ chunk-6VWAHX6D.js?v=d83636e5:197
+flushWork @ chunk-6VWAHX6D.js?v=d83636e5:176
+performWorkUntilDeadline @ chunk-6VWAHX6D.js?v=d83636e5:384Understand this error
+@stripe_stripe-js.js?v=d83636e5:115 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'match')
+    at initStripe2 (@stripe_stripe-js.js?v=d83636e5:115:22)
+    at @stripe_stripe-js.js?v=d83636e5:151:12
+initStripe2 @ @stripe_stripe-js.js?v=d83636e5:115
+(anonymous) @ @stripe_stripe-js.js?v=d83636e5:151
+Promise.then
+loadStripe2 @ @stripe_stripe-js.js?v=d83636e5:150
+(anonymous) @ Shop.jsx:7Understand this error
+App.jsx:110 Uncaught ReferenceError: AdminDashboard is not defined
+    at App (App.jsx:110:40)
+    at renderWithHooks (chunk-6VWAHX6D.js?v=d83636e5:11548:26)
+    at mountIndeterminateComponent (chunk-6VWAHX6D.js?v=d83636e5:14926:21)
+    at beginWork (chunk-6VWAHX6D.js?v=d83636e5:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-6VWAHX6D.js?v=d83636e5:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-6VWAHX6D.js?v=d83636e5:3699:24)
+    at invokeGuardedCallback (chunk-6VWAHX6D.js?v=d83636e5:3733:39)
+    at beginWork$1 (chunk-6VWAHX6D.js?v=d83636e5:19765:15)
+    at performUnitOfWork (chunk-6VWAHX6D.js?v=d83636e5:19198:20)
+    at workLoopSync (chunk-6VWAHX6D.js?v=d83636e5:19137:13)
+App @ App.jsx:110
+renderWithHooks @ chunk-6VWAHX6D.js?v=d83636e5:11548
+mountIndeterminateComponent @ chunk-6VWAHX6D.js?v=d83636e5:14926
+beginWork @ chunk-6VWAHX6D.js?v=d83636e5:15914
+callCallback2 @ chunk-6VWAHX6D.js?v=d83636e5:3674
+invokeGuardedCallbackDev @ chunk-6VWAHX6D.js?v=d83636e5:3699
+invokeGuardedCallback @ chunk-6VWAHX6D.js?v=d83636e5:3733
+beginWork$1 @ chunk-6VWAHX6D.js?v=d83636e5:19765
+performUnitOfWork @ chunk-6VWAHX6D.js?v=d83636e5:19198
+workLoopSync @ chunk-6VWAHX6D.js?v=d83636e5:19137
+renderRootSync @ chunk-6VWAHX6D.js?v=d83636e5:19116
+performConcurrentWorkOnRoot @ chunk-6VWAHX6D.js?v=d83636e5:18678
+workLoop @ chunk-6VWAHX6D.js?v=d83636e5:197
+flushWork @ chunk-6VWAHX6D.js?v=d83636e5:176
+performWorkUntilDeadline @ chunk-6VWAHX6D.js?v=d83636e5:384Understand this error
+App.jsx:110 Uncaught ReferenceError: AdminDashboard is not defined
+    at App (App.jsx:110:40)
+    at renderWithHooks (chunk-6VWAHX6D.js?v=d83636e5:11548:26)
+    at mountIndeterminateComponent (chunk-6VWAHX6D.js?v=d83636e5:14926:21)
+    at beginWork (chunk-6VWAHX6D.js?v=d83636e5:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-6VWAHX6D.js?v=d83636e5:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-6VWAHX6D.js?v=d83636e5:3699:24)
+    at invokeGuardedCallback (chunk-6VWAHX6D.js?v=d83636e5:3733:39)
+    at beginWork$1 (chunk-6VWAHX6D.js?v=d83636e5:19765:15)
+    at performUnitOfWork (chunk-6VWAHX6D.js?v=d83636e5:19198:20)
+    at workLoopSync (chunk-6VWAHX6D.js?v=d83636e5:19137:13)
+App @ App.jsx:110
+renderWithHooks @ chunk-6VWAHX6D.js?v=d83636e5:11548
+mountIndeterminateComponent @ chunk-6VWAHX6D.js?v=d83636e5:14926
+beginWork @ chunk-6VWAHX6D.js?v=d83636e5:15914
+callCallback2 @ chunk-6VWAHX6D.js?v=d83636e5:3674
+invokeGuardedCallbackDev @ chunk-6VWAHX6D.js?v=d83636e5:3699
+invokeGuardedCallback @ chunk-6VWAHX6D.js?v=d83636e5:3733
+beginWork$1 @ chunk-6VWAHX6D.js?v=d83636e5:19765
+performUnitOfWork @ chunk-6VWAHX6D.js?v=d83636e5:19198
+workLoopSync @ chunk-6VWAHX6D.js?v=d83636e5:19137
+renderRootSync @ chunk-6VWAHX6D.js?v=d83636e5:19116
+recoverFromConcurrentError @ chunk-6VWAHX6D.js?v=d83636e5:18736
+performConcurrentWorkOnRoot @ chunk-6VWAHX6D.js?v=d83636e5:18684
+workLoop @ chunk-6VWAHX6D.js?v=d83636e5:197
+flushWork @ chunk-6VWAHX6D.js?v=d83636e5:176
+performWorkUntilDeadline @ chunk-6VWAHX6D.js?v=d83636e5:384Understand this error
+Console.js:61 The above error occurred in the <App> component:
+
+    at App (https://d0751fc2-9db6-4baa-aebd-241cd1de6252-00-39sxc8r074dl3.spock.replit.dev/src/App.jsx:65:27)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+Mt.forEach.n.<computed> @ Console.js:61
+logCapturedError @ chunk-6VWAHX6D.js?v=d83636e5:14032
+update.callback @ chunk-6VWAHX6D.js?v=d83636e5:14052
+callCallback @ chunk-6VWAHX6D.js?v=d83636e5:11248
+commitUpdateQueue @ chunk-6VWAHX6D.js?v=d83636e5:11265
+commitLayoutEffectOnFiber @ chunk-6VWAHX6D.js?v=d83636e5:17093
+commitLayoutMountEffects_complete @ chunk-6VWAHX6D.js?v=d83636e5:17980
+commitLayoutEffects_begin @ chunk-6VWAHX6D.js?v=d83636e5:17969
+commitLayoutEffects @ chunk-6VWAHX6D.js?v=d83636e5:17920
+commitRootImpl @ chunk-6VWAHX6D.js?v=d83636e5:19353
+commitRoot @ chunk-6VWAHX6D.js?v=d83636e5:19277
+finishConcurrentRender @ chunk-6VWAHX6D.js?v=d83636e5:18760
+performConcurrentWorkOnRoot @ chunk-6VWAHX6D.js?v=d83636e5:18718
+workLoop @ chunk-6VWAHX6D.js?v=d83636e5:197
+flushWork @ chunk-6VWAHX6D.js?v=d83636e5:176
+performWorkUntilDeadline @ chunk-6VWAHX6D.js?v=d83636e5:384Understand this error
+chunk-6VWAHX6D.js?v=d83636e5:19413 Uncaught ReferenceError: AdminDashboard is not defined
+    at App (App.jsx:110:40)
+    at renderWithHooks (chunk-6VWAHX6D.js?v=d83636e5:11548:26)
+    at mountIndeterminateComponent (chunk-6VWAHX6D.js?v=d83636e5:14926:21)
+    at beginWork (chunk-6VWAHX6D.js?v=d83636e5:15914:22)
+    at beginWork$1 (chunk-6VWAHX6D.js?v=d83636e5:19753:22)
+    at performUnitOfWork (chunk-6VWAHX6D.js?v=d83636e5:19198:20)
+    at workLoopSync (chunk-6VWAHX6D.js?v=d83636e5:19137:13)
+    at renderRootSync (chunk-6VWAHX6D.js?v=d83636e5:19116:15)
+    at recoverFromConcurrentError (chunk-6VWAHX6D.js?v=d83636e5:18736:28)
+    at performConcurrentWorkOnRoot (chunk-6VWAHX6D.js?v=d83636e5:18684:30)
+App @ App.jsx:110
+renderWithHooks @ chunk-6VWAHX6D.js?v=d83636e5:11548
+mountIndeterminateComponent @ chunk-6VWAHX6D.js?v=d83636e5:14926
+beginWork @ chunk-6VWAHX6D.js?v=d83636e5:15914
+beginWork$1 @ chunk-6VWAHX6D.js?v=d83636e5:19753
+performUnitOfWork @ chunk-6VWAHX6D.js?v=d83636e5:19198
+workLoopSync @ chunk-6VWAHX6D.js?v=d83636e5:19137
+renderRootSync @ chunk-6VWAHX6D.js?v=d83636e5:19116
+recoverFromConcurrentError @ chunk-6VWAHX6D.js?v=d83636e5:18736
+performConcurrentWorkOnRoot @ chunk-6VWAHX6D.js?v=d83636e5:18684
+workLoop @ chunk-6VWAHX6D.js?v=d83636e5:197
+flushWork @ chunk-6VWAHX6D.js?v=d83636e5:176
+performWorkUntilDeadline @ chunk-6VWAHX6D.js?v=d83636e5:384Understand this error
+@stripe_stripe-js.js?v=d83636e5:115 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'match')
+    at initStripe2 (@stripe_stripe-js.js?v=d83636e5:115:22)
+    at @stripe_stripe-js.js?v=d83636e5:151:12
+initStripe2 @ @stripe_stripe-js.js?v=d83636e5:115
+(anonymous) @ @stripe_stripe-js.js?v=d83636e5:151
+Promise.then
+loadStripe2 @ @stripe_stripe-js.js?v=d83636e5:150
+(anonymous) @ Shop.jsx:7Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+client:736 
+            
+            
+           GET https://localhost:5173/ net::ERR_CONNECTION_REFUSED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755
+await in waitForSuccessfulPing
+(anonymous) @ client:561Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
