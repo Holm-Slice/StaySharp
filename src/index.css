@@ -47,21 +47,26 @@ body {
 
   .nav-list ul {
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     display: flex !important;
     gap: 0;
-    padding: 2px;
+    padding: 8px;
+  }
+
+  .nav-list ul li {
+    margin: 0;
+    display: flex !important;
+    justify-content: center;
   }
 
   .nav-list ul li a {
-    font-size: 15px;
-    padding: 6px 3px;
+    font-size: 16px;
+    padding: 10px 6px;
     text-align: center;
     display: block !important;
     white-space: nowrap;
     margin: 0;
-    width: 100%;
   }
 
   /* Mobile-specific utility classes */
