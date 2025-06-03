@@ -181,6 +181,7 @@ function App() {
                   </h2>
                   <ActiveSlider />
                 </Section>
+                <Divider />
                 <ImageCarousel images={images} />
 
                 <About />
