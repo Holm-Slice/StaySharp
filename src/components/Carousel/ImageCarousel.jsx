@@ -16,15 +16,24 @@ const ImageCarousel = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: true,
     responsive: [
       {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
         breakpoint: 768,
         settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
           arrows: false,
         }
       }
@@ -54,11 +63,11 @@ const ImageCarousel = () => {
         <Slider {...settings}>
           {shuffledKnives.map((knife) => (
             <div key={knife.id} className="carousel-slide">
-              <div className="flex justify-center px-4">
-                <div className="flex flex-col justify-center items-center px-4">
-                  <main className="bg-white border-2 border-ss_purple w-full max-w-sm md:max-w-lg h-[400px] md:h-[320px] p-4 md:p-6 md:grid md:grid-cols-2 md:gap-4 shadow-[6px_6px_0px_#453393] transition-colors duration-300 cursor-pointer gap-4 overflow-hidden">
+              <div className="flex justify-center px-2 lg:px-4">
+                <div className="flex flex-col justify-center items-center px-2 lg:px-4">
+                  <main className="bg-white border-2 border-ss_purple w-full max-w-xs sm:max-w-sm lg:max-w-md h-[350px] sm:h-[400px] lg:h-[320px] p-3 sm:p-4 lg:p-6 sm:grid sm:grid-cols-2 lg:gap-4 shadow-[4px_4px_0px_#453393] lg:shadow-[6px_6px_0px_#453393] transition-colors duration-300 cursor-pointer gap-3 sm:gap-4 overflow-hidden">
                     <div
-                      className="relative w-full h-32 md:h-full overflow-hidden"
+                      className="relative w-full h-28 sm:h-32 lg:h-full overflow-hidden"
                       onMouseEnter={() => setHoveredKnife(knife)}
                       onMouseLeave={() => setHoveredKnife(null)}
                     >

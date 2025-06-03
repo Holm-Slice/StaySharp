@@ -13,8 +13,8 @@ import About from "./components/About/About";
 import ActiveSlider from "./ActiveSlider";
 import Shop from "./components/Shop/Shop";
 import ShopDashboard from "./components/Shop/ShopDashboard";
-import AdminDashboard from "./components/Admin/AdminDashboard";
 import CartPage from "./components/Shop/CartPage";
+import ProductDetailPage from "./components/Shop/ProductDetailPage";
 import BookingPage from "./components/Booking/BookingPage";
 import CheckoutPage from './components/Checkout/CheckoutPage';
 import UnifiedCheckoutPage from './components/Checkout/UnifiedCheckoutPage';
@@ -136,6 +136,7 @@ function App() {
             />
           }
         />
+        <Route path="/shop/product/:id" element={<ProductDetailPage cart={cart} setCart={setCart} onUpdateQuantity={updateQuantity} onRemoveItem={removeFromCart} onCheckout={handleCheckout} />} />
         <Route
           path="/"
           element={

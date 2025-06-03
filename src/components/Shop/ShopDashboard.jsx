@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { mockKnives } from "../../data/mockKnives";
 
 // Dynamically import Stripe only if the key is available
@@ -24,6 +24,7 @@ function ShopDashboard({
   onCheckout,
 }) {
   const location = useLocation();
+  const navigate = useNavigate();
   const [knives, setKnives] = useState([]);
   const [filteredKnives, setFilteredKnives] = useState([]);
   const [hoveredKnife, setHoveredKnife] = useState(null);
@@ -89,6 +90,10 @@ function ShopDashboard({
     } catch (error) {
       console.error("Error adding to cart:", error);
     }
+  };
+
+  const handleProductClick = (knife) => {
+    navigate(`/shop/product/${knife.id}`, { state: { product: knife } });
   };
 
   if (loading) {
@@ -269,6 +274,7 @@ function ShopDashboard({
             <div
               key={knife.id}
               className="flex flex-col justify-center items-center"
+              onClick={() => handleProductClick(knife)}
             >
               <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl h-[500px] md:h-[400px] p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-6 overflow-hidden">
                 <div
@@ -322,7 +328,7 @@ function ShopDashboard({
                       {knife.name}
                     </h1>
 
-                    <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
+                    <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center line-clamp-1 md:line-clamp-none">
                       {knife.description}
                     </h2>
                   </div>
@@ -337,7 +343,10 @@ function ShopDashboard({
                       </p>
                     )}
                     <button
-                      onClick={() => addToCart(knife)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        addToCart(knife);
+                      }}
                       disabled={knife.stock === 0}
                       className={`uppercase py-1 px-6 w-full max-w-48 transition-colors duration-[1300ms] border-4 text-sm md:text-base ${
                         knife.stock === 0
