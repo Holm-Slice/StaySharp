@@ -76,7 +76,8 @@ function ServiceCardTailwind({ title, description, price, image }) {
             </p>
             <button
               onClick={handleBookNow}
-              className="uppercase py-3 px-6 w-full max-w-48 transition-colors duration-[1300ms] border-4 text-sm font-medium bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
+              className="uppercase py-3 px-6 w-full max-w-48 transition-colors duration-[1300ms] border-4 text-sm font-medium bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple block"
+              style={{ display: 'block !important', visibility: 'visible !important', opacity: '1 !important' }}
             >
               Book Now!
             </button>
