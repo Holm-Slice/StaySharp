@@ -70,7 +70,7 @@ body {
   }
 
   .nav-list ul li a {
-    font-size: 16px;
+    font-size: 24px;
     padding: 10px 8px;
     text-align: center;
     display: block !important;
@@ -153,7 +153,7 @@ body {
   }
 
   .nav-list ul li a {
-    font-size: 20px;
+    font-size: 24px;
     padding: 5px 5px;
     width: 100%;
     text-align: center;
