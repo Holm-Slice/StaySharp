@@ -13,7 +13,7 @@ const ImageCarousel = () => {
   const [hoveredKnife, setHoveredKnife] = useState(null);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -138,15 +138,6 @@ const ImageCarousel = () => {
             </div>
           ))}
         </Slider>
-        
-        <div className="text-center mt-8">
-          <button
-            onClick={handleViewShop}
-            className="bg-ss_purple text-white px-8 py-3 text-lg font-semibold hover:bg-ss_pale_purple transition-colors duration-300 border-2 border-ss_purple hover:bg-white hover:text-ss_purple"
-          >
-            Browse Full Collection
-          </button>
-        </div>
       </div>
     </section>
   );
