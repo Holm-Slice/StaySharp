@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
@@ -119,7 +118,7 @@ const ImageCarousel = () => {
                           {knife.name}
                         </h1>
 
-                        <h2 className="text-sm md:text-base text-gray-500 font-light my-1 md:my-2 text-center line-clamp-2">
+                        <h2 className="text-xs md:text-sm lg:text-base text-gray-500 font-light my-1 text-center">
                           {knife.description}
                         </h2>
                       </div>
