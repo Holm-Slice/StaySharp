@@ -20,6 +20,7 @@ import CheckoutPage from './components/Checkout/CheckoutPage';
 import UnifiedCheckoutPage from './components/Checkout/UnifiedCheckoutPage';
 import ServiceConfirmationPage from "./components/Confirmation/ServiceConfirmationPage";
 import ShopConfirmationPage from "./components/Confirmation/ShopConfirmationPage";
+import AdminDashboard from "./components/Admin/AdminDashboard";
 
 const images = [
   "/assets/Images/chef-knife1.jpg",
