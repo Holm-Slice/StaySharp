@@ -269,16 +269,16 @@ function ShopDashboard({
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
           {filteredKnives.map((knife) => (
             <div
               key={knife.id}
               className="flex flex-col justify-center items-center"
               onClick={() => handleProductClick(knife)}
             >
-              <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl h-[500px] md:h-[400px] p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-6 overflow-hidden">
+              <main className="bg-white border-2 border-ss_purple w-full max-w-sm sm:max-w-md lg:max-w-2xl h-auto min-h-[400px] lg:h-[400px] p-4 sm:p-6 lg:p-10 flex flex-col lg:grid lg:grid-cols-2 lg:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.02] lg:hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 lg:gap-6 overflow-hidden">
                 <div
-                  className="relative w-full h-48 md:h-full overflow-hidden"
+                  className="relative w-full h-48 sm:h-56 lg:h-full overflow-hidden flex-shrink-0"
                   onMouseEnter={() => setHoveredKnife(knife)}
                   onMouseLeave={() => setHoveredKnife(null)}
                 >
@@ -289,9 +289,9 @@ function ShopDashboard({
                     className="object-cover w-full h-full"
                   />
 
-                  {/* Hover Popup - Only over image */}
+                  {/* Hover Popup - Only over image, hidden on mobile */}
                   {hoveredKnife?.id === knife.id && (
-                    <div className="absolute bottom-2 right-2 bg-white border-2 border-ss_purple rounded-lg shadow-lg p-3 z-10 min-w-48">
+                    <div className="hidden lg:block absolute bottom-2 right-2 bg-white border-2 border-ss_purple rounded-lg shadow-lg p-3 z-10 min-w-48">
                       <div className="space-y-1 text-sm">
                         <div className="flex justify-between">
                           <span className="font-medium text-gray-700">
@@ -322,23 +322,34 @@ function ShopDashboard({
                   )}
                 </div>
 
-                <section className="flex flex-col h-full justify-between">
-                  <div>
-                    <h1 className="font-title font-bold text-xl md:text-2xl text-center">
+                <section className="flex flex-col flex-1 justify-between min-h-0">
+                  <div className="flex-1">
+                    <h1 className="font-title font-bold text-lg sm:text-xl lg:text-2xl text-center mb-2">
                       {knife.name}
                     </h1>
 
-                    <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center line-clamp-1 md:line-clamp-none">
+                    <h2 className="text-sm sm:text-base lg:text-xl text-gray-500 font-light text-center line-clamp-2 lg:line-clamp-none">
                       {knife.description}
                     </h2>
+                    
+                    {/* Mobile-only details */}
+                    <div className="lg:hidden mt-3 text-center">
+                      <div className="flex justify-center space-x-4 text-xs text-gray-600">
+                        <span>{knife.style}</span>
+                        <span>•</span>
+                        <span>{knife.length}</span>
+                        <span>•</span>
+                        <span>{knife.brand}</span>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="flex flex-col items-center space-y-2">
-                    <p className="font-light text-black text-center text-sm md:text-base">
+                  <div className="flex flex-col items-center space-y-3 mt-4">
+                    <p className="font-light text-black text-center text-lg sm:text-xl font-semibold">
                       ${knife.price}
                     </p>
                     {knife.stock > 0 && knife.stock <= 3 && (
-                      <p className="text-orange-500 text-sm">
+                      <p className="text-orange-500 text-sm font-medium">
                         Only {knife.stock} left in stock!
                       </p>
                     )}
@@ -348,7 +359,7 @@ function ShopDashboard({
                         addToCart(knife);
                       }}
                       disabled={knife.stock === 0}
-                      className={`uppercase py-1 px-6 w-full max-w-48 transition-colors duration-[1300ms] border-4 text-sm md:text-base ${
+                      className={`uppercase py-3 px-6 w-full max-w-xs transition-colors duration-[1300ms] border-4 text-sm font-medium ${
                         knife.stock === 0
                           ? "bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed"
                           : "bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
