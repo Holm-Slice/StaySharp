@@ -21,15 +21,7 @@ import UnifiedCheckoutPage from "./components/Checkout/UnifiedCheckoutPage";
 import ServiceConfirmationPage from "./components/Confirmation/ServiceConfirmationPage";
 import ShopConfirmationPage from "./components/Confirmation/ShopConfirmationPage";
 // Lazy load route components for better performance
-// const AdminDashboard = lazy(() => import("./components/Admin/AdminDashboard"));
-// const ShopDashboard = lazy(() => import("./components/Shop/ShopDashboard"));
-// const CartPage = lazy(() => import("./components/Shop/CartPage"));
-// const ProductDetailPage = lazy(() => import("./components/Shop/ProductDetailPage"));
-// const BookingPage = lazy(() => import("./components/Booking/BookingPage"));
-// const CheckoutPage = lazy(() => import("./components/Checkout/CheckoutPage"));
-// const UnifiedCheckoutPage = lazy(() => import("./components/Checkout/UnifiedCheckoutPage"));
-// const ServiceConfirmationPage = lazy(() => import("./components/Confirmation/ServiceConfirmationPage"));
-// const ShopConfirmationPage = lazy(() => import("./components/Confirmation/ShopConfirmationPage"));
+const AdminDashboard = lazy(() => import("./components/Admin/AdminDashboard"));
 
 const images = [
   "/assets/Images/chef-knife1.jpg",
