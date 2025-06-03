@@ -51,19 +51,12 @@ body {
     flex-wrap: wrap;
     display: flex !important;
     gap: 0;
-    padding: 5px;
-  }
-
-  .nav-list ul li {
-    flex: 1;
-    margin: 0;
-    display: flex !important;
-    justify-content: center;
+    padding: 2px;
   }
 
   .nav-list ul li a {
-    font-size: 16px;
-    padding: 10px 4px;
+    font-size: 15px;
+    padding: 6px 3px;
     text-align: center;
     display: block !important;
     white-space: nowrap;

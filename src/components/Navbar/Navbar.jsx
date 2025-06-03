@@ -42,7 +42,7 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
       {/* Logo Container */}
       <div className="mb-0 flex justify-center sm:justify-start w-full sm:w-auto">
         <img
-          className="h-40 m-12 ml-12"
+          className="h-32 sm:h-40 m-4 sm:m-8 sm:ml-12"
           src="/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
           alt="stay-sharp-don't-be-dull-logo"
         />
@@ -51,8 +51,8 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
       {/* Navigation and Cart Container */}
       <div className="flex items-end justify-between w-full md:w-auto">
         {/* Navigation List */}
-        <div className="nav-list h-24">
-          <ul className="flex flex-row max-sm:flex-row items-end justify-evenly p-5 mt-10 uppercase mb-2 overflow-hidden">
+        <div className="nav-list h-20 sm:h-24">
+          <ul className="flex flex-row max-sm:flex-row items-end justify-evenly p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden">
             {!isHomePage && (
               <li className="p-0 text-center">
                 <Link
