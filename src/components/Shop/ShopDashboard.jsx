@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { mockKnives } from "../../data/mockKnives";
 
 // Dynamically import Stripe only if the key is available
 let stripePromise = null;
@@ -13,75 +14,7 @@ if (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
       stripePromise = null;
     });
 }
-
-const mockKnives = [
-  {
-    id: 1,
-    name: "Wusthof Classic Chef's Knife",
-    brand: "Wusthof",
-    style: "German",
-    length: "8 inch",
-    price: 149.99,
-    image: "/assets/Images/chef-knife1.jpg",
-    description: "Professional German chef's knife with full tang construction",
-    stock: 3,
-  },
-  {
-    id: 2,
-    name: "Shun Premier Santoku",
-    brand: "Shun",
-    style: "Japanese",
-    length: "7 inch",
-    price: 189.99,
-    image: "/assets/Images/chef-knife2.jpg",
-    description: "Hand-forged Japanese santoku with Damascus steel",
-    stock: 2,
-  },
-  {
-    id: 3,
-    name: "Miyabi Kaizen Gyuto",
-    brand: "Miyabi",
-    style: "Japanese",
-    length: "9.5 inch",
-    price: 299.99,
-    image: "/assets/Images/chef-knife3.jpg",
-    description: "Premium Japanese gyuto with VG10 steel core",
-    stock: 1,
-  },
-  {
-    id: 4,
-    name: "Henckels Pro Paring Knife",
-    brand: "Henckels",
-    style: "German",
-    length: "3.5 inch",
-    price: 39.99,
-    image: "/assets/Images/chef-knife1.jpg",
-    description: "Precision paring knife for detailed work",
-    stock: 8,
-  },
-  {
-    id: 5,
-    name: "Global G-2 Chef's Knife",
-    brand: "Global",
-    style: "Japanese",
-    length: "8 inch",
-    price: 119.99,
-    image: "/assets/Images/chef-knife2.jpg",
-    description: "Lightweight stainless steel Japanese chef's knife",
-    stock: 5,
-  },
-  {
-    id: 6,
-    name: "Zwilling Twin Signature Bread Knife",
-    brand: "Zwilling",
-    style: "German",
-    length: "10 inch",
-    price: 89.99,
-    image: "/assets/Images/chef-knife3.jpg",
-    description: "Serrated bread knife with ice-hardened blade",
-    stock: 4,
-  },
-];
+  
 
 function ShopDashboard({
   cart,
@@ -90,6 +23,7 @@ function ShopDashboard({
   onRemoveItem,
   onCheckout,
 }) {
+  const location = useLocation();
   const [knives, setKnives] = useState([]);
   const [filteredKnives, setFilteredKnives] = useState([]);
   const [hoveredKnife, setHoveredKnife] = useState(null);
@@ -102,8 +36,22 @@ function ShopDashboard({
       try {
         // Simulate async operation
         await new Promise((resolve) => setTimeout(resolve, 1000));
-        setKnives(mockKnives);
-        setFilteredKnives(mockKnives);
+        
+        // Check if we need to reorder products based on selected product
+        let orderedKnives = [...mockKnives];
+        const selectedProductId = location.state?.selectedProductId;
+        
+        if (selectedProductId) {
+          const selectedIndex = orderedKnives.findIndex(knife => knife.id === selectedProductId);
+          if (selectedIndex > 0) {
+            // Move selected product to the front
+            const selectedProduct = orderedKnives.splice(selectedIndex, 1)[0];
+            orderedKnives.unshift(selectedProduct);
+          }
+        }
+        
+        setKnives(orderedKnives);
+        setFilteredKnives(orderedKnives);
       } catch (error) {
         console.error("Error loading knives:", error);
       } finally {
@@ -112,7 +60,7 @@ function ShopDashboard({
     };
 
     loadKnives();
-  }, []);
+  }, [location.state?.selectedProductId]);
 
   useEffect(() => {
     const filtered = knives.filter(

@@ -5,76 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ImageCarousel.css";
-
-// Import the same mock data from ShopDashboard
-const mockKnives = [
-  {
-    id: 1,
-    name: "Wusthof Classic Chef's Knife",
-    brand: "Wusthof",
-    style: "German",
-    length: "8 inch",
-    price: 149.99,
-    image: "/assets/Images/chef-knife1.jpg",
-    description: "Professional German chef's knife with full tang construction",
-    stock: 3,
-  },
-  {
-    id: 2,
-    name: "Shun Premier Santoku",
-    brand: "Shun",
-    style: "Japanese",
-    length: "7 inch",
-    price: 189.99,
-    image: "/assets/Images/chef-knife2.jpg",
-    description: "Hand-forged Japanese santoku with Damascus steel",
-    stock: 2,
-  },
-  {
-    id: 3,
-    name: "Miyabi Kaizen Gyuto",
-    brand: "Miyabi",
-    style: "Japanese",
-    length: "9.5 inch",
-    price: 299.99,
-    image: "/assets/Images/chef-knife3.jpg",
-    description: "Premium Japanese gyuto with VG10 steel core",
-    stock: 1,
-  },
-  {
-    id: 4,
-    name: "Henckels Pro Paring Knife",
-    brand: "Henckels",
-    style: "German",
-    length: "3.5 inch",
-    price: 39.99,
-    image: "/assets/Images/chef-knife1.jpg",
-    description: "Precision paring knife for detailed work",
-    stock: 8,
-  },
-  {
-    id: 5,
-    name: "Global G-2 Chef's Knife",
-    brand: "Global",
-    style: "Japanese",
-    length: "8 inch",
-    price: 119.99,
-    image: "/assets/Images/chef-knife2.jpg",
-    description: "Lightweight stainless steel Japanese chef's knife",
-    stock: 5,
-  },
-  {
-    id: 6,
-    name: "Zwilling Twin Signature Bread Knife",
-    brand: "Zwilling",
-    style: "German",
-    length: "10 inch",
-    price: 89.99,
-    image: "/assets/Images/chef-knife3.jpg",
-    description: "Serrated bread knife with ice-hardened blade",
-    stock: 4,
-  },
-];
+import { mockKnives } from "../../data/mockKnives";
 
 const ImageCarousel = () => {
   const navigate = useNavigate();
@@ -106,8 +37,12 @@ const ImageCarousel = () => {
     setShuffledKnives(shuffled);
   }, []);
 
-  const handleViewShop = () => {
-    navigate("/shop");
+  const handleViewShop = (productId = null) => {
+    if (productId) {
+      navigate("/shop", { state: { selectedProductId: productId } });
+    } else {
+      navigate("/shop");
+    }
   };
 
   return (
@@ -120,10 +55,10 @@ const ImageCarousel = () => {
           {shuffledKnives.map((knife) => (
             <div key={knife.id} className="carousel-slide">
               <div className="flex justify-center px-4">
-                <div className="flex flex-col justify-center items-center">
-                  <main className="bg-white border-2 border-ss_purple w-full max-w-lg md:max-w-2xl h-[500px] md:h-[400px] p-6 md:p-10 md:grid md:grid-cols-2 md:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-6 overflow-hidden">
+                <div className="flex flex-col justify-center items-center px-4">
+                  <main className="bg-white border-2 border-ss_purple w-full max-w-sm md:max-w-lg h-[400px] md:h-[320px] p-4 md:p-6 md:grid md:grid-cols-2 md:gap-4 shadow-[6px_6px_0px_#453393] transition-colors duration-300 cursor-pointer gap-4 overflow-hidden">
                     <div
-                      className="relative w-full h-48 md:h-full overflow-hidden"
+                      className="relative w-full h-32 md:h-full overflow-hidden"
                       onMouseEnter={() => setHoveredKnife(knife)}
                       onMouseLeave={() => setHoveredKnife(null)}
                     >
@@ -171,27 +106,27 @@ const ImageCarousel = () => {
 
                     <section className="flex flex-col h-full justify-between">
                       <div>
-                        <h1 className="font-title font-bold text-xl md:text-2xl text-center">
+                        <h1 className="font-title font-bold text-lg md:text-xl text-center">
                           {knife.name}
                         </h1>
 
-                        <h2 className="text-lg md:text-xl text-gray-500 font-light my-2 md:my-3 text-center">
+                        <h2 className="text-sm md:text-base text-gray-500 font-light my-1 md:my-2 text-center line-clamp-2">
                           {knife.description}
                         </h2>
                       </div>
 
-                      <div className="flex flex-col items-center space-y-2">
-                        <p className="font-light text-black text-center text-sm md:text-base">
+                      <div className="flex flex-col items-center space-y-1">
+                        <p className="font-light text-black text-center text-sm">
                           ${knife.price}
                         </p>
                         {knife.stock > 0 && knife.stock <= 3 && (
-                          <p className="text-orange-500 text-sm">
-                            Only {knife.stock} left in stock!
+                          <p className="text-orange-500 text-xs">
+                            Only {knife.stock} left!
                           </p>
                         )}
                         <button
-                          onClick={handleViewShop}
-                          className="uppercase py-1 px-6 w-full max-w-48 transition-colors duration-[1300ms] border-4 text-sm md:text-base bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
+                          onClick={() => handleViewShop(knife.id)}
+                          className="uppercase py-1 px-4 w-full max-w-40 transition-colors duration-[1300ms] border-2 text-xs md:text-sm bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
                         >
                           View in Shop
                         </button>
