@@ -109,11 +109,12 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
         </div>
       </div>
       <nav className="navbar-cont relative">
-      <div className="seo-text">
-        Stay Sharp Austin Texas knife sharpening navigation professional kitchen cutlery service 
-        Austin blade experts knife restoration Austin knife shop professional knife care Austin 
-        Texas culinary knife services kitchen blade sharpening navigation menu
-      </div>
+        <div className="seo-text">
+          Stay Sharp Austin Texas knife sharpening navigation professional kitchen cutlery service 
+          Austin blade experts knife restoration Austin knife shop professional knife care Austin 
+          Texas culinary knife services kitchen blade sharpening navigation menu
+        </div>
+      </nav>
     </div>
   );
 }
