@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     hmr: {
       port: 5173,
-      host: "localhost"
+      host: "localhost", "atxstaysharp.world"
     },
     allowedHosts: [
       // add your exact Replit preview URL here:
