@@ -71,15 +71,7 @@ function App() {
       }
 
       // Simulate payment processing
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          try {
-            resolve();
-          } catch (err) {
-            reject(err);
-          }
-        }, 2000);
-      });
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Create order data
       const orderData = {
@@ -114,22 +106,14 @@ function App() {
         onUpdateQuantity={updateQuantity}
         onRemoveItem={removeFromCart}
         onCheckout={handleCheckout}
-      >
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-ss_purple text-white p-2 z-50"
-        >
-          Skip to main content
-        </a>
-      </Navbar>
+      />
+      <HorizontalScroller />
       <Routes>
         <Route
           path="/admin"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <AdminDashboard />
-              </main>
+              <AdminDashboard />
             </Suspense>
           }
         />
@@ -137,9 +121,7 @@ function App() {
           path="/booking"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <BookingPage />
-              </main>
+              <BookingPage />
             </Suspense>
           }
         />
@@ -147,9 +129,7 @@ function App() {
           path="/checkout"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <CheckoutPage />
-              </main>
+              <CheckoutPage />
             </Suspense>
           }
         />
@@ -157,9 +137,7 @@ function App() {
           path="/unified-checkout"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <UnifiedCheckoutPage />
-              </main>
+              <UnifiedCheckoutPage />
             </Suspense>
           }
         />
@@ -167,9 +145,7 @@ function App() {
           path="/confirmation/service"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <ServiceConfirmationPage />
-              </main>
+              <ServiceConfirmationPage />
             </Suspense>
           }
         />
@@ -177,9 +153,7 @@ function App() {
           path="/confirmation/shop"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <ShopConfirmationPage />
-              </main>
+              <ShopConfirmationPage />
             </Suspense>
           }
         />
@@ -187,15 +161,13 @@ function App() {
           path="/shop"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <ShopDashboard
-                  cart={cart}
-                  setCart={setCart}
-                  onUpdateQuantity={updateQuantity}
-                  onRemoveItem={removeFromCart}
-                  onCheckout={handleCheckout}
-                />
-              </main>
+              <ShopDashboard
+                cart={cart}
+                setCart={setCart}
+                onUpdateQuantity={updateQuantity}
+                onRemoveItem={removeFromCart}
+                onCheckout={handleCheckout}
+              />
             </Suspense>
           }
         />
@@ -203,14 +175,12 @@ function App() {
           path="/cart"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <CartPage
-                  cart={cart}
-                  onUpdateQuantity={updateQuantity}
-                  onRemoveItem={removeFromCart}
-                  onCheckout={handleCheckout}
-                />
-              </main>
+              <CartPage
+                cart={cart}
+                onUpdateQuantity={updateQuantity}
+                onRemoveItem={removeFromCart}
+                onCheckout={handleCheckout}
+              />
             </Suspense>
           }
         />
@@ -218,15 +188,13 @@ function App() {
           path="/shop/product/:id"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <main id="main-content" tabIndex={-1}>
-                <ProductDetailPage
-                  cart={cart}
-                  setCart={setCart}
-                  onUpdateQuantity={updateQuantity}
-                  onRemoveItem={removeFromCart}
-                  onCheckout={handleCheckout}
-                />
-              </main>
+              <ProductDetailPage
+                cart={cart}
+                setCart={setCart}
+                onUpdateQuantity={updateQuantity}
+                onRemoveItem={removeFromCart}
+                onCheckout={handleCheckout}
+              />
             </Suspense>
           }
         />
@@ -234,7 +202,7 @@ function App() {
           path="/"
           element={
             <div className="main-app-div">
-              <main id="main-content" tabIndex={-1}>
+              <main>
                 <VideoPlayer className="max-h-40" />
                 <Divider />
 
@@ -269,7 +237,6 @@ function App() {
                   <ContactForm />
                 </Section>
                 <About />
-                <HorizontalScroller />
               </main>
             </div>
           }

@@ -38,31 +38,26 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
   };
 
   return (
-    <header className="w-full bg-ss_purple text-white" role="banner">
-      <nav className="flex flex-col lg:flex-row items-center lg:items-end justify-between p-0" role="navigation" aria-label="Main navigation">
-        {/* Logo Container */}
-        <div className="mb-0 flex justify-center lg:justify-start w-full lg:w-auto lg:flex-1">
-          <Link to="/" aria-label="Stay Sharp Austin homepage">
-            <img
-              className="h-24 sm:h-32 md:h-36 lg:h-40 m-2 sm:m-4 lg:m-8 lg:ml-12 transition-all duration-300 hover:scale-105"
-              src="/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
-              alt="Stay Sharp Austin - Professional Knife Sharpening Service Logo"
-            />
-          </Link>
-        </div>
+    <div className="w-full bg-ss_purple text-white flex flex-col lg:flex-row items-center lg:items-end justify-between p-0">
+      {/* Logo Container */}
+      <div className="mb-0 flex justify-center lg:justify-start w-full lg:w-auto lg:flex-1">
+        <img
+          className="h-24 sm:h-32 md:h-36 lg:h-40 m-2 sm:m-4 lg:m-8 lg:ml-12 transition-all duration-300 hover:scale-105"
+          src="/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
+          alt="stay-sharp-don't-be-dull-logo"
+        />
+      </div>
 
-        {/* Navigation and Cart Container */}
-        <div className="flex items-end justify-center lg:justify-end w-full lg:w-auto lg:mr-8">
-          {/* Navigation List */}
-          <div className="nav-list h-20 sm:h-24 w-full lg:w-auto">
-            <ul className="flex flex-row items-end justify-center lg:justify-end p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden" role="menubar">
+      {/* Navigation and Cart Container */}
+      <div className="flex items-end justify-center lg:justify-end w-full lg:w-auto lg:mr-8">
+        {/* Navigation List */}
+        <div className="nav-list h-20 sm:h-24 w-full lg:w-auto">
+          <ul className="flex flex-row items-end justify-center lg:justify-end p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden">
             {!isHomePage && (
-              <li className="p-0 text-center" role="none">
+              <li className="p-0 text-center">
                 <Link
                   to="/"
                   className="text-white no-underline font-light text-2xl px-0 relative mr-12"
-                  role="menuitem"
-                  aria-label="Navigate to home page"
                 >
                   Home
                 </Link>
@@ -70,49 +65,41 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
             )}
 
             {!isShopDashboard && (
-              <li className="p-0 text-center" role="none">
+              <li className="p-0 text-center">
                 <a
                   href="#services"
                   onClick={handleNavClick}
                   className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
-                  role="menuitem"
-                  aria-label="Navigate to services section"
                 >
                   Services
                 </a>
               </li>
             )}
-            <li className="p-0 text-center" role="none">
+            <li className="p-0 text-center">
               <Link
                 to="/shop"
                 className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
-                role="menuitem"
-                aria-label="Navigate to shop page"
               >
                 Shop
               </Link>
             </li>
             {!isShopDashboard && (
-              <li className="p-0 text-center" role="none">
+              <li className="p-0 text-center">
                 <a
                   href="#about"
                   onClick={handleNavClick}
                   className="text-white no-underline font-light text-2xl px-0 relative mr-12"
-                  role="menuitem"
-                  aria-label="Navigate to about section"
                 >
                   About
                 </a>
               </li>
             )}
             {!isShopDashboard && (
-              <li className="p-0 text-center" role="none">
+              <li className="p-0 text-center">
                 <a
                   href="#contact"
                   onClick={handleNavClick}
                   className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
-                  role="menuitem"
-                  aria-label="Navigate to contact section"
                 >
                   Contact
                 </a>
@@ -121,13 +108,14 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
           </ul>
         </div>
       </div>
-      <div className="sr-only">
-        Stay Sharp Austin Texas knife sharpening navigation professional kitchen cutlery service 
-        Austin blade experts knife restoration Austin knife shop professional knife care Austin 
-        Texas culinary knife services kitchen blade sharpening navigation menu
-      </div>
+      <nav className="navbar-cont relative">
+        <div className="seo-text">
+          Stay Sharp Austin Texas knife sharpening navigation professional kitchen cutlery service 
+          Austin blade experts knife restoration Austin knife shop professional knife care Austin 
+          Texas culinary knife services kitchen blade sharpening navigation menu
+        </div>
       </nav>
-    </header>
+    </div>
   );
 }
 

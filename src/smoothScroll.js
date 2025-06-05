@@ -1,6 +1,5 @@
 export const smoothScroll = (target, duration = 800, offset = 80) => {
-  // Handle both ID selectors and direct element references
-  const targetElement = target.startsWith('#') ? document.querySelector(target) : document.getElementById(target.replace('#', ''));
+  const element = document.querySelector(target);
   if (!element) {
     console.error(`Element with target ${target} not found.`);
     return;
