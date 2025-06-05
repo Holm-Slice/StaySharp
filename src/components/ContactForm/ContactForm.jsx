@@ -11,20 +11,6 @@ function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
-  const [formErrors, setFormErrors] = useState({});
-
-  const validateForm = () => {
-    const errors = {};
-    if (!formData.name?.trim()) errors.name = "Name is required";
-    if (!formData.email?.trim()) {
-      errors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Email is invalid";
-    }
-    if (!formData.message?.trim()) errors.message = "Message is required";
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,10 +22,6 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validateForm()) {
-      return;
-    }
-
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -77,7 +59,6 @@ function ContactForm() {
         phone: "",
         message: "",
       });
-      setFormErrors({});
     } catch (error) {
       console.error("EmailJS Error:", error);
       setSubmitStatus("error");
@@ -93,34 +74,26 @@ function ContactForm() {
         id="contact"
         className="flex flex-col justify-center items-center p-6 m-4 md:p-8 md:m-8"
       >
-        <main className="bg-white border-2 border-ss_purple w-2/3 max-w-2/3 p-4 md:p-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden"
-        aria-labelledby="contact-form-title"
-        role="form"
-        >
-          <h1
-          id="contact-form-title"
-          className="font-title font-bold text-2xl md:text-3xl text-center mb-6 text-ss_purple"
-          >
+        <main className="bg-white border-2 border-ss_purple w-2/3 max-w-2/3 p-4 md:p-8 shadow-[8px_8px_0px_#453393] hover:transition-transform md:hover:scale-110 hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 overflow-hidden">
+          <h1 className="font-title font-bold text-2xl md:text-3xl text-center mb-6 text-ss_purple">
             Let's Connect
           </h1>
 
-          <div id="submit-status" aria-live="polite" aria-atomic="true">
-            {submitStatus === "success" && (
-              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4" role="alert">
-                Thank you! Your message has been sent successfully. We'll get back
-                to you soon!
-              </div>
-            )}
+          {submitStatus === "success" && (
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+              Thank you! Your message has been sent successfully. We'll get back
+              to you soon!
+            </div>
+          )}
 
-            {submitStatus === "error" && (
-              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4" role="alert">
-                Sorry, there was an error sending your message. Please try again
-                or contact us directly.
-              </div>
-            )}
-          </div>
+          {submitStatus === "error" && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+              Sorry, there was an error sending your message. Please try again
+              or contact us directly.
+            </div>
+          )}
 
-          <form className="space-y-6" onSubmit={handleSubmit} noValidate>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             {/* Name, Email, and Phone Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Name Field */}
@@ -139,17 +112,8 @@ function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className={`mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2 ${
-                    formErrors.name ? "error" : ""
-                  }`}
-                  aria-invalid={formErrors.name ? "true" : "false"}
-                  aria-describedby={formErrors.name ? "name-error" : undefined}
+                  className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2"
                 />
-                {formErrors.name && (
-                  <div id="name-error" className="error-message" role="alert">
-                    {formErrors.name}
-                  </div>
-                )}
               </div>
 
               {/* Email Field */}
@@ -168,17 +132,8 @@ function ContactForm() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className={`mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2 ${
-                    formErrors.email ? "error" : ""
-                  }`}
-                  aria-invalid={formErrors.email ? "true" : "false"}
-                  aria-describedby={formErrors.email ? "email-error" : undefined}
+                  className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2"
                 />
-                {formErrors.email && (
-                  <div id="email-error" className="error-message" role="alert">
-                    {formErrors.email}
-                  </div>
-                )}
               </div>
             </div>
 
@@ -217,17 +172,8 @@ function ContactForm() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className={`mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-24 pl-2 pt-2 ${
-                  formErrors.message ? "error" : ""
-                }`}
-                aria-invalid={formErrors.message ? "true" : "false"}
-                aria-describedby={formErrors.message ? "message-error" : undefined}
+                className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-24 pl-2 pt-2"
               ></textarea>
-              {formErrors.message && (
-                <div id="message-error" className="error-message" role="alert">
-                  {formErrors.message}
-                </div>
-              )}
             </div>
 
             {/* Submit Button */}
@@ -235,12 +181,11 @@ function ContactForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`bg-ss_purple text-white uppercase py-2 px-4 md:py-3 md:px-6 transition-colors duration-[1300ms] border-4 border-ss_purple focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2 ${
+                className={`bg-ss_purple text-white uppercase py-2 px-4 md:py-3 md:px-6 transition-colors duration-[1300ms] border-4 border-ss_purple ${
                   isSubmitting
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:bg-white hover:text-ss_purple"
                 }`}
-                aria-describedby="submit-status"
               >
                 {isSubmitting ? "Sending..." : "Send"}
               </button>

@@ -38,80 +38,81 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
   };
 
   return (
-    <div className="navbar-cont flex items-center justify-between px-4 md:px-8 py-4 bg-white relative z-50">
-      <nav className="w-full" role="navigation" aria-label="Main navigation">
-        <div className="flex flex-col md:flex-row items-center justify-between w-full">
-          {/* Logo Section */}
-          <div className="navbar-logo-img flex items-center mb-4 md:mb-0">
-            <Link to="/" className="flex items-center" aria-label="Stay Sharp Austin homepage">
-              <img
-                className="h-24 md:h-32 w-auto"
-                src="/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png"
-                alt="Stay Sharp Austin - Professional Knife Sharpening Service"
-                loading="eager"
-                decoding="sync"
-              />
-            </Link>
-          </div>
-          {/* Navigation Links */}
-          <div className="nav-list flex items-center">
-            <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium" role="menubar">
-              <li role="none">
+    <div className="w-full bg-ss_purple text-white flex flex-col lg:flex-row items-center lg:items-end justify-between p-0">
+      {/* Logo Container */}
+      <div className="mb-0 flex justify-center lg:justify-start w-full lg:w-auto lg:flex-1">
+        <img
+          className="h-24 sm:h-32 md:h-36 lg:h-40 m-2 sm:m-4 lg:m-8 lg:ml-12 transition-all duration-300 hover:scale-105"
+          src="/assets/imgs/logo-PNG/Stay Sharp Logo White.png"
+          alt="stay-sharp-don't-be-dull-logo"
+        />
+      </div>
+
+      {/* Navigation and Cart Container */}
+      <div className="flex items-end justify-center lg:justify-end w-full lg:w-auto lg:mr-8">
+        {/* Navigation List */}
+        <div className="nav-list h-20 sm:h-24 w-full lg:w-auto">
+          <ul className="flex flex-row items-end justify-center lg:justify-end p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden">
+            {!isHomePage && (
+              <li className="p-0 text-center">
                 <Link
                   to="/"
-                  onClick={handleNavClick}
-                  className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
-                  role="menuitem"
-                  aria-label="Navigate to home page"
+                  className="text-white no-underline font-light text-2xl px-0 relative mr-12"
                 >
-                  HOME
+                  Home
                 </Link>
               </li>
-              <li role="none">
+            )}
+
+            {!isShopDashboard && (
+              <li className="p-0 text-center">
                 <a
                   href="#services"
                   onClick={handleNavClick}
-                  className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
-                  role="menuitem"
-                  aria-label="Navigate to services section"
+                  className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
                 >
-                  SERVICES
+                  Services
                 </a>
               </li>
-              <li role="none">
-                <Link
-                  to="/shop"
-                  className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
-                  role="menuitem"
-                  aria-label="Navigate to shop page"
-                >
-                  SHOP
-                </Link>
-              </li>
-              <li role="none">
+            )}
+            <li className="p-0 text-center">
+              <Link
+                to="/shop"
+                className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
+              >
+                Shop
+              </Link>
+            </li>
+            {!isShopDashboard && (
+              <li className="p-0 text-center">
                 <a
                   href="#about"
                   onClick={handleNavClick}
-                  className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
-                  role="menuitem"
-                  aria-label="Navigate to about section"
+                  className="text-white no-underline font-light text-2xl px-0 relative mr-12"
                 >
-                  ABOUT
+                  About
                 </a>
               </li>
-              <li role="none">
+            )}
+            {!isShopDashboard && (
+              <li className="p-0 text-center">
                 <a
                   href="#contact"
                   onClick={handleNavClick}
-                  className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
-                  role="menuitem"
-                  aria-label="Navigate to contact section"
+                  className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
                 >
-                  CONTACT
+                  Contact
                 </a>
               </li>
-            </ul>
-          </div>
+            )}
+          </ul>
+        </div>
+      </div>
+      <nav className="navbar-cont relative">
+        <div className="seo-text">
+          Stay Sharp Austin Texas knife sharpening navigation professional kitchen cutlery service 
+          Austin blade experts knife restoration Austin knife shop professional knife care Austin 
+          Texas culinary knife services kitchen blade sharpening navigation menu
         </div>
       </nav>
     </div>

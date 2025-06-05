@@ -134,8 +134,7 @@ function ActiveSlider() {
       {/* Next Button */}
       <button
         onClick={handleNext}
-        className="absolute lg:mr-40 right-2 sm:right-6 md:right-10 top-1/2 transform -translate-y-1/2 rounded-full p-2 text-ss_purple font-bold focus:outline-none z-50"
-        aria-label="Next service"
+        className="absolute lg:mr-40 right-2 sm:right-6 md:right-10 top-1/2 transform -translate-y-1/2 rounded-full p-2 text-ss_purple font-bold"
       >
         <img
           src={KnifeRightIcon}
