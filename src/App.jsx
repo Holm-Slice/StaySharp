@@ -41,6 +41,7 @@ const Section = ({ id, title, children, className }) => (
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [skipLinkFocus, setSkipLinkFocus] = useState(false);
 
   const updateQuantity = (knifeId, quantity) => {
     if (quantity === 0) {
@@ -101,6 +102,16 @@ function App() {
 
   return (
     <BrowserRouter>
+      {/* Skip Navigation Link */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-ss_purple focus:text-white focus:no-underline"
+        onFocus={() => setSkipLinkFocus(true)}
+        onBlur={() => setSkipLinkFocus(false)}
+      >
+        Skip to main content
+      </a>
+      
       <Navbar
         cart={cart}
         onUpdateQuantity={updateQuantity}
@@ -202,11 +213,11 @@ function App() {
           path="/"
           element={
             <div className="main-app-div">
-              <main>
+              <main id="main-content" role="main" tabIndex={-1}>
                 <VideoPlayer className="max-h-40" />
                 <Divider />
 
-                <Section id="home" title="HOME" className="pb-20">
+                <Section id="home" title="HOME" className="pb-20" role="region" aria-labelledby="home-heading">
                   <header className="flex flex-col mx-4 sm:mx-10">
                     <h1
                       id="home-heading"
@@ -214,24 +225,26 @@ function App() {
                     >
                       Knives Sharp! Chips Gone!
                     </h1>
-                    <h2 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-lg sm:text-xl md:text-4xl pt-10 pb-2 text-center uppercase">
+                    <p className="flex flex-col text-wrap justify-center align-center text-ss_purple text-lg sm:text-xl md:text-4xl pt-10 pb-2 text-center uppercase" role="banner">
                       Got Something You're Looking to Buy or Sell, We'll Help Ya
                       Straighten It Out!
-                    </h2>
+                    </p>
                   </header>
                 </Section>
 
-                <Section id="services" title="SERVICES">
-                  <h2 className="relative text-2xl sm:text-4xl text-center text-ss_purple cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
+                <Section id="services" title="SERVICES" role="region" aria-labelledby="services-heading">
+                  <h2 id="services-heading" className="relative text-2xl sm:text-4xl text-center text-ss_purple cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
                     Fixin's
                   </h2>
                   <ActiveSlider />
                 </Section>
                 <Divider />
-                <ImageCarousel images={images} />
+                <section role="region" aria-label="Gallery of our knife work">
+                  <ImageCarousel images={images} />
+                </section>
 
-                <Section id="contact" title="CONTACT">
-                  <h2 id="contact-heading" className="sr-only">
+                <Section id="contact" title="CONTACT" role="region" aria-labelledby="contact-heading">
+                  <h2 id="contact-heading" className="text-2xl sm:text-4xl text-center text-ss_purple mb-8">
                     Contact Us
                   </h2>
                   <ContactForm />
