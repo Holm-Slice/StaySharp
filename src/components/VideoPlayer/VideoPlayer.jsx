@@ -15,21 +15,11 @@ const VideoPlayer = () => {
         kitchen cutlery maintenance expert knife care Austin knife sharpening video 
         professional knife services Austin Texas culinary blade sharpening expert
       </div>
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="w-full h-full object-cover rounded-lg"
-        style={{
-          maxHeight: '60vh',
-          minHeight: '300px'
-        }}
-        aria-label="Professional knife sharpening demonstration video"
-        title="Stay Sharp Austin knife sharpening process"
-      >
-        <source src="/assets/Video/CHRIS-ASMR-VID-SQUARE.mp4" type="video/mp4" />
-        <track kind="descriptions" src="" label="Video shows professional knife sharpening technique" />
+      <video style={videoStyle} autoPlay loop muted preload="metadata" poster="/assets/Images/chef-knife1.jpg">
+        <source
+          src="/assets/Video/CHRIS-ASMR-VID-SQUARE.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
     </div>
