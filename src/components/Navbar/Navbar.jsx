@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { smoothScroll } from "../../smoothScroll";
 import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
+import CartIcon from "./CartIcon";
 
 function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
   const location = useLocation();
