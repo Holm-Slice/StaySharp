@@ -93,7 +93,7 @@ function ContactForm() {
             </div>
           )}
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6" onSubmit={handleSubmit} aria-label="Contact form">
             {/* Name, Email, and Phone Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Name Field */}
@@ -113,7 +113,10 @@ function ContactForm() {
                   required
                   disabled={isSubmitting}
                   className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2"
+                  aria-required="true"
+                  aria-describedby="name-help"
                 />
+                <div id="name-help" className="sr-only">Enter your full name</div>
               </div>
 
               {/* Email Field */}
@@ -133,7 +136,10 @@ function ContactForm() {
                   required
                   disabled={isSubmitting}
                   className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2"
+                  aria-required="true"
+                  aria-describedby="email-help"
                 />
+                <div id="email-help" className="sr-only">Enter a valid email address</div>
               </div>
             </div>
 
@@ -154,7 +160,9 @@ function ContactForm() {
                 required
                 disabled={isSubmitting}
                 className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-11 pl-2"
+                aria-describedby="phone-help"
               />
+              <div id="phone-help" className="sr-only">Enter your phone number (optional)</div>
             </div>
 
             {/* Message Field */}
@@ -173,7 +181,10 @@ function ContactForm() {
                 required
                 disabled={isSubmitting}
                 className="mt-1 block w-full rounded-md border-2 border-ss_purple shadow-[4px_4px_0px_#453393] focus:outline-none sm:text-sm h-24 pl-2 pt-2"
+                aria-required="true"
+                aria-describedby="message-help"
               ></textarea>
+              <div id="message-help" className="sr-only">Enter your message or inquiry</div>
             </div>
 
             {/* Submit Button */}
@@ -186,9 +197,13 @@ function ContactForm() {
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:bg-white hover:text-ss_purple"
                 }`}
+                aria-describedby="submit-status"
               >
                 {isSubmitting ? "Sending..." : "Send"}
               </button>
+              <div id="submit-status" className="sr-only" aria-live="polite">
+                {isSubmitting ? 'Form is being submitted' : ''}
+              </div>
             </div>
           </form>
         </main>
