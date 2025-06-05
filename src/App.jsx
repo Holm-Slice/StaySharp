@@ -1,6 +1,7 @@
 import { Routes, Route, Link, Router, BrowserRouter } from "react-router-dom";
 import { useState, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar/Navbar";
+import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import ImageCarousel from "./components/Carousel/ImageCarousel";
 import ServiceCardSlider from "./components/ServiceCardSlider";
@@ -70,7 +71,15 @@ function App() {
       }
 
       // Simulate payment processing
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          try {
+            resolve();
+          } catch (err) {
+            reject(err);
+          }
+        }, 2000);
+      });
 
       // Create order data
       const orderData = {
@@ -118,7 +127,9 @@ function App() {
           path="/admin"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <AdminDashboard />
+              <main id="main-content" tabIndex={-1}>
+                <AdminDashboard />
+              </main>
             </Suspense>
           }
         />
@@ -126,7 +137,9 @@ function App() {
           path="/booking"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <BookingPage />
+              <main id="main-content" tabIndex={-1}>
+                <BookingPage />
+              </main>
             </Suspense>
           }
         />
@@ -174,13 +187,15 @@ function App() {
           path="/shop"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <ShopDashboard
-                cart={cart}
-                setCart={setCart}
-                onUpdateQuantity={updateQuantity}
-                onRemoveItem={removeFromCart}
-                onCheckout={handleCheckout}
-              />
+              <main id="main-content" tabIndex={-1}>
+                <ShopDashboard
+                  cart={cart}
+                  setCart={setCart}
+                  onUpdateQuantity={updateQuantity}
+                  onRemoveItem={removeFromCart}
+                  onCheckout={handleCheckout}
+                />
+              </main>
             </Suspense>
           }
         />
@@ -254,6 +269,7 @@ function App() {
                   <ContactForm />
                 </Section>
                 <About />
+                <HorizontalScroller />
               </main>
             </div>
           }
