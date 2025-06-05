@@ -134,15 +134,28 @@ function ActiveSlider() {
       {/* Next Button */}
       <button
         onClick={handleNext}
-        className="absolute lg:mr-40 right-2 sm:right-6 md:right-10 top-1/2 transform -translate-y-1/2 rounded-full p-2 text-ss_purple font-bold"
+        className="absolute lg:mr-40 right-2 sm:right-6 md:right-10 top-1/2 transform -translate-y-1/2 rounded-full p-2 text-ss_purple font-bold focus:outline-none z-50"
+        aria-label="Next service card"
+        type="button"
       >
         <img
           src={KnifeRightIcon}
-          alt="Next"
+          alt=""
+          role="presentation"
           className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transform -rotate-45 transition-transform duration-500 ease-in-out hover:rotate-45"
         />
-        <p className="hidden md:block text-center mt-2">Slice</p>
+        <p className="hidden md:block text-center mt-2" aria-hidden="true">Mince</p>
       </button>
+
+      {/* Service Cards */}
+      <div 
+        className="flex items-center justify-center w-full max-w-4xl mx-auto"
+        role="region"
+        aria-label={`Service ${currentIndex + 1} of ${serviceCards.length}`}
+        aria-live="polite"
+      >
+        {serviceCards[currentIndex]}
+      </div>
     </div>   
   );
 }
