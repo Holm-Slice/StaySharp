@@ -1,0 +1,54 @@
+If you do not provide children, you must specify an aria-label for accessibility
+(anonymous) @ _app-535e5cf8de9af3e4.js:38Understand this warning
+icons.util.repl.co/bash.svg:1 
+            
+            
+           Failed to load resource: net::ERR_NAME_NOT_RESOLVEDUnderstand this error
+13_app-535e5cf8de9af3e4.js:38 If you do not provide children, you must specify an aria-label for accessibility
+(anonymous) @ _app-535e5cf8de9af3e4.js:38Understand this warning
+5Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'battery'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+framework-8e36e162a4e8366f.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-8e36e162a4e8366f.js:1Understand this warning
+6DevelopMental:1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this error
+8191-6511827c15a75c76.js:1 WebSocket connection to 'wss://eval.janeway.platform.replit.com/wsv2/v2.public.Q2dZSTBlNkR3Z1lTQmdqd2lvVENCaUlIYW1GdVpYZGhlVEFBT3RnQkNpUmhaVEJrWWpnNFlTMHlaRFV4TFRSaU1XTXRPREV4TnkwMk1URXdaV016T1dGbVl6Z1NBMjVwZUJvWmNtVndiR2wwTFhKbGNHd3RabWxzWlhNdGFtRnVaWGRoZVNJTlJHVjJaV3h2Y0UxbGJuUmhiQ29LYUc5c2JTMXpiR2xqWlVKWENocHlaWEJzYVhRdGNtVndiQzFpYkc5amEzTXRhbUZ1WlhkaGVSSVljbVZ3YkdsMExYSmxjR3d0YldWMFlTMXFZVzVsZDJGNUdoOXlaWEJzYVhRdGJXRnlaMkZ5YVc1bExXSnNiMk5yY3kxcVlXNWxkMkY1U2djSW5QeTNGQkFCVUFCYUQybHVkR1Z1ZEY5d1pYSnpiMjVoYkhnQVVpVUlBUkNBZ0lDQUNCa0FBQUFBQUFEd1B5RUFBQUFBQUFEd1B5aUFnSUNBeUFFd0FUZ0FZQU5xRVFpYy9MY1VFZ3BvYjJ4dExYTnNhV05sZ2dFQ0tnQ0tBU01JQVJDQWdJQ0FJQmtBQUFBQUFBQVFRQ0VBQUFBQUFBQVFRQ2lBZ0lDQXlBRXdBSm9CQ2dvSU1DNHdMakV6TmpLZ0FRRT2pKx2A0z03JuSUiw6vHxihyPGe9lG0BaFIfIuA334NRCGktqoQtTCb4NS15lTTxQPfbgLhNHIeganF1YssjvcB.Q2dad2NtOWtPak1pQ25KbGNHeHBkQzVqYjIwPQ' failed: 
+(anonymous) @ 8191-6511827c15a75c76.js:1Understand this error
+events.launchdarkly.com/events/bulk/62b35a865152ab14c5942820:1 
+            
+            
+           Failed to load resource: net::ERR_NETWORK_IO_SUSPENDEDUnderstand this error
+/graphql:1 
+            
+            
+           Failed to load resource: net::ERR_INTERNET_DISCONNECTEDUnderstand this error
+events.launchdarkly.com/events/bulk/62b35a865152ab14c5942820:1 
+            
+            
+           Failed to load resource: net::ERR_INTERNET_DISCONNECTED
