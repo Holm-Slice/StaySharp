@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { smoothScroll } from "../../smoothScroll";
 import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
-import CartIcon from "./CartIcon";
 
 function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
   const location = useLocation();
@@ -60,7 +59,7 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
               <li role="none">
                 <Link
                   to="/"
-                  onClick={handleScroll}
+                  onClick={handleNavClick}
                   className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
                   role="menuitem"
                   aria-label="Navigate to home page"
@@ -71,7 +70,7 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
               <li role="none">
                 <a
                   href="#services"
-                  onClick={handleScroll}
+                  onClick={handleNavClick}
                   className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
                   role="menuitem"
                   aria-label="Navigate to services section"
@@ -92,7 +91,7 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
               <li role="none">
                 <a
                   href="#about"
-                  onClick={handleScroll}
+                  onClick={handleNavClick}
                   className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
                   role="menuitem"
                   aria-label="Navigate to about section"
@@ -103,21 +102,13 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
               <li role="none">
                 <a
                   href="#contact"
-                  onClick={handleScroll}
+                  onClick={handleNavClick}
                   className="text-ss_purple hover:text-ss_purple_dark transition-colors duration-200 px-3 py-2 relative focus:outline-none focus:ring-2 focus:ring-ss_purple focus:ring-offset-2"
                   role="menuitem"
                   aria-label="Navigate to contact section"
                 >
                   CONTACT
                 </a>
-              </li>
-              <li role="none">
-                <CartIcon 
-                  cart={cart} 
-                  onUpdateQuantity={onUpdateQuantity}
-                  onRemoveItem={onRemoveItem}
-                  onCheckout={onCheckout}
-                />
               </li>
             </ul>
           </div>
