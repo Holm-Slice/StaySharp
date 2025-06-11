@@ -1,4 +1,4 @@
-modules = ["nodejs-20", "web"]
+modules = ["nodejs-20", "web", "postgresql-16"]
 run = "npm run dev"
 
 [nix]
@@ -31,3 +31,6 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm run dev"
+
+[objectStorage]
+defaultBucketID = "replit-objstore-d13f1a45-879f-4e00-97cc-dd5270a1a1f3"
