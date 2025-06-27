@@ -43,8 +43,24 @@
 }
 
 .scroll-item.chef-chopping {
-  animation: chopMotion 1.2s ease-in-out infinite;
+  animation: chopMotion 1.6s ease-in-out infinite;
   transform-origin: center bottom;
+}
+
+.scroll-item.chef-chopping:nth-of-type(4n+1) {
+  animation-delay: 0s;
+}
+
+.scroll-item.chef-chopping:nth-of-type(4n+2) {
+  animation-delay: 0.2s;
+}
+
+.scroll-item.chef-chopping:nth-of-type(4n+3) {
+  animation-delay: 0.4s;
+}
+
+.scroll-item.chef-chopping:nth-of-type(4n) {
+  animation-delay: 0.6s;
 }
 
 @keyframes chopMotion {
