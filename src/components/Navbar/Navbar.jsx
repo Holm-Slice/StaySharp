@@ -53,7 +53,7 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
         {/* Navigation List */}
         <div className="nav-list h-20 sm:h-24 w-full lg:w-auto">
           <ul className="flex flex-row items-end justify-center lg:justify-end p-2 sm:p-5 mt-2 sm:mt-10 uppercase mb-2 overflow-hidden">
-            {!isHomePage && (
+            {!isShopDashboard && !isHomePage && (
               <li className="p-0 text-center">
                 <Link
                   to="/"
@@ -75,14 +75,16 @@ function Navbar({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                 </a>
               </li>
             )}
-            <li className="p-0 text-center">
-              <Link
-                to="/shop"
-                className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
-              >
-                Shop
-              </Link>
-            </li>
+            {!isShopDashboard && (
+              <li className="p-0 text-center">
+                <Link
+                  to="/shop"
+                  className="text-white no-underline font-light text-xl sm:text-2xl px-0 relative mr-4 sm:mr-12"
+                >
+                  Shop
+                </Link>
+              </li>
+            )}
             {!isShopDashboard && (
               <li className="p-0 text-center">
                 <a
