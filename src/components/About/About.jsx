@@ -18,7 +18,7 @@ function About() {
         {/* Image Section */}
         <div className="w-full md:w-1/2 h-auto flex items-center justify-center mb-8 md:mb-0">
           <img
-            className="about-img object-cover w-4/5 sm:w-3/4 md:w-2/3 lg:w-1/2"
+            className="about-img object-cover h=full w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
             src="assets/Images/chris at pop up.jpeg"
             alt="Chris at Stay Sharp knife sharpening pop-up event"
             loading="lazy"
@@ -40,19 +40,22 @@ function About() {
             >
               <section className="mb-4">
                 <p className="text-ss_purple text-lg text-center leading-relaxed">
-                  Welcome to Stay Sharp, where passion meets precision in the world of professional knife sharpening and premium cutlery sales.
+                  Welcome to Stay Sharp, where passion meets precision in the
+                  world of professional knife sharpening and premium cutlery
+                  sales.
                 </p>
               </section>
 
               {isExpanded && (
                 <section>
                   <p className="text-ss_purple text-lg text-center leading-relaxed">
-                    Along the way I fell in love with a subgenre of chef culture,
-                    that being the cult of really high end and beautiful kitchen
-                    knives. Hours of research and hours spent talking to other
-                    knife shop owners has led me to this place today. The still
-                    poor owner of a tiny, online sharpening and kitchen knife (and
-                    other cooking and dining things) shop. Welcome!
+                    Along the way I fell in love with a subgenre of chef
+                    culture, that being the cult of really high end and
+                    beautiful kitchen knives. Hours of research and hours spent
+                    talking to other knife shop owners has led me to this place
+                    today. The still poor owner of a tiny, online sharpening and
+                    kitchen knife (and other cooking and dining things) shop.
+                    Welcome!
                   </p>
                 </section>
               )}
@@ -64,7 +67,9 @@ function About() {
                 onClick={handleToggle}
                 className="bg-ss_purple text-white uppercase py-1 px-2 md:pt-2 md:pb-1 md:px-4 flex-grow hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] md:flex-none border-4 border-ss_purple"
                 aria-expanded={isExpanded}
-                aria-label={isExpanded ? "Show less information" : "Show more information"}
+                aria-label={
+                  isExpanded ? "Show less information" : "Show more information"
+                }
               >
                 {isExpanded ? "Learn Less" : "Learn More"}
               </button>
