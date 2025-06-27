@@ -59,15 +59,21 @@ function HorizontalScroller(props) {
       <div id="scroller" className="horizontal-scroller" onClick={scrollToTop}>
         <div className="scroll-container">
           <div className="scroll-content">
-            {repeatedImages.map((image, index) => (
-              <img
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                title={image.title}
-                className="scroll-item"
-              />
-            ))}
+            {repeatedImages.map((image, index) => {
+              const isChefIcon = image.src.includes("Stay Sharp Icon Indigo.png") || 
+                                image.src.includes("Stay Sharp Icon Teal.png") || 
+                                image.src.includes("Stay Sharp Icon Purple.png");
+              
+              return (
+                <img
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  title={image.title}
+                  className={`scroll-item ${isChefIcon ? 'chef-chopping' : ''}`}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
