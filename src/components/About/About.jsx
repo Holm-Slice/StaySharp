@@ -18,7 +18,7 @@ function About() {
         {/* Image Section */}
         <div className="w-full md:w-1/2 h-auto flex items-center justify-center mb-8 md:mb-0">
           <img
-            className="about-img object-cover h=full w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
+            className="about-img object-contain w-full h-auto max-w-full"
             src="assets/Images/chris at pop up.jpeg"
             alt="Chris at Stay Sharp knife sharpening pop-up event"
             loading="lazy"
