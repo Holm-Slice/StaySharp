@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
 import emailjs from '@emailjs/browser';
+import { generateInvoiceNumber, generateOrderNumber, formatInvoiceData } from '../../utils/invoiceGenerator';
 
 // Initialize Stripe
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder');
@@ -71,7 +72,20 @@ function UnifiedCheckoutPage() {
       
       if (checkoutType === 'service') {
         // Handle service booking
-        console.log('Service booking processed:', { ...bookingData, services: currentServices, cardData, reservationFee, serviceRemainingBalance });
+        const invoiceNumber = generateInvoiceNumber('service');
+        
+        const enhancedBookingData = formatInvoiceData({
+          ...bookingData,
+          services: currentServices,
+          reservationFee,
+          serviceRemainingBalance,
+          serviceEstimatedTotal,
+          customerName: bookingData.name,
+          customerEmail: bookingData.email,
+          lastFourDigits: cardData.number.slice(-4)
+        }, invoiceNumber);
+        
+        console.log('Service booking processed:', enhancedBookingData);
         
         // Send service confirmation emails
         try {
@@ -81,6 +95,7 @@ function UnifiedCheckoutPage() {
             {
               to_name: bookingData.name,
               to_email: bookingData.email,
+              invoice_number: invoiceNumber,
               booking_date: bookingData.date,
               booking_time: bookingData.time,
               services: currentServices.map(s => s.title).join(', '),
@@ -95,23 +110,29 @@ function UnifiedCheckoutPage() {
           console.error('Email sending failed:', emailError);
         }
         
-        alert(`Service booking confirmed! Remaining balance of $${serviceRemainingBalance} will be collected at service completion.`);
-        navigate('/confirmation/service', { state: { bookingData: { ...bookingData, services: currentServices } } });
+        alert(`Service booking confirmed! Invoice #${invoiceNumber} - Remaining balance of $${serviceRemainingBalance} will be collected at service completion.`);
+        navigate('/confirmation/service', { state: { bookingData: enhancedBookingData } });
         
       } else {
         // Handle shop purchase
-        const orderData = {
+        const invoiceNumber = generateInvoiceNumber('shop');
+        const orderNumber = generateOrderNumber();
+        
+        const orderData = formatInvoiceData({
           items: cartItems,
           customerName: cardData.name,
           customerEmail: bookingData.email || 'customer@email.com',
           lastFourDigits: cardData.number.slice(-4),
-          orderNumber: `SS-${Date.now().toString().slice(-6)}`,
-          total: shopTotal
-        };
+          orderNumber,
+          total: shopTotal,
+          subtotal: shopSubtotal,
+          tax: shopTax,
+          shipping: 0
+        }, invoiceNumber);
         
         console.log('Shop order processed:', orderData);
         
-        alert('Order confirmed! You will receive a confirmation email shortly.');
+        alert(`Order confirmed! Invoice #${invoiceNumber} - You will receive a confirmation email shortly.`);
         navigate('/confirmation/shop', { state: { orderData } });
       }
       

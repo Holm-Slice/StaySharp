@@ -46,10 +46,20 @@ function ShopConfirmationPage() {
             Thank you for your purchase. Your order has been successfully processed.
           </p>
           <div className="bg-green-50 border border-green-200 p-3 mt-4 inline-block">
-            <span className="font-medium text-green-800">Order #:</span>
-            <span className="ml-2 font-bold text-green-800">
-              {orderData.orderNumber || `SS-${Date.now().toString().slice(-6)}`}
-            </span>
+            <div className="flex flex-col space-y-1">
+              <div>
+                <span className="font-medium text-green-800">Invoice #:</span>
+                <span className="ml-2 font-bold text-green-800">
+                  {orderData.invoiceNumber || 'INV-' + Date.now().toString().slice(-6)}
+                </span>
+              </div>
+              <div>
+                <span className="font-medium text-green-800">Order #:</span>
+                <span className="ml-2 font-bold text-green-800">
+                  {orderData.orderNumber || `SS-${Date.now().toString().slice(-6)}`}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -68,9 +78,19 @@ function ShopConfirmationPage() {
                 <span className="font-semibold">{orderData.customerEmail || 'customer@email.com'}</span>
               </div>
               <div className="flex justify-between">
+                <span className="font-medium text-gray-700">Invoice Date:</span>
+                <span className="font-semibold">{orderData.invoiceDateFormatted || new Date().toLocaleDateString()}</span>
+              </div>
+              <div className="flex justify-between">
                 <span className="font-medium text-gray-700">Order Date:</span>
                 <span className="font-semibold">{new Date().toLocaleDateString()}</span>
               </div>
+              {orderData.dueDate && (
+                <div className="flex justify-between">
+                  <span className="font-medium text-gray-700">Due Date:</span>
+                  <span className="font-semibold">{orderData.dueDate}</span>
+                </div>
+              )}
               <div className="flex justify-between">
                 <span className="font-medium text-gray-700">Payment Method:</span>
                 <span className="font-semibold">**** **** **** {orderData.lastFourDigits || '1234'}</span>
