@@ -251,6 +251,7 @@ function BookingPage() {
           </aside>
         </div>
       </div>
+    </div>
   );
 }
 
