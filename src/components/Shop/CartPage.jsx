@@ -1,10 +1,14 @@
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-
-import { Link } from 'react-router-dom';
-
-function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
+function CartPage({ cart, onUpdateQuantity, onRemoveItem }) {
+  const navigate = useNavigate();
   const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  const handleCheckout = () => {
+    navigate('/checkout', { state: { cart } });
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -55,7 +59,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                 <h2 className="font-title font-bold text-xl md:text-2xl text-center mb-6">
                   Cart Items
                 </h2>
-                
+
                 <div className="space-y-6">
                   {cart.map(item => (
                     <div key={item.id} className="flex items-center space-x-4 pb-6 border-b border-gray-200 last:border-b-0">
@@ -65,7 +69,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                         title={item.name}
                         className="w-20 h-20 object-cover"
                       />
-                      
+
                       <div className="flex-1">
                         <h3 className="text-lg font-medium text-gray-900">
                           {item.name}
@@ -77,7 +81,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                           ${item.price}
                         </p>
                       </div>
-                      
+
                       <div className="flex items-center space-x-3">
                         <div className="flex items-center space-x-2">
                           <button
@@ -86,11 +90,11 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                           >
                             -
                           </button>
-                          
+
                           <span className="text-lg font-medium w-12 text-center">
                             {item.quantity}
                           </span>
-                          
+
                           <button
                             onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
                             className="w-8 h-8 bg-ss_purple text-white flex items-center justify-center hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
@@ -98,7 +102,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                             +
                           </button>
                         </div>
-                        
+
                         <button
                           onClick={() => onRemoveItem(item.id)}
                           className="text-red-500 hover:text-red-700 p-2"
@@ -108,7 +112,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                           </svg>
                         </button>
                       </div>
-                      
+
                       <div className="text-right min-w-20">
                         <p className="text-lg font-semibold text-gray-900">
                           ${(item.price * item.quantity).toFixed(2)}
@@ -126,7 +130,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                 <h2 className="font-title font-bold text-xl md:text-2xl text-center mb-4">
                   Order Summary
                 </h2>
-                
+
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between text-gray-600">
                     <span>Subtotal ({totalItems} items)</span>
@@ -141,7 +145,7 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                     <span>Calculated at checkout</span>
                   </div>
                 </div>
-                
+
                 <div className="border-t pt-4 mb-6">
                   <div className="flex justify-between items-center">
                     <span className="text-lg font-semibold text-gray-900">Total</span>
@@ -150,14 +154,14 @@ function CartPage({ cart, onUpdateQuantity, onRemoveItem, onCheckout }) {
                     </span>
                   </div>
                 </div>
-                
+
                 <button
-                  onClick={onCheckout}
+                  onClick={handleCheckout}
                   className="w-full bg-ss_purple text-white py-3 font-medium hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple uppercase mb-4"
                 >
                   Proceed to Checkout
                 </button>
-                
+
                 <Link
                   to="/shop"
                   className="w-full border-4 border-ss_purple text-ss_purple py-3 font-medium hover:bg-ss_purple hover:text-white transition-colors duration-[1300ms] text-center block uppercase"

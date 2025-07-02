@@ -101,6 +101,21 @@ function ShopDashboard({
     navigate(`/shop/product/${knife.id}`, { state: { product: knife } });
   };
 
+   const handleCheckout = () => {
+    if (cart.length === 0) {
+      alert('Your cart is empty. Please add items before checkout.');
+      return;
+    }
+
+    // Navigate to unified checkout page with cart items
+    navigate('/checkout', { 
+      state: { 
+        type: 'shop',
+        cartItems: cart 
+      } 
+    });
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
@@ -236,7 +251,7 @@ function ShopDashboard({
                           </div>
 
                           <button
-                            onClick={onCheckout}
+                            onClick={handleCheckout}
                             className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors"
                           >
                             Checkout
