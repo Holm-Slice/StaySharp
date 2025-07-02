@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProductGrid from './ProductGrid';
 import Cart from './Cart';
 import { loadStripe } from '@stripe/stripe-js';
@@ -7,6 +8,7 @@ import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || null);
 
 function Shop() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -57,46 +59,19 @@ function Shop() {
     );
   };
 
-  const handleCheckout = async () => {
-    if (!import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
-      alert('Stripe is not configured yet. Please contact the store owner.');
+  const handleCheckout = () => {
+    if (cart.length === 0) {
+      alert('Your cart is empty. Please add items before checkout.');
       return;
     }
 
-    const stripe = await stripePromise;
-
-    if (!stripe) {
-      alert('Stripe failed to load. Please try again.');
-      return;
-    }
-
-    try {
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ items: cart }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to create checkout session');
-      }
-
-      const session = await response.json();
-
-      const result = await stripe.redirectToCheckout({
-        sessionId: session.id,
-      });
-
-      if (result.error) {
-        console.error('Stripe error:', result.error);
-        alert('Checkout failed. Please try again.');
-      }
-    } catch (error) {
-      console.error('Checkout error:', error);
-      alert('Checkout failed. Please try again or contact support.');
-    }
+    // Navigate to unified checkout page with cart items
+    navigate('/checkout', { 
+      state: { 
+        type: 'shop',
+        cartItems: cart 
+      } 
+    });
   };
 
   if (loading) {
