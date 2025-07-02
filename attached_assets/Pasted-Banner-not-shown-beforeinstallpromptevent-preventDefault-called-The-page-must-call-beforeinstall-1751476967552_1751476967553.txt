@@ -1,0 +1,663 @@
+Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+12Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'battery'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+framework-a140516cef18ac4b.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-a140516cef18ac4b.js:1Understand this warning
+2_app-920b5c661358b3d3.js:38 WARN: A component changed from uncontrolled to controlled.
+(anonymous) @ _app-920b5c661358b3d3.js:38Understand this warning
+_app-920b5c661358b3d3.js:38 Measure loop restarted more than 5 times
+(anonymous) @ _app-920b5c661358b3d3.js:38Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'ambient-light-sensor'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'battery'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-not-rendered'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'layout-animations'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'legacy-image-formats'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'navigation-override'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'oversized-images'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'publickey-credentials'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'speaker-selection'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'unoptimized-images'.Understand this warning
+workspace_iframe.html:32 Unrecognized feature: 'unsized-media'.Understand this warning
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowfullscreen'.Understand this warning
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowpaymentrequest'.Understand this warning
+Network.js:227 WebSocket connection to 'wss://localhost,atxstaysharp.world:5173/?token=2YPDP2fJUmi_' failed: 
+t @ Network.js:227Understand this error
+Console.js:61 [vite] server connection lost. Polling for restart...
+localhost,atxstaysharp.world:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_NAME_NOT_RESOLVEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:749:13)
+    at WebSocket.<anonymous> (client:561:13)Understand this error
+BookingPage.jsx:1 
+            
+            
+           Failed to load resource: the server responded with a status of 500 (Internal Server Error)Understand this error
+localhost,atxstaysharp.world:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_NAME_NOT_RESOLVEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost,atxstaysharp.world:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_NAME_NOT_RESOLVEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+localhost,atxstaysharp.world:5173/:1 
+            
+            
+           Failed to load resource: net::ERR_NAME_NOT_RESOLVEDUnderstand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+client:736 
+            
+            
+           GET https://localhost,atxstaysharp.world:5173/ net::ERR_NAME_NOT_RESOLVED
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
+Network.js:219 
+            
+            
+           Uncaught (in promise) TypeError: Failed to fetch
+    at window.fetch (Network.js:219:37)
+    at ping (client:736:13)
+    at waitForSuccessfulPing (client:755:17)
+    at async WebSocket.<anonymous> (client:561:7)
+window.fetch @ Network.js:219
+ping @ client:736
+waitForSuccessfulPing @ client:755Understand this error
