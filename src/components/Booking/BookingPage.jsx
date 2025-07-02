@@ -85,17 +85,6 @@ function BookingPage() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Create Stripe session & redirect
-  async function createSessionAndRedirect(bookingData) {
-    const res = await fetch('/api/create-checkout-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ bookingData }),
-    });
-    const { url } = await res.json();
-    window.location.href = url;
-  }
-
   // Submit handler
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -105,7 +94,14 @@ function BookingPage() {
       time: selectedTime,
       services: selectedServices
     };
-    await createSessionAndRedirect(bookingData);
+    
+    // Navigate to checkout page with booking data
+    navigate('/checkout', { 
+      state: { 
+        type: 'service',
+        bookingData: bookingData 
+      } 
+    });
   };
 
   // Focus trap

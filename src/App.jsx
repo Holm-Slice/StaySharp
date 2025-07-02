@@ -129,7 +129,7 @@ function App() {
           path="/checkout"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <CheckoutPage />
+              <UnifiedCheckoutPage />
             </Suspense>
           }
         />
