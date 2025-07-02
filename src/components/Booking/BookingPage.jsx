@@ -160,7 +160,7 @@ function BookingPage() {
                     aria-label={label}
                     onClick={() => handleDateClick(date)}
                     disabled={!isAvailable}
-                    className={`h-12 border-2 transition-all duration-300 flex items-center justify-center ${isSelected?'bg-ss_purple text-white border-ss_purple':isAvailable?'bg-white border-ss_purple hover:bg-ss_purple hover:text-white cursor-pointer':'bg-gray-100 border-gray-300 text-gray-400'}`
+                    className={`h-12 border-2 transition-all duration-300 flex items-center justify-center ${isSelected?'bg-ss_purple text-white border-ss_purple':isAvailable?'bg-white border-ss_purple hover:bg-ss_purple hover:text-white cursor-pointer':'bg-gray-100 border-gray-300 text-gray-400'}`}
                   >
                     <span className="text-sm">{date.getDate()}</span>
                   </button>
