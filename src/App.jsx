@@ -1,4 +1,5 @@
-import { Routes, Route, Link, Router, BrowserRouter } from "react-router-dom";
+import React from "react";
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import { useState, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
@@ -49,8 +50,8 @@ function App() {
     }
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === knifeId ? { ...item, quantity } : item,
-      ),
+        item.id === knifeId ? { ...item, quantity } : item
+      )
     );
   };
 
@@ -86,7 +87,9 @@ function App() {
       setCart([]);
 
       // Navigate to confirmation page
-      window.location.href = `/confirmation/shop?orderData=${encodeURIComponent(JSON.stringify(orderData))}`;
+      window.location.href = `/confirmation/shop?orderData=${encodeURIComponent(
+        JSON.stringify(orderData)
+      )}`;
     } catch (error) {
       console.error("Checkout error:", error);
       alert("There was an error processing your checkout. Please try again.");
@@ -100,7 +103,12 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <Navbar
         cart={cart}
         onUpdateQuantity={updateQuantity}

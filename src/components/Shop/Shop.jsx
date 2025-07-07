@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import ProductGrid from './ProductGrid';
-import Cart from './Cart';
-import { loadStripe } from '@stripe/stripe-js';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import ProductGrid from "./ProductGrid";
+import Cart from "./Cart";
+import { loadStripe } from "@stripe/stripe-js";
 
 // For now, we'll handle the missing Stripe key gracefully
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || null);
+const stripePromise = loadStripe(
+  import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || null
+);
 
 function Shop() {
   const navigate = useNavigate();
@@ -19,22 +21,22 @@ function Shop() {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('/api/products');
+      const response = await fetch("/api/products");
       const data = await response.json();
       setProducts(data);
     } catch (error) {
-      console.error('Error fetching products:', error);
+      console.error("Error fetching products:", error);
     } finally {
       setLoading(false);
     }
   };
 
   const addToCart = (product) => {
-    setCart(prevCart => {
-      const existingItem = prevCart.find(item => item.id === product.id);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === product.id);
       if (existingItem) {
-        return prevCart.map(item =>
-          item.id === product.id 
+        return prevCart.map((item) =>
+          item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
@@ -44,7 +46,7 @@ function Shop() {
   };
 
   const removeFromCart = (productId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== productId));
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
   };
 
   const updateQuantity = (productId, quantity) => {
@@ -52,8 +54,8 @@ function Shop() {
       removeFromCart(productId);
       return;
     }
-    setCart(prevCart =>
-      prevCart.map(item =>
+    setCart((prevCart) =>
+      prevCart.map((item) =>
         item.id === productId ? { ...item, quantity } : item
       )
     );
@@ -61,16 +63,16 @@ function Shop() {
 
   const handleCheckout = () => {
     if (cart.length === 0) {
-      alert('Your cart is empty. Please add items before checkout.');
+      alert("Your cart is empty. Please add items before checkout.");
       return;
     }
 
     // Navigate to unified checkout page with cart items
-    navigate('/checkout', { 
-      state: { 
-        type: 'shop',
-        cartItems: cart 
-      } 
+    navigate("/checkout", {
+      state: {
+        type: "shop",
+        cartItems: cart,
+      },
     });
   };
 
@@ -91,14 +93,11 @@ function Shop() {
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-3">
-            <ProductGrid 
-              products={products} 
-              onAddToCart={addToCart} 
-            />
+            <ProductGrid products={products} onAddToCart={addToCart} />
           </div>
 
           <div className="lg:col-span-1">
-            <Cart 
+            <Cart
               items={cart}
               onUpdateQuantity={updateQuantity}
               onRemoveItem={removeFromCart}

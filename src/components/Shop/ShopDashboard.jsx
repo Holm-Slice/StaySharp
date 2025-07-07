@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { mockKnives } from "../../data/mockKnives";
 
@@ -14,7 +14,6 @@ if (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
       stripePromise = null;
     });
 }
-
 
 function ShopDashboard({
   cart,
@@ -43,7 +42,9 @@ function ShopDashboard({
         const selectedProductId = location.state?.selectedProductId;
 
         if (selectedProductId) {
-          const selectedIndex = orderedKnives.findIndex(knife => knife.id === selectedProductId);
+          const selectedIndex = orderedKnives.findIndex(
+            (knife) => knife.id === selectedProductId
+          );
           if (selectedIndex > -1) {
             // Move selected product to the front
             const selectedProduct = orderedKnives.splice(selectedIndex, 1)[0];
@@ -56,7 +57,7 @@ function ShopDashboard({
 
         // Scroll to top of page when component loads with selected product
         if (selectedProductId) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }
       } catch (error) {
         console.error("Error loading knives:", error);
@@ -74,7 +75,7 @@ function ShopDashboard({
         knife.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         knife.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
         knife.style.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        knife.description.toLowerCase().includes(searchQuery.toLowerCase()),
+        knife.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredKnives(filtered);
   }, [searchQuery, knives]);
@@ -87,7 +88,7 @@ function ShopDashboard({
           return prevCart.map((item) =>
             item.id === knife.id
               ? { ...item, quantity: item.quantity + 1 }
-              : item,
+              : item
           );
         }
         return [...prevCart, { ...knife, quantity: 1 }];
@@ -101,18 +102,18 @@ function ShopDashboard({
     navigate(`/shop/product/${knife.id}`, { state: { product: knife } });
   };
 
-   const handleCheckout = () => {
+  const handleCheckout = () => {
     if (cart.length === 0) {
-      alert('Your cart is empty. Please add items before checkout.');
+      alert("Your cart is empty. Please add items before checkout.");
       return;
     }
 
     // Navigate to unified checkout page with cart items
-    navigate('/checkout', { 
-      state: { 
-        type: 'shop',
-        cartItems: cart 
-      } 
+    navigate("/checkout", {
+      state: {
+        type: "shop",
+        cartItems: cart,
+      },
     });
   };
 
@@ -127,9 +128,10 @@ function ShopDashboard({
   return (
     <div className="min-h-screen bg-white relative">
       <div className="seo-text absolute -translate-y-full opacity-0">
-        Austin Texas knife shop premium kitchen cutlery sales Japanese knives German knives 
-        professional knife collection Austin knife store kitchen cutlery Austin Texas 
-        chef knife sales premium blade collection Austin knife experts culinary knives
+        Austin Texas knife shop premium kitchen cutlery sales Japanese knives
+        German knives professional knife collection Austin knife store kitchen
+        cutlery Austin Texas chef knife sales premium blade collection Austin
+        knife experts culinary knives
       </div>
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
@@ -244,7 +246,7 @@ function ShopDashboard({
                                 .reduce(
                                   (sum, item) =>
                                     sum + item.price * item.quantity,
-                                  0,
+                                  0
                                 )
                                 .toFixed(2)}
                             </span>
@@ -270,7 +272,7 @@ function ShopDashboard({
                             {cart
                               .reduce(
                                 (sum, item) => sum + item.price * item.quantity,
-                                0,
+                                0
                               )
                               .toFixed(2)}
                           </p>

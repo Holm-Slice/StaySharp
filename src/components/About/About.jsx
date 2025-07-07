@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import React from "react";
 import Divider from "../Divider/Divider";
 
 function About() {

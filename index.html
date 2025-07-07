@@ -1,139 +1,227 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Performance Optimization -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
     <!-- SEO Meta Tags -->
-    <title>Stay Sharp Austin Texas - Professional Knife Sharpening & Premium Kitchen Cutlery Sales</title>
-    <meta name="description" content="Austin's premier knife sharpening service & kitchen cutlery store. Professional blade restoration, Japanese knives, German knives, chef knife sales. Expert knife care in Austin, Texas." />
-    <meta name="keywords" content="Austin knife sharpening, Texas knife sharpening service, kitchen knife sales Austin, chef knives Austin, Japanese knives Austin, German knives Austin, blade restoration Austin, professional knife sharpening Texas, cutlery store Austin, knife repair Austin" />
+    <title>
+      Stay Sharp Austin Texas - Professional Knife Sharpening & Premium Kitchen
+      Cutlery Sales
+    </title>
+    <meta
+      name="description"
+      content="Austin's premier knife sharpening service & kitchen cutlery store. Professional blade restoration, Japanese knives, German knives, chef knife sales. Expert knife care in Austin, Texas."
+    />
+    <meta
+      name="keywords"
+      content="Austin knife sharpening, Texas knife sharpening service, kitchen knife sales Austin, chef knives Austin, Japanese knives Austin, German knives Austin, blade restoration Austin, professional knife sharpening Texas, cutlery store Austin, knife repair Austin"
+    />
     <meta name="author" content="Stay Sharp Austin" />
     <meta name="geo.region" content="US-TX" />
     <meta name="geo.placename" content="Austin" />
     <link rel="canonical" href="https://stay-sharp-holm-slice.replit.app" />
-    
+
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Stay Sharp - Professional Knife Sharpening & Kitchen Knife Sales" />
-    <meta property="og:description" content="Expert knife sharpening services and premium kitchen knife sales for professionals and home cooks." />
-    <meta property="og:image" content="/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png" />
-    <meta property="og:url" content="https://your-domain.com" />
-    
+    <meta
+      property="og:title"
+      content="Stay Sharp - Professional Knife Sharpening & Kitchen Knife Sales"
+    />
+    <meta
+      property="og:description"
+      content="Expert knife sharpening services and premium kitchen knife sales for professionals and home cooks."
+    />
+    <meta
+      property="og:image"
+      content="/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png"
+    />
+    <meta
+      property="og:url"
+      content="https://stay-sharp-holm-slice.replit.app"
+    />
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Stay Sharp - Professional Knife Sharpening" />
-    <meta name="twitter:description" content="Expert knife sharpening services and premium kitchen knife sales." />
-    <meta name="twitter:image" content="/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png" />
-    
+    <meta
+      name="twitter:title"
+      content="Stay Sharp - Professional Knife Sharpening"
+    />
+    <meta
+      name="twitter:description"
+      content="Expert knife sharpening services and premium kitchen knife sales."
+    />
+    <meta
+      name="twitter:image"
+      content="/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png"
+    />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png" />
-    <link rel="apple-touch-icon" href="/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png" />
-    
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png"
+    />
+
     <!-- Fonts - Optimized Loading -->
-    <link rel="preload" href="https://use.typekit.net/uqd1zxm.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://use.typekit.net/uqd1zxm.css" /></noscript>
-    
+    <link
+      rel="preload"
+      href="https://use.typekit.net/uqd1zxm.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="https://use.typekit.net/uqd1zxm.css"
+    /></noscript>
+
     <!-- Critical CSS Inline -->
     <style>
       /* Critical CSS for above-the-fold content */
-      .video-element { width: 100%; height: auto; }
-      .navbar-cont { position: relative; }
-      .divider { width: 100%; height: 80px; background-color: rgb(69, 51, 147); }
-      .text-ss_purple { color: rgb(69, 51, 147); }
-      .bg-white { background-color: white; }
-      .flex { display: flex; }
-      .text-center { text-align: center; }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          sans-serif;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      .video-element {
+        width: 100%;
+        height: auto;
+      }
+      .navbar-cont {
+        position: relative;
+      }
+      .divider {
+        width: 100%;
+        height: 80px;
+        background-color: rgb(69, 51, 147);
+      }
+      .text-ss_purple {
+        color: rgb(69, 51, 147);
+      }
+      .bg-white {
+        background-color: white;
+      }
+      .flex {
+        display: flex;
+      }
+      .text-center {
+        text-align: center;
+      }
+      /* Loading state */
+      .loading-fallback {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
     </style>
-    
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Stay Sharp Austin",
-      "description": "Austin's premier professional knife sharpening service and premium kitchen cutlery store",
-      "url": "https://stay-sharp-holm-slice.replit.app",
-      "logo": "/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png",
-      "image": "/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png",
-      "serviceType": ["Knife Sharpening Service", "Kitchen Cutlery Sales", "Blade Restoration"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Austin",
-        "addressRegion": "TX",
-        "addressCountry": "US"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Austin",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Texas"
-        }
-      },
-      "priceRange": "$-$$",
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Professional Knife Services & Premium Cutlery",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Western Style Knife Sharpening",
-              "description": "Professional sharpening for Wusthof, Zwilling, Shun knives"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "1.00",
-              "priceCurrency": "USD",
-              "description": "Starting at $1 per inch"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Japanese Style Knife Sharpening",
-              "description": "Expert care for Japanese knives including Shun, Global, Miyabi"
-            },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "2.00",
-              "priceCurrency": "USD",
-              "description": "Starting at $2 per inch"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Premium Kitchen Knives",
-              "description": "High-quality Japanese and German kitchen knives for professionals and home cooks"
-            }
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Stay Sharp Austin",
+        "description": "Austin's premier professional knife sharpening service and premium kitchen cutlery store",
+        "url": "https://stay-sharp-holm-slice.replit.app",
+        "logo": "/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png",
+        "image": "/assets/imgs/logo-PNG/Stay Sharp Logo Purple.png",
+        "serviceType": [
+          "Knife Sharpening Service",
+          "Kitchen Cutlery Sales",
+          "Blade Restoration"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Austin",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Austin",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
           }
-        ]
-      },
-      "sameAs": [],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "25"
+        },
+        "priceRange": "$-$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Professional Knife Services & Premium Cutlery",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Western Style Knife Sharpening",
+                "description": "Professional sharpening for Wusthof, Zwilling, Shun knives"
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "1.00",
+                "priceCurrency": "USD",
+                "description": "Starting at $1 per inch"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Japanese Style Knife Sharpening",
+                "description": "Expert care for Japanese knives including Shun, Global, Miyabi"
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "2.00",
+                "priceCurrency": "USD",
+                "description": "Starting at $2 per inch"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Premium Kitchen Knives",
+                "description": "High-quality Japanese and German kitchen knives for professionals and home cooks"
+              }
+            }
+          ]
+        },
+        "sameAs": [],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "25"
+        }
       }
-    }
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Fallback content while React loads -->
+      <div class="loading-fallback">
+        <div>Loading Stay Sharp...</div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -1,6 +1,5 @@
-
-
-import ProductCard from './ProductCard';
+import React from "react";
+import ProductCard from "./ProductCard";
 
 function ProductGrid({ products, onAddToCart }) {
   if (!products.length) {
@@ -13,8 +12,8 @@ function ProductGrid({ products, onAddToCart }) {
 
   return (
     <div className="grid grid-cols-3 gap-2 md:gap-4 lg:gap-6">
-      {products.map(product => (
-        <ProductCard 
+      {products.map((product) => (
+        <ProductCard
           key={product.id}
           product={product}
           onAddToCart={onAddToCart}

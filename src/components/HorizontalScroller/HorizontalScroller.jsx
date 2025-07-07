@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./HorizontalScroller.css";
 
 function HorizontalScroller(props) {
@@ -23,34 +23,115 @@ function HorizontalScroller(props) {
 
   // Define the image patterns for the scroll
   const imagePattern = [
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/wordmark-PNG/Stay Sharp Wordmark Indigo.png", alt: "stay-sharp-wordmark", title: "stay-sharp-wordmark" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/wordmark-PNG/Stay Sharp Wordmark Purple.png", alt: "stay-sharp-wordmark", title: "stay-sharp-wordmark" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/wordmark-PNG/Stay Sharp Wordmark Teal.png", alt: "stay-sharp-wordmark", title: "stay-sharp-wordmark" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" },
-    { src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png", alt: "stay-sharp-icon", title: "stay-sharp-icon" }
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/wordmark-PNG/Stay Sharp Wordmark Indigo.png",
+      alt: "stay-sharp-wordmark",
+      title: "stay-sharp-wordmark",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Indigo.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/wordmark-PNG/Stay Sharp Wordmark Purple.png",
+      alt: "stay-sharp-wordmark",
+      title: "stay-sharp-wordmark",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Purple.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/wordmark-PNG/Stay Sharp Wordmark Teal.png",
+      alt: "stay-sharp-wordmark",
+      title: "stay-sharp-wordmark",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
+    {
+      src: "/assets/imgs/icon-PNG/Stay Sharp Icon Teal.png",
+      alt: "stay-sharp-icon",
+      title: "stay-sharp-icon",
+    },
   ];
 
   // Repeat the pattern to ensure seamless infinite scroll
-  const repeatedImages = [
-    ...imagePattern, 
-    ...imagePattern
-  ];
+  const repeatedImages = [...imagePattern, ...imagePattern];
 
   return (
     <div
@@ -60,17 +141,18 @@ function HorizontalScroller(props) {
         <div className="scroll-container">
           <div className="scroll-content">
             {repeatedImages.map((image, index) => {
-              const isChefIcon = image.src.includes("Stay Sharp Icon Indigo.png") || 
-                                image.src.includes("Stay Sharp Icon Teal.png") || 
-                                image.src.includes("Stay Sharp Icon Purple.png");
-              
+              const isChefIcon =
+                image.src.includes("Stay Sharp Icon Indigo.png") ||
+                image.src.includes("Stay Sharp Icon Teal.png") ||
+                image.src.includes("Stay Sharp Icon Purple.png");
+
               return (
                 <img
                   key={index}
                   src={image.src}
                   alt={image.alt}
                   title={image.title}
-                  className={`scroll-item ${isChefIcon ? 'chef-chopping' : ''}`}
+                  className={`scroll-item ${isChefIcon ? "chef-chopping" : ""}`}
                 />
               );
             })}
@@ -78,9 +160,10 @@ function HorizontalScroller(props) {
         </div>
       </div>
       <div className="seo-text">
-        Stay Sharp Austin Texas knife sharpening professional kitchen cutlery service 
-        Austin blade sharpening expert knife restoration Austin knife care professional 
-        knife sharpening service Austin Texas kitchen knife experts culinary blade care
+        Stay Sharp Austin Texas knife sharpening professional kitchen cutlery
+        service Austin blade sharpening expert knife restoration Austin knife
+        care professional knife sharpening service Austin Texas kitchen knife
+        experts culinary blade care
       </div>
     </div>
   );
