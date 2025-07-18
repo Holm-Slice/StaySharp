@@ -1,5 +1,8 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
+
+// Time slots - moved outside component to avoid dependency issues
+const timeSlots = ["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM"];
 
 function BookingPage() {
   const location = useLocation();
@@ -35,15 +38,12 @@ function BookingPage() {
     { title: "Total Restoration", description: "Get that beast piece RTG", price: "Starting at $50" }
   ];
 
-  // Time slots
-  const timeSlots = ["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM"];
-
   // Mock availability
-  const getAvailability = (date) => {
+  const getAvailability = useCallback((date) => {
     const dow = date.getDay();
     if (dow === 0 || dow === 6) return [];
     return timeSlots.filter(() => Math.random() > 0.3);
-  };
+  }, []);
 
   // Days in month
   const getDaysInMonth = (date) => {
@@ -58,7 +58,7 @@ function BookingPage() {
 
   // Memoized
   const days = useMemo(() => getDaysInMonth(currentMonth), [currentMonth]);
-  const availableTimes = useMemo(() => selectedDate ? getAvailability(selectedDate) : [], [selectedDate]);
+  const availableTimes = useMemo(() => selectedDate ? getAvailability(selectedDate) : [], [selectedDate, getAvailability]);
 
   // Handlers
   const handleDateClick = (date) => {
@@ -107,11 +107,14 @@ function BookingPage() {
   // Focus trap
   useEffect(() => {
     if (showServiceModal && modalRef.current) {
-      const focusable = modalRef.current.querySelectorAll('button, [href], input, textarea');
+      const modal = modalRef.current; // Store ref in variable
+      const focusable = modal.querySelectorAll('button, [href], input, textarea');
       focusable[0]?.focus();
       const trap = e => { if (e.key === 'Tab') { e.preventDefault(); focusable[0]?.focus(); }};
-      modalRef.current.addEventListener('keydown', trap);
-      return () => modalRef.current.removeEventListener('keydown', trap);
+      modal.addEventListener('keydown', trap);
+      return () => {
+        modal.removeEventListener('keydown', trap);
+      };
     }
   }, [showServiceModal]);
 
