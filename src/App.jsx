@@ -42,10 +42,9 @@ const Section = ({ id, title, children, className }) => (
     className={className}
     aria-labelledby={id ? `${id}-heading` : undefined}
   >
-  {children}
+    {children}
   </section>
 );
-
 
 function ConditionalNavbar() {
   const location = useLocation();

@@ -50,7 +50,7 @@ function ProductCard({ product, onAddToCart }) {
         <button
           onClick={handleAddToCart}
           disabled={product.stock === 0}
-          className={`w-full py-3 px-4 font-medium uppercase text-sm transition-colors duration-300 border-2 ${
+          className={`w-full py-3 px-4 font-medium uppercase text-sm transition-colors duration-[1300ms] border-4 ${
             product.stock === 0
               ? "bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed"
               : "bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"

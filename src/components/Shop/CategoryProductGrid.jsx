@@ -172,7 +172,7 @@ function CategoryProductGrid({
               <div className="text-center">
                 <button
                   onClick={() => toggleCategoryExpansion(category)}
-                  className="inline-flex items-center px-8 py-3 font-medium uppercase text-sm transition-all duration-300 border-2 bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple hover:scale-105"
+                  className="inline-flex items-center px-8 py-3 font-medium uppercase text-sm transition-all duration-[1300ms] border-4 bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple hover:scale-105"
                 >
                   {isExpanded ? (
                     <>

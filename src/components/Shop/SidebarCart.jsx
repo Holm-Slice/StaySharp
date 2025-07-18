@@ -38,7 +38,7 @@ function SidebarCart({
             </h2>
             <button
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+              className="text-gray-500 hover:text-gray-700 text-2xl font-bold uppercase transition-colors duration-[1300ms]"
             >
               ×
             </button>
@@ -78,7 +78,7 @@ function SidebarCart({
                           onClick={() =>
                             onUpdateQuantity(item.id, item.quantity - 1)
                           }
-                          className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                          className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border-4 border-ss_purple transition-colors duration-[1300ms] uppercase"
                         >
                           −
                         </button>
@@ -91,14 +91,14 @@ function SidebarCart({
                           onClick={() =>
                             onUpdateQuantity(item.id, item.quantity + 1)
                           }
-                          className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                          className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border-4 border-ss_purple transition-colors duration-[1300ms] uppercase"
                         >
                           +
                         </button>
 
                         <button
                           onClick={() => onRemoveItem(item.id)}
-                          className="text-red-500 hover:text-red-700 ml-2 text-sm"
+                          className="text-red-500 hover:text-red-700 ml-2 text-sm uppercase transition-colors duration-[1300ms]"
                         >
                           Remove
                         </button>
@@ -122,7 +122,7 @@ function SidebarCart({
 
               <button
                 onClick={onCheckout}
-                className="w-full bg-ss_purple text-white py-3 font-medium hover:bg-white hover:text-ss_purple transition-colors duration-300 border-2 border-ss_purple uppercase"
+                className="w-full bg-ss_purple text-white py-3 font-medium hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple uppercase"
               >
                 Checkout
               </button>

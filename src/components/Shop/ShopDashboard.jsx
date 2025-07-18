@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { mockKnives } from "../../data/mockKnives";
 import CategoryProductGrid from "./CategoryProductGrid";
 import StreamlinedFilterBar from "./StreamlinedFilterBar";
@@ -19,7 +19,6 @@ function ShopDashboard({
   const [knives, setKnives] = useState([]);
   const [filteredKnives, setFilteredKnives] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   // Filter state
@@ -119,17 +118,6 @@ function ShopDashboard({
     loadKnives();
   }, [location.state?.selectedProductId]);
 
-  useEffect(() => {
-    const filtered = knives.filter(
-      (knife) =>
-        knife.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        knife.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        knife.style.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        knife.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFilteredKnives(filtered);
-  }, [searchQuery, knives]);
-
   const addToCart = (knife) => {
     try {
       setCart((prevCart) => {
@@ -185,7 +173,7 @@ function ShopDashboard({
       {/* Responsive Navbar */}
       <div
         className={`transition-all duration-300 ${
-          cart.length > 0 && isCartOpen ? "lg:pr-80" : ""
+          isCartOpen ? "lg:pr-80" : ""
         }`}
       >
         <Navbar />
@@ -213,7 +201,7 @@ function ShopDashboard({
                   </h2>
                   <button
                     onClick={closeCart}
-                    className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                    className="text-gray-500 hover:text-gray-700 text-2xl font-bold uppercase transition-colors duration-[1300ms]"
                   >
                     ×
                   </button>
@@ -250,7 +238,7 @@ function ShopDashboard({
                                 onClick={() =>
                                   onUpdateQuantity(item.id, item.quantity - 1)
                                 }
-                                className="w-6 h-6 bg-ss_purple text-white flex items-center justify-center text-xs hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                                className="w-6 h-6 bg-ss_purple text-white flex items-center justify-center text-xs hover:bg-white hover:text-ss_purple border-4 border-ss_purple transition-colors duration-[1300ms] uppercase"
                               >
                                 −
                               </button>
@@ -261,13 +249,13 @@ function ShopDashboard({
                                 onClick={() =>
                                   onUpdateQuantity(item.id, item.quantity + 1)
                                 }
-                                className="w-6 h-6 bg-ss_purple text-white flex items-center justify-center text-xs hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                                className="w-6 h-6 bg-ss_purple text-white flex items-center justify-center text-xs hover:bg-white hover:text-ss_purple border-4 border-ss_purple transition-colors duration-[1300ms] uppercase"
                               >
                                 +
                               </button>
                               <button
                                 onClick={() => onRemoveItem(item.id)}
-                                className="text-red-500 hover:text-red-700 ml-1 text-xs"
+                                className="text-red-500 hover:text-red-700 ml-1 text-xs uppercase transition-colors duration-[1300ms]"
                               >
                                 Remove
                               </button>
@@ -294,7 +282,7 @@ function ShopDashboard({
                     </div>
                     <button
                       onClick={handleCheckout}
-                      className="w-full bg-ss_purple text-white py-2 text-sm font-medium hover:bg-white hover:text-ss_purple transition-colors duration-300 border-2 border-ss_purple uppercase"
+                      className="w-full bg-ss_purple text-white py-2 text-sm font-medium hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple uppercase"
                     >
                       Checkout
                     </button>
@@ -308,7 +296,7 @@ function ShopDashboard({
         {/* Floating Cart Button for Mobile */}
         <button
           onClick={toggleCart}
-          className="fixed bottom-6 right-6 bg-ss_purple text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-[9997] lg:hidden"
+          className="fixed bottom-6 right-6 bg-ss_purple text-white p-4 shadow-lg hover:shadow-xl transition-all duration-[1300ms] z-[9997] lg:hidden border-4 border-ss_purple uppercase"
         >
           <svg
             className="w-6 h-6"
@@ -333,7 +321,7 @@ function ShopDashboard({
         {/* Main Shop Content */}
         <div
           className={`flex-1 transition-all duration-300 ${
-            cart.length > 0 && isCartOpen ? "lg:pr-80" : ""
+            isCartOpen ? "lg:pr-80" : ""
           }`}
         >
           <div className="seo-text absolute -translate-y-full opacity-0">
@@ -348,12 +336,28 @@ function ShopDashboard({
             <div className="max-w-6xl mx-auto px-4 py-6">
               <div className="flex flex-col space-y-4">
                 <div className="flex flex-col items-center text-center">
-                  <Link
-                    to="/"
-                    className="text-ss_purple hover:text-ss_pale_purple transition-colors flex items-center gap-2 mb-4"
+                  {/* Desktop Cart Toggle Button - Always Visible */}
+                  <button
+                    onClick={() => setIsCartOpen(!isCartOpen)}
+                    className="uppercase py-1 px-3 transition-colors duration-[1300ms] border-4 text-sm font-medium bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple mb-4 flex items-center space-x-2"
                   >
-                    ← Back to Home
-                  </Link>
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5H21M9 19v2a2 2 0 11-4 0v-2m0 0V9a2 2 0 112 0v10m0 0h4m-4 0a2 2 0 104 0m0 0v-2a2 2 0 00-2-2H9z"
+                      />
+                    </svg>
+                    <span>
+                      {isCartOpen ? "Hide" : "Show"} Cart ({cart.length})
+                    </span>
+                  </button>
                   <h1 className="text-3xl font-bold text-ss_purple">
                     Stay Sharp Knife Collection
                   </h1>
@@ -362,48 +366,21 @@ function ShopDashboard({
                   </p>
                 </div>
 
-                {/* Search Bar */}
-                <div className="flex justify-center items-center space-x-4">
-                  <div className="max-w-md w-full">
-                    <input
-                      type="text"
-                      placeholder="Search by name, brand, style, or description..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-ss_purple focus:ring-2 focus:ring-ss_purple focus:ring-opacity-20"
+                {/* Filter Bar */}
+                <div className="flex justify-center items-center">
+                  <div className="flex-1 max-w-4xl">
+                    <StreamlinedFilterBar
+                      products={knives}
+                      onFilterChange={handleFilterChange}
+                      filters={filters}
                     />
                   </div>
-
-                  {/* Desktop Cart Toggle Button */}
-                  {cart.length > 0 && (
-                    <button
-                      onClick={() => setIsCartOpen(!isCartOpen)}
-                      className="hidden lg:flex bg-ss_purple text-white px-4 py-2 rounded-lg hover:bg-white hover:text-ss_purple border-2 border-ss_purple transition-colors items-center space-x-2"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5H21M9 19v2a2 2 0 11-4 0v-2m0 0V9a2 2 0 112 0v10m0 0h4m-4 0a2 2 0 104 0m0 0v-2a2 2 0 00-2-2H9z"
-                        />
-                      </svg>
-                      <span>
-                        {isCartOpen ? "Hide" : "Show"} Cart ({cart.length})
-                      </span>
-                    </button>
-                  )}
                 </div>
               </div>
             </div>
           </header>
 
-          {/* Main Content - Filters and Products */}
+          {/* Main Content - Products */}
           <main className="max-w-7xl mx-auto px-4 py-8">
             {loading ? (
               <div className="flex justify-center items-center min-h-[400px]">
@@ -411,13 +388,6 @@ function ShopDashboard({
               </div>
             ) : (
               <>
-                {/* Streamlined Filter Bar */}
-                <StreamlinedFilterBar
-                  products={knives}
-                  onFilterChange={handleFilterChange}
-                  filters={filters}
-                />
-
                 {/* Category Products Grid with See More functionality */}
                 <CategoryProductGrid
                   products={filteredKnives}
@@ -434,8 +404,8 @@ function ShopDashboard({
           </main>
         </div>
 
-        {/* Desktop Cart Sidebar - Visible when cart has items AND is open */}
-        {cart.length > 0 && isCartOpen && (
+        {/* Desktop Cart Sidebar - Visible when cart is open */}
+        {isCartOpen && (
           <div className="hidden lg:block fixed right-0 top-0 h-full w-80 bg-white border-l border-gray-200 shadow-lg z-[9995]">
             <div className="flex flex-col h-full">
               {/* Cart Header */}
@@ -446,7 +416,7 @@ function ShopDashboard({
                   </h2>
                   <button
                     onClick={() => setIsCartOpen(false)}
-                    className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                    className="text-gray-500 hover:text-gray-700 text-2xl font-bold uppercase transition-colors duration-[1300ms]"
                   >
                     ×
                   </button>
@@ -487,7 +457,7 @@ function ShopDashboard({
                               onClick={() =>
                                 onUpdateQuantity(item.id, item.quantity - 1)
                               }
-                              className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                              className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border-4 border-ss_purple transition-colors duration-[1300ms] uppercase"
                             >
                               −
                             </button>
@@ -500,14 +470,14 @@ function ShopDashboard({
                               onClick={() =>
                                 onUpdateQuantity(item.id, item.quantity + 1)
                               }
-                              className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                              className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border-4 border-ss_purple transition-colors duration-[1300ms] uppercase"
                             >
                               +
                             </button>
 
                             <button
                               onClick={() => onRemoveItem(item.id)}
-                              className="text-red-500 hover:text-red-700 ml-2 text-sm"
+                              className="text-red-500 hover:text-red-700 ml-2 text-sm uppercase transition-colors duration-[1300ms]"
                             >
                               Remove
                             </button>
@@ -536,14 +506,14 @@ function ShopDashboard({
 
                 <button
                   onClick={handleCheckout}
-                  className="w-full bg-ss_purple text-white py-3 font-medium hover:bg-white hover:text-ss_purple transition-colors duration-300 border-2 border-ss_purple uppercase"
+                  className="w-full bg-ss_purple text-white py-3 font-medium hover:bg-white hover:text-ss_purple transition-colors duration-[1300ms] border-4 border-ss_purple uppercase"
                 >
                   Checkout
                 </button>
 
                 <button
                   onClick={() => setCart([])}
-                  className="w-full bg-gray-100 text-gray-600 py-2 text-sm font-medium hover:bg-red-50 hover:text-red-600 transition-colors duration-300 border border-gray-300 hover:border-red-300"
+                  className="w-full bg-gray-100 text-gray-600 py-2 text-sm font-medium hover:bg-red-50 hover:text-red-600 transition-colors duration-[1300ms] border-4 border-gray-300 hover:border-red-300 uppercase"
                 >
                   Clear All Items
                 </button>
