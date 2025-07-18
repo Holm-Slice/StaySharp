@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 
 function ProductCard({ product, onAddToCart }) {
@@ -14,12 +15,12 @@ function ProductCard({ product, onAddToCart }) {
           alt={product.name}
           className="object-cover w-full h-full hover:scale-110 transition-transform duration-500"
         />
-        
+
         {/* Category Badge */}
         <div className="absolute top-2 left-2 bg-ss_purple text-white px-2 py-1 text-xs font-medium rounded">
           {product.category}
         </div>
-        
+
         {/* Stock Warning */}
         {product.stock > 0 && product.stock <= 3 && (
           <div className="absolute top-2 right-2 bg-orange-500 text-white px-2 py-1 text-xs font-medium rounded">
@@ -43,9 +44,7 @@ function ProductCard({ product, onAddToCart }) {
         </div>
 
         <div className="text-center">
-          <p className="text-xl font-bold text-ss_purple">
-            ${product.price}
-          </p>
+          <p className="text-xl font-bold text-ss_purple">${product.price}</p>
         </div>
 
         <button

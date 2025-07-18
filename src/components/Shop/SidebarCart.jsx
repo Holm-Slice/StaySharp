@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function SidebarCart({ 
-  items, 
-  onUpdateQuantity, 
-  onRemoveItem, 
-  onCheckout, 
-  isOpen, 
-  onClose 
+function SidebarCart({
+  items,
+  onUpdateQuantity,
+  onRemoveItem,
+  onCheckout,
+  isOpen,
+  onClose,
 }) {
   const total = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -18,16 +18,18 @@ function SidebarCart({
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity"
           onClick={onClose}
         />
       )}
-      
+
       {/* Sidebar */}
-      <div className={`fixed left-0 top-0 h-full w-80 sm:w-96 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}>
+      <div
+        className={`fixed left-0 top-0 h-full w-80 sm:w-96 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -69,7 +71,7 @@ function SidebarCart({
                         {item.name}
                       </h4>
                       <p className="text-sm text-gray-500">${item.price}</p>
-                      
+
                       {/* Quantity Controls */}
                       <div className="flex items-center space-x-2 mt-2">
                         <button

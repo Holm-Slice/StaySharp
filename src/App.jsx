@@ -1,5 +1,11 @@
 import React from "react";
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Link,
+  BrowserRouter,
+  useLocation,
+} from "react-router-dom";
 import { useState, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import HorizontalScroller from "./components/HorizontalScroller/HorizontalScroller";
@@ -7,12 +13,11 @@ import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import ImageCarousel from "./components/Carousel/ImageCarousel";
 import ServiceCardSlider from "./components/ServiceCardSlider";
 import "./App.css";
+import "./components/HorizontalScroller/HorizontalScroller.css";
 import Divider from "./components/Divider/Divider";
 import ContactForm from "./components/ContactForm/ContactForm";
-import { smoothScroll } from "./smoothScroll";
 import About from "./components/About/About";
 import ActiveSlider from "./ActiveSlider";
-import Shop from "./components/Shop/Shop";
 import ShopDashboard from "./components/Shop/ShopDashboard";
 import CartPage from "./components/Shop/CartPage";
 import ProductDetailPage from "./components/Shop/ProductDetailPage";
@@ -21,6 +26,7 @@ import CheckoutPage from "./components/Checkout/CheckoutPage";
 import UnifiedCheckoutPage from "./components/Checkout/UnifiedCheckoutPage";
 import ServiceConfirmationPage from "./components/Confirmation/ServiceConfirmationPage";
 import ShopConfirmationPage from "./components/Confirmation/ShopConfirmationPage";
+import ServicePage from "./components/Service/ServicePage";
 // Lazy load route components for better performance
 const AdminDashboard = lazy(() => import("./components/Admin/AdminDashboard"));
 
@@ -36,9 +42,26 @@ const Section = ({ id, title, children, className }) => (
     className={className}
     aria-labelledby={id ? `${id}-heading` : undefined}
   >
-    {children}
+  {children}
   </section>
 );
+
+
+function ConditionalNavbar() {
+  const location = useLocation();
+  const isShopPage = location.pathname === "/shop";
+
+  if (isShopPage) {
+    return null;
+  }
+
+  return (
+    <>
+      <Navbar />
+      <HorizontalScroller />
+    </>
+  );
+}
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -96,12 +119,6 @@ function App() {
     }
   };
 
-  const handleScroll = (e) => {
-    e.preventDefault();
-    const target = e.target.getAttribute("href");
-    smoothScroll(target, 5000);
-  };
-
   return (
     <BrowserRouter
       future={{
@@ -109,13 +126,7 @@ function App() {
         v7_relativeSplatPath: true,
       }}
     >
-      <Navbar
-        cart={cart}
-        onUpdateQuantity={updateQuantity}
-        onRemoveItem={removeFromCart}
-        onCheckout={handleCheckout}
-      />
-      <HorizontalScroller />
+      <ConditionalNavbar />
       <Routes>
         <Route
           path="/admin"
@@ -130,6 +141,14 @@ function App() {
           element={
             <Suspense fallback={<div>Loading...</div>}>
               <BookingPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/service"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ServicePage />
             </Suspense>
           }
         />
@@ -223,34 +242,20 @@ function App() {
                       Knives Sharp! Chips Gone!
                     </h1>
                     <h2 className="flex flex-col text-wrap justify-center align-center text-ss_purple text-lg sm:text-xl md:text-4xl pt-10 pb-2 text-center uppercase">
-                      Got Something You're Looking to Buy or Sell, We'll Help Ya
-                      Straighten It Out!
+                      Got Something You&rsquo;re Looking to Buy or Sell,
+                      We&rsquo;ll Help Ya Straighten It Out!
                     </h2>
                   </header>
                 </Section>
 
                 <Section id="services" title="SERVICES">
                   <h2 className="relative text-2xl sm:text-4xl text-center text-ss_purple cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
-                    Fixin's
+                    Fixin&rsquo;s
                   </h2>
                   <ActiveSlider />
                 </Section>
                 <Divider />
 
-                <Section id="shop" title="SHOP" className="py-20">
-                  <h2 className="relative text-2xl sm:text-4xl text-center text-ss_purple mb-8 cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
-                    Shop
-                  </h2>
-                  <Shop
-                    cart={cart}
-                    setCart={setCart}
-                    onUpdateQuantity={updateQuantity}
-                    onRemoveItem={removeFromCart}
-                    onCheckout={handleCheckout}
-                  />
-                </Section>
-                <Divider />
-                
                 <ImageCarousel images={images} />
 
                 <Section id="contact" title="CONTACT">

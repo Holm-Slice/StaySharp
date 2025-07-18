@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 import ProductCard from "./ProductCard";
 
@@ -14,7 +15,7 @@ function CategorizedProductGrid({ products, onAddToCart }) {
 
   // Define category order
   const categoryOrder = ["Knives", "Utensils", "Other"];
-  
+
   // Get category descriptions
   const getCategoryDescription = (category) => {
     switch (category) {
@@ -41,7 +42,7 @@ function CategorizedProductGrid({ products, onAddToCart }) {
     <div className="space-y-12">
       {categoryOrder.map((category) => {
         const categoryProducts = groupedProducts[category];
-        
+
         if (!categoryProducts || categoryProducts.length === 0) {
           return null;
         }
