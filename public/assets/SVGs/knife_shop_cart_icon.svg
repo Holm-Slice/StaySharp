@@ -1,0 +1,13 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Grocery bag body with subtle sharp angles -->
+  <path d="M6 9h12l-1 10H7z"/>
+  
+  <!-- Bag handles with knife-inspired angular design -->
+  <path d="M8 9V7a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+  
+
+  
+  <!-- Sharp fold lines on bag -->
+  <path d="M6 9l1-1"/>
+  <path d="M18 9l-1-1"/>
+</svg>

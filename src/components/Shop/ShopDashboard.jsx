@@ -1,19 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { mockKnives } from "../../data/mockKnives";
-
-// Dynamically import Stripe only if the key is available
-let stripePromise = null;
-if (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
-  import("@stripe/stripe-js")
-    .then(({ loadStripe }) => {
-      stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
-    })
-    .catch((error) => {
-      console.warn("Stripe failed to load:", error);
-      stripePromise = null;
-    });
-}
 
 function ShopDashboard({
   cart,
@@ -29,6 +16,29 @@ function ShopDashboard({
   const [hoveredKnife, setHoveredKnife] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  // Close cart handlers
+  const closeCart = useCallback(() => {
+    setIsCartOpen(false);
+  }, []);
+
+  // Close cart on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isCartOpen) {
+        closeCart();
+      }
+    };
+
+    if (isCartOpen) {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isCartOpen, closeCart]);
 
   useEffect(() => {
     // Simulate API call with error handling
@@ -93,6 +103,11 @@ function ShopDashboard({
         }
         return [...prevCart, { ...knife, quantity: 1 }];
       });
+
+      // Show cart when item is added
+      if (!isCartOpen) {
+        setIsCartOpen(true);
+      }
     } catch (error) {
       console.error("Error adding to cart:", error);
     }
@@ -117,6 +132,10 @@ function ShopDashboard({
     });
   };
 
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
@@ -126,294 +145,395 @@ function ShopDashboard({
   }
 
   return (
-    <div className="min-h-screen bg-white relative">
-      <div className="seo-text absolute -translate-y-full opacity-0">
-        Austin Texas knife shop premium kitchen cutlery sales Japanese knives
-        German knives professional knife collection Austin knife store kitchen
-        cutlery Austin Texas chef knife sales premium blade collection Austin
-        knife experts culinary knives
-      </div>
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col space-y-4">
-            <div className="flex flex-col items-center text-center">
-              <Link
-                to="/"
-                className="text-ss_purple hover:text-ss_pale_purple transition-colors flex items-center gap-2 mb-4"
-              >
-                ← Back to Home
-              </Link>
-              <h1 className="text-3xl font-bold text-ss_purple">
-                Stay Sharp Knife Collection
-              </h1>
-              <p className="text-gray-600 mt-1">
-                Premium knives for professional and home chefs
-              </p>
-            </div>
-
-            {/* Search Bar and Cart Container */}
-            <div className="flex flex-col items-center space-y-4 w-full">
-              {/* Centered Search Bar */}
-              <div className="max-w-md w-full">
-                <input
-                  type="text"
-                  placeholder="Search by name, brand, style, or description..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-ss_purple focus:ring-2 focus:ring-ss_purple focus:ring-opacity-20"
-                />
+    <div className="min-h-screen bg-white relative flex">
+      {/* Mobile Cart Overlay (only on mobile) */}
+      {isCartOpen && (
+        <>
+          <div
+            className="fixed inset-0 bg-black bg-opacity-30 z-[9998] transition-opacity duration-500 lg:hidden"
+            onClick={closeCart}
+          />
+          <div
+            className={`fixed right-0 top-0 h-full w-80 bg-white shadow-2xl z-[9999] transform transition-transform duration-500 ease-in-out lg:hidden ${
+              isCartOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            {/* Mobile cart content - same as desktop but with close button */}
+            <div className="flex flex-col h-full">
+              <div className="flex items-center justify-between p-3 border-b border-gray-200">
+                <h2 className="font-title font-bold text-lg text-ss_purple">
+                  Cart ({cart.length})
+                </h2>
+                <button
+                  onClick={closeCart}
+                  className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                >
+                  ×
+                </button>
               </div>
-
-              {/* Cart - Centered */}
-              {cart && cart.length > 0 && (
-                <div className="max-w-md w-full">
-                  <div className="bg-white rounded-lg shadow-md p-4 border w-full">
-                    <h2 className="text-lg font-semibold text-gray-900 mb-3 text-center">
-                      Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)}{" "}
-                      items)
-                    </h2>
-
-                    {/* Show full cart details if only one unique item type */}
-                    {cart.length === 1 ? (
-                      <>
-                        <div className="space-y-3 mb-4">
-                          {cart.map((item) => (
-                            <div
-                              key={item.id}
-                              className="flex items-center space-x-3"
-                            >
-                              <img
-                                src={
-                                  item.image || "/assets/Images/chef-knife1.jpg"
-                                }
-                                alt={item.name}
-                                title={item.name}
-                                className="w-12 h-12 object-cover rounded"
-                              />
-
-                              <div className="flex-1">
-                                <h4 className="text-sm font-medium text-gray-900">
-                                  {item.name}
-                                </h4>
-                                <p className="text-sm text-gray-500">
-                                  ${item.price}
-                                </p>
-                              </div>
-
-                              <div className="flex items-center space-x-2">
-                                <button
-                                  onClick={() =>
-                                    onUpdateQuantity(item.id, item.quantity - 1)
-                                  }
-                                  className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
-                                >
-                                  -
-                                </button>
-
-                                <span className="text-sm font-medium w-8 text-center">
-                                  {item.quantity}
-                                </span>
-
-                                <button
-                                  onClick={() =>
-                                    onUpdateQuantity(item.id, item.quantity + 1)
-                                  }
-                                  className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300"
-                                >
-                                  +
-                                </button>
-
-                                <button
-                                  onClick={() => onRemoveItem(item.id)}
-                                  className="text-red-500 hover:text-red-700 ml-2"
-                                >
-                                  ✕
-                                </button>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="border-t pt-3">
-                          <div className="flex justify-between items-center mb-3">
-                            <span className="text-base font-semibold">
-                              Total:
-                            </span>
-                            <span className="text-lg font-bold text-ss_purple">
-                              $
-                              {cart
-                                .reduce(
-                                  (sum, item) =>
-                                    sum + item.price * item.quantity,
-                                  0
-                                )
-                                .toFixed(2)}
-                            </span>
-                          </div>
-
-                          <button
-                            onClick={handleCheckout}
-                            className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors"
-                          >
-                            Checkout
-                          </button>
-                        </div>
-                      </>
-                    ) : (
-                      /* Show compact view with "View Cart" button for multiple items */
-                      <>
-                        <div className="text-center mb-4">
-                          <p className="text-sm text-gray-600 mb-2">
-                            {cart.length} different items in your cart
-                          </p>
-                          <p className="text-lg font-bold text-ss_purple">
-                            Total: $
-                            {cart
-                              .reduce(
-                                (sum, item) => sum + item.price * item.quantity,
-                                0
-                              )
-                              .toFixed(2)}
-                          </p>
-                        </div>
-
-                        <Link
-                          to="/cart"
-                          className="w-full bg-ss_purple text-white py-2 rounded-md font-medium hover:bg-ss_pale_purple transition-colors text-center block"
-                        >
-                          View Cart
-                        </Link>
-                      </>
-                    )}
+              <div className="flex-1 overflow-y-auto p-3">
+                {cart.length === 0 ? (
+                  <div className="text-center py-8">
+                    <p className="text-gray-500">Your cart is empty</p>
+                    <p className="text-sm text-gray-400 mt-2">
+                      Add some products to get started
+                    </p>
                   </div>
+                ) : (
+                  <div className="space-y-3">
+                    {cart.map((item) => (
+                      <div
+                        key={item.id}
+                        className="flex items-start space-x-2 p-2 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                      >
+                        <img
+                          src={item.image || "/assets/Images/chef-knife1.jpg"}
+                          alt={item.name}
+                          className="w-12 h-12 object-cover rounded"
+                        />
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-xs font-medium text-gray-900 truncate">
+                            {item.name}
+                          </h4>
+                          <p className="text-xs text-gray-500">${item.price}</p>
+                          <div className="flex items-center space-x-1 mt-1">
+                            <button
+                              onClick={() =>
+                                onUpdateQuantity(item.id, item.quantity - 1)
+                              }
+                              className="w-6 h-6 bg-ss_purple text-white flex items-center justify-center text-xs hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                            >
+                              −
+                            </button>
+                            <span className="text-xs font-medium w-6 text-center">
+                              {item.quantity}
+                            </span>
+                            <button
+                              onClick={() =>
+                                onUpdateQuantity(item.id, item.quantity + 1)
+                              }
+                              className="w-6 h-6 bg-ss_purple text-white flex items-center justify-center text-xs hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                            >
+                              +
+                            </button>
+                            <button
+                              onClick={() => onRemoveItem(item.id)}
+                              className="text-red-500 hover:text-red-700 ml-1 text-xs"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {cart.length > 0 && (
+                <div className="border-t border-gray-200 p-3 space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-semibold">Total:</span>
+                    <span className="text-lg font-bold text-ss_purple">
+                      $
+                      {cart
+                        .reduce(
+                          (sum, item) => sum + item.price * item.quantity,
+                          0
+                        )
+                        .toFixed(2)}
+                    </span>
+                  </div>
+                  <button
+                    onClick={handleCheckout}
+                    className="w-full bg-ss_purple text-white py-2 text-sm font-medium hover:bg-white hover:text-ss_purple transition-colors duration-300 border-2 border-ss_purple uppercase"
+                  >
+                    Checkout
+                  </button>
                 </div>
               )}
             </div>
           </div>
-        </div>
-      </header>
+        </>
+      )}
 
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-          {filteredKnives.map((knife) => (
-            <div
-              key={knife.id}
-              className="flex flex-col justify-center items-center"
-              onClick={() => handleProductClick(knife)}
-            >
-              <main className="bg-white border-2 border-ss_purple w-full max-w-sm sm:max-w-md lg:max-w-2xl h-auto min-h-[400px] lg:h-[400px] p-4 sm:p-6 lg:p-10 flex flex-col lg:grid lg:grid-cols-2 lg:gap-8 shadow-[8px_8px_0px_#453393] hover:transition-transform hover:scale-[1.02] lg:hover:scale-[1.08] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-4 lg:gap-6 overflow-hidden">
-                <div
-                  className="relative w-full h-48 sm:h-56 lg:h-full overflow-hidden flex-shrink-0"
-                  onMouseEnter={() => setHoveredKnife(knife)}
-                  onMouseLeave={() => setHoveredKnife(null)}
-                >
-                  <img
-                    src={knife.image}
-                    alt={`${knife.name} - Professional kitchen knife available at Stay Sharp Austin`}
-                    className="w-full h-48 object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    width="300"
-                    height="192"
-                  />
-
-                  {/* Hover Popup - Only over image, hidden on mobile */}
-                  {hoveredKnife?.id === knife.id && (
-                    <div className="hidden lg:block absolute bottom-2 right-2 bg-white border-2 border-ss_purple rounded-lg shadow-lg p-3 z-10 min-w-48">
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span className="font-medium text-gray-700">
-                            Style:
-                          </span>
-                          <span className="text-ss_purple font-semibold">
-                            {knife.style}
-                          </span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="font-medium text-gray-700">
-                            Length:
-                          </span>
-                          <span className="text-ss_purple font-semibold">
-                            {knife.length}
-                          </span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="font-medium text-gray-700">
-                            Brand:
-                          </span>
-                          <span className="text-ss_purple font-semibold">
-                            {knife.brand}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                <section className="flex flex-col flex-1 justify-between min-h-0">
-                  <div className="flex-1">
-                    <h1 className="font-title font-bold text-lg sm:text-xl lg:text-2xl text-center mb-2">
-                      {knife.name}
-                    </h1>
-
-                    <h2 className="text-sm sm:text-base lg:text-xl text-gray-500 font-light text-center line-clamp-2 lg:line-clamp-none">
-                      {knife.description}
-                    </h2>
-
-                    {/* Mobile-only details */}
-                    <div className="lg:hidden mt-3 text-center">
-                      <div className="flex justify-center space-x-4 text-xs text-gray-600">
-                        <span>{knife.style}</span>
-                        <span>•</span>
-                        <span>{knife.length}</span>
-                        <span>•</span>
-                        <span>{knife.brand}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col items-center space-y-3 mt-4">
-                    <p className="font-light text-black text-center text-lg sm:text-xl font-semibold">
-                      ${knife.price}
-                    </p>
-                    {knife.stock > 0 && knife.stock <= 3 && (
-                      <p className="text-orange-500 text-sm font-medium">
-                        Only {knife.stock} left in stock!
-                      </p>
-                    )}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        addToCart(knife);
-                      }}
-                      disabled={knife.stock === 0}
-                      className={`uppercase py-3 px-6 w-full max-w-xs transition-colors duration-[1300ms] border-4 text-sm font-medium ${
-                        knife.stock === 0
-                          ? "bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed"
-                          : "bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
-                      }`}
-                    >
-                      {knife.stock === 0 ? "Out of Stock" : "Add to Cart"}
-                    </button>
-                  </div>
-                </section>
-              </main>
-            </div>
-          ))}
-        </div>
-
-        {filteredKnives.length === 0 && !loading && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              {searchQuery
-                ? `No knives found matching "${searchQuery}"`
-                : "No knives available at the moment"}
-            </p>
-          </div>
+      {/* Floating Cart Button for Mobile */}
+      <button
+        onClick={toggleCart}
+        className="fixed bottom-6 right-6 bg-ss_purple text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-[9997] lg:hidden"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5H21M9 19v2a2 2 0 11-4 0v-2m0 0V9a2 2 0 112 0v10m0 0h4m-4 0a2 2 0 104 0m0 0v-2a2 2 0 00-2-2H9z"
+          />
+        </svg>
+        {cart.length > 0 && (
+          <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
+            {cart.length}
+          </span>
         )}
-      </main>
+      </button>
+
+      {/* Main Shop Content */}
+      <div className={`flex-1 transition-all duration-300 ${cart.length > 0 ? 'lg:pr-80' : ''}`}>
+        <div className="seo-text absolute -translate-y-full opacity-0">
+          Austin Texas knife shop premium kitchen cutlery sales Japanese knives
+          German knives professional knife collection Austin knife store kitchen
+          cutlery Austin Texas chef knife sales premium blade collection Austin
+          knife experts culinary knives
+        </div>
+        
+        {/* Header */}
+        <header className="bg-white shadow-sm border-b">
+          <div className="max-w-6xl mx-auto px-4 py-6">
+            <div className="flex flex-col space-y-4">
+              <div className="flex flex-col items-center text-center">
+                <Link
+                  to="/"
+                  className="text-ss_purple hover:text-ss_pale_purple transition-colors flex items-center gap-2 mb-4"
+                >
+                  ← Back to Home
+                </Link>
+                <h1 className="text-3xl font-bold text-ss_purple">
+                  Stay Sharp Knife Collection
+                </h1>
+                <p className="text-gray-600 mt-1">
+                  Premium knives for professional and home chefs
+                </p>
+              </div>
+
+              {/* Search Bar */}
+              <div className="flex justify-center">
+                <div className="max-w-md w-full">
+                  <input
+                    type="text"
+                    placeholder="Search by name, brand, style, or description..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-ss_purple focus:ring-2 focus:ring-ss_purple focus:ring-opacity-20"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Main Content - Smaller product cards */}
+        <main className="max-w-6xl mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+            {filteredKnives.map((knife) => (
+              <div
+                key={knife.id}
+                className="flex flex-col justify-center items-center"
+                onClick={() => handleProductClick(knife)}
+              >
+                <main className="bg-white border-2 border-ss_purple w-full max-w-md h-auto min-h-[300px] p-4 flex flex-col shadow-[6px_6px_0px_#453393] hover:transition-transform hover:scale-[1.02] hover:duration-[2000ms] duration-[3000ms] cursor-pointer gap-3 overflow-hidden">
+                  <div
+                    className="relative w-full h-40 overflow-hidden flex-shrink-0"
+                    onMouseEnter={() => setHoveredKnife(knife)}
+                    onMouseLeave={() => setHoveredKnife(null)}
+                  >
+                    <img
+                      src={knife.image}
+                      alt={`${knife.name} - Professional kitchen knife available at Stay Sharp Austin`}
+                      className="w-full h-40 object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      width="300"
+                      height="160"
+                    />
+
+                    {/* Hover Popup - Only on desktop */}
+                    {hoveredKnife?.id === knife.id && (
+                      <div className="hidden lg:block absolute bottom-2 right-2 bg-white border-2 border-ss_purple rounded-lg shadow-lg p-2 z-10 min-w-40">
+                        <div className="space-y-1 text-xs">
+                          <div className="flex justify-between">
+                            <span className="font-medium text-gray-700">Style:</span>
+                            <span className="text-ss_purple font-semibold">{knife.style}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="font-medium text-gray-700">Length:</span>
+                            <span className="text-ss_purple font-semibold">{knife.length}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="font-medium text-gray-700">Brand:</span>
+                            <span className="text-ss_purple font-semibold">{knife.brand}</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <section className="flex flex-col flex-1 justify-between min-h-0">
+                    <div className="flex-1">
+                      <h1 className="font-title font-bold text-lg text-center mb-2">
+                        {knife.name}
+                      </h1>
+
+                      <h2 className="text-sm text-gray-500 font-light text-center line-clamp-2">
+                        {knife.description}
+                      </h2>
+
+                      {/* Mobile details */}
+                      <div className="lg:hidden mt-2 text-center">
+                        <div className="flex justify-center space-x-3 text-xs text-gray-600">
+                          <span>{knife.style}</span>
+                          <span>•</span>
+                          <span>{knife.length}</span>
+                          <span>•</span>
+                          <span>{knife.brand}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center space-y-2 mt-3">
+                      <p className="text-black text-center text-lg font-semibold">
+                        ${knife.price}
+                      </p>
+                      {knife.stock > 0 && knife.stock <= 3 && (
+                        <p className="text-orange-500 text-xs font-medium">
+                          Only {knife.stock} left in stock!
+                        </p>
+                      )}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          addToCart(knife);
+                        }}
+                        disabled={knife.stock === 0}
+                        className={`uppercase py-2 px-4 w-full max-w-xs transition-colors duration-[1300ms] border-2 text-xs font-medium ${
+                          knife.stock === 0
+                            ? "bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed"
+                            : "bg-ss_purple text-white border-ss_purple hover:bg-white hover:text-ss_purple"
+                        }`}
+                      >
+                        {knife.stock === 0 ? "Out of Stock" : "Add to Cart"}
+                      </button>
+                    </div>
+                  </section>
+                </main>
+              </div>
+            ))}
+          </div>
+
+          {filteredKnives.length === 0 && !loading && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">
+                {searchQuery
+                  ? `No knives found matching "${searchQuery}"`
+                  : "No knives available at the moment"}
+              </p>
+            </div>
+          )}
+        </main>
+      </div>
+
+      {/* Desktop Cart Sidebar - Visible when cart has items */}
+      {cart.length > 0 && (
+        <div className="hidden lg:block fixed right-0 top-0 h-full w-80 bg-white border-l border-gray-200 shadow-lg z-[9995]">
+          <div className="flex flex-col h-full">
+            {/* Cart Header */}
+            <div className="p-4 border-b border-gray-200">
+              <h2 className="font-title font-bold text-xl text-ss_purple text-center">
+                Shopping Cart ({cart.length})
+              </h2>
+            </div>
+
+          {/* Cart Items */}
+          <div className="flex-1 overflow-y-auto p-4">
+            {cart.length === 0 ? (
+              <div className="text-center py-8">
+                <p className="text-gray-500">Your cart is empty</p>
+                <p className="text-sm text-gray-400 mt-2">
+                  Add some products to get started
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {cart.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <img
+                      src={item.image || "/assets/Images/chef-knife1.jpg"}
+                      alt={item.name}
+                      className="w-16 h-16 object-cover rounded"
+                    />
+
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-gray-900 truncate">
+                        {item.name}
+                      </h4>
+                      <p className="text-sm text-gray-500">${item.price}</p>
+
+                      {/* Quantity Controls */}
+                      <div className="flex items-center space-x-2 mt-2">
+                        <button
+                          onClick={() =>
+                            onUpdateQuantity(item.id, item.quantity - 1)
+                          }
+                          className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                        >
+                          −
+                        </button>
+
+                        <span className="text-sm font-medium w-8 text-center">
+                          {item.quantity}
+                        </span>
+
+                        <button
+                          onClick={() =>
+                            onUpdateQuantity(item.id, item.quantity + 1)
+                          }
+                          className="w-7 h-7 bg-ss_purple text-white flex items-center justify-center text-sm hover:bg-white hover:text-ss_purple border border-ss_purple transition-colors"
+                        >
+                          +
+                        </button>
+
+                        <button
+                          onClick={() => onRemoveItem(item.id)}
+                          className="text-red-500 hover:text-red-700 ml-2 text-sm"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Cart Footer with Total and Checkout */}
+          <div className="border-t border-gray-200 p-4 space-y-4">
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-semibold">Total:</span>
+              <span className="text-xl font-bold text-ss_purple">
+                $
+                {cart
+                  .reduce((sum, item) => sum + item.price * item.quantity, 0)
+                  .toFixed(2)}
+              </span>
+            </div>
+
+            <button
+              onClick={handleCheckout}
+              className="w-full bg-ss_purple text-white py-3 font-medium hover:bg-white hover:text-ss_purple transition-colors duration-300 border-2 border-ss_purple uppercase"
+            >
+              Checkout
+            </button>
+          </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

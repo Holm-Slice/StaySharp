@@ -236,6 +236,21 @@ function App() {
                   <ActiveSlider />
                 </Section>
                 <Divider />
+
+                <Section id="shop" title="SHOP" className="py-20">
+                  <h2 className="relative text-2xl sm:text-4xl text-center text-ss_purple mb-8 cursor-pointer hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-current hover:after:animate-underline">
+                    Shop
+                  </h2>
+                  <Shop
+                    cart={cart}
+                    setCart={setCart}
+                    onUpdateQuantity={updateQuantity}
+                    onRemoveItem={removeFromCart}
+                    onCheckout={handleCheckout}
+                  />
+                </Section>
+                <Divider />
+                
                 <ImageCarousel images={images} />
 
                 <Section id="contact" title="CONTACT">
