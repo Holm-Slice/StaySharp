@@ -62,7 +62,7 @@ function CategorizedProductGrid({ products, onAddToCart }) {
 
             {/* Products Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {categoryProducts.map((product) => (
+              {categoryProducts.slice(0, 3).map((product) => (
                 <ProductCard
                   key={product.id}
                   product={product}

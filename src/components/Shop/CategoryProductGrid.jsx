@@ -10,7 +10,7 @@ function CategoryProductGrid({
   const [expandedCategories, setExpandedCategories] = useState({});
 
   // Items to show initially per category
-  const INITIAL_ITEMS_PER_CATEGORY = 4;
+  const INITIAL_ITEMS_PER_CATEGORY = 3;
 
   // Show "No results" message if no products match filters
   if (!products.length) {
@@ -157,7 +157,7 @@ function CategoryProductGrid({
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-8 px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 px-4">
               {productsToShow.map((product) => (
                 <ProductCard
                   key={product.id}
